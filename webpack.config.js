@@ -1,13 +1,34 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+
+const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.pug',
   devtool: 'source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  plugins: [new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, 'src/index.pug'),
+    filename: "index.html",
+    minify: {
+      collapseWhitespace: isProd,
+    }
+  })],
+  devServer: {
+    historyApiFallback: true,
+    static: path.resolve(__dirname, 'dist'),
+    open: true,
+    compress: true,
+    hot: true,
+    port: 3000,
+  }, 
   module: {
     rules: [
       {
@@ -34,6 +55,13 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true,
+        }
       },
     ]
   }
