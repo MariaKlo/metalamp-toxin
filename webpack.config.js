@@ -8,19 +8,21 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.pug',
+  entry: ['./src/main.js'],
   devtool: 'source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'src/index.pug'),
+  plugins: [
+    new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, 'src/pug/index.pug'),
     filename: "index.html",
     minify: {
       collapseWhitespace: isProd,
     }
-  })],
+  }),
+],
   devServer: {
     historyApiFallback: true,
     static: path.resolve(__dirname, 'dist'),
@@ -62,7 +64,7 @@ module.exports = {
         options: {
           pretty: true,
         }
-      },
+      }, 
     ]
   }
 };
