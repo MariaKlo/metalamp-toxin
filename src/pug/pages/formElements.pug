@@ -1,0 +1,80 @@
+div.elements
+  form(action="/new_movie" method="POST")
+    div.elements__description
+      h3.elements__info Text field
+      p.elements__state Default 
+    input(type="text" name="e-mail" placeholder="Email").elements__field
+    div.elements__description
+      h3.elements__info Text field
+      p.elements__state Hover/Focus 
+    input(type="text" name="text" placeholder="This is pretty awesome").elements__field
+    h3.elements__info Dropdown
+    input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
+    h3.elements__info Masked text field
+    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
+    div.date-dropdown
+      div.date-dropdown_before
+        h3.elements__info Date dropdown
+        input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
+      div.date-dropdown_after
+        h3.elements__info Date dropdown
+        input(type="text" name="date" placeholder="19.08.2019").elements__field
+    h3.elements__info Filer date dropdown
+    input(type="text" name="date" placeholder="19 авг - 23 авг").elements__field
+    h3.elements__info Subscription text filed
+    input(type="text" name="e-mail" placeholder="Email").elements__field
+  div.buttons
+    div.checkbox-buttons
+      h3.checkbox-buttons__name Checkbox buttons
+      div.checkbox-buttons__item
+        input(type='checkbox' name='agreement').checkbox-buttons__field
+        p.checkbox-buttons__option Можно курить
+      div.checkbox-buttons__item
+        input(type='checkbox' name='agreement' checked).checkbox-buttons__field
+        p.checkbox-buttons__option Можно с питомцами
+      div.checkbox-buttons__item
+        input(type='checkbox' name='agreement' checked).checkbox-buttons__field
+        p.checkbox-buttons__option Можно пригласить гостей (до 10 человек)
+    div.radio-buttons
+      h3.radio-buttons__name Radio buttons
+      div.radio-buttons__wrapper
+        input(type='radio', name='sex', value='Мужчина').radio-buttons__field
+        input(type='radio', name='sex', value='Женщина').radio-buttons__field
+    div.toggle-buttons
+      h3.toggle-buttons__name Toggle buttons
+      div.toggle-buttons__wrapper
+        input(type='radio', name='news', value='Получать спецпредложения').toggle-buttons__field
+        input(type='radio', name='news', value='Получать спецпредложения').toggle-buttons__field
+    div.like-button
+      h3.like-buttons__name Like button
+      div.like-buttons__wrapper
+        input(type='radio', name='like', value=2).like-buttons__field
+        input(type='radio', name='like', value=12).like-buttons__field
+    div.rate-button
+      h3.like-buttons__name Rate button
+      div.like-buttons__wrapper
+  div.other-buttons
+    div.range-button
+      div.range-button__info
+        h3.range-button__name Range slider
+        p.range-button__price 5000&#8381; - 10000&#8381;
+      div.range-button__slider
+    div.buttons
+      div.ellipse-buttons
+        button(class="ellipse-buttons__button ellipse-buttons_dark-solid") Click me
+        button(class="ellipse-buttons__button ellipse-buttons_light-solid") Click me
+        button(class="ellipse-buttons__button ellipse-buttons_dark-transparent") Click me
+        button(class="ellipse-buttons__button ellipse-buttons_light-transparent") Click me
+      div.link-buttons
+        a(href="#" class="link-buttons_active") Click me
+        a(href="#" class="link-buttons_nonactive") Click me
+      button(class="button-payment") Перейти к оплате &rarr;
+  div.pagination
+    div.pagination__pages
+      span(class="pagination__page pagination__page_active") 1
+      span.pagination__page 2
+      span.pagination__page 3
+      span.pagination__page ...
+      span.pagination__page 15
+      span.pagination__page &rarr;
+    p.pagination__info 1-12 из 100+ вариантов аренды
