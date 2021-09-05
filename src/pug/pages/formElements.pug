@@ -1,28 +1,33 @@
+// переменные
+- var textField = 'text field'
+- var dropdown = 'dropdown'
+// поля ввода
 div.elements
   form(action="/new_movie" method="POST")
     div.elements__description
-      h3.elements__info Text field
+      h3.elements__info #{textField}
       p.elements__state Default 
     input(type="text" name="e-mail" placeholder="Email").elements__field
     div.elements__description
-      h3.elements__info Text field
+      h3.elements__info #{textField}
       p.elements__state Hover/Focus 
     input(type="text" name="text" placeholder="This is pretty awesome").elements__field
-    h3.elements__info Dropdown
+    h3.elements__info #{dropdown}
     input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
-    h3.elements__info Masked text field
+    h3.elements__info Masked #{textField}
     input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
     div.date-dropdown
       div.date-dropdown_before
-        h3.elements__info Date dropdown
+        h3.elements__info Date #{dropdown}
         input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
       div.date-dropdown_after
-        h3.elements__info Date dropdown
+        h3.elements__info Date #{dropdown}
         input(type="text" name="date" placeholder="19.08.2019").elements__field
-    h3.elements__info Filer date dropdown
+    h3.elements__info Filer date #{dropdown}
     input(type="text" name="date" placeholder="19 авг - 23 авг").elements__field
-    h3.elements__info Subscription text filed
+    h3.elements__info Subscription #{textField}
     input(type="text" name="e-mail" placeholder="Email").elements__field
+  // кнопки
   div.buttons
     div.checkbox-buttons
       h3.checkbox-buttons__name Checkbox buttons
@@ -59,6 +64,7 @@ div.elements
         h3.range-button__name Range slider
         p.range-button__price 5000&#8381; - 10000&#8381;
       div.range-button__slider
+    // кнопки + пагинация
     div.buttons
       div.ellipse-buttons
         button(class="ellipse-buttons__button ellipse-buttons_dark-solid") Click me
