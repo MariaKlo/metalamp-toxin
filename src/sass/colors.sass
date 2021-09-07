@@ -5,12 +5,12 @@
 
 $flex-display: flex
 $dark-blue: rgb(31, 32, 65)
-$mediumSize: 19px
+$mediumSize: 1.18rem
 // стили для тегов
 body 
   @include zeroOffset()
   font-family: 'Montserrat-Regular'
-  font-size: 14px
+  font-size: 0.87rem
 
 div, p, form, input, a, span, button 
   box-sizing: border-box
@@ -26,10 +26,10 @@ h1, h2, h3, h4, h5, h6
   @include zeroOffset()
 
 // стили для секции "цвета и шрифты"
-.wrapper 
+.wrapper
   display: $flex-display
   justify-content: space-around
-  padding-top: 145px
+  padding-top: 9.06em
 
 .logo
   background: #ffffff url('../img/logo.png') no-repeat top left
@@ -37,13 +37,13 @@ h1, h2, h3, h4, h5, h6
 .color
   display: $flex-display
   align-items: center
-  margin-bottom: 20px
+  margin-bottom: 1.25em
 
 .rectangle
-  width: 70px
-  height: 70px
+  width: 4.37em
+  height: 4.37em
   border-radius: 7%
-  margin-right: 40px
+  margin-right: 2.5em
 
   &_first
     background-color: rgba($dark-blue, 1)
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6
 
 .english-name
   font-family: 'Montserrat-Bold'
-  margin-bottom: 5px
+  margin-bottom: 0.31em
 
 .hex-name
   color: rgba($dark-blue, 1)
@@ -77,36 +77,36 @@ h1, h2, h3, h4, h5, h6
   font-size: $mediumSize
 
 .titles
-  max-width: 555px
+  max-width: 34.68em
 
 .title
   display: $flex-display
   align-items: flex-start
-  margin-bottom: 51px
+  margin-bottom: 3.18em
 
   &_first
-    font-size: 24px
+    font-size: 1.5rem
 
   &_second
     font-size: $mediumSize
 
   &_third
-    font-size: 12px
+    font-size: 0.75rem
 
   &_fourth
-    font-size: 14px
+    font-size: 0.87rem
 
 .title span
   color: rgba($dark-blue, 0.25)
 
 .title_first span
-  margin-right: 30px
+  margin-right: 1.6em
 
 .title_second span
-  margin-right: 36px
+  margin-right: 2.25em
 
 .title_third span
-  margin-right: 43px
+  margin-right: 3.98em
 
 .title_fourth span
-  margin-right: 28px
+  margin-right: 2.25em
