@@ -1,11 +1,33 @@
+// mixins, variables
+@mixin zeroOffset()
+  margin: 0
+  padding: 0
+
+$flex-display: flex
+$dark-blue: rgb(31, 32, 65)
+$mediumSize: 19px
 // стили для тегов
 body 
-  padding: 0
-  margin: 0
+  @include zeroOffset()
   font-family: 'Montserrat-Regular'
+  font-size: 14px
+
+div, p, form, input, a, span, button 
+  box-sizing: border-box
+
+p
+  @include zeroOffset()
+
+ul, li 
+  display: block
+  @include zeroOffset()
+
+h1, h2, h3, h4, h5, h6 
+  @include zeroOffset()
+
 // стили для секции "цвета и шрифты"
 .wrapper 
-  display: flex
+  display: $flex-display
   justify-content: space-around
   padding-top: 145px
 
@@ -13,30 +35,78 @@ body
   background: #ffffff url('../img/logo.png') no-repeat top left
 
 .color
-  display: flex
+  display: $flex-display
+  align-items: center
+  margin-bottom: 20px
 
 .rectangle
   width: 70px
   height: 70px
-  border-radius: 6%
+  border-radius: 7%
+  margin-right: 40px
 
-.rectangle_first
-  background-color: rgba(31, 32, 65, 1)
+  &_first
+    background-color: rgba($dark-blue, 1)
 
-.rectangle_second
-  background-color: rgba(31, 32, 65, 0.75)
+  &_second
+    background-color: rgba($dark-blue, 0.75)
 
-.rectangle_third
-  background-color: rgba(31, 32, 65, 0.5)
+  &_third
+    background-color: rgba($dark-blue, 0.5)
 
-.rectangle_fourth
-  background-color: rgba(31, 32, 65, 0.25)
+  &_fourth
+    background-color: rgba($dark-blue, 0.25)
 
-.rectangle_fifth
-  background-color: rgba(31, 32, 65, 0.05)
+  &_fifth
+    background-color: rgba($dark-blue, 0.05)
 
-.rectangle_sixth
-  background-color: rgba(188, 156, 207, 1)
+  &_sixth
+    background-color: rgba(188, 156, 207, 1)
 
-.rectangle_seventh
-  background-color: rgba(111, 207, 151, 1)
+  &_seventh
+    background-color: rgba(111, 207, 151, 1)
+
+.english-name
+  font-family: 'Montserrat-Bold'
+  margin-bottom: 5px
+
+.hex-name
+  color: rgba($dark-blue, 1)
+
+.english-name, .hex-name
+  font-size: $mediumSize
+
+.titles
+  max-width: 555px
+
+.title
+  display: $flex-display
+  align-items: flex-start
+  margin-bottom: 51px
+
+  &_first
+    font-size: 24px
+
+  &_second
+    font-size: $mediumSize
+
+  &_third
+    font-size: 12px
+
+  &_fourth
+    font-size: 14px
+
+.title span
+  color: rgba($dark-blue, 0.25)
+
+.title_first span
+  margin-right: 30px
+
+.title_second span
+  margin-right: 36px
+
+.title_third span
+  margin-right: 43px
+
+.title_fourth span
+  margin-right: 28px
