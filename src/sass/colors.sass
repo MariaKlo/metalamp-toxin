@@ -9,7 +9,7 @@ $mediumSize: 1.18rem
 // стили для тегов
 body 
   @include zeroOffset()
-  font-family: 'Montserrat-Regular'
+  font-family: 'Montserrat'
   font-size: 0.87rem
 
 div, p, form, input, a, span, button 
@@ -24,6 +24,16 @@ ul, li
 
 h1, h2, h3, h4, h5, h6 
   @include zeroOffset()
+  font-weight: 700
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active 
+  outline: none
+
+input, input:hover, input:focus, input:active
+  border: 1px solid rgba(31, 32, 65, 0.5)
+  color: rgba(31, 32, 65, 0.5)
+
 
 // стили для секции "цвета и шрифты"
 .wrapper
@@ -67,7 +77,7 @@ h1, h2, h3, h4, h5, h6
     background-color: rgba(111, 207, 151, 1)
 
 .english-name
-  font-family: 'Montserrat-Bold'
+  // font-family: 'Montserrat-Bold'
   margin-bottom: 0.31em
 
 .hex-name
@@ -95,6 +105,9 @@ h1, h2, h3, h4, h5, h6
 
   &_fourth
     font-size: 0.87rem
+
+.title p
+  line-height: 1.5em
 
 .title span
   color: rgba($dark-blue, 0.25)

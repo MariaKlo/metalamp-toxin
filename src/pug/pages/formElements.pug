@@ -1,36 +1,36 @@
 // переменные
-- var textField = 'text field'
-- var dropdown = 'dropdown'
+- var textField = 'TEXT FILED'
+- var dropdown = 'DROPDOWN'
 // поля ввода
 div.elements
   form(action="/new_movie" method="POST")
     div.elements__description
       h3.elements__info #{textField}
-      p.elements__state Default 
+      p.elements__state DEFAULT 
     input(type="text" name="e-mail" placeholder="Email").elements__field
     div.elements__description
       h3.elements__info #{textField}
-      p.elements__state Hover/Focus 
+      p.elements__state HOVER/FOCUS 
     input(type="text" name="text" placeholder="This is pretty awesome").elements__field
     h3.elements__info #{dropdown}
     input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
-    h3.elements__info Masked #{textField}
+    h3.elements__info MASKED #{textField}
     input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
     div.date-dropdown
       div.date-dropdown_before
-        h3.elements__info Date #{dropdown}
-        input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
+        h3.elements__info DATE #{dropdown}
+        input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field-date
       div.date-dropdown_after
-        h3.elements__info Date #{dropdown}
-        input(type="text" name="date" placeholder="19.08.2019").elements__field
-    h3.elements__info Filer date #{dropdown}
-    input(type="text" name="date" placeholder="19 авг - 23 авг").elements__field
-    h3.elements__info Subscription #{textField}
-    input(type="text" name="e-mail" placeholder="Email").elements__field
+        h3.elements__info DATE #{dropdown}
+        input(type="text" name="date" placeholder="19.08.2019").elements__field-date
+    h3.elements__info FILTER DATE #{dropdown}
+    input(type="text" name="date" placeholder="19 авг - 23 авг").elements__field-filter
+    h3.elements__info SUBSCRIPTION #{textField}
+    input(type="text" name="e-mail" placeholder="Email").elements__field-subscription
   // кнопки
   div.buttons
     div.checkbox-buttons
-      h3.checkbox-buttons__name Checkbox buttons
+      h3.checkbox-buttons__name CHECKBOX BUTTONS
       div.checkbox-buttons__item
         input(type='checkbox' name='agreement').checkbox-buttons__field
         p.checkbox-buttons__option Можно курить
@@ -41,27 +41,27 @@ div.elements
         input(type='checkbox' name='agreement' checked).checkbox-buttons__field
         p.checkbox-buttons__option Можно пригласить гостей (до 10 человек)
     div.radio-buttons
-      h3.radio-buttons__name Radio buttons
+      h3.radio-buttons__name RADIO BUTTONS
       div.radio-buttons__wrapper
         input(type='radio', name='sex', value='Мужчина').radio-buttons__field
         input(type='radio', name='sex', value='Женщина').radio-buttons__field
     div.toggle-buttons
-      h3.toggle-buttons__name Toggle buttons
+      h3.toggle-buttons__name TOGGLE
       div.toggle-buttons__wrapper
         input(type='radio', name='news', value='Получать спецпредложения').toggle-buttons__field
         input(type='radio', name='news', value='Получать спецпредложения').toggle-buttons__field
     div.like-button
-      h3.like-buttons__name Like button
+      h3.like-buttons__name LIKE BUTTON
       div.like-buttons__wrapper
         input(type='radio', name='like', value=2).like-buttons__field
         input(type='radio', name='like', value=12).like-buttons__field
     div.rate-button
-      h3.like-buttons__name Rate button
+      h3.like-buttons__name RATE BUTTON
       div.like-buttons__wrapper
   div.other-buttons
     div.range-button
       div.range-button__info
-        h3.range-button__name Range slider
+        h3.range-button__name RANGE SLIDER
         p.range-button__price 5000&#8381; - 10000&#8381;
       div.range-button__slider
     // кнопки + пагинация
@@ -75,12 +75,13 @@ div.elements
         a(href="#" class="link-buttons_active") Click me
         a(href="#" class="link-buttons_nonactive") Click me
       button(class="button-payment") Перейти к оплате &rarr;
-  div.pagination
-    div.pagination__pages
-      span(class="pagination__page pagination__page_active") 1
-      span.pagination__page 2
-      span.pagination__page 3
-      span.pagination__page ...
-      span.pagination__page 15
-      span.pagination__page &rarr;
-    p.pagination__info 1-12 из 100+ вариантов аренды
+    div.pagination
+      h3.pagination__name PAGINATION
+      div.pagination__pages
+        span(class="pagination__page pagination__page_active") 1
+        span.pagination__page 2
+        span.pagination__page 3
+        span.pagination__page ...
+        span.pagination__page 15
+        span.pagination__page &rarr;
+      p.pagination__info 1-12 из 100+ вариантов аренды

@@ -1,0 +1,44 @@
+// переменные, миксины
+@mixin flex-between()
+    display: flex
+    justify-content: space-between
+
+@mixin input-style()
+    height: 2.75em
+    border: 0.0625em solid rgba(31, 32, 65, 0.25)
+    border-radius: 0.375em
+    padding: 0.8125em 0 0.8125em 0.9375em
+
+$font-small: 0.75rem
+// стили к инпутам
+.elements
+    display: flex
+    justify-content: space-around
+    padding-top: 8.9375em
+
+    &__description
+        @include flex-between()
+        font-size: $font-small
+
+    &__info
+        font-size: $font-small
+        margin-bottom: 0.3125em
+
+    &__field
+        width: 20em
+        @include input-style()
+        margin-bottom: 1.25em
+
+.date-dropdown
+  @include flex-between
+  margin-top: 2.5em
+  margin-bottom: 2.5625em
+
+.elements__field-date
+  width: 9.375em
+  @include input-style()
+
+.elements__field-filter, .elements__field-subscription
+  width: 16.625em
+  @include input-style()
+  margin-bottom: 2.5625em
