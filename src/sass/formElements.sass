@@ -1,4 +1,6 @@
 // переменные, миксины
+$font-small: 0.75rem
+
 @mixin flex-between()
     display: flex
     justify-content: space-between
@@ -8,8 +10,6 @@
     border: 0.0625em solid rgba(31, 32, 65, 0.25)
     border-radius: 0.375em
     padding: 0.8125em 0 0.8125em 0.9375em
-
-$font-small: 0.75rem
 // стили к инпутам
 .elements
     display: flex
@@ -42,3 +42,134 @@ $font-small: 0.75rem
   width: 16.625em
   @include input-style()
   margin-bottom: 2.5625em
+
+// стили для кнопок
+  // checkbox
+.checkbox-buttons
+  margin-bottom: 40px
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 17px
+
+  &__item
+    display: flex
+    margin-bottom: 5px
+
+  &__field
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+  &__option
+    color: rgba(31, 32, 65, 0.5)
+    margin-left: 10px
+    align-items: center
+    display: flex
+
+.checkbox-buttons__field + label
+  display: inline-flex
+  align-items: center
+  user-select: none
+
+.checkbox-buttons__field + label::before
+  content: ''
+  display: inline-block
+  flex-shrink: 0
+  flex-grow: 0
+  border: 1px solid rgba(31, 32, 65, 0.25) 
+  border-radius: 0.25em
+  width: 20px
+  height: 20px
+
+.checkbox-buttons__field:checked + label::before
+  border: 1px solid #BC9CFF
+  background-color: #BC9CFF
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+
+  // radio buttons
+.radio-buttons
+  margin-bottom: 37px
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 17px
+
+.radio-buttons__field
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.radio-buttons__field + label 
+  display: inline-flex
+  align-items: center
+  user-select: none
+  color: rgba(31, 32, 65, 0.5)
+
+.radio-buttons__field + label::before 
+  content: ''
+  display: inline-block
+  width: 1em
+  height: 1em
+  flex-shrink: 0
+  flex-grow: 0
+  border: 1px solid #adb5bd
+  border-radius: 50%
+  margin-right: 0.5em
+
+.radio-buttons__field:checked + label::before 
+  border-color: #BC9CFF
+  background-color: #BC9CFF
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
+
+  // toggle buttons
+.toggle-buttons
+  margin-bottom: 44px
+
+.toggle-buttons__wrap
+  margin-bottom: 14px
+
+.toggle-buttons__name
+  font-size: $font-small
+  margin-bottom: 17px
+
+.toggle-buttons__field 
+  position: relative
+  width: 40px
+  height: 20px
+  margin: 0
+  vertical-align: top
+  background: transparent
+  border: 1px solid rgba(31, 32, 65, 0.25)
+  border-radius: 30px
+  outline: none
+  cursor: pointer
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
+
+.toggle-buttons__field::after 
+  content: ""
+  position: absolute
+  left: 3px
+  top: 3px
+  width: 12px
+  height: 12px
+  background-color: rgba(31, 32, 65, 0.25)
+  border-radius: 50%
+  transform: translateX(0)
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
+
+.toggle-buttons__field:checked::after 
+  transform: translateX(calc(100% + 7px))
+  border-color: #BC9CFF
+  background-color: #BC9CFF
+
+.toggle-buttons__field:checked 
+  border-color: #BC9CFF
+
+
+.toggle__text
+  color: rgba(31, 32, 65, 0.75)
+  margin-left: 10px
