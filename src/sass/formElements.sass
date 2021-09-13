@@ -1,5 +1,10 @@
 // переменные, миксины
-$font-small: 0.75rem
+$font-small: 0.75rem //12px
+$purple: #BC9CFF
+$light-blue: rgba(31, 32, 65, 0.25)
+$medium-blue: rgba(31, 32, 65, 0.5)
+$dark-blue: rgba(31, 32, 65, 0.75)
+$pink: rgba(188, 156, 255, 1)
 
 @mixin flex-between()
     display: flex
@@ -7,9 +12,16 @@ $font-small: 0.75rem
 
 @mixin input-style()
     height: 2.75em
-    border: 0.0625em solid rgba(31, 32, 65, 0.25)
+    border: 0.0625em solid $light-blue
     border-radius: 0.375em
     padding: 0.8125em 0 0.8125em 0.9375em
+
+@mixin no-item()
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+
 // стили к инпутам
 .elements
     display: flex
@@ -46,15 +58,14 @@ $font-small: 0.75rem
 // стили для кнопок
   // checkbox
 .checkbox-buttons
-  margin-bottom: 40px
-
+  margin-bottom: 2.5em
   &__name
     font-size: $font-small
-    margin-bottom: 17px
+    margin-bottom: 1.0625em
 
   &__item
     display: flex
-    margin-bottom: 5px
+    margin-bottom: 0.3125em
 
   &__field
     position: absolute
@@ -62,8 +73,8 @@ $font-small: 0.75rem
     opacity: 0
 
   &__option
-    color: rgba(31, 32, 65, 0.5)
-    margin-left: 10px
+    color: $medium-blue
+    margin-left: 0.625em
     align-items: center
     display: flex
 
@@ -77,23 +88,23 @@ $font-small: 0.75rem
   display: inline-block
   flex-shrink: 0
   flex-grow: 0
-  border: 1px solid rgba(31, 32, 65, 0.25) 
+  border: 1px solid $light-blue 
   border-radius: 0.25em
-  width: 20px
-  height: 20px
+  width: 1.25em
+  height: 1.25em
 
 .checkbox-buttons__field:checked + label::before
-  border: 1px solid #BC9CFF
-  background-color: #BC9CFF
+  border: 1px solid $purple
+  background-color: $purple
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
 
   // radio buttons
 .radio-buttons
-  margin-bottom: 37px
+  margin-bottom: 2.3125em
 
   &__name
     font-size: $font-small
-    margin-bottom: 17px
+    margin-bottom: 1.0625em
 
 .radio-buttons__field
   position: absolute
@@ -104,7 +115,7 @@ $font-small: 0.75rem
   display: inline-flex
   align-items: center
   user-select: none
-  color: rgba(31, 32, 65, 0.5)
+  color: $medium-blue
 
 .radio-buttons__field + label::before 
   content: ''
@@ -118,58 +129,193 @@ $font-small: 0.75rem
   margin-right: 0.5em
 
 .radio-buttons__field:checked + label::before 
-  border-color: #BC9CFF
-  background-color: #BC9CFF
+  border-color: $purple
+  background-color: $purple
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
 
   // toggle buttons
 .toggle-buttons
-  margin-bottom: 44px
+  margin-bottom: 2.75em
 
-.toggle-buttons__wrap
-  margin-bottom: 14px
+  &__wrap
+    margin-bottom: 0.875em
 
-.toggle-buttons__name
-  font-size: $font-small
-  margin-bottom: 17px
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.0625em
 
 .toggle-buttons__field 
   position: relative
-  width: 40px
-  height: 20px
+  width: 2.5em
+  height: 1.25em
   margin: 0
   vertical-align: top
   background: transparent
-  border: 1px solid rgba(31, 32, 65, 0.25)
-  border-radius: 30px
+  border: 1px solid $light-blue
+  border-radius: 1.875em
   outline: none
   cursor: pointer
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
+  @include no-item()
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
 
 .toggle-buttons__field::after 
   content: ""
   position: absolute
-  left: 3px
-  top: 3px
-  width: 12px
-  height: 12px
-  background-color: rgba(31, 32, 65, 0.25)
+  left: 0.1875em
+  top: 0.1575em
+  width: 0.75em
+  height: 0.75em
+  background-color: $light-blue
   border-radius: 50%
   transform: translateX(0)
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
 
 .toggle-buttons__field:checked::after 
-  transform: translateX(calc(100% + 7px))
-  border-color: #BC9CFF
-  background-color: #BC9CFF
+  transform: translateX(calc(100% + 0.4375em))
+  border-color: $purple
+  background-color: $purple
 
 .toggle-buttons__field:checked 
-  border-color: #BC9CFF
-
+  border-color: $purple
 
 .toggle__text
-  color: rgba(31, 32, 65, 0.75)
-  margin-left: 10px
+  color: $dark-blue
+  margin-left: 0.625em
+
+// like buttons
+.like-buttons
+  margin-bottom: 2.5em
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.0625em
+
+.like-buttons__field
+  width: 2.5em
+  height: 1.25em
+  @include no-item()
+  border: 1px solid $light-blue
+  font-size: 0.625rem
+  border-radius: 0.625em
+
+.like-buttons__field:hover
+  border: 1px solid $pink
+  color: $pink
+
+// rate buttons 
+.rate-buttons__wrapper
+  @include flex-between()
+  
+.rate-buttons__name
+  font-size: $font-small
+  margin-bottom: 1.0625em
+
+.rate-buttons__button
+  @include no-item()
+  border: none
+  background-color: transparent
+  font-size: 1.5rem
+  color: $pink
+  padding: 0
+
+// слайдер
+.range-button
+  margin-bottom: 43px
+
+  &__info
+    @include flex-between()
+    
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.4375em
+
+  &__price
+    font-size: $font-small
+    color: $medium-blue
+
+  &__slider
+    width: 100%
+    height: 0.375em
+    border: 1px solid grey
+
+// эллипсовые кнопки
+.buttons
+  margin-bottom: 40px
+
+.buttons__name
+  font-size: $font-small
+  margin-bottom: 16px
+
+.ellipse-buttons
+  @include flex-between()
+  flex-wrap: wrap
+  margin-bottom: 31px
+
+.ellipse-buttons__button
+  width: 99px
+  height: 44px
+  border-radius: 22px
+  font-size: $font-small
+  text-transform: uppercase
+  font-weight: 700
+
+.ellipse-buttons_first
+  color: #ffffff
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+  border: none
+
+.ellipse-buttons_second
+  color: #ffffff
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+  opacity: 0.5
+  border: none
+
+.ellipse-buttons_third
+  background-color: transparent
+  color: $purple
+  border: 2px solid #8BA4F9
+
+.ellipse-buttons_fourth
+  color: $purple
+  background-color: transparent
+  border: 2px solid $purple
+
+// кнопки-ссылки
+.link-buttons
+  margin-bottom: 2.0625em
+
+.link-buttons__button
+  font-size: $font-small
+  font-weight: 700
+  text-transform: uppercase
+  background-color: transparent
+  border: none
+  color: $medium-blue
+
+.link-buttons_active
+  color: $pink
+
+.link-buttons__button:hover
+  color: $pink
+
+.button-payment
+  width: 100%
+  height: 2.75em
+  border-radius: 1.375em
+  border: none
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+  font-size: $font-small
+  color: #ffffff
+  text-transform: uppercase
+  font-weight: 700
+
+// пагинация
+.pagination__name
+  font-size: $font-small
+  margin-bottom: 1em
+
+.pagination__pages
+  margin-bottom: 0.625em
+
+.pagination__info
+  color: $dark-blue

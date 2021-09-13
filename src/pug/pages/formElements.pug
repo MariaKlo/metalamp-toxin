@@ -57,16 +57,28 @@ div.elements
           input(type='checkbox' name='news' value='Получать спецпредложения' id='toggle').toggle-buttons__field
           label(for='toggle' class='toggle__text') Получать спецпредложения
         div.toggle-buttons__wrap
-          input(type='checkbox' name='news' value='Получать спецпредложения' id='toggle').toggle-buttons__field
+          input(type='checkbox' name='news' value='Получать спецпредложения' id='toggle' checked).toggle-buttons__field
           label(for='toggle' class='toggle__text') Получать спецпредложения
-    div.like-button
+    div.like-buttons
       h3.like-buttons__name LIKE BUTTON
       div.like-buttons__wrapper
-        input(type='radio' name='like' value=2).like-buttons__field
-        input(type='radio' name='like' value=12).like-buttons__field
-    div.rate-button
-      h3.like-buttons__name RATE BUTTON
-      div.like-buttons__wrapper
+        input(type='text' name='like' id='like' placeholder='2' value=2).like-buttons__field
+        input(type='text' name='like' id='like' placeholder='12' value=12).like-buttons__field
+    div.rate-buttons
+      h3.rate-buttons__name RATE BUTTON
+        div.rate-buttons__wrapper
+          div.rate-buttons__wrap
+            button(class='rate-buttons__button rate-buttons__button_first') &#9734
+            button(class='rate-buttons__button rate-buttons__button_second') &#9734
+            button(class='rate-buttons__button rate-buttons__button_third') &#9734
+            button(class='rate-buttons__button rate-buttons__button_fourth') &#9734
+            button(class='rate-buttons__button rate-buttons__button_fifth') &#9734
+          div.rate-buttons__wrap
+            button(class='rate-buttons__button rate-buttons__button_first') &#9734
+            button(class='rate-buttons__button rate-buttons__button_second') &#9734
+            button(class='rate-buttons__button rate-buttons__button_third') &#9734
+            button(class='rate-buttons__button rate-buttons__button_fourth') &#9734
+            button(class='rate-buttons__button rate-buttons__button_fifth') &#9734
   div.other-buttons
     div.range-button
       div.range-button__info
@@ -75,14 +87,15 @@ div.elements
       div.range-button__slider
     // кнопки + пагинация
     div.buttons
+      h3.buttons__name BUTTONS
       div.ellipse-buttons
-        button(class='ellipse-buttons__button ellipse-buttons_dark-solid') Click me
-        button(class='ellipse-buttons__button ellipse-buttons_light-solid') Click me
-        button(class='ellipse-buttons__button ellipse-buttons_dark-transparent') Click me
-        button(class='ellipse-buttons__button ellipse-buttons_light-transparent') Click me
+        button(class='ellipse-buttons__button ellipse-buttons_first') Click me
+        button(class='ellipse-buttons__button ellipse-buttons_second') Click me
+        button(class='ellipse-buttons__button ellipse-buttons_third') Click me
+        button(class='ellipse-buttons__button ellipse-buttons_fourth') Click me
       div.link-buttons
-        a(href='#' class='link-buttons_active') Click me
-        a(href='#' class='link-buttons_nonactive') Click me
+        button(class='link-buttons__button link-buttons_active') Click me
+        button(class='link-buttons__button link-buttons_nonactive') Click me
       button(class='button-payment') Перейти к оплате &rarr;
     div.pagination
       h3.pagination__name PAGINATION
