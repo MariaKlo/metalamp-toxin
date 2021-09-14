@@ -107,3 +107,94 @@ div.elements
         span.pagination__page 15
         span.pagination__page &rarr;
       p.pagination__info 1-12 из 100+ вариантов аренды
+// фильтры по поиску номеров
+div.elements__filter    
+  div.filter
+    div.filter__description
+      h3.filter__info #{dropdown}
+      p.filter__state DEFAULT
+    input(type='text' name='bedroom' placeholder='2 спальни, 2 кровати' class='filter__field filter__field_first')
+    div.filter__description
+      h3.filter__info #{dropdown}
+      p.filter__state EXPANDED
+    input(type='text' name='bedroom' placeholder='2 спальни, 2 кровати' class='filter__field filter__field_second')
+    div.filter__checkbox_expanded
+      h3.filter__checkbox-title Expandable checkbox list
+      input(type='text' name='bedroom' placeholder='Expandable checkbox list' class='filter__field-checkbox filter__field-checkbox_first')
+      h3.filter__checkbox-title Expandable checkbox list
+      input(type='text' name='bedroom' placeholder='Expandable checkbox list').filter__field-checkbox
+      div.filter__checkbox
+        input(type='checkbox' name='agreement' id='filter').filter__field-checkbox
+        label(for='filter')
+        p.filter__field-option Завтрак
+      div.filter__checkbox
+        input(type='checkbox' name='agreement' id='filter' checked).filter__field-checkbox
+        label(for='filter')
+        p.filter__field-option Письменный стол
+      div.filter__checkbox
+        input(type='checkbox' name='agreement' id='filter' checked).filter__field-checkbox
+        label(for='filter')
+        p.filter__field-option Стул для кормления
+      div.filter__checkbox
+        input(type='checkbox' name='agreement' id='filter' checked).filter__field-checkbox
+        label(for='filter')
+        p.filter__field-option Кроватка
+      div.filter__checkbox
+        input(type='checkbox' name='agreement' id='filter').filter__field-checkbox
+        label(for='filter')
+        p.filter__field-option Телевизор
+      div.filter__checkbox
+        input(type='checkbox' name='agreement' id='filter').filter__field-checkbox
+        label(for='filter')
+        p.filter__field-option Шампнуь
+  // dropdown с гостями
+  div.guests
+    h3.guests__info #{dropdown}
+    input(type='text' name='dropdown' placeholder='Сколько гостей').guests__field
+    h3.guests__title Rich Checkbox Buttons
+    div.guests__checkbox-wrapper
+      div.guests__checkbox
+        input(type='checkbox' name='agreement' id='guests').guests__field-checkbox
+        label(for='guests')
+        div.guests__checkbox-wrap
+          p.guests__option-title Широкий коридор
+          p.guests__option-text Ширина коридоров в номере не менее 91 см.
+      div.guests__checkbox
+        input(type='checkbox' name='agreement' id='guests').guests__field-checkbox
+        label(for='guests')
+        div.guests__checkbox-wrap
+          p.guests__option-title Помощник для инвалидов
+          p.guests__option-text На 1 этаже вас встретит специалист  и проводит до номера.
+  // dropdown и списки
+  div.lists
+    h3.lists__info #{dropdown}
+    input(type='text' name='dropdown' placeholder='3 гостя').lists__field
+    h3.lists__bullet-title Bullet list
+    ul.lists__bullet
+      li.lists__bullet-item Нельзя с питомцами
+      li.lists__bullet-item Без вечеринок и мероприятий
+      li.lists__bullet-item Время прибытия — после 13:00, а выезд до 12:00
+// комментарии
+div.elements__comments
+  div.comments
+    div.comment
+      // picture here
+      div.comment__wrap
+        h3.comment__title Комфорт
+        p.comment__description Шумопоглащающие стены
+    div.comment
+      // picture here
+      div.comment__wrap
+        h3.comment__title Удобство
+        p.comment__description Окно в каждой из спален
+  div.feedback
+    div.feedback__info
+      // picture here
+      div.feedback__wrap
+        p.feedback__username Мурад Сарафанов
+        p.feedback__time 5 дней назад
+    div.feedback__wrap
+      input(type='text' name='like' id='like' placeholder='12' value=12).feedback__field
+      p.feedback__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+

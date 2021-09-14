@@ -21,9 +21,22 @@ $pink: rgba(188, 156, 255, 1)
   -moz-appearance: none
   appearance: none
 
+@mixin button-style()
+  font-weight: 700
+  text-transform: uppercase
+  border: none
 
+@mixin ellipse-button-style-first()
+  color: #ffffff
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+  border: none
+  
+@mixin ellipse-button-style-second()
+  background-color: transparent
+  color: $purple
+  border: 2px solid #8BA4F9
 // стили к инпутам
-.elements
+.elements, .elements__filter, .elements__comments
     display: flex
     justify-content: space-around
     padding-top: 8.9375em
@@ -240,45 +253,33 @@ $pink: rgba(188, 156, 255, 1)
 
 // эллипсовые кнопки
 .buttons
-  margin-bottom: 40px
+  margin-bottom: 2.5em
 
 .buttons__name
   font-size: $font-small
-  margin-bottom: 16px
+  margin-bottom: 1em
 
 .ellipse-buttons
   @include flex-between()
   flex-wrap: wrap
-  margin-bottom: 31px
+  margin-bottom: 1.9375em
 
 .ellipse-buttons__button
-  width: 99px
-  height: 44px
-  border-radius: 22px
+  width: 6.1875em
+  height: 2.75em
+  border-radius: 1.375em
   font-size: $font-small
   text-transform: uppercase
   font-weight: 700
 
-.ellipse-buttons_first
-  color: #ffffff
-  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
-  border: none
+.ellipse-buttons_first, .ellipse-buttons_second
+  @include ellipse-button-style-first()
 
 .ellipse-buttons_second
-  color: #ffffff
-  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   opacity: 0.5
-  border: none
 
-.ellipse-buttons_third
-  background-color: transparent
-  color: $purple
-  border: 2px solid #8BA4F9
-
-.ellipse-buttons_fourth
-  color: $purple
-  background-color: transparent
-  border: 2px solid $purple
+.ellipse-buttons_third, .ellipse-buttons_fourth
+  @include ellipse-button-style-second()
 
 // кнопки-ссылки
 .link-buttons
@@ -286,10 +287,8 @@ $pink: rgba(188, 156, 255, 1)
 
 .link-buttons__button
   font-size: $font-small
-  font-weight: 700
-  text-transform: uppercase
+  @include button-style()
   background-color: transparent
-  border: none
   color: $medium-blue
 
 .link-buttons_active
@@ -302,12 +301,10 @@ $pink: rgba(188, 156, 255, 1)
   width: 100%
   height: 2.75em
   border-radius: 1.375em
-  border: none
+  @include button-style()
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   font-size: $font-small
   color: #ffffff
-  text-transform: uppercase
-  font-weight: 700
 
 // пагинация
 .pagination__name
@@ -318,4 +315,92 @@ $pink: rgba(188, 156, 255, 1)
   margin-bottom: 0.625em
 
 .pagination__info
+  color: $dark-blue
+
+// фильтры по поиску номеров
+.filter__description
+  @include flex-between()
+
+.filter__info, .filter__state
+  font-size: $font-small
+  margin-bottom: 0.3125em
+
+.filter__field
+  width: 16.625em
+  padding: 0.75em 0 0.5em 0.9375em
+  border-radius: 0.325em
+  border: 1px solid $light-blue
+
+.filter__field_first
+  margin-bottom: 1.25em
+
+.filter__field_second
+  margin-bottom: 3.375em
+
+.filter__checkbox-title
+  text-transform: uppercase
+  font-size: $font-small
+  margin-bottom: 3.0625em
+
+.filter__field-option
+  color: $medium-blue
+
+// dropdown с гостями
+.guests__info
+  margin-bottom: 0.3125em
+  font-size: $font-small
+
+.guests__field, .lists__field
+  width: 20em
+  padding: 0.75em 0 0.5em 0.9375em
+  border-radius: 0.325em
+  border: 1px solid $light-blue
+  margin-bottom: 6.125em
+
+.guests__title
+  font-size: $font-small
+  margin-bottom: 1em
+
+.guests__checkbox
+  display: flex
+  margin-bottom: 0.6875em
+
+.guests__option-title
+  color: $dark-blue
+  font-weight: 700
+  margin-bottom: 0.3125em
+
+.guests__option-text
+  color: $medium-blue
+
+// dropdown и списки
+.lists__bullet-title
+  font-size: $font-small
+  margin-bottom: 1em
+
+.lists__bullet-item
+  color: $dark-blue
+  margin-bottom: 0.625em
+
+// комментарии
+.comment
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1)
+  display: flex
+  padding-bottom: 1.0625em
+
+  &__title
+    font-weight: 700
+    margin-bottom: 0.4375em
+
+  &__description
+    color: $dark-blue
+
+.feedback__info, .feedback__wrap
+  display: flex
+
+.feedback__username
+  font-weight: 700
+  margin-bottom: 0.4375em
+
+.feedback__time, .feedback__text
   color: $dark-blue
