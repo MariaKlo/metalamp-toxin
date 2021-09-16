@@ -27,7 +27,7 @@ $pink: rgba(188, 156, 255, 1)
   border: none
 
 @mixin ellipse-button-style-first()
-  color: #ffffff
+  color: rgba(255, 255, 255, 1)
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   border: none
   
@@ -37,6 +37,7 @@ $pink: rgba(188, 156, 255, 1)
   border: 2px solid #8BA4F9
 // стили к инпутам
 .elements, .elements__filter, .elements__comments
+    background-color: rgba(255, 255, 255, 1)
     display: flex
     justify-content: space-around
     padding-top: 8.9375em
@@ -120,7 +121,7 @@ $pink: rgba(188, 156, 255, 1)
   width: 18px
   height: 18px
   border: 1px solid #dddddd
-  background-color: #ffffff
+  background-color: rgba(255, 255, 255, 1)
 
 .checkbox-buttons__field:checked + label:before, 
 .checkbox-buttons__field:not(:checked) + label:before 
@@ -366,7 +367,7 @@ $pink: rgba(188, 156, 255, 1)
   @include button-style()
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   font-size: $font-small
-  color: #ffffff
+  color: rgba(255, 255, 255, 1)
 
 // пагинация
 .pagination__name
