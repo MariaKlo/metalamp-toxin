@@ -1,3 +1,5 @@
+@import "scss/fontawesome.scss"
+@import "scss/brands.scss"
 // mixins, variables
 $dark-blue: rgba(31, 32, 65, 0.75)
 $medium-blue: rgba(31, 32, 65, 0.5)
@@ -10,11 +12,14 @@ $white: #ffffff
 
 .header
   display: flex
-  justify-content: space-around
+  justify-content: space-between
   align-items: center
   background-color: $white
   margin-bottom: 2.5em 
-  padding: 15px 0
+  padding-top: 0.9375em
+  padding-bottom: 0.9375em
+  padding-left: 1.5625em
+  padding-right: 1.5625em
   box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
   -webkit-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
   -moz-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
@@ -71,3 +76,79 @@ $white: #ffffff
   border-left: 1px solid $thin-blue
   color: $medium-blue
   padding-left: 1.25em
+
+// footer
+.footers
+  margin-bottom: 3.125em
+
+.footer
+  background-color: $white
+  margin-bottom: 2.5em
+  padding-top: 6.5em
+  padding-bottom: 1.625em
+  padding-left: 1.5625em
+  padding-right: 1.5625em
+  box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
+  -webkit-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
+  -moz-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
+
+.footer__nav
+  border-bottom: 1px solid rgba(31, 32, 65, 0.05)
+  display: flex
+  justify-content: space-between
+  padding-bottom: 6.25em
+
+.footer__copyright
+  display: flex
+  justify-content: space-between
+  padding-top: 1.625em
+
+.footer__logo
+  background: url('../img/logo-color.png') no-repeat top left
+  height: 3em
+  margin-bottom: 1.25em
+
+.footer__text
+  color: $dark-blue
+  max-width: 16.25em
+  line-height: 1.5em
+
+.footer__wrap
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.footer__title
+  font-size: 0.75rem
+
+.footer__item
+  color: $medium-blue
+  text-decoration: none
+
+.footer__input
+  border: 1px solid rgba(31, 32, 65, 0.25)
+  color: rgba(31, 32, 65, 0.25)
+  padding: 0.75em 0 0.75em 0.9375em
+  border-radius: 0.2em
+
+.footer__copy
+  color: $dark-blue
+
+.fab
+  margin-right: 1.25em
+  font-size: 1.5rem
+  color: #BC9CFF 
+
+.footer_center
+  max-width: 48em
+  margin: 0 auto
+  text-align: center
+  padding-bottom: 7.5em
+
+.footer__text_center
+  max-width: 35em
+  margin: 0 auto
+  margin-bottom: 1.5625em
+
+.footer__logo_center
+  background: url('../img/logo-color.png') no-repeat center center
