@@ -1,18 +1,15 @@
 @import "scss/fontawesome.scss"
 @import "scss/brands.scss"
-// mixins, variables
-$dark-blue: rgba(31, 32, 65, 0.75)
-$medium-blue: rgba(31, 32, 65, 0.5)
-$thin-blue: rgba(31, 32, 65, 0.1)
-$white: #ffffff
+@import "partials/__mixins.sass"
+@import "partials/__variables.sass"
+@import "partials/__tegs.sass"
 
 // headers
 .headers
   background-color: #E5E5E5
 
 .header
-  display: flex
-  justify-content: space-between
+  @include flex-between()
   align-items: center
   background-color: $white
   margin-bottom: 2.5em 
@@ -20,18 +17,16 @@ $white: #ffffff
   padding-bottom: 0.9375em
   padding-left: 1.5625em
   padding-right: 1.5625em
-  box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
-  -webkit-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
-  -moz-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
+  @include shadows()
     
-.header__logo
-  background: url('../img/logo-color.png') no-repeat top left
-  height: 3em
-  width: 7.925em
+  &__logo
+    background: url('../img/logo-color.png') no-repeat top left
+    height: 3em
+    width: 7.925em
 
-.header__wrapper
-  display: flex
-  align-items: baseline
+  &__wrapper
+    display: flex
+    align-items: baseline
 
 .header__menu
   display: flex
@@ -88,51 +83,46 @@ $white: #ffffff
   padding-bottom: 1.625em
   padding-left: 1.5625em
   padding-right: 1.5625em
-  box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
-  -webkit-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
-  -moz-box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
+  @include shadows()
 
-.footer__nav
-  border-bottom: 1px solid rgba(31, 32, 65, 0.05)
-  display: flex
-  justify-content: space-between
-  padding-bottom: 6.25em
+  &__nav
+    border-bottom: 1px solid rgba(31, 32, 65, 0.05)
+    @include flex-between()
+    padding-bottom: 6.25em
 
-.footer__copyright
-  display: flex
-  justify-content: space-between
-  padding-top: 1.625em
+  &__copyright
+    @include flex-between()
+    padding-top: 1.625em
 
-.footer__logo
-  background: url('../img/logo-color.png') no-repeat top left
-  height: 3em
-  margin-bottom: 1.25em
+  &__logo
+    background: url('../img/logo-color.png') no-repeat top left
+    height: 3em
+    margin-bottom: 1.25em
 
-.footer__text
-  color: $dark-blue
-  max-width: 16.25em
-  line-height: 1.5em
+  &__text
+    color: $dark-blue
+    max-width: 16.25em
+    line-height: 1.5em
 
-.footer__wrap
-  display: flex
-  flex-direction: column
-  justify-content: space-between
+  &__wrap
+    @include flex-between()
+    flex-direction: column
 
-.footer__title
-  font-size: 0.75rem
+  &__title
+    font-size: 0.75rem
 
-.footer__item
-  color: $medium-blue
-  text-decoration: none
+  &__item
+    color: $medium-blue
+    text-decoration: none
 
-.footer__input
-  border: 1px solid rgba(31, 32, 65, 0.25)
-  color: rgba(31, 32, 65, 0.25)
-  padding: 0.75em 0 0.75em 0.9375em
-  border-radius: 0.2em
+  &__input
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    color: rgba(31, 32, 65, 0.25)
+    padding: 0.75em 0 0.75em 0.9375em
+    border-radius: 0.2em
 
-.footer__copy
-  color: $dark-blue
+  &__copy
+    color: $dark-blue
 
 .fab
   margin-right: 1.25em

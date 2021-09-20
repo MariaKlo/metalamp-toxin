@@ -1,12 +1,104 @@
 div.cards
+  // rooms
   form.rooms(action="#")
     h1.rooms__title Найдём номера под ваши пожелания
     div.rooms__date
-      h3.rooms__info прибытие
-      input(type="text" name="date" class="rooms__datepick")  
+      h3.rooms__info Прибытие
+      input(type="text" name="date" class="rooms__datepick")
+    div.rooms__date
+      h3.rooms__info Выезд
+      input(type="text" name="date" class="rooms__datepick")
+    div.rooms__date
+      h3.rooms__info Гости
+      input(type="text" name="date" class="rooms__guests" placeholder="Сколько гостей")
+    button(type="submit" class="rooms__btn")
+  // registration    
   form.registration(action="#")
+    h1.registration__title Регистрация аккаунта
+    div.registration__username
+      input(type="text" name="first name" class="registration__input" placeholder="Имя")
+      input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
+    div.registration__username
+      input(type="radio" name="male" class="registration__input_radio")
+      input(type="radio" name="female" class="registration__input_radio")
+    div.registration__birth
+      h3.registration__birth-title Дата Рождения
+      input(type="text" name="date" class="registration__datepick")
+    div.registration__data
+      h3.registration__data-title Данные для входа в сервис
+      input(type="text" name="email" class="registration__input" placeholder="Email")
+      input(type="text" name="password" class="registration__input" placeholder="Пароль")
+    input(type="toggle" name="offers" class="registration__toggle-btn" id="registration__toggle")
+    label(for="registration__toggle")
+    button(type="submit" class="registration__btn") Перейти к оплате
+    div.registration_exist
+      p.registration__text_exist Уже есть аккаунт на Toxin
+      button(type="submit" class="registration__btn_sign-in") Войти
+  // book
   form.book(action="#")
+    div.book__wrap
+      h1.book__title №888
+        span Люкс
+      p.book__price 9 990 &#x20bd;
+        span в сутки
+    div.book__wrap
+      div.book__wrap
+        h3.book__title_small Прибытие
+        input(type="text" name="arrival" class="book__input")
+      div.book__wrap
+        h3.book__title_small Выезд
+        input(type="text" name="departure" class="book__input")
+    h3.book__title_small
+    input(type="text" name="guests" class="book__input book__input_guests")
+    div.book__total
+      div.book__wrap
+        p.book__text 9 990&#x20bd; х 4 суток
+        p.book__total-price 39 960&#x20bd;
+      div.book__wrap
+        p.book__text Сбор за услуги: скидка 2 179&#x20bd; 
+          span &#9432;
+        p.book__total-price 0&#x20bd;
+      div.book__wrap
+        p.book__text Сбор за дополнительные услуги
+          span &#9432;
+        p.book__total-price 300&#x20bd;
+      div.book__wrap
+        p.book__text Итого
+        p.book__total-price 38 081&#x20bd;
+    button(type="submit" class="book__btn")
+  // sign-in
   form.sign-in(action="#")
+    h1.sign-in__title Войти
+    input(type="text" name="email" class="sign-in__input" placeholder="Email")
+    input(type="text" name="password" class="sign-in__input" placeholder="Пароль")
+    button(type="submit" class="sign-in__btn")
+    div.sign-in__wrap
+      p.sign-in__text Нет аккаунта на Toxin?
+      button(type="submit" class="sign-in__btn_sign-up") Создать
+  // calendar
   form.calendar(action="#")
+  // jquery plugin here
+  // luxury room
   form.luxury-room(action="#")
-  form.usual-room(action="#")       
+    div.luxury-room__img
+    div.luxury-room__wrap
+      h1.luxury-room__title №888
+        span Люкс
+      p.luxury-room__price 9 990 &#x20bd;
+        span в сутки
+    div.luxury-room__wrap
+      // star buttons
+      p.luxury-rooms__comments 145
+        span отзывов
+  // usual room
+  form.usual-room(action="#")
+    div.usual-room__img
+      div.usual-room__wrap
+        h1.usual-room__title №840
+          span Люкс
+        p.usual-room__price 9 900 &#x20bd;
+          span в сутки
+      div.usual-room__wrap
+        // star buttons
+        p.usual-rooms__comments 65
+          span отзывов       
