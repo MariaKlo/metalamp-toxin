@@ -2,25 +2,28 @@ div.cards
   // rooms
   form.rooms(action="#")
     h1.rooms__title Найдём номера под ваши пожелания
-    div.rooms__date
-      h3.rooms__info Прибытие
-      input(type="text" name="date" class="rooms__datepick")
-    div.rooms__date
-      h3.rooms__info Выезд
-      input(type="text" name="date" class="rooms__datepick")
-    div.rooms__date
+    div.rooms__wrapper
+      div.rooms__wrap
+        h3.rooms__info Прибытие
+        input(type="text" name="date" class="rooms__date")
+      div.rooms__wrap
+        h3.rooms__info Выезд
+        input(type="text" name="date" class="rooms__date")
+    div.rooms__guests
       h3.rooms__info Гости
-      input(type="text" name="date" class="rooms__guests" placeholder="Сколько гостей")
-    button(type="submit" class="rooms__btn")
+      input(type="text" name="date" class="rooms__guests-input" placeholder="Сколько гостей")
+    button(type="submit" class="rooms__btn") Подобрать номер
   // registration    
   form.registration(action="#")
     h1.registration__title Регистрация аккаунта
-    div.registration__username
+    div.registration__info
       input(type="text" name="first name" class="registration__input" placeholder="Имя")
       input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
     div.registration__username
-      input(type="radio" name="male" class="registration__input_radio")
-      input(type="radio" name="female" class="registration__input_radio")
+      input(type="radio" name="male" class="registration__input_radio" id="male")
+      label(for="male" class="male") Мужчина
+      input(type="radio" name="female" class="registration__input_radio" id="female")
+      label(for="female") Женщина
     div.registration__birth
       h3.registration__birth-title Дата Рождения
       input(type="text" name="date" class="registration__datepick")
@@ -28,8 +31,9 @@ div.cards
       h3.registration__data-title Данные для входа в сервис
       input(type="text" name="email" class="registration__input" placeholder="Email")
       input(type="text" name="password" class="registration__input" placeholder="Пароль")
-    input(type="toggle" name="offers" class="registration__toggle-btn" id="registration__toggle")
-    label(for="registration__toggle")
+    div.registration__wrap
+      input(type="checkbox" name="offers" class="registration__toggle-btn" id="registration__toggle")
+      label(for="registration__toggle" class="registration__toggle") Получать спецпредложения
     button(type="submit" class="registration__btn") Перейти к оплате
     div.registration_exist
       p.registration__text_exist Уже есть аккаунт на Toxin

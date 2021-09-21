@@ -3,9 +3,9 @@
 @import "partials/__tegs.sass"
 // стили для секции "цвета и шрифты"
 .wrapper
-  display: $flex-display
-  justify-content: space-around
+  @include flex-between()
   padding-top: 9.06em
+  @include container()
 
 .logo
   background: #ffffff url('../img/logo.png') no-repeat top left

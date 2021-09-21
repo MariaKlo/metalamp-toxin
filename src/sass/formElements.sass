@@ -3,9 +3,9 @@
 @import "partials/__tegs.sass"
 // стили к инпутам
 .elements, .elements__filter, .elements__comments
-    background-color: rgba(255, 255, 255, 1)
-    display: flex
-    justify-content: space-around
+    background-color: $white
+    @include flex-between()
+    @include container()
     padding-top: 8.9375em
 
     &__description
@@ -333,7 +333,7 @@
   @include button-style()
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   font-size: $font-small
-  color: rgba(255, 255, 255, 1)
+  color: $white
 
 // пагинация
 .pagination__name
