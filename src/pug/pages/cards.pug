@@ -43,16 +43,17 @@ div.cards
     div.book__wrap
       h1.book__title №888
         span Люкс
-      p.book__price 9 990 &#x20bd;
+      p.book__price 9 990&#x20bd;
         span в сутки
     div.book__wrap
-      div.book__wrap
+      div.book__wrapper
         h3.book__title_small Прибытие
         input(type="text" name="arrival" class="book__input")
       div.book__wrap
-        h3.book__title_small Выезд
-        input(type="text" name="departure" class="book__input")
-    h3.book__title_small
+        div.book__wrapper
+          h3.book__title_small Выезд
+          input(type="text" name="departure" class="book__input")
+    h3.book__title_small Гости
     input(type="text" name="guests" class="book__input book__input_guests")
     div.book__total
       div.book__wrap
@@ -67,15 +68,16 @@ div.cards
           span &#9432;
         p.book__total-price 300&#x20bd;
       div.book__wrap
-        p.book__text Итого
-        p.book__total-price 38 081&#x20bd;
-    button(type="submit" class="book__btn")
+        p.book__result Итого
+        div.book__line
+        p.book__result 38 081&#x20bd;
+    button(type="submit" class="book__btn") Забронировать
   // sign-in
   form.sign-in(action="#")
     h1.sign-in__title Войти
     input(type="text" name="email" class="sign-in__input" placeholder="Email")
-    input(type="text" name="password" class="sign-in__input" placeholder="Пароль")
-    button(type="submit" class="sign-in__btn")
+    input(type="text" name="password" class="sign-in__input sign-in__input_second" placeholder="Пароль")
+    button(type="submit" class="sign-in__btn") Войти
     div.sign-in__wrap
       p.sign-in__text Нет аккаунта на Toxin?
       button(type="submit" class="sign-in__btn_sign-up") Создать
@@ -85,24 +87,23 @@ div.cards
   // luxury room
   form.luxury-room(action="#")
     div.luxury-room__img
-    div.luxury-room__wrap
+    div(class="luxury-room__wrap luxury-room__wrap_border")
       h1.luxury-room__title №888
         span Люкс
-      p.luxury-room__price 9 990 &#x20bd;
+      p.luxury-room__price 9 990&#x20bd;
         span в сутки
     div.luxury-room__wrap
       // star buttons
-      p.luxury-rooms__comments 145
+      p.luxury-room__comments 145
         span отзывов
   // usual room
   form.usual-room(action="#")
     div.usual-room__img
-      div.usual-room__wrap
-        h1.usual-room__title №840
-          span Люкс
-        p.usual-room__price 9 900 &#x20bd;
-          span в сутки
-      div.usual-room__wrap
-        // star buttons
-        p.usual-rooms__comments 65
-          span отзывов       
+    div(class="usual-room__wrap usual-room__wrap_border")
+      h1.usual-room__title №840
+      p.usual-room__price 9 900&#x20bd;
+        span в сутки
+    div.usual-room__wrap
+      // star buttons
+      p.usual-room__comments 65
+        span отзывов       
