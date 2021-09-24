@@ -45,24 +45,16 @@
 .header__button
   text-transform: uppercase
 
-.button__sign-in
-  background-color: transparent
-  border: 2px solid #BC9CFF
-  border-radius: 1.375em
-  color: rgba(188, 156, 255, 1)
-  font-weight: 700
-  padding: 0.625em 1.25em
+.button__sign-in 
+  @include ellipse-button-style-transparent()
   margin-right: 1.25em
+  padding: 0.625em 1.25em
 
 .button__sign-in:hover, .button__sign-up:hover
-  opacity: 0.5
-  transition: all 0.2s ease
+  @include button-hover()
 
 .button__sign-up
-  color: $white
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  border: none
-  border-radius: 1.375em
+  @include ellipse-button-style-solid()
   font-weight: 700
   padding: 0.725em 1.35em
 

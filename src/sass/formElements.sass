@@ -22,7 +22,7 @@
         margin-bottom: 1.25em
 
 .date-dropdown
-  @include flex-between
+  @include flex-between()
   margin-top: 2.5em
   margin-bottom: 2.5625em
 
@@ -45,7 +45,7 @@
 
   &__item
     display: flex
-    margin-bottom: 0.3125em
+    margin-bottom: 0.8125em
 
   &__field
     position: absolute
@@ -91,7 +91,9 @@
 
 .checkbox-buttons__field:checked + label:before, 
 .checkbox-buttons__field:not(:checked) + label:before 
-  border-radius: 2px
+  border-radius: 4px
+  border: 1px solid $purple
+
 
 .radio-buttons__field:checked + label:before, 
 .radio-buttons__field:not(:checked) + label:before 
@@ -111,10 +113,15 @@
 .checkbox-buttons__field:checked + label:after, 
 .checkbox-buttons__field:not(:checked) + label:after 
   left: 3px
-  top: 4px
+  top: 5px
   width: 10px
   height: 5px
-  border-radius: 1px
+  background-image: linear-gradient(rgba(188, 156, 255, 1), rgba(188, 156, 255, 1)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  background-origin: border-box
+  background-clip: content-box, border-box
+  box-shadow: 2px 1000px 1px #fff inset
+  -moz-border-image: -moz-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-border-image: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   border-left: 4px solid $purple
   border-bottom: 4px solid #8BA4F9
   -webkit-transform: rotate(-45deg)
@@ -125,12 +132,12 @@
 
 .radio-buttons__field:checked + label:after, 
 .radio-buttons__field:not(:checked) + label:after 
-  left: 5px
-  top: 5px
-  width: 10px
-  height: 10px
+  left: 4px
+  top: 4px
+  width: 12px
+  height: 12px
   border-radius: 100%
-  background-color: #e145a3
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
 .checkbox-buttons__field:not(:checked) + label:after, 
 .radio-buttons__field:not(:checked) + label:after 
@@ -171,8 +178,7 @@
   margin-right: 0.5em
 
 .radio-buttons__field:checked + label::before 
-  border-color: $purple
-  background-color: $purple
+  border: 1px solid $purple
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
 
   // toggle buttons
@@ -301,14 +307,14 @@
   text-transform: uppercase
   font-weight: 700
 
-.ellipse-buttons_first, .ellipse-buttons_second
-  @include ellipse-button-style-first()
+.ellipse-buttons_solid
+  @include ellipse-button-style-solid()
 
-.ellipse-buttons_second
-  opacity: 0.5
+.ellipse-buttons_solid:hover, .ellipse-buttons_transparent:hover
+  @include button-hover()
 
-.ellipse-buttons_third, .ellipse-buttons_fourth
-  @include ellipse-button-style-second()
+.ellipse-buttons_transparent
+  @include ellipse-button-style-transparent()
 
 // кнопки-ссылки
 .link-buttons
@@ -328,12 +334,14 @@
 
 .button-payment
   width: 100%
-  height: 2.75em
   border-radius: 1.375em
   @include button-style()
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   font-size: $font-small
   color: $white
+
+.button-payment:hover
+  @include button-hover()
 
 // пагинация
 .pagination__name
