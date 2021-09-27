@@ -62,23 +62,65 @@ div.elements
     div.like-buttons
       h3.like-buttons__name LIKE BUTTON
       div.like-buttons__wrapper
-        input(type="text" name="like" id="like" placeholder="2" value=2).like-buttons__field
-        input(type="text" name="like" id="like" placeholder="12" value=12).like-buttons__field
+          button(type="text" name="like").like-buttons__btn 
+            span &#9825;
+          button(type="text" name="like").like-buttons__btn 
+            span &#9825;
     div.rate-buttons
       h3.rate-buttons__name RATE BUTTON
-        div.rate-buttons__wrapper
-          div.rate-buttons__wrap
-            button(type="submit" class="rate-buttons__button rate-buttons__button_first") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_second") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_third") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_fourth") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_fifth") &#9734
-          div.rate-buttons__wrap
-            button(type="submit" class="rate-buttons__button rate-buttons__button_first") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_second") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_third") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_fourth") &#9734
-            button(type="submit" class="rate-buttons__button rate-buttons__button_fifth") &#9734
+      div.rate-buttons__wrapper
+        div.rate-buttons__wrap
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_first" id="rate-buttons_first")
+          label(for="rate-buttons_first")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg>
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_second" id="rate-buttons_second")
+          label(for="rate-buttons_second")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg>
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_third" id="rate-buttons_third")
+          label(for="rate-buttons_third")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fourth" id="rate-buttons_fourth")
+          label(for="rate-buttons_fourth")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fifth" id="rate-buttons_fifth")
+          label(for="rate-buttons_fifth")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+        div.rate-buttons__wrap
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_first" id="rate-buttons_sixth")
+          label(for="rate-buttons_sixth")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_second" id="rate-buttons_seventh")
+          label(for="rate-buttons_seventh")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_third" id="rate-buttons_eigth")
+          label(for="rate-buttons_eigth")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fourth" id="rate-buttons_ninth")
+          label(for="rate-buttons_ninth")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
+          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fifth" id="rate-buttons_tenth")
+          label(for="rate-buttons_tenth")
+            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
+            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+            </svg> 
   div.other-buttons
     div.range-button
       div.range-button__info
