@@ -62,65 +62,118 @@ div.elements
     div.like-buttons
       h3.like-buttons__name LIKE BUTTON
       div.like-buttons__wrapper
-          button(type="text" name="like").like-buttons__btn 
-            span &#9825;
-          button(type="text" name="like").like-buttons__btn 
-            span &#9825;
+        div.like-buttons__source
+        <svg height="0" width="0">
+          <path id="heart-icon" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454C30,20.335,16,28.261,16,28.261z"/>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grad-heart">
+            <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+            <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+          </linearGradient>
+          <symbol id="heart" viewBox="0 0 32 32">
+            <polygon id="heart-shape" stroke="url(#grad-heart)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+          </symbol>            
+        </svg>
+        div.like-buttons__wrap
+          <input type="radio" name="like" id="liked">
+          <label for="liked" class="heart__label">
+            <svg class="icon is-outlined is-hoverable" viewBox="0 0 32 32">
+              <use xlink:href="#heart-icon"></use>
+            </svg>
+            span.heart__counter 2
+          </label>
+        div.like-buttons__wrap
+          <input type="radio" name="like" id="liked_second">
+          <label for="liked_second" class="heart__label">
+            <svg class="icon is-outlined is-hoverable" viewBox="0 0 32 32">
+              <use xlink:href="#heart-icon"></use>
+            </svg>
+            span.heart__counter 12
+          </label>
     div.rate-buttons
       h3.rate-buttons__name RATE BUTTON
       div.rate-buttons__wrapper
+        div.rate-buttons__source
+        <svg class="gradient">
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grad">
+            <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+            <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+          </linearGradient>
+          <symbol id="star" viewBox="153 89 106 108">
+            <polygon id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+          </symbol>
+        </svg>
         div.rate-buttons__wrap
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_first" id="rate-buttons_first")
-          label(for="rate-buttons_first")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+          <input type="radio" name="star" id="five">
+          <label for="five">
+            <svg class="star">
+              <use xlink:href="#star"/>
             </svg>
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_second" id="rate-buttons_second")
-          label(for="rate-buttons_second")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
+          </label>
+          <input type="radio" name="star" id="four">
+          <label for="four">
+            <svg class="star">
+              <use xlink:href="#star"/>
             </svg>
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_third" id="rate-buttons_third")
-          label(for="rate-buttons_third")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fourth" id="rate-buttons_fourth")
-          label(for="rate-buttons_fourth")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fifth" id="rate-buttons_fifth")
-          label(for="rate-buttons_fifth")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
+          </label>
+          <input type="radio" name="star" id="three">
+          <label for="three">
+            <svg class="star">
+              <use xlink:href="#star"/>
+            </svg>
+          </label>
+          <input type="radio" name="star" id="two">
+          <label for="two">
+            <svg class="star">
+              <use xlink:href="#star" />
+            </svg>
+          </label>
+          <input type="radio" name="star" id="one">
+          <label for="one">
+            <svg class="star">
+              <use xlink:href="#star" />
+            </svg>
+          </label>
+        div.rate-buttons__source
+        <svg class="gradient">
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grads">
+            <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+            <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+          </linearGradient>
+          <symbol id="stars" viewBox="153 89 106 108">
+            <polygon id="stars-shapes" stroke="url(#grads)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+          </symbol>
+        </svg>
         div.rate-buttons__wrap
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_first" id="rate-buttons_sixth")
-          label(for="rate-buttons_sixth")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_second" id="rate-buttons_seventh")
-          label(for="rate-buttons_seventh")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_third" id="rate-buttons_eigth")
-          label(for="rate-buttons_eigth")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fourth" id="rate-buttons_ninth")
-          label(for="rate-buttons_ninth")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
-          input(type="checkbox" class="rate-buttons__button rate-buttons__button_fifth" id="rate-buttons_tenth")
-          label(for="rate-buttons_tenth")
-            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink" class="rate-buttons__star">
-            <path d="M512 198.525l-176.89-25.704-79.11-160.291-79.108 160.291-176.892 25.704 128 124.769-30.216 176.176 158.216-83.179 158.216 83.179-30.217-176.176 128.001-124.769z"></path>
-            </svg> 
+          <input type="radio" name="stars" id="fives">
+          <label for="fives">
+            <svg class="star">
+              <use xlink:href="#stars"/>
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="fours">
+          <label for="fours">
+            <svg class="star">
+              <use xlink:href="#stars"/>
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="threes">
+          <label for="threes">
+            <svg class="star">
+              <use xlink:href="#stars"/>
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="twos">
+          <label for="twos">
+            <svg class="star">
+              <use xlink:href="#stars" />
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="ones">
+          <label for="ones">
+            <svg class="star">
+              <use xlink:href="#stars" />
+            </svg>
+          </label>
   div.other-buttons
     div.range-button
       div.range-button__info
@@ -136,8 +189,8 @@ div.elements
         button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
         button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
       div.link-buttons
-        button(type="submit" class="link-buttons__button link-buttons_active") Click me
-        button(type="submit" class="link-buttons__button link-buttons_nonactive") Click me
+        button(type="submit" class="link-buttons__button") Click me
+        button(type="submit" class="link-buttons__button") Click me
       button(type="submit" class="button-payment") Перейти к оплате &rarr;
     div.pagination
       h3.pagination__name PAGINATION
@@ -220,18 +273,18 @@ div.elements__filter
 div.elements__comments
   div.comments
     div.comment
-      // picture here
+      div.comment__img
       div.comment__wrap
         h3.comment__title Комфорт
         p.comment__description Шумопоглащающие стены
     div.comment
-      // picture here
+      div.comment__img_second
       div.comment__wrap
         h3.comment__title Удобство
         p.comment__description Окно в каждой из спален
   div.feedback
     div.feedback__info
-      // picture here
+      div.feedback__img
       div.feedback__wrap
         p.feedback__username Мурад Сарафанов
         p.feedback__time 5 дней назад

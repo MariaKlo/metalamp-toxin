@@ -2,6 +2,9 @@
 @import "partials/__variables.sass"
 @import "partials/__tegs.sass"
 // стили к инпутам
+.elements
+  background: #ffffff url('../img/Group.svg') no-repeat top left
+
 .elements, .elements__filter, .elements__comments
     background-color: $white
     @include flex-between()
@@ -238,63 +241,151 @@
     font-size: $font-small
     margin-bottom: 1.0625em
 
-  &__wrap
-    position: relative
+  &__wrapper
+    display: flex
 
-  &__btn
-    width: 2.8em
-    height: 1.4em
-    @include no-item()
-    border: 1px solid $light-blue
-    background-color: transparent
-    font-size: 0.625rem
-    border-radius: 0.625em
-    padding: 0 0 0 0.25em
-
-.like-buttons__btn span
-  font-size: 0.75rem
+.heart__counter
   color: $light-blue
-  display: flex
-  align-items: center
-  height: 0.6em
+  font-size: 0.625rem
 
   &:hover
     color: $purple
 
-.like-buttons__btn:hover
-  border: 1px solid $pink
-  color: $pink
+.heart__label
+  display: flex
+  align-items: center
+
+.icon.is-outlined
+  stroke: $light-blue
+  stroke-width: 2px
+  fill: transparent
+  width: 1em
+  height: 1.2em
+
+.icon.is-hoverable:hover
+  stroke: $purple
+  fill: $purple
+  cursor: pointer
+
+input[name="like"] 
+  display: inline-block
+  width: 0
+  opacity: 0
+  margin-left: -2px
+
+.like-buttons__source 
+  width: 0
+  height: 0
+  visibility: hidden
+
+.icon 
+  color: transparent
+  transition: color 0.2s ease-in-out
+  width: 1.5rem
+  height: 1.5rem
+  padding: 0.15rem
+
+.like-buttons__wrap
+  display: flex
+  border: 1px solid $light-blue
+  border-radius: 0.625em
+  width: 2.5em
+  height: 1.55em
+  margin-right: 0.625em
+
+  &:hover
+    border-color: $purple
+
+label:hover ~ label .icon,
+svg.icon:hover,
+input[name="like"]:focus ~ label .icon,
+input[name="like"]:checked ~ label .icon
+  color: rgba(188, 156, 255, 1)
+
+
+input[name="like"]:checked + label .icon
+  animation: starred 0.5s
+
+
+input[name="like"]:checked + label
+  animation: scaleup 1s
+
+@keyframes scaleup 
+  from 
+    transform: scale(1.2)
+  to 
+    transform: scale(1)
+
+@keyframes starred 
+  from 
+    color: rgba(139, 164, 249, 1)
+  to 
+    color: rgba(188, 156, 255, 1)
 
 // rate buttons 
-  
-.rate-buttons__star
-  width: 0.8em
-  height: 0.8em
-  stroke: #bc9cff
-  stroke-width: 1.5em
-  fill: transparent
+.gradient
+  width: 0
+  height: 0
 
-  &:hover
-    fill: $purple
-    transition: all 0.2s ease
-    
-.rate-buttons__wrapper
-  @include flex-between()
-  
 .rate-buttons__name
-  font-size: $font-small
   margin-bottom: 1em
 
-.rate-buttons__button
-  @include no-item()
-  border: none
-  background-color: transparent
-  font-size: 1.5rem
-  color: $pink
-  padding: 0
+.rate-buttons__wrapper
+  display: flex
 
-  &:hover
-    border: none
+input[name="star"], input[name="stars"] 
+  display: inline-block
+  width: 0
+  opacity: 0
+  margin-left: -2px
+
+.rate-buttons__source 
+  width: 0
+  height: 0
+  visibility: hidden
+
+.star 
+  color: transparent
+  transition: color 0.2s ease-in-out
+  width: 1.5rem
+  height: 1.5rem
+  padding: 0.15rem
+
+.rate-buttons__wrap
+  display: flex
+  flex-direction: row-reverse
+  justify-content: center
+  margin-right: 1.25em
+
+label:hover ~ label .star,
+svg.star:hover,
+input[name="star"]:focus ~ label .star,
+input[name="star"]:checked ~ label .star,
+input[name="stars"]:focus ~ label .star,
+input[name="stars"]:checked ~ label .star  
+  color: rgba(188, 156, 255, 1)
+
+
+input[name="star"]:checked + label .star,
+input[name="stars"]:checked + label .star  
+  animation: starred 0.5s
+
+
+input[name="star"]:checked + label,
+input[name="stars"]:checked + label 
+  animation: scaleup 1s
+
+@keyframes scaleup 
+  from 
+    transform: scale(1.2)
+  to 
+    transform: scale(1)
+
+@keyframes starred 
+  from 
+    color: rgba(139, 164, 249, 1)
+  to 
+    color: rgba(188, 156, 255, 1)
 
 // слайдер
 .range-button
@@ -328,6 +419,8 @@
   @include flex-between()
   flex-wrap: wrap
   margin-bottom: 1.9375em
+  width: 13.5625em
+  height: 7.375em
 
 .ellipse-buttons__button
   width: 6.1875em
@@ -356,10 +449,8 @@
   background-color: transparent
   color: $medium-blue
 
-.link-buttons_active
-  color: $pink
-
 .link-buttons__button:hover
+  transition: all 0.2s ease
   color: $pink
 
 .button-payment
@@ -448,12 +539,30 @@
 .lists__bullet-item
   color: $dark-blue
   margin-bottom: 0.625em
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  &::before
+    content: "ss"
+    border-radius: 50%
+    background-color: $light-blue
+    color: transparent
+    margin-right: 0.625em
+    font-size: 0.47rem
 
 // комментарии
+.elements__comments
+  padding-bottom: 8.1875em
+
+.comments
+  margin-right: 10.625em
+
 .comment
   border-bottom: 1px solid rgba(31, 32, 65, 0.1)
   display: flex
   padding-bottom: 1.0625em
+  padding-top: 1.25em
 
   &__title
     font-weight: 700
@@ -462,12 +571,36 @@
   &__description
     color: $dark-blue
 
-.feedback__info, .feedback__wrap
+  &__img
+    background: url('../img/insert_emoticon.svg') no-repeat center center
+    width: 3.8em
+    height: 4em
+    margin-right: 0.625em
+
+  &__img_second
+    background: url('../img/location_city.svg') no-repeat center center
+    width: 3.8em
+    height: 4em
+    margin-right: 0.625em
+
+.feedback
   display: flex
+  flex-direction: column
+  align-self: center
 
-.feedback__username
-  font-weight: 700
-  margin-bottom: 0.4375em
+  &__info
+   display: flex
 
-.feedback__time, .feedback__text
+  &__img
+    background: url('../img/image.svg') no-repeat center center 
+    width: 3.4em
+    height: 4.6em
+    margin-right: 0.625em
+
+  &__username
+    font-weight: 700
+    margin-bottom: 0.4375em
+    color: $dark-blue
+
+  &__time, &__text
   color: $dark-blue

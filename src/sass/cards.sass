@@ -11,6 +11,7 @@
   background-color: $grey
   padding-top: 9.375em
   margin-bottom: 8.75em
+  background: url('../img/Group.svg') no-repeat top left
 
 .rooms, .registration, .book, .sign-in, .calendar
   background-color: $white
@@ -357,7 +358,7 @@
 .luxury-room, .usual-room
   background-color: $white
   border-radius: 0.25em
-  width: 16.875em
+  width: 19.875em
   height: 16.0625em
   @include shadows-wide()
 
@@ -403,6 +404,69 @@
   margin-left: 0.189em
   font-size: $font-small
   font-weight: 400
+
+// rate buttons
+.gradient
+  width: 0
+  height: 0
+
+.luxury-room__wrapper, .usual-room__wrapper
+  display: flex
+  align-items: center
+  padding-top: 0.5em
+  padding-left: 1.25em
+
+input[name="star-room"], input[name="stars-rooms"] 
+  display: inline-block
+  width: 0
+  opacity: 0
+  margin-left: -2px
+
+.luxury-room__source, .usual-room__source 
+  width: 0
+  height: 0
+  visibility: hidden
+
+.star 
+  color: transparent
+  transition: color 0.2s ease-in-out
+  width: 1.5rem
+  height: 1.5rem
+  padding: 0.15rem
+
+.luxury-room__wraps, .usual-room__wraps
+  display: flex
+  flex-direction: row-reverse
+  justify-content: center
+  margin-right: 1.25em
+
+label:hover ~ label .star,
+svg.star:hover,
+input[name="star-room"]:focus ~ label .star,
+input[name="star-room"]:checked ~ label .star,
+input[name="stars-rooms"]:focus ~ label .star,
+input[name="stars-rooms"]:checked ~ label .star  
+  color: rgba(188, 156, 255, 1)
+
+input[name="star-room"]:checked + label .star,
+input[name="stars-rooms"]:checked + label .star  
+  animation: starred 0.5s
+
+input[name="star-room"]:checked + label,
+input[name="stars-rooms"]:checked + label 
+  animation: scaleup 1s
+
+@keyframes scaleup 
+  from 
+    transform: scale(1.2)
+  to 
+    transform: scale(1)
+
+@keyframes starred 
+  from 
+    color: rgba(139, 164, 249, 1)
+  to 
+    color: rgba(188, 156, 255, 1)
 
 // usual room card
 .usual-room__img
