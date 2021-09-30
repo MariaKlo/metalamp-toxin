@@ -20,9 +20,9 @@ div.cards
       input(type="text" name="first name" class="registration__input" placeholder="Имя")
       input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
     div.registration__username
-      input(type="radio" name="sex" class="registration__input_radio" id="male")
+      input(type="radio" name="sex" class="radio-buttons__field" id="male")
       label(for="male" class="male") Мужчина
-      input(type="radio" name="sex" class="registration__input_radio" id="female")
+      input(type="radio" name="sex" class="radio-buttons__field" id="female")
       label(for="female") Женщина
     div.registration__birth
       h3.registration__birth-title Дата Рождения
@@ -32,8 +32,8 @@ div.cards
       input(type="text" name="email" class="registration__input" placeholder="Email")
       input(type="text" name="password" class="registration__input" placeholder="Пароль")
     div.registration__wrap
-      input(type="checkbox" name="offers" class="registration__toggle-btn" id="registration__toggle")
-      label(for="registration__toggle" class="registration__toggle") Получать спецпредложения
+      input(type="checkbox" name="offers" class="toggle-buttons__field" id="registration__toggle")
+      label(for="registration__toggle" class="toggle__text") Получать спецпредложения
     button(type="submit" class="registration__btn") Перейти к оплате
     div.registration_exist
       p.registration__text_exist Уже есть аккаунт на Toxin

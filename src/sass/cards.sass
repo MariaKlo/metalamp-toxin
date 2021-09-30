@@ -1,7 +1,9 @@
 @import "partials/__mixins.sass"
 @import "partials/__variables.sass"
 @import "partials/__tegs.sass"
-
+@import "radio-button.sass"
+@import "toggle-button.sass"
+@import "rate-button.sass"
 // make mixins for title, btn, input
 
 .cards
@@ -139,99 +141,6 @@
 
 .male
   margin-right: 1.25em
-// radio button
-.registration__input_radio:checked, 
-.registration__input_radio:not(:checked) 
-  position: absolute
-  left: -9999px
-
-.registration__input_radio:checked + label, 
-.registration__input_radio:not(:checked) + label 
-  display: inline-block
-  position: relative
-  padding-left: 28px
-  line-height: 20px
-  cursor: pointer
-
-.registration__input_radio:checked + label:before, 
-.registration__input_radio:not(:checked) + label:before 
-  content: ""
-  position: absolute
-  left: 0px
-  top: 0px
-  width: 18px
-  height: 18px
-  border: 1px solid #dddddd
-  background-color: rgba(255, 255, 255, 1)
-
-.registration__input_radio:checked + label:before, 
-.registration__input_radio:not(:checked) + label:before 
-  border-radius: 100%
-  border: 1px solid $purple
-
-.registration__input_radio:checked + label:after, 
-.registration__input_radio:not(:checked) + label:after 
-  content: ""
-  position: absolute
-  -webkit-transition: all 0.2s ease
-  -moz-transition: all 0.2s ease
-  -o-transition: all 0.2s ease
-  transition: all 0.2s ease
-
-.registration__input_radio:checked + label:after, 
-.registration__input_radio:not(:checked) + label:after 
-  left: 4px
-  top: 4px
-  width: 12px
-  height: 12px
-  border-radius: 100%
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-
-.registration__input_radio:not(:checked) + label:after 
-  opacity: 0
-
-.registration__input_radio:checked + label:after 
-  opacity: 1
-
-// toggle button
-
-.registration__toggle-btn 
-  position: relative
-  width: 2.5em
-  height: 1.25em
-  margin: 0
-  vertical-align: top
-  background: transparent
-  border: 1px solid $light-blue
-  border-radius: 1.875em
-  outline: none
-  cursor: pointer
-  @include no-item()
-  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
-
-.registration__toggle-btn::after 
-  content: ""
-  position: absolute
-  left: 0.1875em
-  top: 0.1575em
-  width: 0.75em
-  height: 0.75em
-  background-color: $light-blue
-  border-radius: 50%
-  transform: translateX(0)
-  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
-
-.registration__toggle-btn:checked::after 
-  transform: translateX(calc(100% + 0.4375em))
-  border-color: $purple
-  background-color: $purple
-
-.registration__toggle-btn:checked 
-  border-color: $purple
-
-.registration__toggle
-  color: $dark-blue
-  margin-left: 0.625em
 
 // book
 .book
@@ -404,69 +313,6 @@
   margin-left: 0.189em
   font-size: $font-small
   font-weight: 400
-
-// rate buttons
-.gradient
-  width: 0
-  height: 0
-
-.luxury-room__wrapper, .usual-room__wrapper
-  display: flex
-  align-items: center
-  padding-top: 0.5em
-  padding-left: 1.25em
-
-input[name="star-room"], input[name="stars-rooms"] 
-  display: inline-block
-  width: 0
-  opacity: 0
-  margin-left: -2px
-
-.luxury-room__source, .usual-room__source 
-  width: 0
-  height: 0
-  visibility: hidden
-
-.star 
-  color: transparent
-  transition: color 0.2s ease-in-out
-  width: 1.5rem
-  height: 1.5rem
-  padding: 0.15rem
-
-.luxury-room__wraps, .usual-room__wraps
-  display: flex
-  flex-direction: row-reverse
-  justify-content: center
-  margin-right: 1.25em
-
-label:hover ~ label .star,
-svg.star:hover,
-input[name="star-room"]:focus ~ label .star,
-input[name="star-room"]:checked ~ label .star,
-input[name="stars-rooms"]:focus ~ label .star,
-input[name="stars-rooms"]:checked ~ label .star  
-  color: rgba(188, 156, 255, 1)
-
-input[name="star-room"]:checked + label .star,
-input[name="stars-rooms"]:checked + label .star  
-  animation: starred 0.5s
-
-input[name="star-room"]:checked + label,
-input[name="stars-rooms"]:checked + label 
-  animation: scaleup 1s
-
-@keyframes scaleup 
-  from 
-    transform: scale(1.2)
-  to 
-    transform: scale(1)
-
-@keyframes starred 
-  from 
-    color: rgba(139, 164, 249, 1)
-  to 
-    color: rgba(188, 156, 255, 1)
 
 // usual room card
 .usual-room__img
