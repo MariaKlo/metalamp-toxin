@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -14,6 +15,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    alias: {
+        jquery:"./src/jquery/test.js"
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'src/pug/index.pug'),
@@ -22,7 +28,16 @@ module.exports = {
       collapseWhitespace: isProd,
     }
   }),
-],
+    new HtmlWebpackExternalsPlugin({
+      externals: [
+        {
+          module: 'jquery',
+          entry: 'dist/jquery.min.js',
+          global: 'jQuery',
+        },
+      ],
+    }),
+  ],
   devServer: {
     historyApiFallback: true,
     static: path.resolve(__dirname, 'dist'),
@@ -84,6 +99,30 @@ module.exports = {
             loader: 'svgo-loader',
           }
         ]
+      },
+      {
+        test: require.resolve("jquery"),
+        loader: "expose-loader",
+        options: {
+          exposes: ["$", "jQuery"],
+        },
+      },
+      {
+        test: require.resolve("underscore"),
+        loader: "expose-loader",
+        options: {
+          exposes: [
+            "_.map|map",
+            {
+              globalName: "_.reduce",
+              moduleLocalName: "reduce",
+            },
+            {
+              globalName: ["_", "filter"],
+              moduleLocalName: "filter",
+            },
+          ],
+        },
       },
     ]
   }
