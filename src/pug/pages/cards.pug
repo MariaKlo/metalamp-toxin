@@ -86,7 +86,19 @@ div.cards
   // jquery plugin here
   // luxury room
   form.luxury-room(action="#")
-    div.luxury-room__img
+    div(class="swiper luxury-room__swiper")
+      div.swiper-wrapper
+        div.swiper-slide
+          div.luxury-room__img
+        div.swiper-slide
+          div.luxury-room__img
+        div.swiper-slide
+          div.luxury-room__img
+        div.swiper-slide
+          div.luxury-room__img
+      div.swiper-pagination.swiper-pagination-position
+      div.swiper-button-prev
+      div.swiper-button-next
     div(class="luxury-room__wrap luxury-room__wrap_border")
       h1.luxury-room__title №888
         span Люкс
@@ -138,7 +150,17 @@ div.cards
         span отзывов
   // usual room
   form.usual-room(action="#")
-    div.usual-room__img
+    div.swiper
+      div.swiper-wrapper
+        div.swiper-slide
+          div.usual-room__img 
+        div.swiper-slide
+          div.usual-room__img
+        div.swiper-slide
+          div.usual-room__img
+        div.swiper-slide
+          div.usual-room__img
+      div.swiper-pagination
     div(class="usual-room__wrap usual-room__wrap_border")
       h1.usual-room__title №840
       p.usual-room__price 9 900&#x20bd;

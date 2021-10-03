@@ -15,7 +15,7 @@ div.elements
     h3.elements__info #{dropdown}
     input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
     h3.elements__info MASKED #{textField}
-    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ").elements__field
+    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field datepicker-here" data-position="right top")
     div.date-dropdown
       div.date-dropdown_before
         h3.elements__info DATE #{dropdown}
@@ -87,7 +87,7 @@ div.elements
             <svg class="icon is-outlined is-hoverable" viewBox="0 0 32 32">
               <use xlink:href="#heart-icon"></use>
             </svg>
-            span.heart__counter 12
+            span(class="heart__counter" id="heart__counter") 12
           </label>
     div.rate-buttons
       h3.rate-buttons__name RATE BUTTON
