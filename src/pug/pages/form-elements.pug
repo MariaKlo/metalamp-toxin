@@ -14,8 +14,22 @@ div.elements
     input(type="text" name="text" placeholder="This is pretty awesome").elements__field
     h3.elements__info #{dropdown}
     input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
+
+    div.iqdropdown
+      p.iqdropdown-selection
+      div.iqdropdown-menu
+        div(class="iqdropdown-menu-option" data-id="item1")
+          p.iqdropdown-item Item 1
+          p.iqdropdown-description A short description
+        div(class="iqdropdown-menu-option" data-id="item2")
+          p.iqdropdown-item Item 2
+          p.iqdropdown-description A short description
+        div(class="iqdropdown-menu-option" data-id="item3")
+          p.iqdropdown-item Item 3
+          p.iqdropdown-description A short description
+
     h3.elements__info MASKED #{textField}
-    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field datepicker-here" data-position="right top")
+    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field" data-position="right top" id="datepicker-here")
     div.date-dropdown
       div.date-dropdown_before
         h3.elements__info DATE #{dropdown}
@@ -214,9 +228,16 @@ div.elements__filter
       p.filter__state EXPANDED
     input(type="text" name="bedroom" placeholder="2 спальни, 2 кровати" class="filter__field filter__field_second")
     div.filter__checkbox_expanded
-      h3.filter__checkbox-title Expandable checkbox list
-      input(type="text" name="bedroom" placeholder="Expandable checkbox list" class="filter__field-checkbox filter__field-checkbox_first")
-      h3.filter__checkbox-title Expandable checkbox list
+      //- input(type="text" name="bedroom" placeholder="Expandable checkbox list" class="filter__field-checkbox filter__field-checkbox_first")
+      select(class="expandable-checkbox-list" name="checkbox-list")
+        option(selected class="expandable-checkbox-list__option_disabled") Expandable checkbox list
+        option(value="Завтрак" class="expandable-checkbox-list__option") Завтрак
+        option(value="Письменный стол" class="expandable-checkbox-list__option") Письменный стол
+        option(value="Стул для кормления" class="expandable-checkbox-list__option") Стул для кормления
+        option(value="Кроватка" class="expandable-checkbox-list__option") Кроватка
+        option(value="Телевизор" class="expandable-checkbox-list__option") Телевизор
+        option(value="Шампунь" class="expandable-checkbox-list__option") Шампунь
+
       input(type="text" name="bedroom" placeholder="Expandable checkbox list").filter__field-checkbox
       div.filter__checkbox
         input(type="checkbox" name="agreement" id="filter").filter__field-checkbox
