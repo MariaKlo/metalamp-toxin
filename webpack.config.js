@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
@@ -17,8 +18,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-        jquery:"./src/jquery/test.js"
-    }
+        jquery:"./src/jquery/test.js",
+        'node_modules': path.join(__dirname, 'node_modules'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,6 +38,11 @@ module.exports = {
           global: 'jQuery',
         },
       ],
+    }),
+    new webpack.ProvidePlugin( {
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
   ],
   devServer: {
@@ -59,19 +66,8 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.s[ac]ss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
-        ],
+        use: [ "style-loader", "css-loader", "sass-loader", ],
       },
       {
         test: /\.pug$/,
