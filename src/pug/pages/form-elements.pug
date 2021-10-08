@@ -1,0 +1,300 @@
+// переменные
+- var textField = 'TEXT FILED'
+- var dropdown = 'DROPDOWN'
+// поля ввода
+div.elements
+  form(action="/new_movie" method="POST")
+    div.elements__description
+      h3.elements__info #{textField}
+      p.elements__state DEFAULT 
+    input(type="text" name="e-mail" placeholder="Email").elements__field
+    div.elements__description
+      h3.elements__info #{textField}
+      p.elements__state HOVER/FOCUS 
+    input(type="text" name="text" placeholder="This is pretty awesome").elements__field
+    h3.elements__info #{dropdown}
+    input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
+    h3.elements__info MASKED #{textField}
+    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field" data-position="right top" id="datepicker-here")
+    div.date-dropdown
+      div.date-dropdown_before
+        h3.elements__info DATE #{dropdown}
+        input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" id="datepicker").elements__field-date
+      div.date-dropdown_after
+        h3.elements__info DATE #{dropdown}
+        input(type="text" name="date" placeholder="19.08.2019" id="datepicker-date").elements__field-date
+    h3.elements__info FILTER DATE #{dropdown}
+    input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-filter-date").elements__field-filter
+    h3.elements__info SUBSCRIPTION #{textField}
+    input(type="text" name="e-mail" placeholder="Email").elements__field-subscription
+  // кнопки
+  div.buttons
+    div.checkbox-buttons
+      h3.checkbox-buttons__name CHECKBOX BUTTONS
+      div.checkbox-buttons__item
+        input(type="checkbox" name="agreement" id="checkbox").checkbox-buttons__field
+        label(for="checkbox")
+        p.checkbox-buttons__option Можно курить
+      div.checkbox-buttons__item
+        input(type="checkbox" name="agreement" id="checkbox-second" checked).checkbox-buttons__field
+        label(for="checkbox-second")
+        p.checkbox-buttons__option Можно с питомцами
+      div.checkbox-buttons__item
+        input(type="checkbox" name="agreement" id="checkbox-third" checked).checkbox-buttons__field
+        label(for="checkbox-third")
+        p.checkbox-buttons__option Можно пригласить гостей (до 10 человек)
+    div.radio-buttons
+      h3.radio-buttons__name RADIO BUTTONS
+      div.radio-buttons__wrapper
+        input(type="radio" name="sex" value="Мужчина" id="sex-m" checked).radio-buttons__field
+        label(for="sex-m") Мужчина
+        input(type="radio" name="sex" value="Женщина" id="sex-f").radio-buttons__field
+        label(for="sex-f") Женщина
+    div.toggle-buttons
+      h3.toggle-buttons__name TOGGLE
+      div.toggle-buttons__wrapper
+        div.toggle-buttons__wrap
+          input(type="checkbox" name="news" value="Получать спецпредложения" id="toggle").toggle-buttons__field
+          label(for="toggle" class="toggle__text") Получать спецпредложения
+        div.toggle-buttons__wrap
+          input(type="checkbox" name="news" value="Получать спецпредложения" id="toggle" checked).toggle-buttons__field
+          label(for="toggle" class="toggle__text") Получать спецпредложения
+    div.like-buttons
+      h3.like-buttons__name LIKE BUTTON
+      div.like-buttons__wrapper
+        div.like-buttons__source
+        <svg height="0" width="0">
+          <path id="heart-icon" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454C30,20.335,16,28.261,16,28.261z"/>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grad-heart">
+            <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+            <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+          </linearGradient>
+          <symbol id="heart" viewBox="0 0 32 32">
+            <polygon id="heart-shape" stroke="url(#grad-heart)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+          </symbol>            
+        </svg>
+        div.like-buttons__wrap
+          <input type="radio" name="like" id="liked">
+          <label for="liked" class="heart__label">
+            <svg class="icon is-outlined is-hoverable" viewBox="0 0 32 32">
+              <use xlink:href="#heart-icon"></use>
+            </svg>
+            span.heart__counter 2
+          </label>
+        div.like-buttons__wrap
+          <input type="radio" name="like" id="liked_second">
+          <label for="liked_second" class="heart__label">
+            <svg class="icon is-outlined is-hoverable" viewBox="0 0 32 32">
+              <use xlink:href="#heart-icon"></use>
+            </svg>
+            span(class="heart__counter" id="heart__counter") 12
+          </label>
+    div.rate-buttons
+      h3.rate-buttons__name RATE BUTTON
+      div.rate-buttons__wrapper
+        div.rate-buttons__source
+        <svg class="gradient">
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grad">
+            <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+            <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+          </linearGradient>
+          <symbol id="star" viewBox="153 89 106 108">
+            <polygon id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+          </symbol>
+        </svg>
+        div.rate-buttons__wrap
+          <input type="radio" name="star" id="five">
+          <label for="five">
+            <svg class="star">
+              <use xlink:href="#star"/>
+            </svg>
+          </label>
+          <input type="radio" name="star" id="four">
+          <label for="four">
+            <svg class="star">
+              <use xlink:href="#star"/>
+            </svg>
+          </label>
+          <input type="radio" name="star" id="three">
+          <label for="three">
+            <svg class="star">
+              <use xlink:href="#star"/>
+            </svg>
+          </label>
+          <input type="radio" name="star" id="two">
+          <label for="two">
+            <svg class="star">
+              <use xlink:href="#star" />
+            </svg>
+          </label>
+          <input type="radio" name="star" id="one">
+          <label for="one">
+            <svg class="star">
+              <use xlink:href="#star" />
+            </svg>
+          </label>
+        div.rate-buttons__source
+        <svg class="gradient">
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grads">
+            <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+            <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+          </linearGradient>
+          <symbol id="stars" viewBox="153 89 106 108">
+            <polygon id="stars-shapes" stroke="url(#grads)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+          </symbol>
+        </svg>
+        div.rate-buttons__wrap
+          <input type="radio" name="stars" id="fives">
+          <label for="fives">
+            <svg class="star">
+              <use xlink:href="#stars"/>
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="fours">
+          <label for="fours">
+            <svg class="star">
+              <use xlink:href="#stars"/>
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="threes">
+          <label for="threes">
+            <svg class="star">
+              <use xlink:href="#stars"/>
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="twos">
+          <label for="twos">
+            <svg class="star">
+              <use xlink:href="#stars" />
+            </svg>
+          </label>
+          <input type="radio" name="stars" id="ones">
+          <label for="ones">
+            <svg class="star">
+              <use xlink:href="#stars" />
+            </svg>
+          </label>
+  div.other-buttons
+    div.range-button
+      div.range-button__info
+        h3.range-button__name RANGE SLIDER
+        p.range-button__price 5000&#8381; - 10000&#8381;
+      div.range-button__slider
+    // кнопки + пагинация
+    div.buttons
+      h3.buttons__name BUTTONS
+      div.ellipse-buttons
+        button(type="submit" class="ellipse-buttons__button ellipse-buttons_solid") Click me
+        button(type="submit" class="ellipse-buttons__button ellipse-buttons_solid") Click me
+        button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
+        button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
+      div.link-buttons
+        button(type="submit" class="link-buttons__button") Click me
+        button(type="submit" class="link-buttons__button") Click me
+      button(type="submit" class="button-payment") Перейти к оплате &rarr;
+    div.pagination
+      h3.pagination__name PAGINATION
+      div.pagination__pages
+        span(class="pagination__page pagination__page_active") 1
+        span.pagination__page 2
+        span.pagination__page 3
+        span.pagination__page ...
+        span.pagination__page 15
+        span.pagination__page &rarr;
+      p.pagination__info 1-12 из 100+ вариантов аренды
+// фильтры по поиску номеров
+div.elements__filter    
+  div.filter
+    div.filter__description
+      h3.filter__info #{dropdown}
+      p.filter__state DEFAULT
+    input(type="text" name="bedroom" placeholder="2 спальни, 2 кровати" class="filter__field filter__field_first")
+    div.filter__description
+      h3.filter__info #{dropdown}
+      p.filter__state EXPANDED
+    input(type="text" name="bedroom" placeholder="2 спальни, 2 кровати" class="filter__field filter__field_second")
+    div.filter__checkbox_expanded
+      //- input(type="text" name="bedroom" placeholder="Expandable checkbox list" class="filter__field-checkbox filter__field-checkbox_first")
+      select(class="expandable-checkbox-list" name="checkbox-list")
+        option(selected class="expandable-checkbox-list__option_disabled") Expandable checkbox list
+        option(value="Завтрак" class="expandable-checkbox-list__option") Завтрак
+        option(value="Письменный стол" class="expandable-checkbox-list__option") Письменный стол
+        option(value="Стул для кормления" class="expandable-checkbox-list__option") Стул для кормления
+        option(value="Кроватка" class="expandable-checkbox-list__option") Кроватка
+        option(value="Телевизор" class="expandable-checkbox-list__option") Телевизор
+        option(value="Шампунь" class="expandable-checkbox-list__option") Шампунь
+
+      input(type="text" name="bedroom" placeholder="Expandable checkbox list").filter__field-checkbox
+      div.filter__checkbox
+        input(type="checkbox" name="agreement" id="filter").filter__field-checkbox
+        label(for="filter")
+        p.filter__field-option Завтрак
+      div.filter__checkbox
+        input(type="checkbox" name="agreement" id="filter" checked).filter__field-checkbox
+        label(for="filter")
+        p.filter__field-option Письменный стол
+      div.filter__checkbox
+        input(type="checkbox" name="agreement" id="filter" checked).filter__field-checkbox
+        label(for="filter")
+        p.filter__field-option Стул для кормления
+      div.filter__checkbox
+        input(type="checkbox" name="agreement" id="filter" checked).filter__field-checkbox
+        label(for="filter")
+        p.filter__field-option Кроватка
+      div.filter__checkbox
+        input(type="checkbox" name="agreement" id="filter").filter__field-checkbox
+        label(for="filter")
+        p.filter__field-option Телевизор
+      div.filter__checkbox
+        input(type="checkbox" name="agreement" id="filter").filter__field-checkbox
+        label(for="filter")
+        p.filter__field-option Шампнуь
+  // dropdown с гостями
+  div.guests
+    h3.guests__info #{dropdown}
+    input(type="text" name="dropdown" placeholder="Сколько гостей").guests__field
+    h3.guests__title Rich Checkbox Buttons
+    div.guests__checkbox-wrapper
+      div.checkbox-buttons__item
+        input(type="checkbox" name="agreement" id="guests").checkbox-buttons__field
+        label(for="guests")
+        div.guests__checkbox-wrap
+          p.guests__option-title Широкий коридор
+          p.guests__option-text Ширина коридоров в номере не менее 91 см.
+      div.checkbox-buttons__item
+        input(type="checkbox" name="agreement" id="guests__second").checkbox-buttons__field
+        label(for="guests__second")
+        div.guests__checkbox-wrap
+          p.guests__option-title Помощник для инвалидов
+          p.guests__option-text На 1 этаже вас встретит специалист  и проводит до номера.
+  // dropdown и списки
+  div.lists
+    h3.lists__info #{dropdown}
+    input(type="text" name="dropdown" placeholder="3 гостя").lists__field
+    h3.lists__bullet-title Bullet list
+    ul.lists__bullet
+      li.lists__bullet-item Нельзя с питомцами
+      li.lists__bullet-item Без вечеринок и мероприятий
+      li.lists__bullet-item Время прибытия — после 13:00, а выезд до 12:00
+// комментарии
+div.elements__comments
+  div.comments
+    div.comment
+      div.comment__img
+      div.comment__wrap
+        h3.comment__title Комфорт
+        p.comment__description Шумопоглащающие стены
+    div.comment
+      div.comment__img_second
+      div.comment__wrap
+        h3.comment__title Удобство
+        p.comment__description Окно в каждой из спален
+  div.feedback
+    div.feedback__info
+      div.feedback__img
+      div.feedback__wrap
+        p.feedback__username Мурад Сарафанов
+        p.feedback__time 5 дней назад
+    div.feedback__wrap
+      input(type="text" name="like" id="like" placeholder="12" value=12).feedback__field
+      p.feedback__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
