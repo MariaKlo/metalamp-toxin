@@ -26,6 +26,7 @@
   margin-bottom: 2.5em
   height: 26.375em
   width: 23.75em
+  order: 0
 
   &__title
     font-size: $big-size
@@ -73,6 +74,7 @@
   margin-bottom: 2.5em
   width: 25.75em
   height: 40.375em
+  order: 1
 
   &__title
     font-size: $big-size
@@ -144,9 +146,11 @@
 
 // book
 .book
+  margin-right: 2.5rem
   margin-bottom: 2.5em
   width: 23.75em
   height: 40.375em
+  order: 0
 
   &__wrap
     @include flex-between()
@@ -221,6 +225,7 @@
   margin-right: 2.5em
   width: 23.75em
   height: 22.375em
+  order: 1
 
   &__title
     font-size: $big-size
@@ -269,6 +274,7 @@
   border-radius: 0.25em
   width: 19em
   height: 19.5em
+  order: 2
   @include shadows-wide()
 
 .luxury-room
@@ -351,7 +357,3 @@
   margin-left: 0.189em
   font-size: $font-small
   font-weight: 400
-
-// calendar
-.calendar
-  @include shadows-wide()
