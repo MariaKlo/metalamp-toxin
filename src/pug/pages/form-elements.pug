@@ -13,45 +13,18 @@ div.elements
       p.elements__state HOVER/FOCUS 
     input(type="text" name="text" placeholder="This is pretty awesome").elements__field
     h3.elements__info #{dropdown}
-    //- <div class="iqdropdown">
-    //-   <p class="iqdropdown-selection"></p>
-    //-   <div class="iqdropdown-menu">
-    //-     <div class="iqdropdown-menu-option" data-id="item1">
-    //-       <div>
-    //-         <p class="iqdropdown-item">Item 1</p>
-    //-         <p class="iqdropdown-description">A short description</p>
-    //-       </div>
-    //-     </div>
-    //-     <div class="iqdropdown-menu-option" data-id="item2">
-    //-       <div>
-    //-         <p class="iqdropdown-item">Item 2</p>
-    //-         <p class="iqdropdown-description">A short description</p>
-    //-       </div>
-    //-     </div>
-    //-     <div class="iqdropdown-menu-option" data-id="item3">
-    //-       <div>
-    //-         <p class="iqdropdown-item">Item 3</p>
-    //-         <p class="iqdropdown-description">A short description</p>
-    //-       </div>
-    //-     </div>
-    //-   </div>
-    //- </div>
-    input(type="text" name="dropdown" placeholder="Сколько гостей").elements__field
-    div(class="iqdropdown")
-      p(class="iqdropdown-selection" data-seletion-text="item" data-text-plural="items")
+    div(class="iqdropdown" id="iqdropdown")
+      p(class="iqdropdown-selection" data-seletion-text="гость" data-text-plural="гостей")
       div(class="iqdropdown-menu")
         div(class="iqdropdown-menu-option" data-id="item1")
           div
-            p(class="iqdropdown-item") Item 1
-            p(class="iqdropdown-description") A short description
+            p(class="iqdropdown-item") Взрослые
         div(class="iqdropdown-menu-option" data-id="item2")
           div
-            p(class="iqdropdown-item") Item 2
-            p(class="iqdropdown-description") A short description
+            p(class="iqdropdown-item") Дети
         div(class="iqdropdown-menu-option" data-id="item3")
           div
-            p(class="iqdropdown-item") Item 3
-            p(class="iqdropdown-description") A short description
+            p(class="iqdropdown-item") Младенцы
     h3.elements__info MASKED #{textField}
     input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field" data-position="right top" id="datepicker-here")
     div.date-dropdown

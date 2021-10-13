@@ -1,0 +1,84 @@
+@import "../partials/__mixins.sass"
+@import "../partials/__tegs.sass"
+@import "../partials/__variables.sass"
+@import "../fonts.sass"
+
+#iqdropdown
+  @include input-style()
+  margin-bottom: 1.4375em
+  font-family: 'Montserrat'
+
+#iqdropdown:active
+  border-color: #1F204180
+
+#iqdropdown .iqdropdown-selection
+  color: $dark-blue
+  font-family: 'Montserrat'
+  font-size: .875rem
+
+#iqdropdown .iqdropdown-selection::after 
+  background-image: url("../img/expand_more.svg")
+  right: .8125rem
+
+.iqdropdown.menu-open .iqdropdown-menu
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+  border: 1px solid #1F204180
+
+#iqdropdown .iqdropdown-menu
+  box-shadow: none
+  top: 2.25rem
+
+#iqdropdown .iqdropdown-menu-option
+  height: 2.8375em
+
+#iqdropdown .iqdropdown-item
+  text-transform: uppercase
+  font-size: $font-small
+  color: #1F2041
+  font-family: 'Montserrat'
+  font-weight: 700
+
+#iqdropdown .iqdropdown-item-controls 
+  align-items: center
+
+#iqdropdown .iqdropdown-item-controls .counter
+  color: #1F2041
+  font-family: 'Montserrat'
+  font-size: $font-small
+  font-weight: 700
+  border-bottom: none
+  border-top: none
+  padding: .5em 1em
+
+#iqdropdown .iqdropdown-item-controls button.button-decrement 
+  border-radius: 50%
+
+#iqdropdown .iqdropdown-item-controls button.button-increment 
+  border-radius: 50%
+
+#iqdropdown .iqdropdown-item-controls button
+  border: 1px solid $light-blue
+  height: 1.875em
+  width: 1.875em
+  padding: 0 .625em
+
+#iqdropdown .icon-decrement::after 
+  background: $medium-blue
+  content: ""
+  display: block
+  height: .0625em
+  position: absolute
+  top: 0.475em
+  right: 0.65em
+  width: .4375em
+
+#iqdropdown .icon-decrement.icon-increment::before
+  background: $medium-blue
+  content: ""
+  display: block
+  height: .0625em
+  position: absolute
+  top: 0.475em
+  right: 0.5575em
+  width: .5625em
