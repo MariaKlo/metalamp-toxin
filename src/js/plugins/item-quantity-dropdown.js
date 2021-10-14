@@ -1,31 +1,39 @@
 import './item-quantity-dropdown.min.js';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
+/* 
+gostey - 11,12,13,14,15,16,17,18,19, end on 0,5,6,7,8,9
+gost - 1, end on 1
+gostya - end on 2,3,4
+*/
+
+
 $(document).ready(() => {
     $('.iqdropdown').iqDropdown({
-    setSelectionText: (itemCount, totalItems) => {return `Сколько гостей`},
     selectionText: 'гость',
     textPlural: 'гостей',
     setSelectionText (itemCount, totalItems) {
-      // default placeholder
+      // set up the grammar of the word "гость"
       const placeholderText = `Сколько гостей`;
-      if (totalItems === 0) return placeholderText;
-      if (totalItems === 1) return `${totalItems} ${this.selectionText}`;
-      // placeholder for 2-4 numbers
       const secondSelectionText = `гостя`;
       const useAnotherPlural = totalItems >= 2 && totalItems <= 4;
-      const anotherText = useAnotherPlural ? secondSelectionText : this.textPlural; // adds for 5+ range
-      return `${totalItems} ${anotherText}`;
-      // const usePlural = totalItems !== 1; // check if items are > 0
-      // const text = usePlural ? this.textPlural : this.selectionText; // check when to use single/plural text
-      // return `${totalItems} ${text}`;
-
-      // if (totalItems > 20) {
-      //   const arrayOfDigits = Array.from(String(totalItems), Number); 
-      //   if (arrayOfDigits.length-1 === 1) return `${totalItems} ${this.selectionText}`
-      //   if (arrayOfDigits.length-1 >= 2 && arrayOfDigits.length-1 <= 4) return `${totalItems} ${secondSelectiontext}`
-      //   if (arrayOfDigits.length-1 >= 5 && arrayOfDigits.length-1 <= 9 || arrayOfDigits.length-1 === 0) return `${totalItems} ${this.totalItems}`
-      // }
+      if (totalItems === 0) return placeholderText;
+      if (totalItems === 1) return `${totalItems} ${this.selectionText}`;
+      if (useAnotherPlural) {
+        return `${totalItems} ${secondSelectionText}`;
+      } else if (totalItems >= 5 && totalItems <= 20) {
+        return `${totalItems} ${this.textPlural}`;
+      } else if (totalItems > 20) {
+          let arrayOfTotalItems = totalItems.toString(10).split("").map(Number);
+          if (arrayOfTotalItems[arrayOfTotalItems.length-1] === 1) {
+            return `${totalItems} ${this.selectionText}`; 
+          } else if (arrayOfTotalItems[arrayOfTotalItems.length-1] === 2 || 
+            arrayOfTotalItems[arrayOfTotalItems.length-1] === 3 || 
+            arrayOfTotalItems[arrayOfTotalItems.length-1] === 4) {
+            return `${totalItems} ${secondSelectionText}`;
+          }
+        return `${totalItems} ${this.textPlural}`;
+      }
     },
   });
 });
