@@ -16,30 +16,30 @@
     padding-top: 8.9375em
 
     &__description
-        @include flex-between()
-        font-size: $font-small
+      @include flex-between()
+      font-size: $font-small
 
     &__info
-        font-size: $font-small
-        margin-bottom: 0.3125em
+      font-size: $font-small
+      margin-bottom: 0.3125em
 
     &__field
-        width: 20em
+      width: 20em
+      @include input-style()
+      margin-bottom: 1.25em
+
+      &-date
+        width: 9.375em
         @include input-style()
-        margin-bottom: 1.25em
+
+      &-filter, &-subscription
+        width: 16.625em
+        @include input-style()
+        margin-bottom: 2.5625em
 
 .date-dropdown
   @include flex-between()
   margin-top: 2.5em
-  margin-bottom: 2.5625em
-
-.elements__field-date
-  width: 9.375em
-  @include input-style()
-
-.elements__field-filter, .elements__field-subscription
-  width: 16.625em
-  @include input-style()
   margin-bottom: 2.5625em
 
 // стили для кнопок
@@ -157,9 +157,9 @@ input[name="like"]:checked + label
 .buttons
   margin-bottom: 2.5em
 
-.buttons__name
-  font-size: $font-small
-  margin-bottom: 1em
+  &__name
+    font-size: $font-small
+    margin-bottom: 1em
 
 .ellipse-buttons
   @include flex-between()
@@ -168,36 +168,36 @@ input[name="like"]:checked + label
   width: 13.5625em
   height: 7.375em
 
-.ellipse-buttons__button
-  width: 6.1875em
-  height: 2.75em
-  border-radius: 1.375em
-  font-size: $font-small
-  text-transform: uppercase
-  font-weight: 700
+  &__button
+    width: 6.1875em
+    height: 2.75em
+    border-radius: 1.375em
+    font-size: $font-small
+    text-transform: uppercase
+    font-weight: 700
 
-.ellipse-buttons_solid
-  @include ellipse-button-style-solid()
+  &_solid
+    @include ellipse-button-style-solid()
+
+  &_transparent
+    @include ellipse-button-style-transparent()
 
 .ellipse-buttons_solid:hover, .ellipse-buttons_transparent:hover
   @include button-hover()
-
-.ellipse-buttons_transparent
-  @include ellipse-button-style-transparent()
 
 // кнопки-ссылки
 .link-buttons
   margin-bottom: 2.0625em
 
-.link-buttons__button
-  font-size: $font-small
-  @include button-style()
-  background-color: transparent
-  color: $medium-blue
+  &__button
+    font-size: $font-small
+    @include button-style()
+    background-color: transparent
+    color: $medium-blue
 
-.link-buttons__button:hover
-  transition: all 0.2s ease
-  color: $pink
+    &:hover
+      transition: all 0.2s ease
+      color: $pink
 
 .button-payment
   width: 100%
@@ -207,8 +207,8 @@ input[name="like"]:checked + label
   font-size: $font-small
   color: $white
 
-.button-payment:hover
-  @include button-hover()
+  &:hover
+    @include button-hover()
 
 // пагинация
 .pagination__name

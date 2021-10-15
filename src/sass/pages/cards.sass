@@ -65,8 +65,8 @@
     @include ellipse-button-style-solid()
     font-size: $font-small
 
-  &__btn:hover
-    @include button-hover()
+    &:hover
+      @include button-hover()
 
 // registration card
 .registration
@@ -124,8 +124,8 @@
     font-size: $font-small
     margin-bottom: 1.875em
 
-  &__btn:hover
-    @include button-hover()
+    &:hover
+      @include button-hover()
 
   &_exist
     @include flex-between()
@@ -138,8 +138,8 @@
     text-transform: uppercase
     @include ellipse-button-style-transparent()
 
-  &__btn_sign-in:hover
-    @include button-hover()
+    &:hover
+      @include button-hover()
 
 .male
   margin-right: 1.25em
@@ -160,9 +160,19 @@
   &__title
     font-size: $big-size
 
+    span
+      font-size: $font-small
+      color: $purple
+      margin-left: 0.5em
+
   &__price
     color: $medium-blue
     font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
 
   &__title_small
     font-size: $font-small
@@ -175,12 +185,15 @@
     border-radius: 0.25em
     border: 1px solid $light-blue
 
-  &__input_guests
-    width: 100%
-    margin-bottom: 1.3125em
+    &_guests
+      width: 100%
+      margin-bottom: 1.3125em
 
   &__text
     width: 16em
+
+    span
+      color: $light-blue
 
   &__text, &__total-price
     color: $dark-blue
@@ -198,27 +211,14 @@
     @include ellipse-button-style-solid()
     color: $white
 
-  &__btn:hover
-    @include button-hover()
+    &:hover
+      @include button-hover()
 
   &__line
     background-color: $light-blue
     height: 1px
     width: 42%
     margin-top: 3.75em
-
-.book__title span
-  font-size: $font-small
-  color: $purple
-  margin-left: 0.5em
-
-.book__price span
-  margin-left: 0.189em
-  font-size: $font-small
-  font-weight: 400
-
-.book__text span
-  color: $light-blue
 
 // sign-in card
 .sign-in
@@ -251,8 +251,8 @@
     font-size: $font-small
     margin-bottom: 1.875em
 
-  &__btn:hover
-    @include button-hover()
+    &:hover
+      @include button-hover()
 
   &__wrap
     @include flex-between()
@@ -265,8 +265,8 @@
     text-transform: uppercase
     @include ellipse-button-style-transparent()
 
-  &__btn_sign-up:hover
-    @include button-hover()
+    &:hover
+      @include button-hover()
 
 // luxury room card
 .luxury-room, .usual-room
@@ -298,28 +298,28 @@
   &__title
     font-size: $big-size
 
+    span
+      font-size: $font-small
+      color: $purple
+      margin-left: 0.5em
+
   &__price
     color: $medium-blue
     font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
     
   &__comments
     color: $medium-blue
     font-weight: 700
 
-.luxury-room__title span
-  font-size: $font-small
-  color: $purple
-  margin-left: 0.5em
-
-.luxury-room__price span
-  margin-left: 0.189em
-  font-size: $font-small
-  font-weight: 400
-
-.luxury-room__comments span
-  margin-left: 0.189em
-  font-size: $font-small
-  font-weight: 400
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
 
 // usual room card
 .usual-room__img
@@ -333,9 +333,9 @@
   margin-top: 1.25em
   padding: 0 1.25em 1.25em 1.25em
 
-.usual-room__wrap_border
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1)
-  padding-bottom: 0.625em
+  &_border
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1)
+    padding-bottom: 0.625em
 
 .usual-room__title
   font-size: $big-size
@@ -344,16 +344,16 @@
   color: $medium-blue
   font-weight: 700
 
-.usual-room__price span
-  margin-left: 0.189em
-  font-size: $font-small
-  font-weight: 400
+  span
+    margin-left: 0.189em
+    font-size: $font-small
+    font-weight: 400
 
 .usual-room__comments
   color: $medium-blue
   font-weight: 700
 
-.usual-room__comments span
-  margin-left: 0.189em
-  font-size: $font-small
-  font-weight: 400
+  span
+    margin-left: 0.189em
+    font-size: $font-small
+    font-weight: 400
