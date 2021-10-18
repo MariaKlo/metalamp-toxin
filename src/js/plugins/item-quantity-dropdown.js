@@ -5,6 +5,14 @@ $(document).ready(() => {
     $('.iqdropdown').iqDropdown({
     selectionText: 'гость',
     textPlural: 'гостей',
+    // controls: {
+    //   clear: 'iqdropdown-btn-clear'
+    // },
+    // setSelectionText (itemCount, totalItems) {
+    //   $( "#iqdropdown-btn-clear" ).click(function() {
+    //     $( ".iqdropdown-selection" ).text( "Сколько гостей" );
+    //   });
+    // },
     setSelectionText (itemCount, totalItems) {
       // set up the grammar of the word "гость"
       const placeholderText = `Сколько гостей`;
