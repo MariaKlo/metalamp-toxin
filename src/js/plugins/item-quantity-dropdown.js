@@ -5,15 +5,20 @@ $(document).ready(() => {
     $('.iqdropdown').iqDropdown({
     selectionText: 'гость',
     textPlural: 'гостей',
-    // controls: {
-    //   clear: 'iqdropdown-btn-clear'
-    // },
-    // setSelectionText (itemCount, totalItems) {
-    //   $( "#iqdropdown-btn-clear" ).click(function() {
-    //     $( ".iqdropdown-selection" ).text( "Сколько гостей" );
-    //   });
-    // },
     setSelectionText (itemCount, totalItems) {
+      $("#iqdropdown-btn-clear").click(function() {
+        $( "#iqdropdown-selection" ).text( "Сколько гостей" );
+        // $(".counter").val(0);
+        // let count = parseInt($(".counter").text());
+        
+        // const itemCount = {};
+        $(`<span>${itemCount[0]}</span>`);
+        itemCount[0] = 0;
+      });
+
+      $("#iqdropdown-btn-confirm").click(function() {
+        $(".iqdropdown").removeClass(".menu-open");
+      });
       // set up the grammar of the word "гость"
       const placeholderText = `Сколько гостей`;
       const secondSelectionText = `гостя`;
