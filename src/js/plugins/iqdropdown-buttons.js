@@ -1,5 +1,5 @@
-import './item-quantity-dropdown.min.js';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+// import './item-quantity-dropdown.min.js';
+// import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 // $("#iqdropdown-btn-clear").click(function() {
 //     $( "#iqdropdown-selection" ).text( "Сколько гостей" );
@@ -11,4 +11,8 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 //     // const itemCount = {};
 //     // $(`<span>${itemCount[0]}</span>`);
 //     // itemCount[0] = 0;
+// });
+
+// $("#iqdropdown-btn-confirm").click(function() {
+//     $(".iqdropdown").removeClass(".menu-open");
 // });
