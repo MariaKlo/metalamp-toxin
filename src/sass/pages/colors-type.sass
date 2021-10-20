@@ -4,8 +4,8 @@
 // стили для секции "цвета и шрифты"
 .wrapper
   @include flex-between()
-  padding-top: 9.06em
   @include container()
+  padding-top: 9.06em
 
 .logo
   background: #ffffff url('../img/Group.svg') no-repeat top left
@@ -63,14 +63,26 @@
   &_first
     font-size: 1.5rem
 
+    span
+      margin-right: 1.6em
+
   &_second
     font-size: $mediumSize
+
+    span
+      margin-right: 2.25em
 
   &_third
     font-size: 0.75rem
 
+    span
+      margin-right: 3.98em
+
   &_fourth
     font-size: 0.87rem
+
+    span
+      margin-right: 2.25em
 
   p
     line-height: 1.5em
@@ -78,14 +90,5 @@
   span
     color: rgba($dark-blue, 0.25)
 
-.title_first span
-  margin-right: 1.6em
-
-.title_second span
-  margin-right: 2.25em
-
-.title_third span
-  margin-right: 3.98em
-
-.title_fourth span
-  margin-right: 2.25em
+  h1, h2
+    text-transform: none
