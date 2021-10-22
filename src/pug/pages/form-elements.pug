@@ -3,7 +3,7 @@
 - var dropdown = 'DROPDOWN'
 // поля ввода
 div.elements
-  form(action="/new_movie" method="POST")
+  form(action="#")
     div.elements__description
       h3.elements__info #{textField}
       p.elements__state DEFAULT 
@@ -14,7 +14,7 @@ div.elements
     input(type="text" name="text" placeholder="This is pretty awesome").elements__field
     h3.elements__info #{dropdown}
     div(class="iqdropdown" id="iqdropdown")
-      p(class="iqdropdown-selection" id="iqdropdown-selection" data-seletion-text="гость" data-text-plural="гостей")
+      p(class="iqdropdown-selection" id="iqdropdown-selection")
       div(class="iqdropdown-menu")
         div(class="iqdropdown-menu-option" data-id="item1")
           div

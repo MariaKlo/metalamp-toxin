@@ -3,7 +3,30 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 $(document).ready(() => {
     $('.iqdropdown').iqDropdown({
+    onChange: (id, count, totalItems) => {
+      $( "#iqdropdown-btn-clear" ).click(function() {
+        // const itemCount = {};
+        // const $counter = $(`<span>${itemCount[id]}</span>`).addClass("counter");
+        // itemCount[id] = 0;
+        // totalItems = 0;
+        // $counter.html(itemCount[id]);
+        $(".counter").text("0");
+        $( ".iqdropdown-selection" ).text( "Сколько гостей" );
+      });
+      $("#iqdropdown-btn-confirm").click(function() {
+        $(".iqdropdown").removeClass(".menu-open");
+      });
+    },
     setSelectionText: (itemCount, totalItems) => {
+      itemCount = 0;
+      if ($(".counter").val(itemCount)) {
+        $("button-decrement").css("opacity", "0.5");
+      }
+      if (totalItems === 0) {
+        $("#iqdropdown-btn-clear").hide();
+      } else {
+        $("#iqdropdown-btn-clear").show();
+      }
       // set up the grammar of the word "гость"
       const textPlural = `гостей`;
       const selectionText = `гость`;
