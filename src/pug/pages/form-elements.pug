@@ -40,7 +40,8 @@ div.elements
     h3.elements__info FILTER DATE #{dropdown}
     input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-filter-date").elements__field-filter
     h3.elements__info SUBSCRIPTION #{textField}
-    input(type="text" name="e-mail" placeholder="Email").elements__field-subscription
+    div.elements__field-wrap
+      input(type="text" name="e-mail" placeholder="Email").elements__field-subscription
   // кнопки
   div.buttons
     div.checkbox-buttons
