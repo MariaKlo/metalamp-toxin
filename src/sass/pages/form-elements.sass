@@ -32,13 +32,20 @@
         position: relative
 
         &::after
-          content: "\2192"
-          position: absolute
-          top: -0.22em
-          right: 1.4em
-          font-size: 2.5rem
-          color: $purple
+          @include arrow-right()
 
+        &-datepicker
+          position: relative
+
+          &::after
+            @include arrow()
+
+          &_short
+            position: relative
+
+            &::after
+              @include arrow($right: 3.8em)
+              
       &-date
         width: 9.375em
         @include input-style()
@@ -217,7 +224,11 @@ input[name="like"]:checked + label
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   font-size: $font-small
   color: $white
+  position: relative
 
+  &::after
+    @include arrow-right($color: #ffffff)
+    
   &:hover
     @include button-hover()
 

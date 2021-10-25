@@ -64,3 +64,23 @@
 @mixin container()
   padding-left: 1.5625em
   padding-right: 1.5625em
+
+@mixin arrow($right: 0.8em)
+  background: url("../img/expand_more.svg") no-repeat
+  content: ""
+  position: absolute
+  top: 1em
+  right: $right
+  width: 0.855em
+  height: 0.625em
+  color: $medium-blue
+
+@mixin arrow-right($color: #bc9cff)
+  content: "\2192"
+  position: absolute
+  top: 0.7em
+  right: 1em
+  width: 10px
+  color: #ffffff
+  height: 10px
+  color: $color

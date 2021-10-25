@@ -4,7 +4,6 @@
 @import "../components/radio-button.sass"
 @import "../components/toggle-button.sass"
 @import "../components/rate-button.sass"
-// make mixins for title, btn, input
 
 .cards
   @include container()
@@ -64,9 +63,19 @@
     @include button-style()
     @include ellipse-button-style-solid()
     font-size: $font-small
+    position: relative
+
+    &::after
+      @include arrow-right($color: #ffffff)
 
     &:hover
       @include button-hover()
+
+  &__datepicker-wrap
+    position: relative
+
+    &::after
+      @include arrow($right: 0.8em)
 
 // registration card
 .registration
@@ -123,6 +132,10 @@
     @include button-style()
     font-size: $font-small
     margin-bottom: 1.875em
+    position: relative
+
+    &::after
+      @include arrow-right($color: #ffffff)
 
     &:hover
       @include button-hover()
@@ -210,6 +223,10 @@
     @include button-style()
     @include ellipse-button-style-solid()
     color: $white
+    position: relative
+
+    &::after
+      @include arrow-right($color: #ffffff)
 
     &:hover
       @include button-hover()
@@ -220,6 +237,12 @@
     width: 42%
     margin-top: 3.75em
 
+  &__datepicker-wrap
+    position: relative
+
+    &::after
+      @include arrow($right: 0.8em)
+      
 // sign-in card
 .sign-in
   margin-right: 2.5em
@@ -250,6 +273,10 @@
     @include ellipse-button-style-solid()
     font-size: $font-small
     margin-bottom: 1.875em
+    position: relative
+
+    &::after
+      @include arrow-right($color: #ffffff)
 
     &:hover
       @include button-hover()
