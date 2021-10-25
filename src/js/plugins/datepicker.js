@@ -4,6 +4,12 @@ import 'air-datepicker/air-datepicker.css';
 let button = {
     content: 'Применить',
     className: 'custom-button-classname',
+    onClick: (db) => {
+        let $isDatePickerActive = $('.air-datepicker.-active-');
+        let $isDatePickerInline = $('.air-datepicker.-inline-');
+        $isDatePickerActive.css('display', 'none');
+        $isDatePickerInline.css('display', 'none');
+    }
 }
 
 // datepickers from form elements page
