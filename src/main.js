@@ -4,6 +4,6 @@ import './sass/fonts.sass';
 
 import './js/plugins/datepicker.js';
 import './js/plugins/item-quantity-dropdown.js';
-// import './js/plugins/iqdropdown-buttons.js';
+import './js/plugins/paginationjs.js';
 
 global.jQuery = global.$ = $;

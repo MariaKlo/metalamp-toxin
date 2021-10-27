@@ -19,7 +19,6 @@ module.exports = {
   },
   resolve: {
     alias: {
-        jquery:"./src/jquery/test.js",
         'node_modules': path.join(__dirname, 'node_modules'),
     },
   },
