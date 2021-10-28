@@ -18,9 +18,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    alias: {
-        'node_modules': path.join(__dirname, 'node_modules'),
-    },
+    modules: ['node_modules'],
   },
   plugins: [
     new HtmlWebpackPlugin({
