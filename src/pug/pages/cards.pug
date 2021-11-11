@@ -1,0 +1,242 @@
+div.cards
+  // rooms
+  form.rooms(action="#")
+    h1.rooms__title Найдём номера под ваши пожелания
+    div.rooms__wrapper
+      div.rooms__wrap
+        h3.rooms__info Прибытие
+        div.rooms__datepicker-wrap
+          input(type="text" name="date" class="rooms__date" placeholder="ДД.ММ.ГГГГ" id="datepicker-rooms-arrival")
+      div.rooms__wrap
+        h3.rooms__info Выезд
+        div.rooms__datepicker-wrap
+          input(type="text" name="date" class="rooms__date" placeholder="ДД.ММ.ГГГГ" id="datepicker-rooms-departure")
+    div.rooms__guests
+      h3.rooms__info Гости
+      div(class="iqdropdown" id="iqdropdown-fourth")
+        p(class="iqdropdown-selection" data-seleсtion-text="гость" data-text-plural="гостей")
+        div(class="iqdropdown-menu")
+          div(class="iqdropdown-menu-option" data-id="item1")
+            div
+              p(class="iqdropdown-item") Взрослые
+          div(class="iqdropdown-menu-option" data-id="item2")
+            div
+              p(class="iqdropdown-item") Дети
+          div(class="iqdropdown-menu-option" data-id="item3")
+            div
+              p(class="iqdropdown-item") Младенцы
+          div(class="iqdropdown-menu-btn-wrap")
+            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+    button(type="submit" class="rooms__btn") Подобрать номер
+  // registration    
+  form.registration(action="#")
+    h1.registration__title Регистрация аккаунта
+    div.registration__info
+      input(type="text" name="first name" class="registration__input" placeholder="Имя")
+      input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
+    div.registration__username
+      input(type="radio" name="sex" class="radio-buttons__field" id="male")
+      label(for="male" class="male") Мужчина
+      input(type="radio" name="sex" class="radio-buttons__field" id="female")
+      label(for="female") Женщина
+    div.registration__birth
+      h3.registration__birth-title Дата Рождения
+      input(type="text" name="date" class="registration__datepick" placeholder="ДД.ММ.ГГГГ" id="datepicker-birthday")
+    div.registration__data
+      h3.registration__data-title Данные для входа в сервис
+      input(type="text" name="email" class="registration__input" placeholder="Email")
+      input(type="text" name="password" class="registration__input" placeholder="Пароль")
+    div.registration__wrap
+      input(type="checkbox" name="offers" class="toggle-buttons__field" id="registration__toggle")
+      label(for="registration__toggle" class="toggle__text") Получать спецпредложения
+    button(type="submit" class="registration__btn") Перейти к оплате
+    div.registration_exist
+      p.registration__text_exist Уже есть аккаунт на Toxin
+      button(type="submit" class="registration__btn_sign-in") Войти
+  // book
+  form.book(action="#")
+    div.book__wrap
+      h1.book__title №888
+        span Люкс
+      p.book__price 9 990&#x20bd;
+        span в сутки
+    div.book__wrap
+      div.book__wrapper
+        h3.book__title_small Прибытие
+        div.book__datepicker-wrap
+          input(type="text" name="arrival" class="book__input" placeholder="19.08.2019" id="datepicker-book-arrival")
+      div.book__wrap
+        div.book__wrapper
+          h3.book__title_small Выезд
+          div.book__datepicker-wrap
+            input(type="text" name="departure" class="book__input" placeholder="23.08.2019" id="datepicker-book-departure")
+    h3.book__title_small Гости
+    div(class="iqdropdown" id="iqdropdown-fifth")
+      p(class="iqdropdown-selection" data-seleсtion-text="гость" data-text-plural="гостей")
+      div(class="iqdropdown-menu")
+        div(class="iqdropdown-menu-option" data-id="item1")
+          div
+            p(class="iqdropdown-item") Взрослые
+        div(class="iqdropdown-menu-option" data-id="item2")
+          div
+            p(class="iqdropdown-item") Дети
+        div(class="iqdropdown-menu-option" data-id="item3")
+          div
+            p(class="iqdropdown-item") Младенцы
+        div(class="iqdropdown-menu-btn-wrap")
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+    div.book__total
+      div.book__wrap
+        p.book__text 9 990&#x20bd; х 4 суток
+        p.book__total-price 39 960&#x20bd;
+      div.book__wrap
+        p.book__text Сбор за услуги: скидка 2 179&#x20bd; 
+          span &#9432;
+        p.book__total-price 0&#x20bd;
+      div.book__wrap
+        p.book__text Сбор за дополнительные услуги
+          span &#9432;
+        p.book__total-price 300&#x20bd;
+      div.book__wrap
+        p.book__result Итого
+        div.book__line
+        p.book__result 38 081&#x20bd;
+    button(type="submit" class="book__btn") Забронировать
+  // sign-in
+  form.sign-in(action="#")
+    h1.sign-in__title Войти
+    input(type="text" name="email" class="sign-in__input" placeholder="Email")
+    input(type="text" name="password" class="sign-in__input sign-in__input_second" placeholder="Пароль")
+    button(type="submit" class="sign-in__btn") Войти
+    div.sign-in__wrap
+      p.sign-in__text Нет аккаунта на Toxin?
+      button(type="submit" class="sign-in__btn_sign-up") Создать
+  // calendar
+  div#datepicker-calendar
+  // luxury room
+  form.luxury-room(action="#")
+    div(class="swiper luxury-room__swiper")
+      div.swiper-wrapper
+        div.swiper-slide
+          div.luxury-room__img
+        div.swiper-slide
+          div.luxury-room__img
+        div.swiper-slide
+          div.luxury-room__img
+        div.swiper-slide
+          div.luxury-room__img
+      div.swiper-pagination.swiper-pagination-position
+      div.swiper-button-prev
+      div.swiper-button-next
+    div(class="luxury-room__wrap luxury-room__wrap_border")
+      h1.luxury-room__title №888
+        span Люкс
+      p.luxury-room__price 9 990&#x20bd;
+        span в сутки
+    div.luxury-room__wrapper
+      div.luxury-room__source
+      <svg class="gradient">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grad-room">
+          <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+          <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+        </linearGradient>
+        <symbol id="star-room" viewBox="153 89 106 108">
+          <polygon id="star-shape-room" stroke="url(#grad-room)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+        </symbol>
+      </svg>
+      div.luxury-room__wraps
+        <input type="radio" name="star-room" id="five-room">
+        <label for="five-room">
+          <svg class="star">
+            <use xlink:href="#star-room"/>
+          </svg>
+        </label>
+        <input type="radio" name="star-room" id="four-room">
+        <label for="four-room">
+          <svg class="star">
+            <use xlink:href="#star-room"/>
+          </svg>
+        </label>
+        <input type="radio" name="star-room" id="three-room">
+        <label for="three-room">
+          <svg class="star">
+            <use xlink:href="#star-room"/>
+          </svg>
+        </label>
+        <input type="radio" name="star-room" id="two-room">
+        <label for="two-room">
+          <svg class="star">
+            <use xlink:href="#star-room" />
+          </svg>
+        </label>
+        <input type="radio" name="star-room" id="one-room">
+        <label for="one-room">
+          <svg class="star">
+            <use xlink:href="#star-room" />
+          </svg>
+        </label>
+      p.luxury-room__comments 145
+        span отзывов
+  // usual room
+  form.usual-room(action="#")
+    div.swiper
+      div.swiper-wrapper
+        div.swiper-slide
+          div.usual-room__img 
+        div.swiper-slide
+          div.usual-room__img
+        div.swiper-slide
+          div.usual-room__img
+        div.swiper-slide
+          div.usual-room__img
+      div.swiper-pagination
+    div(class="usual-room__wrap usual-room__wrap_border")
+      h1.usual-room__title №840
+      p.usual-room__price 9 900&#x20bd;
+        span в сутки
+    div.usual-room__wrapper
+      div.usual-room__source
+      <svg class="gradient">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="grads-rooms">
+          <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00" />
+          <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00" />
+        </linearGradient>
+        <symbol id="stars-rooms" viewBox="153 89 106 108">
+          <polygon id="stars-shapes-rooms" stroke="url(#grads-rooms)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
+        </symbol>
+      </svg>
+      div.usual-room__wraps
+        <input type="radio" name="stars-rooms" id="fives-rooms">
+        <label for="fives-rooms">
+          <svg class="star">
+            <use xlink:href="#stars-rooms"/>
+          </svg>
+        </label>
+        <input type="radio" name="stars-rooms" id="fours-rooms">
+        <label for="fours-rooms">
+          <svg class="star">
+            <use xlink:href="#stars-rooms"/>
+          </svg>
+        </label>
+        <input type="radio" name="stars-rooms" id="threes-rooms">
+        <label for="threes-rooms">
+          <svg class="star">
+            <use xlink:href="#stars-rooms"/>
+          </svg>
+        </label>
+        <input type="radio" name="stars-rooms" id="twos-rooms">
+        <label for="twos-rooms">
+          <svg class="star">
+            <use xlink:href="#stars-rooms" />
+          </svg>
+        </label>
+        <input type="radio" name="stars-rooms" id="ones-rooms">
+        <label for="ones-rooms">
+          <svg class="star">
+            <use xlink:href="#stars-rooms" />
+          </svg>
+        </label>
+      p.usual-room__comments 65
+        span отзывов       

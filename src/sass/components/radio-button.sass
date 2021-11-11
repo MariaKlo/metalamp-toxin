@@ -1,0 +1,96 @@
+@import "../partials/__mixins.sass"
+@import "../partials/__variables.sass"
+@import "../partials/__tegs.sass"
+@import "../fonts.sass"
+
+.radio-buttons__field:checked, 
+.radio-buttons__field:not(:checked) 
+  position: absolute
+  left: -9999px
+
+.radio-buttons__field:checked + label, 
+.radio-buttons__field:not(:checked) + label 
+  display: inline-block
+  position: relative
+  padding-left: 28px
+  line-height: 20px
+  cursor: pointer
+
+.radio-buttons__field:checked + label:before, 
+.radio-buttons__field:not(:checked) + label:before 
+  content: ""
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 18px
+  height: 18px
+  border: 1px solid #dddddd
+  background-color: rgba(255, 255, 255, 1)
+
+.radio-buttons__field:checked + label:before, 
+.radio-buttons__field:not(:checked) + label:before 
+  border-radius: 100%
+  
+.radio-buttons__field:checked + label:after, 
+.radio-buttons__field:not(:checked) + label:after 
+  content: ""
+  position: absolute
+  -webkit-transition: all 0.2s ease
+  -moz-transition: all 0.2s ease
+  -o-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+.radio-buttons__field:checked + label:after, 
+.radio-buttons__field:not(:checked) + label:after 
+  left: 3px
+  top: 3px
+  width: 12px
+  height: 12px
+  border-radius: 100%
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+#male:checked + label:after,
+#male:not(:checked) + label:after,
+#female:checked + label:after,
+#female:not(:checked) + label:after
+  left: 0.25em
+  top: 0.25em
+
+.radio-buttons__field:not(:checked) + label:after 
+  opacity: 0
+ 
+.radio-buttons__field:checked + label:after 
+  opacity: 1
+
+.radio-buttons
+  margin-bottom: 2.3125em
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.0625em
+
+  &__field
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.radio-buttons__field + label 
+  display: inline-flex
+  align-items: center
+  user-select: none
+  color: $medium-blue
+
+.radio-buttons__field + label::before 
+  content: ''
+  display: inline-block
+  width: 1em
+  height: 1em
+  flex-shrink: 0
+  flex-grow: 0
+  border: 1px solid #adb5bd
+  border-radius: 50%
+  margin-right: 0.5em
+
+.radio-buttons__field:checked + label::before 
+  border: 1px solid $purple
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
