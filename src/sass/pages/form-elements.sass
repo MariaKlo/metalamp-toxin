@@ -128,85 +128,6 @@ svg.one, svg.two
       fill: #BC9CFF
       stroke: #BC9CFF
 
-
-// .heart__counter
-//   color: $light-blue
-//   font-size: 0.625rem
-
-//   &:hover
-//     color: $purple
-
-// .heart__label
-//   display: flex
-//   align-items: center
-
-// .icon.is-outlined
-//   stroke: $light-blue
-//   stroke-width: 2px
-//   fill: transparent
-//   width: 1em
-//   height: 1.2em
-
-// .icon.is-hoverable:hover
-//   stroke: $purple
-//   fill: $purple
-//   cursor: pointer
-
-// input[name="like"] 
-//   display: inline-block
-//   width: 0
-//   opacity: 0
-//   margin-left: -2px
-
-// .like-buttons__source 
-//   width: 0
-//   height: 0
-//   visibility: hidden
-
-// .icon 
-//   color: transparent
-//   transition: color 0.2s ease-in-out
-//   width: 1.5rem
-//   height: 1.5rem
-//   padding: 0.15rem
-
-// .like-buttons__wrap
-//   display: flex
-//   border: 1px solid $light-blue
-//   border-radius: 0.625em
-//   width: 2.5em
-//   height: 1.55em
-//   margin-right: 0.625em
-
-//   &:hover
-//     border-color: $purple
-
-// label:hover ~ label .icon,
-// svg.icon:hover,
-// input[name="like"]:focus ~ label .icon,
-// input[name="like"]:checked ~ label .icon
-//   color: rgba(188, 156, 255, 1)
-
-
-// input[name="like"]:checked + label .icon
-//   animation: starred 0.5s
-
-
-// input[name="like"]:checked + label
-//   animation: scaleup 1s
-
-// @keyframes scaleup 
-//   from 
-//     transform: scale(1.2)
-//   to 
-//     transform: scale(1)
-
-// @keyframes starred 
-//   from 
-//     color: rgba(139, 164, 249, 1)
-//   to 
-//     color: rgba(188, 156, 255, 1)
-
 // слайдер
 .range-button
   margin-bottom: 43px
@@ -292,25 +213,53 @@ svg.one, svg.two
   font-size: $font-small
   margin-bottom: 0.3125em
 
-.filter__field
-  width: 16.625em
-  padding: 0.75em 0 0.5em 0.9375em
-  border-radius: 0.325em
-  border: 1px solid $light-blue
+.filter__checkbox
+  display: none
 
-.filter__field_first
-  margin-bottom: 1.25em
+  &.show
+    display: flex
 
-.filter__field_second
-  margin-bottom: 3.375em
+  &-list
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: space-between
+    min-height: 11.875rem
+    color: #1F2041
+    font-weight: 700
+    text-transform: uppercase
+    font-size: $font-small
+    position: relative
 
-.filter__checkbox-title
-  text-transform: uppercase
-  font-size: $font-small
-  margin-bottom: 3.0625em
+    &-arrow_first
+      position: absolute
+      border: solid rgba(31, 32, 65, 0.5)
+      width: .625rem
+      height: .625rem
+      border-width: 0 2px 2px 0
+      display: inline-block
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+      top: 0
+      right: -1.4375rem
 
+      &.rotate
+        position: absolute
+        border: solid rgba(31, 32, 65, 0.5)
+        width: .625rem
+        height: .625rem
+        border-width: 0 2px 2px 0
+        display: inline-block
+        -webkit-transform: rotate(-135deg)
+        transform: rotate(-135deg)
+        top: .375rem
+        right: -1.4375rem
+  
 .filter__field-option
   color: $medium-blue
+  font-weight: 400
+  text-transform: none
+  font-size: .875rem
 
 // dropdown с гостями
 .guests__info
