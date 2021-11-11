@@ -73,17 +73,38 @@
   &__wrapper
     display: flex
 
-svg.one
-  width: 1rem
-  height: 1rem
+  &__border
+    margin-right: .9375rem
 
-  .heart  
+  &__border, &__border_second-like-button
+    display: flex
+    justify-content: space-around
+    align-items: center
+    border: 1px solid $light-blue
+    width: 2rem
+    height: 1.25rem
+    border-radius: 10px
+
+    &.on
+      border-color: $purple
+
+  &__counter, &__counter_second-like-button
+    color: $light-blue
+    font-size: .625rem
+
+    &.on
+      color: $purple
+
+svg.one, svg.two
+  width: 0.5rem
+
+  .heart, .heart-two  
     fill: transparent
     stroke: $light-blue
     stroke-width: 6
     transition: all .6s ease-out
 
-  .heartEX 
+  .heartEX, .heartEX-two 
     fill: none
     stroke: transparent
     transform-box: border-box
@@ -93,7 +114,7 @@ svg.one
     transition:none
 
   &.on 
-    .heartEX 
+    .heartEX, .heartEX-two  
       transform: scale(2)
       opacity:0
       stroke: #BC9CFF
@@ -103,7 +124,7 @@ svg.one
       transition-duration: .6s, .01s, .4s
       transition-delay: 0s, 0s, .2s
 
-    .heart  
+    .heart, .heart-two  
       fill: #BC9CFF
       stroke: #BC9CFF
 
