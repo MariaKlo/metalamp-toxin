@@ -241,7 +241,7 @@ div.elements__filter
     div.filter__checkbox_expanded
       div.filter__checkbox-list Expandable checkbox list
         i.filter__checkbox-list-arrow_first
-        div.filter__checkbox
+        div(class="filter__checkbox filter__checkbox_first")
           input(type="checkbox" name="agreement" id="filter").checkbox-buttons__field
           label(for="filter")
           p.filter__field-option Завтрак
@@ -264,6 +264,32 @@ div.elements__filter
         div(class="filter__checkbox filter__checkbox_sixth")
           input(type="checkbox" name="agreement" id="filter_sixth").checkbox-buttons__field
           label(for="filter_sixth")
+          p.filter__field-option Шампнуь
+      div.filter__checkbox-list_second Expandable checkbox list
+        i.filter__checkbox-list-arrow_second
+        div(class="filter__checkbox filter__checkbox_seventh")
+          input(type="checkbox" name="agreement" id="filter_seventh").checkbox-buttons__field
+          label(for="filter_seventh")
+          p.filter__field-option Завтрак
+        div(class="filter__checkbox filter__checkbox_eighth")
+          input(type="checkbox" name="agreement" id="filter_eighth" checked).checkbox-buttons__field
+          label(for="filter_eighth")
+          p.filter__field-option Письменный стол
+        div(class="filter__checkbox filter__checkbox_ninth")
+          input(type="checkbox" name="agreement" id="filter_ninth" checked).checkbox-buttons__field
+          label(for="filter_ninth")
+          p.filter__field-option Стул для кормления
+        div(class="filter__checkbox filter__checkbox_tenth")
+          input(type="checkbox" name="agreement" id="filter_tenth" checked).checkbox-buttons__field
+          label(for="filter_tenth")
+          p.filter__field-option Кроватка
+        div(class="filter__checkbox filter__checkbox_eleventh")
+          input(type="checkbox" name="agreement" id="filter_eleventh").checkbox-buttons__field
+          label(for="filter_eleventh")
+          p.filter__field-option Телевизор
+        div(class="filter__checkbox filter__checkbox_twelfth")
+          input(type="checkbox" name="agreement" id="filter_twelfth").checkbox-buttons__field
+          label(for="filter_twelfth")
           p.filter__field-option Шампнуь
   // dropdown с гостями
   div.guests
@@ -336,9 +362,16 @@ div.elements__comments
   div.feedback
     div.feedback__info
       div.feedback__img
-      div.feedback__wrap
+      div.feedback__wrapper
         p.feedback__username Мурад Сарафанов
         p.feedback__time 5 дней назад
     div.feedback__wrap
-      input(type="text" name="like" id="like" placeholder="12" value=12).feedback__field
+      div.like-buttons__border_third-like-button
+          <svg class="three" viewBox="0 0 100 100">
+            <g class="heart-three">
+              <path  class="heartEX-three" d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z" />
+              <path class="heart-three"    d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z" />
+            </g>
+          </svg>
+          div.like-buttons__counter_third-like-button 0
       p.feedback__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.

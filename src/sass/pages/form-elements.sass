@@ -76,7 +76,10 @@
   &__border
     margin-right: .9375rem
 
-  &__border, &__border_second-like-button
+  &__border_third-like-button
+    margin-right: 1.5rem
+
+  &__border, &__border_second-like-button, &__border_third-like-button
     display: flex
     justify-content: space-around
     align-items: center
@@ -88,23 +91,23 @@
     &.on
       border-color: $purple
 
-  &__counter, &__counter_second-like-button
+  &__counter, &__counter_second-like-button, &__counter_third-like-button
     color: $light-blue
     font-size: .625rem
 
     &.on
       color: $purple
 
-svg.one, svg.two
+svg.one, svg.two, svg.three
   width: 0.5rem
 
-  .heart, .heart-two  
+  .heart, .heart-two, .heart-three  
     fill: transparent
     stroke: $light-blue
     stroke-width: 6
     transition: all .6s ease-out
 
-  .heartEX, .heartEX-two 
+  .heartEX, .heartEX-two, .heartEX-three 
     fill: none
     stroke: transparent
     transform-box: border-box
@@ -114,7 +117,7 @@ svg.one, svg.two
     transition:none
 
   &.on 
-    .heartEX, .heartEX-two  
+    .heartEX, .heartEX-two, .heartEX-three  
       transform: scale(2)
       opacity:0
       stroke: #BC9CFF
@@ -124,7 +127,7 @@ svg.one, svg.two
       transition-duration: .6s, .01s, .4s
       transition-delay: 0s, 0s, .2s
 
-    .heart, .heart-two  
+    .heart, .heart-two, .heart-three  
       fill: #BC9CFF
       stroke: #BC9CFF
 
@@ -216,22 +219,28 @@ svg.one, svg.two
 .filter__checkbox
   display: none
 
+  &_first, &_seventh
+    margin-top: 1.0625rem
+
   &.show
     display: flex
+    margin-bottom: .625rem
 
-  &-list
+  &-list 
+    margin-bottom: 3.125rem
+
+  &-list, &-list_second
     display: flex
     flex-direction: column
     align-content: center
     justify-content: space-between
-    min-height: 11.875rem
     color: #1F2041
     font-weight: 700
     text-transform: uppercase
     font-size: $font-small
     position: relative
 
-    &-arrow_first
+    &-arrow_first, &-arrow_second
       position: absolute
       border: solid rgba(31, 32, 65, 0.5)
       width: .625rem
@@ -346,6 +355,9 @@ svg.one, svg.two
   flex-direction: column
   align-self: center
 
+  &__wrap
+    display: flex
+
   &__info
    display: flex
 
@@ -359,6 +371,10 @@ svg.one, svg.two
     font-weight: 700
     margin-bottom: 0.4375em
     color: $dark-blue
+
+  &__text
+    max-width: 40.8125rem
+    line-height: 1.6
 
   &__time, &__text
   color: $dark-blue
