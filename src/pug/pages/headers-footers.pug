@@ -10,20 +10,23 @@ div.headers
               a(href="#" class="header__item")= firstItem
             li
               a(href="#" class="header__item")= secondItem
+                div.header__dropdown
             li
               a(href="#" class="header__item")= thirdItem
             li
               a(href="#" class="header__item")= fourthItem
             li
               a(href="#" class="header__item")= fifthItem
+                div.header__dropdown
       +header("О нас", "Услуги", "Вакансии", "Новости", "Соглашения")
       div.header__buttons
         button(type="submit" class="header__button button__sign-in") Войти
         button(type="submit" class="header__button button__sign-up") Зарегистрироваться
   div.header
     div.header__logo
-    div.header__wrapper
+    div.header__wrapper.header__wrapper_second
       +header("О нас", "Услуги", "Вакансии", "Новости", "Соглашения")
+      div.header__vertical-line
       p.header__username Юлий Цезарь
 // footers
 div.footers
@@ -67,4 +70,5 @@ div.footers
     div(class="footer__logo footer__logo_center")
     p(class="footer__text footer__text_center") Copyright © 2018 Toxin отель. Все права защищены.
     // fontawesome
-    +fontawesome()
+    div.footer__wrapper_center
+      +fontawesome()

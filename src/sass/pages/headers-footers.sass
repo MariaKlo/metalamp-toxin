@@ -14,9 +14,9 @@
   @include flex-between()
   align-items: center
   background-color: $white
-  margin-bottom: 2.5em 
-  padding-top: 0.9375em
-  padding-bottom: 0.9375em
+  margin-bottom: 2.8em 
+  padding-top: 1.0375em
+  padding-bottom: 0.975em
   @include container()
   @include shadows()
     
@@ -27,28 +27,51 @@
 
   &__wrapper
     display: flex
-    align-items: baseline
+    align-items: center
+    width: 51.8125rem
+
+    &_second
+      width: 40.6125rem
+
+  &__nav
+    margin-right: .6875rem
 
   &__menu
     display: flex
 
     li
-      margin-right: 1.25em
+      margin-right: 1.55em
 
   &__item
     color: $medium-blue
     text-decoration: none
+    display: flex
+    align-items: center
 
     &:hover
       color: $dark-blue
       font-weight: 700
       transition: all 0.2s ease
 
+  &__dropdown
+    border: solid $medium-blue
+    border-width: 0 2px 2px 0
+    display: inline-block
+    -webkit-transform: rotate(45deg)
+    transform: rotate(45deg)
+    width: 0.525rem
+    height: 0.525rem
+    margin-left: .625rem
+
   &__button
     text-transform: uppercase
 
+  &__vertical-line
+    width: .0625rem
+    height: 1.875rem
+    background-color: $thin-blue
+
   &__username
-    border-left: 1px solid $thin-blue
     color: $medium-blue
     padding-left: 1.25em
 
@@ -60,7 +83,7 @@
 .button__sign-up
   @include ellipse-button-style-solid()
   font-weight: 700
-  padding: 0.725em 1.35em
+  padding: 0.725em 1.25em
 
 .button__sign-in:hover, .button__sign-up:hover
   @include button-hover()
@@ -72,7 +95,7 @@
 .footer
   background-color: $white
   margin-bottom: 2.5em
-  padding-top: 6.5em
+  padding-top: 7.4em
   padding-bottom: 1.625em
   @include container()
   @include shadows()
@@ -84,27 +107,32 @@
 
   &__copyright
     @include flex-between()
-    padding-top: 1.625em
+    padding-top: 2em
 
   &__logo
     background: url('../img/Logo.svg') no-repeat top left
     height: 3em
-    margin-bottom: 1.25em
+    margin-bottom: 1.15em
 
   &__text
     color: $dark-blue
-    max-width: 16.25em
-    line-height: 1.5em
+    max-width: 19.25em
+    line-height: 1.7em
+    margin-bottom: 1.4375rem
 
   &__wrap
-    @include flex-between()
+    display: flex
     flex-direction: column
 
   &__navigation
     width: 17%
 
+    li
+      margin-bottom: 1.25rem
+
   &__title
     font-size: 0.75rem
+    margin-bottom: 1.25rem
 
   &__item
     color: $medium-blue
@@ -118,7 +146,7 @@
   &__input
     border: 1px solid rgba(31, 32, 65, 0.25)
     color: rgba(31, 32, 65, 0.25)
-    padding: 0.75em 0 0.75em 0.9375em
+    padding: 1em 6.1em 1em 0.9375em
     border-radius: 0.2em
 
     &-wrap
@@ -127,13 +155,17 @@
       &::after
         content: "\2192"
         position: absolute
-        top: -0.22em
-        right: 1.4em
+        top: -0.12em
+        right: 0.5em
         font-size: 2.5rem
         color: $purple
 
   &__copy
     color: $dark-blue
+
+  &__wrapper
+    display: flex
+    justify-content: space-evenly
 
 .fab
   margin-right: 1.25em
@@ -144,10 +176,11 @@
     @include button-hover() 
 
 .footer_center
-  max-width: 48em
+  max-width: 55em
   margin: 0 auto
   text-align: center
-  padding-bottom: 7.5em
+  padding-top: 8.6em
+  padding-bottom: 8.6em
 
 .footer__text_center
   max-width: 35em
