@@ -4,15 +4,15 @@
 @import "../fonts.sass"
 
 .checkbox-buttons
-  margin-bottom: 2.5em
+  margin-bottom: 3em
   
   &__name
     font-size: $font-small
-    margin-bottom: 1.0625em
+    margin-bottom: 1.3625em
 
   &__item
     display: flex
-    margin-bottom: 0.8125em
+    margin-bottom: 1.1em
 
   &__field
     position: absolute
@@ -21,9 +21,10 @@
 
   &__option
     color: $medium-blue
-    margin-left: 0.625em
+    margin-left: 0.2em
     align-items: center
     display: flex
+    max-width: 12rem
 
 .checkbox-buttons__field:checked, 
 .checkbox-buttons__field:not(:checked)
@@ -35,7 +36,7 @@
 .checkbox-buttons__field:not(:checked) + label
   display: inline-block
   position: relative
-  padding-left: 28px
+  padding-left: 26px
   line-height: 20px
   cursor: pointer
 

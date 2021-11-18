@@ -21,60 +21,75 @@
 
     &__info
       font-size: $font-small
-      margin-bottom: 0.3125em
+      margin-bottom: 0.4875em
 
     &__field
-      width: 20em
       @include input-style()
-      margin-bottom: 1.25em
+      margin-bottom: 1.65em
+      letter-spacing: 0.07em
 
       &-wrap
         position: relative
 
         &::after
           @include arrow-purple()
+          top: -0.15em
+          right: 1.95em
 
         &-datepicker
           position: relative
 
           &::after
             @include arrow()
+            top: 1.2em
+            right: 1.1em
 
           &_short
             position: relative
+            margin-bottom: 3em
 
             &::after
-              @include arrow($right: 3.8em)
+              @include arrow($right: 4.9em)
+              top: 1.3em
               
       &-date
-        width: 9.375em
         @include input-style()
+        width: 11.275em
+        border: 0.0625em solid rgba(31, 32, 65, 0.25)
+        border-radius: 0.31em
+        padding: 0.9125em 0 0.9125em 0.9375em
+        letter-spacing: 0.1em
+
+      &-filter
+        letter-spacing: 0.04em
+
+      &-subscription
+        letter-spacing: 0.12em
 
       &-filter, &-subscription
-        width: 16.625em
         @include input-style()
-        margin-bottom: 2.5625em
+        padding: 0.9125em 6.6em 0.9125em 0.9375em
 
 .date-dropdown
   @include flex-between()
   margin-top: 2.5em
-  margin-bottom: 2.5625em
+  margin-bottom: 2.9625em
 
 // стили для кнопок
 
 // like buttons
 .like-buttons
-  margin-bottom: 2.5em
+  margin-bottom: 2.8em
 
   &__name
     font-size: $font-small
-    margin-bottom: 1.0625em
+    margin-bottom: 1.425em
 
   &__wrapper
     display: flex
 
   &__border
-    margin-right: .9375rem
+    margin-right: .7rem
 
   &__border_third-like-button
     margin-right: 1.5rem
@@ -84,7 +99,7 @@
     justify-content: space-around
     align-items: center
     border: 1px solid $light-blue
-    width: 2rem
+    width: 2.5rem
     height: 1.25rem
     border-radius: 10px
 
@@ -94,6 +109,7 @@
   &__counter, &__counter_second-like-button, &__counter_third-like-button
     color: $light-blue
     font-size: .625rem
+    margin-right: 7px
 
     &.on
       color: $purple
@@ -137,10 +153,10 @@ svg.one, svg.two, svg.three
 
   &__info
     @include flex-between()
+    margin-bottom: 23px
     
   &__name
     font-size: $font-small
-    margin-bottom: 1.4375em
 
 // эллипсовые кнопки
 .buttons
@@ -148,22 +164,25 @@ svg.one, svg.two, svg.three
 
   &__name
     font-size: $font-small
-    margin-bottom: 1em
+    margin-bottom: 1.5em
 
 .ellipse-buttons
   @include flex-between()
-  flex-wrap: wrap
-  margin-bottom: 1.9375em
-  width: 13.5625em
-  height: 7.375em
+  flex-flow: column
+
+  &__wrap
+    display: flex
+    margin-bottom: 1.8125rem
 
   &__button
-    width: 6.1875em
-    height: 2.75em
-    border-radius: 1.375em
+    width: 6.1875rem
+    height: 2.75rem
     font-size: $font-small
     text-transform: uppercase
     font-weight: 700
+
+    &:nth-child(1)
+      margin-right: 1.1875rem
 
   &_solid
     @include ellipse-button-style-solid()
@@ -176,11 +195,12 @@ svg.one, svg.two, svg.three
 
 // кнопки-ссылки
 .link-buttons
-  margin-bottom: 2.0625em
+  margin-bottom: 2.1em
 
   &__button
     font-size: $font-small
     @include button-style()
+    height: 0
     background-color: transparent
     color: $medium-blue
 
@@ -189,16 +209,19 @@ svg.one, svg.two, svg.three
       color: $pink
 
 .button-payment
-  width: 100%
-  border-radius: 1.375em
+  width: 20rem
+  border-radius: 1.775em
   @include button-style()
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
   font-size: $font-small
   color: $white
   position: relative
+  height: 3.7em
+  margin-bottom: .375rem
 
   &::after
     @include arrow-right($color: #ffffff)
+    margin-bottom: .3125rem
     
   &:hover
     @include button-hover()
@@ -206,7 +229,7 @@ svg.one, svg.two, svg.three
 // пагинация
 .pagination__name
   font-size: $font-small
-  margin-bottom: 1em
+  margin-bottom: 1.2em
 
 // фильтры по поиску номеров
 .filter__description

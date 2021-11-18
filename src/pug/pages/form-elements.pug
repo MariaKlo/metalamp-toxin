@@ -1,5 +1,5 @@
 // переменные
-- var textField = 'TEXT FILED'
+- var textField = 'TEXT FIELD'
 - var dropdown = 'DROPDOWN'
 // поля ввода
 div.elements
@@ -193,10 +193,12 @@ div.elements
     div.buttons
       h3.buttons__name BUTTONS
       div.ellipse-buttons
-        button(type="submit" class="ellipse-buttons__button ellipse-buttons_solid") Click me
-        button(type="submit" class="ellipse-buttons__button ellipse-buttons_solid") Click me
-        button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
-        button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
+        div.ellipse-buttons__wrap
+          button(type="submit" class="ellipse-buttons__button ellipse-buttons_solid") Click me
+          button(type="submit" class="ellipse-buttons__button ellipse-buttons_solid") Click me
+        div.ellipse-buttons__wrap
+          button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
+          button(type="submit" class="ellipse-buttons__button ellipse-buttons_transparent") Click me
       div.link-buttons
         button(type="submit" class="link-buttons__button") Click me
         button(type="submit" class="link-buttons__button") Click me
