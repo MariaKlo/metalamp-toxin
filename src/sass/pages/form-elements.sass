@@ -92,7 +92,7 @@
     margin-right: .7rem
 
   &__border_third-like-button
-    margin-right: 1.5rem
+    margin-right: 1.2rem
 
   &__border, &__border_second-like-button, &__border_third-like-button
     display: flex
@@ -232,12 +232,15 @@ svg.one, svg.two, svg.three
   margin-bottom: 1.2em
 
 // фильтры по поиску номеров
+.elements__filter
+  padding-top: 7.24em
+
 .filter__description
   @include flex-between()
+  margin-bottom: 0.4em
 
 .filter__info, .filter__state
   font-size: $font-small
-  margin-bottom: 0.3125em
 
 .filter__checkbox
   display: none
@@ -247,10 +250,10 @@ svg.one, svg.two, svg.three
 
   &.show
     display: flex
-    margin-bottom: .625rem
+    margin-bottom: .925rem
 
   &-list 
-    margin-bottom: 3.125rem
+    margin-bottom: 3rem
 
   &-list, &-list_second
     display: flex
@@ -273,7 +276,7 @@ svg.one, svg.two, svg.three
       -webkit-transform: rotate(45deg)
       transform: rotate(45deg)
       top: 0
-      right: -1.4375rem
+      right: 1rem
 
       &.rotate
         position: absolute
@@ -285,7 +288,7 @@ svg.one, svg.two, svg.three
         -webkit-transform: rotate(-135deg)
         transform: rotate(-135deg)
         top: .375rem
-        right: -1.4375rem
+        right: 1rem
   
 .filter__field-option
   color: $medium-blue
@@ -295,7 +298,7 @@ svg.one, svg.two, svg.three
 
 // dropdown с гостями
 .guests__info
-  margin-bottom: 0.3125em
+  margin-bottom: 0.4125em
   font-size: $font-small
 
 .guests__field, .lists__field
@@ -307,7 +310,7 @@ svg.one, svg.two, svg.three
 
 .guests__title
   font-size: $font-small
-  margin-bottom: 1em
+  margin-bottom: 1.4em
 
 .guests__checkbox
   display: flex
@@ -320,26 +323,38 @@ svg.one, svg.two, svg.three
 
 .guests__option-text
   color: $medium-blue
+  max-width: 17rem
 
 // dropdown и списки
+.lists__info
+  font-size: $font-small
+  margin-bottom: .3125rem
+
 .lists__bullet-title
   font-size: $font-small
-  margin-bottom: 1em
+  margin-bottom: 1.4em
+
+.lists__bullet-wrap
+  display: flex
+  align-items: baseline
+  margin-bottom: 1.2em
+
+.lists__bullet-design
+  border-radius: 50%
+  background-color: $light-blue
+  margin-right: 0.725em
+  width: .625rem
+  height: .625rem
 
 .lists__bullet-item
   color: $dark-blue
-  margin-bottom: 0.625em
   display: flex
   flex-direction: row
   align-items: center
 
-  &::before
-    content: "ss"
-    border-radius: 50%
-    background-color: $light-blue
-    color: transparent
-    margin-right: 0.625em
-    font-size: 0.47rem
+  &_third
+    width: 15.0625rem
+    line-height: 1.6em
 
 // комментарии
 .elements__comments
@@ -349,17 +364,24 @@ svg.one, svg.two, svg.three
   margin-right: 10.625em
 
 .comment
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1)
   display: flex
-  padding-bottom: 1.0625em
+  align-items: center
+  padding-bottom: 1.1625em
   padding-top: 1.25em
 
   &__title
     font-weight: 700
     margin-bottom: 0.4375em
+    font-size: .875rem
+    text-transform: none
 
   &__description
     color: $dark-blue
+
+  &__border
+    height: .0625rem
+    background-color: rgba(31, 32, 65, 0.1)
+    width: 17.5rem
 
   &__img
     background: url('../img/insert_emoticon.svg') no-repeat center center
@@ -380,24 +402,26 @@ svg.one, svg.two, svg.three
 
   &__wrap
     display: flex
+    align-items: flex-start
 
   &__info
    display: flex
+   align-items: flex-start
 
   &__img
     background: url('../img/image.svg') no-repeat center center 
     width: 3.4em
     height: 4.6em
-    margin-right: 0.625em
+    margin-right: 0.725em
 
   &__username
     font-weight: 700
-    margin-bottom: 0.4375em
+    margin-bottom: 0.5375em
     color: $dark-blue
 
   &__text
-    max-width: 40.8125rem
-    line-height: 1.6
+    max-width: 40.5125rem
+    line-height: 1.8
 
   &__time, &__text
   color: $dark-blue

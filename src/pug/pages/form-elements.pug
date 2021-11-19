@@ -345,9 +345,15 @@ div.elements__filter
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
     h3.lists__bullet-title Bullet list
     ul.lists__bullet
-      li.lists__bullet-item Нельзя с питомцами
-      li.lists__bullet-item Без вечеринок и мероприятий
-      li.lists__bullet-item Время прибытия — после 13:00, а выезд до 12:00
+      div.lists__bullet-wrap
+        div.lists__bullet-design
+        li.lists__bullet-item Нельзя с питомцами
+      div.lists__bullet-wrap
+        div.lists__bullet-design
+        li.lists__bullet-item Без вечеринок и мероприятий
+      div.lists__bullet-wrap
+        div.lists__bullet-design
+        li.lists__bullet-item.lists__bullet-item_third Время прибытия — после 13:00, а выезд до 12:00
 // комментарии
 div.elements__comments
   div.comments
@@ -356,11 +362,13 @@ div.elements__comments
       div.comment__wrap
         h3.comment__title Комфорт
         p.comment__description Шумопоглащающие стены
+    div.comment__border
     div.comment
       div.comment__img_second
       div.comment__wrap
         h3.comment__title Удобство
         p.comment__description Окно в каждой из спален
+    div.comment__border
   div.feedback
     div.feedback__info
       div.feedback__img
