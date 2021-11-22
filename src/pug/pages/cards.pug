@@ -57,7 +57,8 @@ div.cards
   // book
   form.book(action="#")
     div.book__wrap
-      h1.book__title №888
+      h1.book__title №
+        span 888
         span Люкс
       p.book__price 9 990&#x20bd;
         span в сутки
@@ -66,11 +67,10 @@ div.cards
         h3.book__title_small Прибытие
         div.book__datepicker-wrap
           input(type="text" name="arrival" class="book__input" placeholder="19.08.2019" id="datepicker-book-arrival")
-      div.book__wrap
-        div.book__wrapper
-          h3.book__title_small Выезд
-          div.book__datepicker-wrap
-            input(type="text" name="departure" class="book__input" placeholder="23.08.2019" id="datepicker-book-departure")
+      div.book__wrapper
+        h3.book__title_small Выезд
+        div.book__datepicker-wrap
+          input(type="text" name="departure" class="book__input" placeholder="23.08.2019" id="datepicker-book-departure")
     h3.book__title_small Гости
     div(class="iqdropdown" id="iqdropdown-fifth")
       p(class="iqdropdown-selection" data-seleсtion-text="гость" data-text-plural="гостей")
@@ -88,18 +88,19 @@ div.cards
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
     div.book__total
-      div.book__wrap
-        p.book__text 9 990&#x20bd; х 4 суток
-        p.book__total-price 39 960&#x20bd;
-      div.book__wrap
-        p.book__text Сбор за услуги: скидка 2 179&#x20bd; 
-          span &#9432;
-        p.book__total-price 0&#x20bd;
-      div.book__wrap
-        p.book__text Сбор за дополнительные услуги
-          span &#9432;
-        p.book__total-price 300&#x20bd;
-      div.book__wrap
+      div.book__total-main-wrap
+        div.book__total-wrap
+          p.book__text 9 990&#x20bd; х 4 суток
+          p.book__total-price 39 960&#x20bd;
+        div.book__total-wrap
+          p.book__text Сбор за услуги: скидка 2 179&#x20bd; 
+            span &#9432;
+          p.book__total-price 0&#x20bd;
+        div.book__total-wrap
+          p.book__text Сбор за дополнительные услуги
+            span &#9432;
+          p.book__total-price 300&#x20bd;
+      div.book__total-price-wrap
         p.book__result Итого
         div.book__line
         p.book__result 38 081&#x20bd;

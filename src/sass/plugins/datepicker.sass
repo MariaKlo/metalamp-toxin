@@ -5,6 +5,41 @@
 #datepicker-here
   margin-bottom: 0.5em
 
+#datepicker-calendar .air-datepicker.-inline-
+  width: 21.3em
+  height: 24.7em
+  padding: .625rem
+
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker-nav
+  margin-bottom: 1.25rem
+
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker--content
+.air-datepicker-body .air-datepicker-body--cells .air-datepicker-cell.-range-to-::after
+  right: 1.25rem
+  top: 0
+
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker--buttons .air-datepicker-buttons
+  margin-top: 3.0625rem
+
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker--content
+.air-datepicker-body .air-datepicker-body--cells .air-datepicker-cell.-focus-
+  height: 2.375rem
+
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker--content
+.air-datepicker-body .air-datepicker-body--cells .air-datepicker-cell.-selected-.-range-from-
+  height: 2.375rem
+
+  &::after
+    top: 0
+    
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker--content
+.air-datepicker-body .air-datepicker-body--cells .air-datepicker-cell.-selected-.-range-to- 
+  height: 2.375rem
+
+#datepicker-calendar .air-datepicker.-inline- .air-datepicker--buttons .air-datepicker-buttons
+  display: flex
+  justify-content: space-between
+
 .air-datepicker
   --adp-font-family: "Montserrat"
   --adp-font-size: 14px
@@ -131,3 +166,20 @@
   font-size: .75rem
   text-transform: uppercase
   font-weight: 700
+
+#datepicker-rooms-arrival, #datepicker-rooms-departure
+  max-width: 11.3em
+  padding: 1.6em 1em 1.6em 1.15em
+  letter-spacing: 0.08em
+
+.rooms__datepicker-wrap::after
+  top: 1.4em
+  right: 1.1em
+
+#datepicker-book-arrival, #datepicker-book-departure
+  width: 11.4em
+  padding: 1.6em 1em 1.6em 1.15em
+
+.book__datepicker-wrap::after
+  top: 1.4em
+  right: 1.1em
