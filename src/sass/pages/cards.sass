@@ -88,28 +88,25 @@
 .registration
   margin-right: 2.5em
   margin-bottom: 2.5em
-  width: 25.75em
-  height: 40.375em
+  width: 27.1em
+  height: 46.375em
   order: 1
 
   &__title
     font-size: $big-size
-    margin-bottom: 1.25em
+    margin-bottom: 0.8em
     text-transform: none
-
-  &__info
-    margin-bottom: 0.625em
 
   &__input
     border-radius: 0.25em
-    width: 100%
-    height: 2.75em
+    width: 24em
+    height: 3.3em
     padding-left: 0.9375em
-    margin-bottom: 0.625em
+    margin-bottom: 0.825em
     border: 1px solid $light-blue
 
   &__username
-    margin-bottom: 1.5em
+    margin-bottom: 1.6em
 
   &__birth-title
     font-size: $font-small
@@ -117,10 +114,10 @@
 
   &__datepick
     border-radius: 0.25em
-    width: 100%
-    height: 2.75em
+    width: 24em
+    height: 3.3em
     padding-left: 0.9375em
-    margin-bottom: 0.625em
+    margin-bottom: 1.55em
     border: 1px solid $light-blue
 
   &__data-title
@@ -130,33 +127,42 @@
   &__wrap
     display: flex
     align-items: center
-    margin-bottom: 1.5em
+    margin-bottom: 1.7em
 
   &__btn
-    width: 100%
-    height: 3.2em
-    @include ellipse-button-style-solid()
+    width: 20rem
+    border-radius: 1.775em
     @include button-style()
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
     font-size: $font-small
-    margin-bottom: 1.875em
+    color: $white
     position: relative
+    height: 3.7em
+    margin-bottom: 2.6em
+    letter-spacing: 0.06em
 
     &::after
       @include arrow-right($color: #ffffff)
+      margin-bottom: .3125rem
 
     &:hover
       @include button-hover()
 
   &_exist
     @include flex-between()
-    align-items: center
+    align-items: baseline
 
   &__btn_sign-in
     width: 6.1875em
     height: 2.75em
     font-size: $font-small
     text-transform: uppercase
+    width: 6.1875rem
+    height: 2.75rem
+    font-size: 0.75rem
+    text-transform: uppercase
     @include ellipse-button-style-transparent()
+    margin-right: 1.2em
 
     &:hover
       @include button-hover()
@@ -293,37 +299,41 @@
 // sign-in card
 .sign-in
   margin-right: 2.5em
-  width: 23.75em
-  height: 22.375em
+  width: 27.1em
+  height: 25.5em
   order: 1
 
   &__title
     font-size: $big-size
-    margin-bottom: 1.3125em
+    margin-bottom: 0.8em
     text-transform: none
 
   &__input
     border-radius: 0.25em
-    width: 100%
-    height: 2.75em
+    width: 24em
+    height: 3.3em
     padding-left: 0.9375em
-    margin-bottom: 0.625em
+    margin-bottom: 0.825em
     border: 1px solid $light-blue
 
   &__input_second
-    margin-bottom: 1.25em
+    margin-bottom: 1.4em
 
   &__btn
-    width: 100%
-    height: 3.2em
+    width: 20rem
+    border-radius: 1.775em
     @include button-style()
-    @include ellipse-button-style-solid()
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
     font-size: $font-small
-    margin-bottom: 1.875em
+    color: $white
     position: relative
+    height: 3.7em
+    margin-bottom: 2.6em
+    letter-spacing: 0.06em
 
     &::after
       @include arrow-right($color: #ffffff)
+      margin-bottom: .3125rem
 
     &:hover
       @include button-hover()
@@ -337,7 +347,11 @@
     height: 2.75em
     font-size: $font-small
     text-transform: uppercase
+    width: 6.1875rem
+    height: 2.75rem
+    font-size: 0.75rem
     @include ellipse-button-style-transparent()
+    margin-right: 1.2em
 
     &:hover
       @include button-hover()
@@ -347,7 +361,7 @@
   background-color: $white
   border-radius: 0.25em
   width: 19em
-  height: 19.5em
+  height: 18.5em
   order: 2
   @include shadows-wide()
 
@@ -360,22 +374,29 @@
     width: 19em
 
   &__wrap
-    margin-top: 1.25em
-    @include flex-between()
+    margin-top: 0.6em
+    display: flex
     align-items: baseline
-    padding: 0 1.25em 1.25em 1.25em
+    padding: 0 1.25em 1em 1.25em
   
   &__wrap_border
-    border-bottom: 1px solid $thin-blue
-    padding-bottom: 0.625em
+    height: .0225rem
+    margin: 0 auto
+    width: 14.375rem
+    background-color: $thin-blue 
 
   &__title
-    font-size: $big-size
+    font-size: .875rem
+    margin-right: 2.1em
 
-    span
+    span:nth-child(1)
+      font-size: 1.2rem
+      margin-left: 0.2em
+
+    span:nth-child(2)
       font-size: $font-small
       color: $purple
-      margin-left: 0.5em
+      margin-left: 0.2em
 
   &__price
     color: $medium-blue
@@ -404,15 +425,22 @@
 .usual-room__wrap
   @include flex-between()
   align-items: center
-  margin-top: 1.25em
-  padding: 0 1.25em 1.25em 1.25em
+  margin-top: 0.9em
+  padding: 0 1.25em 0.6em 1.25em
 
   &_border
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1)
-    padding-bottom: 0.625em
+    height: .0225rem
+    margin: 0 auto
+    width: 14.375rem
+    background-color: $thin-blue
 
 .usual-room__title
-  font-size: $big-size
+  font-size: .875rem
+  margin-right: 2.1em
+
+  span:nth-child(1)
+    font-size: 1.2rem
+    margin-left: 0.2em
 
 .usual-room__price
   color: $medium-blue
