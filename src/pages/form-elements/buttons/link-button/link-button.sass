@@ -1,0 +1,17 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__variables.sass"
+@import "../../../partials/__tegs.sass"
+
+.link-buttons
+  margin-bottom: 2.1em
+
+  &__button
+    font-size: $font-small
+    @include button-style()
+    height: 0
+    background-color: transparent
+    color: $medium-blue
+
+    &:hover
+      transition: all 0.2s ease
+      color: $pink

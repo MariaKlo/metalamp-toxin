@@ -1,0 +1,134 @@
+@import "../partials/__mixins.sass"
+@import "../partials/__variables.sass"
+@import "../partials/__tegs.sass"
+
+@import "buttons/buttons.sass"
+@import "plugins/plugins.sass"
+@import "bullet-list/bullet-list.sass"
+@import "comment/comment.sass"
+@import "feedback/feedback.sass"
+@import "inputs/regular-input/regular-input.sass"
+// стили к инпутам
+.elements
+  background: #ffffff url('../img/Group.svg') no-repeat top left
+
+.elements, .elements__filter, .elements__comments
+    background-color: $white
+    @include flex-between()
+    @include container()
+    padding-top: 8.9375em
+
+    &__description
+      @include flex-between()
+      font-size: $font-small
+
+    &__info
+      font-size: $font-small
+      margin-bottom: 0.4875em
+
+    &__field
+      @include input-style()
+      margin-bottom: 1.65em
+      letter-spacing: 0.07em
+
+      &-wrap
+        position: relative
+
+        &::after
+          @include arrow-purple()
+          top: -0.15em
+          right: 1.95em
+
+        &-datepicker
+          position: relative
+
+          &::after
+            @include arrow()
+            top: 1.2em
+            right: 1.1em
+
+          &_short
+            position: relative
+            margin-bottom: 3em
+
+            &::after
+              @include arrow($right: 4.9em)
+              top: 1.3em
+              
+      &-date
+        @include input-style()
+        width: 11.275em
+        border: 0.0625em solid rgba(31, 32, 65, 0.25)
+        border-radius: 0.31em
+        padding: 0.9125em 0 0.9125em 0.9375em
+        letter-spacing: 0.1em
+
+      &-filter
+        letter-spacing: 0.04em
+
+      &-subscription
+        letter-spacing: 0.12em
+
+      &-filter, &-subscription
+        @include input-style()
+        padding: 0.9125em 6.6em 0.9125em 0.9375em
+
+.date-dropdown
+  @include flex-between()
+  margin-top: 2.5em
+  margin-bottom: 2.9625em
+
+// стили для кнопок
+
+// эллипсовые кнопки
+.buttons
+  margin-bottom: 2.5em
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.5em
+
+.ellipse-buttons
+
+  &__wrap
+    display: flex
+    margin-bottom: 1.8125rem
+
+// пагинация
+.pagination__name
+  font-size: $font-small
+  margin-bottom: 1.2em
+
+// dropdown с гостями
+.guests__info
+  margin-bottom: 0.4125em
+  font-size: $font-small
+
+.guests__field, .lists__field
+  width: 20em
+  padding: 0.75em 0 0.5em 0.9375em
+  border-radius: 0.325em
+  border: 1px solid $light-blue
+  margin-bottom: 6.125em
+
+.guests__title
+  font-size: $font-small
+  margin-bottom: 1.4em
+
+.guests__checkbox
+  display: flex
+  margin-bottom: 0.6875em
+
+.guests__option-title
+  color: $dark-blue
+  font-weight: 700
+  margin-bottom: 0.3125em
+
+.guests__option-text
+  color: $medium-blue
+  max-width: 17rem
+
+// dropdown и списки
+.lists__info
+  font-size: $font-small
+  margin-bottom: .3125rem

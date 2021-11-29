@@ -1,0 +1,22 @@
+form.registration(action="#")
+    h1.registration__title Регистрация аккаунта
+    div.registration__info
+      input(type="text" name="first name" class="registration__input" placeholder="Имя")
+      input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
+    div.registration__username
+      include ../../form-elements/buttons/radio-button/radio-button.pug
+      +radio-button("male", "Мужчина")
+      +radio-button("female", "Женщина")
+    div.registration__birth
+      h3.registration__birth-title Дата Рождения
+      input(type="text" name="date" class="registration__datepick" placeholder="ДД.ММ.ГГГГ" id="datepicker-birthday")
+    div.registration__data
+      h3.registration__data-title Данные для входа в сервис
+      input(type="text" name="email" class="registration__input" placeholder="Email")
+      input(type="text" name="password" class="registration__input" placeholder="Пароль")
+    include ../../form-elements/buttons/toggle-button/toggle-button.pug
+    +toggle-button()
+    button(type="submit" class="registration__btn") Перейти к оплате
+    div.registration_exist
+      p.registration__text_exist Уже есть аккаунт на Toxin
+      button(type="submit" class="registration__btn_sign-in") Войти
