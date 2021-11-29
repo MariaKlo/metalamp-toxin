@@ -1,0 +1,21 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__variables.sass"
+@import "../../../partials/__tegs.sass"
+
+.button-payment
+  width: 20rem
+  border-radius: 1.775em
+  @include button-style()
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+  font-size: $font-small
+  color: $white
+  position: relative
+  height: 3.7em
+  margin-bottom: .375rem
+
+  &::after
+    @include arrow-right($color: #ffffff)
+    margin-bottom: .3125rem
+    
+  &:hover
+    @include button-hover()

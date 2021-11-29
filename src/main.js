@@ -1,13 +1,13 @@
 import $ from 'jquery';
-import './sass/main.sass';
-import './sass/fonts.sass';
+import './pages/main.sass';
+import './pages/fonts.sass';
 
-import './js/plugins/datepicker/datepicker.js';
-import './js/plugins/iqdropdown/item-quantity-dropdown.js';
-import './js/plugins/pagination/paginationjs.js';
-import './js/plugins/range-slider/slider.js';
-import './js/plugins/swiper/swiper.js';
-import './js/buttons/like-button.js';
-import './js/buttons/expandableCheckboxList.js';
+import './pages/form-elements/plugins/datepicker/datepicker.js';
+import './pages/form-elements/plugins/item-quantity-dropdown/item-quantity-dropdown.js';
+import './pages/form-elements/plugins/pagination/paginationjs.js';
+import './pages/form-elements/plugins/range-slider/range-slider.js';
+import './pages/form-elements/plugins/swiper/swiper.js';
+import './pages/form-elements/buttons/like-button/like-button.js';
+import './pages/form-elements/buttons/expandable-checkbox-list/expandable-checkbox-list.js';
 
 global.jQuery = global.$ = $;

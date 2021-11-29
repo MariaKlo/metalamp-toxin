@@ -1,0 +1,64 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__tegs.sass"
+@import "../../../partials/__variables.sass"
+
+#data-container
+  display: none
+
+#pagination-container
+  margin-bottom: .625rem
+  width: 15.0625rem
+
+  .paginationjs-pages
+    margin-bottom: .625rem
+
+  .paginationjs .paginationjs-nav.J-paginationjs-nav
+    color: $dark-blue
+
+#pagination-container ul
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .paginationjs-page > a
+    font-size: $font-small
+    color: $medium-blue
+    text-decoration: none
+
+  .paginationjs-page.active
+    font-size: $font-small
+    font-weight: 700
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    border-radius: 50%
+    padding: 1em 1.5em
+
+  .paginationjs-page.active > a
+    color: $white
+
+  .paginationjs-next, .paginationjs-prev
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    border-radius: 50%
+    padding: 1.5em
+    position: relative
+
+  .paginationjs-next > a, .paginationjs-prev > a
+    display: none
+
+  .paginationjs-next::after
+    content: "→"
+    position: absolute
+    color: $white
+    font-size: 2.5rem
+    top: -7px
+    left: 8px
+
+  .paginationjs-prev::after
+    content: "←"
+    position: absolute
+    color: $white
+    font-size: 2.5rem
+    top: -7px
+    left: 8px
+
+  .paginationjs-next.disabled, .paginationjs-prev.disabled
+    display: none

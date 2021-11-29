@@ -1,0 +1,129 @@
+@import "../../partials/__mixins.sass"
+@import "../../partials/__variables.sass"
+@import "../../partials/__tegs.sass"
+@import "../../form-elements/plugins/item-quantity-dropdown/iqdropdown.sass"
+
+.book
+  margin-right: 2.5rem
+  margin-bottom: 2.5em
+  width: 27.2em
+  max-height: 36.9em
+  order: 0
+
+  &__wrap
+    display: flex
+    margin-bottom: 1.5em
+    align-items: flex-end
+
+  &__wrapper:nth-child(1)
+    margin-right: 1.25rem
+
+  &__title
+    font-size: .875rem
+    margin-right: 7.4em
+
+    span:nth-child(1)
+      font-size: 1.5rem
+      margin-left: 0.2em
+
+    span:nth-child(2)
+      font-size: $font-small
+      color: $purple
+      margin-left: 0.7em
+
+  &__price
+    color: $medium-blue
+    font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
+
+  &__wrap:nth-child(2)
+    display: flex
+    align-items: center
+
+  &__title_small
+    font-size: $font-small
+    margin-bottom: 0.45em
+
+  &__input
+    width: 9.375em
+    height: 2.75em
+    padding-left: 0.9375em
+    border-radius: 0.25em
+    border: 1px solid $light-blue
+
+    &_guests
+      width: 100%
+      margin-bottom: 1.3125em
+
+  &__text
+    width: 16em
+
+    span
+      color: $light-blue
+  
+  &__total
+    width: 23.2em
+
+    &-wrap
+      display: flex
+      justify-content: space-between
+      margin-bottom: 1.05rem
+
+    &-price-wrap
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      margin-bottom: 1.3125rem
+
+    &-main-wrap
+      margin-bottom: 2.1875rem
+
+  &__text
+    display: flex
+    width: 17.4em
+    line-height: 1
+
+    span
+      font-size: 1.25rem
+      margin-left: .5625rem
+
+  &__text, &__total-price
+    color: $dark-blue
+
+  &__result
+    font-weight: 700
+    font-size: 1.188rem
+
+  &__btn
+    width: 20rem
+    border-radius: 1.775em
+    @include button-style()
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+    font-size: $font-small
+    color: $white
+    position: relative
+    height: 3.7em
+    margin-bottom: .375rem
+    letter-spacing: 0.06em
+
+    &::after
+      @include arrow-right($color: #ffffff)
+      margin-bottom: .3125rem
+
+    &:hover
+      @include button-hover()
+
+  &__line
+    background-color: $light-blue
+    height: 1px
+    width: 42%
+
+  &__datepicker-wrap
+    position: relative
+
+    &::after
+      @include arrow($right: 0.8em)

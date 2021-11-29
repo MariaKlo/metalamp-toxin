@@ -1,0 +1,6 @@
+mixin colors(normalNameOfColor, hexNameOfColor)
+  div.color
+    div(class!=attributes.class)
+    div.color-wrapper
+      h2.english-name= normalNameOfColor
+      p.hex-name= hexNameOfColor
