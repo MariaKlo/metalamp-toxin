@@ -1,0 +1,41 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__tegs.sass"
+@import "../../../partials/__variables.sass"
+@import "headers/headers.sass"
+
+.header
+  @include flex-between()
+  align-items: center
+  background-color: $white
+  padding-top: 1.0375em
+  padding-bottom: 0.975em
+  @include container()
+    
+  &__logo
+    background: url('../img/logo.svg') no-repeat top left
+    height: 3em
+    width: 7.925em
+
+  &__wrapper
+    display: flex
+    align-items: center
+    width: 51.8125rem
+
+    &_second
+      width: 40.6125rem
+
+  &__button
+    text-transform: uppercase
+
+.button__sign-in 
+  @include ellipse-button-style-transparent()
+  margin-right: 1.25em
+  padding: 0.625em 1.25em
+
+.button__sign-up
+  @include ellipse-button-style-solid()
+  font-weight: 700
+  padding: 0.725em 1.25em
+
+.button__sign-in:hover, .button__sign-up:hover
+  @include button-hover()

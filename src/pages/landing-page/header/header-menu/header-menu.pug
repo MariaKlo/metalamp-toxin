@@ -1,0 +1,8 @@
+div.header
+  div.header__logo
+  div.header__wrapper
+    include headers/headers.pug
+    +header("О нас", "Услуги", "Вакансии", "Новости", "Соглашения")
+    div.header__buttons
+      button(type="submit" class="header__button button__sign-in") Войти
+      button(type="submit" class="header__button button__sign-up") Зарегистрироваться
