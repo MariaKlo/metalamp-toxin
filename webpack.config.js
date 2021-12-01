@@ -28,6 +28,13 @@ module.exports = {
       collapseWhitespace: isProd,
     }
   }),
+    new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, 'src/pages/sign-in/sign-in.pug'),
+    filename: "sign-in.html",
+    minify: {
+      collapseWhitespace: isProd,
+    }
+  }),
     new HtmlWebpackExternalsPlugin({
       externals: [
         {

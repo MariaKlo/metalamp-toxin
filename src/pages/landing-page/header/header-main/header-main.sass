@@ -1,0 +1,26 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__variables.sass"
+@import "../../../partials/__tegs.sass"
+
+@import "header-cards/search/search.sass"
+@import "header-cards/plugins/datepicker/datepicker.sass"
+@import "header-cards/plugins/item-quantity-dropdown/iqdropdown.sass"
+
+.header
+  &__bg
+    background: url("../img/main-bg.png") no-repeat center center
+    padding-top: 4.375rem
+    padding-bottom: 1.125rem 
+
+  &__container
+    @include container()
+
+  &__wrap
+    margin-top: 20rem
+
+  &__text
+    color: $dark-blue
+    text-align: end
+
+    &:first-child
+      line-height: 1.5rem

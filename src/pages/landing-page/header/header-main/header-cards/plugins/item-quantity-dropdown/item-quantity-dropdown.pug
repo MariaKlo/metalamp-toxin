@@ -1,0 +1,17 @@
+mixin item-quantity-dropdown(id, firstOption, secondOption, thirdOption)
+  div(class="iqdropdown" id=id)
+    p(class="iqdropdown-selection" data-seleсtion-text="гость" data-text-plural="гостей")
+    div(class="iqdropdown-menu")
+      div(class="iqdropdown-menu-option" data-id="item1")
+        div
+          p(class="iqdropdown-item")= firstOption
+      div(class="iqdropdown-menu-option" data-id="item2")
+        div
+          p(class="iqdropdown-item")= secondOption
+      div(class="iqdropdown-menu-option" data-id="item3")
+        div
+          p(class="iqdropdown-item")= thirdOption
+      if block
+        block
+      else
+        div
