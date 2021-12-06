@@ -1,9 +1,11 @@
 div.header
-  div.header__logo
-  div.header__wrapper
-    include headers/headers.pug
-    +header("О нас", "Услуги", "Вакансии", "Новости", "Соглашения")
-    div.header__buttons
-      a(href="../../../sign-in/sign-in.pug")
-        button(type="submit" class="header__button button__sign-in") Войти
-      button(type="submit" class="header__button button__sign-up") Зарегистрироваться
+  a(href="index.html")
+    div.header__logo
+    div.header__wrapper
+      include headers/headers.pug
+      +header("О нас", "Услуги", "Вакансии", "Новости", "Соглашения")
+      div.header__buttons
+        a(href="sign-in.html")
+          button(type="submit" class="header__button button__sign-in") Войти
+        a(href="registration.html")
+          button(type="submit" class="header__button button__sign-up") Зарегистрироваться
