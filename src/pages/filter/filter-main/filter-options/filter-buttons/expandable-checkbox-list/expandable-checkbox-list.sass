@@ -1,0 +1,69 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__variables.sass"
+@import "../../../partials/__tegs.sass"
+@import "../../../fonts.sass"
+
+.elements__filter
+  padding-top: 7.24em
+
+.filter
+  &__description
+    @include flex-between()
+    margin-bottom: 0.4em
+
+  &__info, &__state
+    font-size: $font-small
+
+  &__checkbox
+    display: none
+
+    &_first, &_seventh
+      margin-top: 1.0625rem
+
+    &.show
+      display: flex
+      margin-bottom: .925rem
+
+    &-list 
+      margin-bottom: 3rem
+
+    &-list, &-list_second
+      display: flex
+      flex-direction: column
+      align-content: center
+      justify-content: space-between
+      color: #1F2041
+      font-weight: 700
+      text-transform: uppercase
+      font-size: $font-small
+      position: relative
+
+      &-arrow_first, &-arrow_second
+        position: absolute
+        border: solid rgba(31, 32, 65, 0.5)
+        width: .625rem
+        height: .625rem
+        border-width: 0 2px 2px 0
+        display: inline-block
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+        top: 0
+        right: -2.95rem
+
+        &.rotate
+          position: absolute
+          border: solid rgba(31, 32, 65, 0.5)
+          width: .625rem
+          height: .625rem
+          border-width: 0 2px 2px 0
+          display: inline-block
+          -webkit-transform: rotate(-135deg)
+          transform: rotate(-135deg)
+          top: .375rem
+          right: -2.95rem
+  
+  &__field-option
+    color: $medium-blue
+    font-weight: 400
+    text-transform: none
+    font-size: .875rem

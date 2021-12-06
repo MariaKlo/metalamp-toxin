@@ -59,6 +59,10 @@ module.exports = {
     template: 'src/pages/registration/registration.pug',
     filename: "./registration.html",
   }),
+  new HtmlWebpackPlugin({
+    template: 'src/pages/filter/filter.pug',
+    filename: "./filter.html",
+  }),
     new HtmlWebpackExternalsPlugin({
       externals: [
         {
