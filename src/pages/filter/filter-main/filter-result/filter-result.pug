@@ -1,2 +1,6 @@
-h2 Номера, которые мы для вас подобрали
-// pagination with cards
+div.filter-result__wrap
+  h2.filter-result__title Номера, которые мы для вас подобрали
+  div.filter-result__page
+    include filter-card/filter-card.pug 
+  include pagination/pagination.pug
+  +pagination()

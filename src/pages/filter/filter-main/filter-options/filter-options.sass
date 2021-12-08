@@ -6,6 +6,9 @@
 @import "filter-plugins/filter-plugins.sass"
 
 .filter
+  &__wrapper
+    margin-bottom: 1.875rem
+
   &__title
     font-size: .75rem
     text-transform: uppercase
@@ -14,9 +17,6 @@
 
     &_below
       margin-bottom: 1rem
-
-    &_above
-      margin-top: 1.875rem
 
   &__input
     @include input-style()

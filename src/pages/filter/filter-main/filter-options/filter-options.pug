@@ -7,19 +7,22 @@ div.filter
     div(class="iqdropdown-menu-btn-wrap")
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-  include filter-plugins/range-slider/range-slider.pug
-  +range-slider()
-  h3.filter__title.filter__title_below Правила дома
-  include filter-buttons/checkbox-button/checkbox-button.pug
-  +checkbox-button("checkbox", "Можно курить")(class="checkbox-buttons__option")
-  +checkbox-button("checkbox-second", "Можно с питомцами")(class="checkbox-buttons__option")
-  +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)")(class="checkbox-buttons__option") 
-  h3.filter__title.filter__title_below Доступность
-  +checkbox-button("checkbox-fourth", "Широкий коридор")(class="checkbox-buttons__option_bold")
-    p.filter__text Ширина коридоров в номере не менее 91 см.
-  +checkbox-button("checkbox-fifth", "Помощник для инвалидов")(class="checkbox-buttons__option_bold")
-    p.filter__text На 1 этаже вас встретит специалист  и проводит до номера.
-  h3.filter__title.filter__title_above Удобства номера
+  div.filter__wrapper
+    include filter-plugins/range-slider/range-slider.pug
+    +range-slider()
+  div.filter__wrapper  
+    h3.filter__title.filter__title_below Правила дома
+    include filter-buttons/checkbox-button/checkbox-button.pug
+    +checkbox-button("checkbox", "Можно курить")(class="checkbox-buttons__option")
+    +checkbox-button("checkbox-second", "Можно с питомцами")(class="checkbox-buttons__option")
+    +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)")(class="checkbox-buttons__option") 
+  div.filter__wrapper
+    h3.filter__title.filter__title_below Доступность
+    +checkbox-button("checkbox-fourth", "Широкий коридор")(class="checkbox-buttons__option_bold")
+      p.filter__text Ширина коридоров в номере не менее 91 см.
+    +checkbox-button("checkbox-fifth", "Помощник для инвалидов")(class="checkbox-buttons__option_bold")
+      p.filter__text На 1 этаже вас встретит специалист  и проводит до номера.
+  h3.filter__title Удобства номера
   +item-quantity-dropdown("iqdropdown-sixth", "Спальни", "Кровати", "Ванные комнаты")
   div.filter__checkbox-list Дополнительные удобства
     i.filter__checkbox-list-arrow_first
