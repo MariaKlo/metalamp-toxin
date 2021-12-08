@@ -5,11 +5,12 @@
 
 .header
   @include flex-between()
+  @include container()
+  @include header-shadow()
   align-items: center
   background-color: $white
   padding-top: 1.0375em
   padding-bottom: 0.975em
-  @include container()
     
   &__logo
     background: url('../img/logo.svg') no-repeat top left
