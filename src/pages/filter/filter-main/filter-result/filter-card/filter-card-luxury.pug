@@ -1,6 +1,5 @@
-// "swiper_second", "usual-room__img", "840", "9 990₽", "grads-rooms", "stars-rooms", "stars-shapes-rooms", "url(#grads-rooms)", "stars-rooms", "fives-rooms", "forths-rooms", "threes-rooms", "seconds-rooms", "ones-rooms", "#stars-rooms", "65" (class="swiper")
-mixin filter-card-usual(swiperId, imgSwiperClass, roomNumber, price, linearGradientId, symbolId, polygonId, polygonUrl, name, firstIdStar, secondIdStar, thirdIdStar, fourthIdStar, fifthIdStar, href, commentsNumber)
-  form.usual-room(action="#")
+mixin filter-card-luxury(swiperId, imgSwiperClass, roomNumber, price, linearGradientId, symbolId, polygonId, polygonUrl, name, firstIdStar, secondIdStar, thirdIdStar, fourthIdStar, fifthIdStar, href, commentsNumber)
+  form.luxury-room(action="#")
     div(class!=attributes.class id=swiperId)
       div.swiper-wrapper
         div.swiper-slide
@@ -14,21 +13,22 @@ mixin filter-card-usual(swiperId, imgSwiperClass, roomNumber, price, linearGradi
       div.swiper-pagination.swiper-pagination-position
       div.swiper-button-prev
       div.swiper-button-next
-    div.usual-room__wrap
-      h1.usual-room__title №
+    div.luxury-room__wrap
+      h1.luxury-room__title №
         span= roomNumber
-      p.usual-room__price= price
+        span Люкс
+      p.luxury-room__price= price
         span в сутки
-    div.usual-room__wrap_border
-    div.usual-room__wrapper
-      div.usual-room__source
+    div.luxury-room__wrap_border
+    div.luxury-room__wrapper
+      div.luxury-room__source
       svg(class="gradient")
         linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id=linearGradientId)
           stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
           stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
         symbol(id=symbolId viewBox="153 89 106 108")
           polygon(id=polygonId stroke=polygonUrl stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
-      div.usual-room__wraps
+      div.luxury-room__wraps
         input(type="radio" name=name id=firstIdStar)
         label(for=firstIdStar)
           svg.star
@@ -49,5 +49,5 @@ mixin filter-card-usual(swiperId, imgSwiperClass, roomNumber, price, linearGradi
         label(for=fifthIdStar)
           svg.star
             use(xlink:href=href)
-      p.usual-room__comments= commentsNumber
-        span Отзывов     
+      p.luxury-room__comments= commentsNumber
+        span Отзывов   

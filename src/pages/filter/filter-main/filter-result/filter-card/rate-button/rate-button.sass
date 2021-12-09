@@ -14,7 +14,7 @@
 .rate-buttons__wrapper
   display: flex
 
-input[name="star"], input[name="stars"] 
+input[name="star"], input[name="stars"], input[name="star-room-third"]
   display: inline-block
   width: 0
   opacity: 0
@@ -43,17 +43,19 @@ svg.star:hover,
 input[name="star"]:focus ~ label .star,
 input[name="star"]:checked ~ label .star,
 input[name="stars"]:focus ~ label .star,
-input[name="stars"]:checked ~ label .star  
+input[name="stars"]:checked ~ label .star,
+input[name="star-room-third"]:focus ~ label .star,
+input[name="star-room-third"]:checked ~ label .star   
   color: rgba(188, 156, 255, 1)
 
-
 input[name="star"]:checked + label .star,
-input[name="stars"]:checked + label .star  
+input[name="stars"]:checked + label .star,
+input[name="star-room-third"]:checked + label .star 
   animation: starred 0.5s
 
-
 input[name="star"]:checked + label,
-input[name="stars"]:checked + label 
+input[name="stars"]:checked + label,
+input[name="star-room-third"]:checked + label
   animation: scaleup 1s
 
 @keyframes scaleup 

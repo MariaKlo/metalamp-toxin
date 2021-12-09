@@ -1,6 +1,6 @@
 @import "../../../../../partials/__variables.sass"
 
-.luxury-room__swiper
+.luxury-room__swiper, .luxury-room__swiper-third
   height: 11.5625em
   
 .swiper 
@@ -59,6 +59,58 @@
   font-size: 1.0625rem
 
 #swiper_second .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+  content: "prev"
+  color: $white
+  font-size: 1.0625rem
+
+// style of third swiper
+#swiper_third .swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, .swiper-pagination-fraction
+  bottom: 1.5625em!important
+  left: 7.5em!important
+  width: 100% !important
+
+#swiper_third .swiper-pagination-bullet
+  border: 2px solid $white
+  opacity: 1
+  background-color: transparent 
+
+#swiper_third .swiper-pagination-bullet-active
+  background-color: $white
+
+#swiper_third .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+  content: "next"
+  color: $white
+  font-size: 1.0625rem
+
+#swiper_third .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+  content: "prev"
+  color: $white
+  font-size: 1.0625rem
+
+// style of fourth swiper
+#swiper_fourth .swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, .swiper-pagination-fraction
+  bottom: 1.5625em!important
+  left: 7.5em!important
+  width: 100% !important
+
+#swiper_fourth .swiper-pagination-bullet
+  border: 2px solid $white
+  opacity: 1
+  background-color: transparent 
+
+#swiper_fourth .swiper-pagination-bullet-active
+  background-color: $white
+
+#swiper_fourth .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+  content: "next"
+  color: $white
+  font-size: 1.0625rem
+
+#swiper_fourth .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
   content: "prev"
   color: $white
   font-size: 1.0625rem

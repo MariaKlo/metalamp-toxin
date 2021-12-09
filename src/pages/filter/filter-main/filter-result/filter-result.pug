@@ -1,6 +1,15 @@
 div.filter-result__wrap
   h2.filter-result__title Номера, которые мы для вас подобрали
   div.filter-result__page
-    include filter-card/filter-card.pug 
+    // first room
+    include filter-card/filter-card-luxury.pug
+    +filter-card-luxury("swiper", "luxury-room__img", "888", "9 990₽", "grad-room", "star-room", "star-shape-room", "url(#grad-room)", "star-room", "five-room", "four-room", "three-room", "two-room", "one-room", "#star-room", "145")(class="swiper luxury-room__swiper")
+    // second room
+    include filter-card/filter-card.pug
+    +filter-card-usual("swiper_second", "usual-room__img", "840", "9 990₽", "grads-rooms", "stars-rooms", "stars-shapes-rooms", "url(#grads-rooms)", "stars-rooms", "fives-rooms", "forths-rooms", "threes-rooms", "seconds-rooms", "ones-rooms", "#stars-rooms", "65")(class="swiper")
+    // third room 
+    +filter-card-luxury("swiper_third", "luxury-room__img-third", "980", "8 500₽", "grad-room-third", "star-room-third", "star-shape-room-third", "url(#grad-room-third)", "star-room-third", "five-room-third", "four-room-third", "three-room-third", "two-room-third", "one-room-third", "#star-room-third", "35")(class="swiper luxury-room__swiper-third")
+    // fourth room
+    +filter-card-usual("swiper_fourth", "usual-room__img-fourth", "856", "7 300₽", "grads-rooms-fourth", "stars-rooms-fourth", "stars-shapes-rooms-fourth", "url(#grads-rooms-fourth)", "stars-rooms", "fives-rooms-fourth", "forths-rooms-fourth", "threes-rooms-fourth", "twos-rooms-fourth", "ones-rooms-fourth", "#stars-rooms-fourth", "19")(class="swiper")
   include pagination/pagination.pug
   +pagination()
