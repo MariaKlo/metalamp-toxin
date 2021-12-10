@@ -70,7 +70,7 @@ input[name="star-room-third"]:checked + label
   to 
     color: rgba(188, 156, 255, 1)
 
-// rate buttons for cards
+// styles for other rate buttons
 
 .luxury-room__wrapper, .usual-room__wrapper
   display: flex
@@ -78,7 +78,8 @@ input[name="star-room-third"]:checked + label
   padding-top: 0.5em
   padding-left: 1.25em
 
-input[name="star-room"], input[name="stars-rooms"] 
+input[name="star-room"], input[name="stars-rooms"], input[name="star-room-fifth"],
+input[name="star-room-sixth"]
   display: inline-block
   width: 0
   opacity: 0
@@ -98,13 +99,60 @@ input[name="star-room"], input[name="stars-rooms"]
 input[name="star-room"]:focus ~ label .star,
 input[name="star-room"]:checked ~ label .star,
 input[name="stars-rooms"]:focus ~ label .star,
-input[name="stars-rooms"]:checked ~ label .star  
+input[name="stars-rooms"]:checked ~ label .star,
+input[name="star-room-fifth"]:focus ~ label .star,
+input[name="star-room-fifth"]:checked ~ label .star,
+input[name="star-room-sixth"]:focus ~ label .star,
+input[name="star-room-sixth"]:checked ~ label .star
   color: rgba(188, 156, 255, 1)
 
 input[name="star-room"]:checked + label .star,
-input[name="stars-rooms"]:checked + label .star  
+input[name="stars-rooms"]:checked + label .star,
+input[name="star-room-fifth"]:checked + label .star,
+input[name="star-room-sixth"]:checked + label .star 
   animation: starred 0.5s
 
 input[name="star-room"]:checked + label,
-input[name="stars-rooms"]:checked + label 
+input[name="stars-rooms"]:checked + label,
+input[name="star-room-fifth"]:checked + label,
+input[name="star-room-sixth"]:checked + label
+  animation: scaleup 1s
+
+// styles for other rate buttons
+
+input[name="star-room-seventh"], input[name="star-room-eighth"], input[name="star-room-ninth"],
+input[name="star-room-tenth"], input[name="star-room-eleventh"], input[name="star-room-twelfth"]
+  display: inline-block
+  width: 0
+  opacity: 0
+  margin-left: -2px
+
+input[name="star-room-seventh"]:focus ~ label .star,
+input[name="star-room-seventh"]:checked ~ label .star,
+input[name="star-room-eighth"]:focus ~ label .star,
+input[name="star-room-eighth"]:checked ~ label .star,
+input[name="star-room-ninth"]:focus ~ label .star,
+input[name="star-room-ninth"]:checked ~ label .star,
+input[name="star-room-tenth"]:focus ~ label .star,
+input[name="star-room-tenth"]:checked ~ label .star,
+input[name="star-room-eleventh"]:focus ~ label .star,
+input[name="star-room-eleventh"]:checked ~ label .star,
+input[name="star-room-twelfth"]:focus ~ label .star,
+input[name="star-room-twelfth"]:checked ~ label .star
+  color: rgba(188, 156, 255, 1)
+
+input[name="star-room-seventh"]:checked + label .star,
+input[name="star-room-eighth"]:checked + label .star,
+input[name="star-room-ninth"]:checked + label .star,
+input[name="star-room-tenth"]:checked + label .star,
+input[name="star-room-eleventh"]:checked + label .star,
+input[name="star-room-twelfth"]:checked + label .star
+  animation: starred 0.5s
+
+input[name="star-room-seventh"]:checked + label,
+input[name="star-room-eighth"]:checked + label,
+input[name="star-room-ninth"]:checked + label,
+input[name="star-room-tenth"]:checked + label,
+input[name="star-room-eleventh"]:checked + label,
+input[name="star-room-twelfth"]:checked + label
   animation: scaleup 1s

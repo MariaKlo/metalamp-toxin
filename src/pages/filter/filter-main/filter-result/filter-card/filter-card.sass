@@ -7,7 +7,7 @@
 
 // first room styles
 .luxury-room
-  margin: 0 2.5em
+  margin: 1em
   background-color: $white
   border-radius: 0.25em
   width: 19em
@@ -69,6 +69,7 @@
 
 // second room styles
 .usual-room
+  margin: 1em
   background-color: $white
   border-radius: 0.25em
   width: 19em
@@ -80,10 +81,37 @@
     height: 9.5rem
     width: 16.9375rem
 
-    &-fourth
-      background: url('../img/fourth-room.png') no-repeat center center
+    &-fourth, &-fifth, &-sixth, &-seventh, &-eighth, &-ninth, &-tenth,
+    &-eleventh, &-twelfth
       height: 10.9em
       width: 19em
+
+    &-fourth
+      background: url('../img/fourth-room.png') no-repeat center center
+      
+    &-fifth
+      background: url('../img/fifth-room.png') no-repeat center center
+
+    &-sixth
+      background: url('../img/sixth-room.png') no-repeat center center
+
+    &-seventh
+      background: url('../img/seventh-room.png') no-repeat center center
+
+    &-eighth
+      background: url('../img/eighth-room.png') no-repeat center center
+
+    &-ninth
+      background: url('../img/ninth-room.png') no-repeat center center
+
+    &-tenth
+      background: url('../img/tenth-room.png') no-repeat center center
+
+    &-eleventh
+      background: url('../img/eleventh-room.png') no-repeat center center
+    
+    &-twelfth
+      background: url('../img/twelfth-room.png') no-repeat center center
 
   &__wrap
     @include flex-between()
