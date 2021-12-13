@@ -63,6 +63,10 @@ module.exports = {
     template: 'src/pages/filter/filter.pug',
     filename: "./filter.html",
   }),
+  new HtmlWebpackPlugin({
+    template: 'src/pages/room-details/room-details.pug',
+    filename: "./room-details.html",
+  }),
     new HtmlWebpackExternalsPlugin({
       externals: [
         {

@@ -1,5 +1,5 @@
 mixin filter-card-luxury(swiperId, imgSwiperClass, roomNumber, price, linearGradientId, symbolId, polygonId, polygonUrl, name, firstIdStar, secondIdStar, thirdIdStar, fourthIdStar, fifthIdStar, href, commentsNumber)
-  form.luxury-room(action="#")
+  form.luxury-room(action="room-details.html")
     div(class!=attributes.class id=swiperId)
       div.swiper-wrapper
         div.swiper-slide
@@ -14,9 +14,10 @@ mixin filter-card-luxury(swiperId, imgSwiperClass, roomNumber, price, linearGrad
       div.swiper-button-prev
       div.swiper-button-next
     div.luxury-room__wrap
-      h1.luxury-room__title №
-        span= roomNumber
-        span Люкс
+      a(href="room-details.html").luxury-room__link
+        h1.luxury-room__title №
+          span= roomNumber
+          span Люкс
       p.luxury-room__price= price
         span в сутки
     div.luxury-room__wrap_border

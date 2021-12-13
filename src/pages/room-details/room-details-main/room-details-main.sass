@@ -1,0 +1,21 @@
+@import "../../partials/__variables.sass"
+@import "../../partials/__mixins.sass"
+@import "../../partials/__tegs.sass"
+
+@import "rules/bullet-list.sass"
+@import "card/card-book.sass"
+@import "info/info.sass"
+@import "comments/comment.sass"
+
+.main
+  @include container()
+  padding-top: 4.375rem
+  padding-bottom: 4.375rem
+
+  &__title
+    font-size: 1.1875rem
+    text-transform: none
+    margin-bottom: 1.25rem
+
+  &__text
+    color: $dark-blue

@@ -1,5 +1,5 @@
 mixin filter-card-usual(swiperId, imgSwiperClass, roomNumber, price, linearGradientId, symbolId, polygonId, polygonUrl, name, firstIdStar, secondIdStar, thirdIdStar, fourthIdStar, fifthIdStar, href, commentsNumber)
-  form.usual-room(action="#")
+  form.usual-room(action="room-details.html")
     div(class!=attributes.class id=swiperId)
       div.swiper-wrapper
         div.swiper-slide
@@ -14,8 +14,9 @@ mixin filter-card-usual(swiperId, imgSwiperClass, roomNumber, price, linearGradi
       div.swiper-button-prev
       div.swiper-button-next
     div.usual-room__wrap
-      h1.usual-room__title №
-        span= roomNumber
+      a(href="room-details.html").usual-room__link
+        h1.usual-room__title №
+          span= roomNumber
       p.usual-room__price= price
         span в сутки
     div.usual-room__wrap_border
