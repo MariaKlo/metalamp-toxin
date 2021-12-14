@@ -11,11 +11,26 @@
   @include container()
   padding-top: 4.375rem
   padding-bottom: 4.375rem
+  display: flex
+
+  &__wrap
+    margin: 0 auto
+
+  &__wrapper
+    margin-bottom: 1.875rem
+
+    &_additional
+      @include flex-between()
 
   &__title
     font-size: 1.1875rem
     text-transform: none
     margin-bottom: 1.25rem
 
+  &__comments
+    margin-bottom: 1.875rem
+
   &__text
+    line-height: 1.5rem
+    max-width: 21.3125rem
     color: $dark-blue

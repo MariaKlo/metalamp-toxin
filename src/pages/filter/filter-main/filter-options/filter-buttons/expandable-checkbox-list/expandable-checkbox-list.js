@@ -9,12 +9,14 @@ let showSixthItem = document.querySelector('.filter__checkbox_sixth');
 
 let firstArrow = document.querySelector('.filter__checkbox-list-arrow_first');
 
-firstList.addEventListener('click', e=>{
-    showFirstItem.classList.toggle('show');
-    showSecondItem.classList.toggle('show');
-    showThirdItem.classList.toggle('show');
-    showFourthItem.classList.toggle('show');
-    showFifthItem.classList.toggle('show');
-    showSixthItem.classList.toggle('show');
-    firstArrow.classList.toggle('rotate');
-}, false);
+if (firstArrow) {
+    firstList.addEventListener('click', e=>{
+        showFirstItem.classList.toggle('show');
+        showSecondItem.classList.toggle('show');
+        showThirdItem.classList.toggle('show');
+        showFourthItem.classList.toggle('show');
+        showFifthItem.classList.toggle('show');
+        showSixthItem.classList.toggle('show');
+        firstArrow.classList.toggle('rotate');
+    }, false);
+}

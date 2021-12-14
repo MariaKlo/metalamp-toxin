@@ -16,10 +16,10 @@
   &__border
     margin-right: .7rem
 
-    &_third-like-button
+    &_second-like-button
       margin-right: 1.2rem
 
-  &__border, &__border_second-like-button, &__border_third-like-button
+  &__border, &__border_second-like-button
     display: flex
     justify-content: space-around
     align-items: center
@@ -31,7 +31,7 @@
     &.on
       border-color: $purple
 
-  &__counter, &__counter_second-like-button, &__counter_third-like-button
+  &__counter, &__counter_second-like-button
     color: $light-blue
     font-size: .625rem
     margin-right: 7px
@@ -39,16 +39,16 @@
     &.on
       color: $purple
 
-svg.one, svg.two, svg.three
+svg.one, svg.two
   width: 0.5rem
 
-  .heart, .heart-two, .heart-three  
+  .heart, .heart-two
     fill: transparent
     stroke: $light-blue
     stroke-width: 6
     transition: all .6s ease-out
 
-  .heartEX, .heartEX-two, .heartEX-three 
+  .heartEX, .heartEX-two
     fill: none
     stroke: transparent
     transform-box: border-box
@@ -58,7 +58,7 @@ svg.one, svg.two, svg.three
     transition:none
 
   &.on 
-    .heartEX, .heartEX-two, .heartEX-three  
+    .heartEX, .heartEX-two
       transform: scale(2)
       opacity:0
       stroke: #BC9CFF
@@ -68,6 +68,6 @@ svg.one, svg.two, svg.three
       transition-duration: .6s, .01s, .4s
       transition-delay: 0s, 0s, .2s
 
-    .heart, .heart-two, .heart-three  
+    .heart, .heart-two
       fill: #BC9CFF
       stroke: #BC9CFF
