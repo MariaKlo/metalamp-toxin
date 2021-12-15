@@ -6,6 +6,7 @@
 @import "card/card-book.sass"
 @import "info/info.sass"
 @import "comments/comment.sass"
+@import "graph/graph.sass"
 
 .main
   @include container()
@@ -26,6 +27,13 @@
     font-size: 1.1875rem
     text-transform: none
     margin-bottom: 1.25rem
+    @include flex-between()
+
+    span
+      color: $medium-blue
+      text-transform: none
+      font-size: .875rem
+      font-weight: 400
 
   &__comments
     margin-bottom: 1.875rem

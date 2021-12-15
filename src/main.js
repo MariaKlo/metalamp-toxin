@@ -9,5 +9,6 @@ import './pages/filter/filter-main/filter-options/filter-plugins/range-slider/ra
 import './pages/filter/filter-main/filter-result/pagination/paginationjs.js';
 import './pages/filter/filter-main/filter-result/filter-card/swiper/swiper.js';
 import './pages/room-details/room-details-main/comments/like-button/like-button.js';
+import './pages/room-details/room-details-main/graph/graph.js';
 
 global.jQuery = global.$ = $;

@@ -10,16 +10,6 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
-// const PATHS = {
-//   // src must be src
-//   src: path.join(__dirname, '../website/src'),
-//   // dist to public
-//   dist: path.join(__dirname, '../dist'),
-//   // assets to static
-//   assets: 'assets/'
-// }
-// const PAGES_DIR = `${PATHS.src}/pages/`
-// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
   mode: 'development',
@@ -28,9 +18,9 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
   },
   resolve: {
     modules: ['node_modules'],
@@ -42,11 +32,9 @@ module.exports = {
     },
   },
   plugins: [
-    new MiniCssExtractPlugin(),
-    // ...PAGES.map(page => new HtmlWebpackPlugin({
-    //   template: `${PAGES_DIR}/${page}`,
-    //   filename: `./${page.replace(/\.pug/,'.html')}`
-    // })),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     new HtmlWebpackPlugin({
     template: 'src/pages/landing-page/landing-page.pug',
     filename: "./index.html",
@@ -107,8 +95,24 @@ module.exports = {
         }
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [ "style-loader", "css-loader", "sass-loader", ],
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+            ('development') ? "style-loader" : MiniCssExtractPlugin.loader,
+            "css-loader",
+            {
+              loader: "postcss-loader",
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    [
+                      "postcss-preset-env",
+                    ],
+                  ],
+                },
+              },
+            },
+          "sass-loader",
+        ],
       },
       {
         test: /\.pug$/,
@@ -116,10 +120,6 @@ module.exports = {
         options: {
           pretty: true,
         }
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
