@@ -15,6 +15,11 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './src/main.js',
+    // landingPage: './src/pages/landing-page/landingPage.js',
+    // signIn: './src/pages/sign-in/signIn.js',
+    // registration: './src/pages/registration/registration.js',
+    // filter: './src/pages/filter/filter.js',
+    // roomDetails: './src/pages/room-details/roomDetails.js',
   },
   devtool: 'source-map',
   output: {
@@ -38,22 +43,37 @@ module.exports = {
     new HtmlWebpackPlugin({
     template: 'src/pages/landing-page/landing-page.pug',
     filename: "./index.html",
+    // chunks: ['landingPage'],
+    inject: 'body',
+    scriptLoading: 'defer'
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/sign-in/sign-in.pug',
     filename: "./sign-in.html",
+    // chunks: ['signIn'],
+    inject: 'body',
+    scriptLoading: 'defer'
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/registration/registration.pug',
     filename: "./registration.html",
+    // chunks: ['registration'],
+    inject: 'body',
+    scriptLoading: 'defer'
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/filter/filter.pug',
     filename: "./filter.html",
+    // chunks: ['filter'],
+    inject: 'body',
+    scriptLoading: 'defer'
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/room-details/room-details.pug',
     filename: "./room-details.html",
+    // chunks: ['roomDetails'],
+    inject: 'body',
+    scriptLoading: 'defer'
   }),
     new HtmlWebpackExternalsPlugin({
       externals: [

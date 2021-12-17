@@ -1,7 +1,7 @@
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
-var slider = document.getElementById('slider');
+let slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
     start: [5000, 10000],
