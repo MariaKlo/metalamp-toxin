@@ -13,6 +13,10 @@
   &__item
     display: flex
     margin-bottom: 1.1em
+    max-width: 16rem
+
+    &:nth-child(2)
+      max-width: 13.625rem
 
   &__field
     position: absolute
@@ -29,6 +33,7 @@
     &_bold
       color: $dark-blue
       font-weight: 700
+      margin-bottom: .75rem
       
 .checkbox-buttons__field:checked, 
 .checkbox-buttons__field:not(:checked)
