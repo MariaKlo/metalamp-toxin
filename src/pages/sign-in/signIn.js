@@ -1,2 +1,2 @@
-// import $ from 'jquery';
-// global.jQuery = global.$ = $;
+import $ from 'jquery';
+global.jQuery = global.$ = $;

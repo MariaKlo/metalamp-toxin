@@ -1,10 +1,10 @@
 const path = require('path');
 var webpack = require('webpack');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const fs = require('fs');
+// const ESLintPlugin = require('eslint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -15,11 +15,11 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './src/main.js',
-    // landingPage: './src/pages/landing-page/landingPage.js',
-    // signIn: './src/pages/sign-in/signIn.js',
-    // registration: './src/pages/registration/registration.js',
-    // filter: './src/pages/filter/filter.js',
-    // roomDetails: './src/pages/room-details/roomDetails.js',
+    landingPage: './src/pages/landing-page/landingPage.js',
+    signIn: './src/pages/sign-in/signIn.js',
+    registration: './src/pages/registration/registration.js',
+    filter: './src/pages/filter/filter.js',
+    roomDetails: './src/pages/room-details/roomDetails.js',
   },
   devtool: 'source-map',
   output: {
@@ -37,53 +37,42 @@ module.exports = {
     },
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-    }),
+    // new ESLintPlugin({
+    //   context: 'src/pages',
+    //   fix: true,
+    //   exclude: 'node_modules'
+    // }),
+    new MiniCssExtractPlugin(
+      {
+      filename: isDev ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDev ? '[id].css' : '[id].[hash].css',
+    }
+    ),
     new HtmlWebpackPlugin({
     template: 'src/pages/landing-page/landing-page.pug',
     filename: "./index.html",
-    // chunks: ['landingPage'],
-    inject: 'body',
-    scriptLoading: 'defer'
+    chunks: ['main', 'landingPage'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/sign-in/sign-in.pug',
     filename: "./sign-in.html",
-    // chunks: ['signIn'],
-    inject: 'body',
-    scriptLoading: 'defer'
+    chunks: ['main', 'signIn'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/registration/registration.pug',
     filename: "./registration.html",
-    // chunks: ['registration'],
-    inject: 'body',
-    scriptLoading: 'defer'
+    chunks: ['main', 'registration'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/filter/filter.pug',
     filename: "./filter.html",
-    // chunks: ['filter'],
-    inject: 'body',
-    scriptLoading: 'defer'
+    chunks: ['main', 'filter'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/room-details/room-details.pug',
     filename: "./room-details.html",
-    // chunks: ['roomDetails'],
-    inject: 'body',
-    scriptLoading: 'defer'
+    chunks: ['main', 'roomDetails'],
   }),
-    new HtmlWebpackExternalsPlugin({
-      externals: [
-        {
-          module: 'jquery',
-          entry: 'dist/jquery.min.js',
-          global: 'jQuery',
-        },
-      ],
-    }),
     new webpack.ProvidePlugin( {
       $: 'jquery',
       jQuery: 'jquery',
@@ -156,13 +145,6 @@ module.exports = {
             loader: 'svgo-loader',
           }
         ]
-      },
-      {
-        test: require.resolve("jquery"),
-        loader: "expose-loader",
-        options: {
-          exposes: ["$", "jQuery"],
-        },
       },
     ]
   }
