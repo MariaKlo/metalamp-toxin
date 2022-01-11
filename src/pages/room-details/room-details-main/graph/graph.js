@@ -79,6 +79,21 @@ let gradientOfBlack = canvasOfBlack.createLinearGradient(0,0,0,170);
 gradientOfBlack.addColorStop(0, 'rgba(144, 144, 144, 1)');
 gradientOfBlack.addColorStop(1, 'rgba(61, 73, 117, 1)');
 
+// function to add text in the center of doughnut (responsive)
+const counter = {
+  id: 'counter',
+  beforeDraw(chart, args, options) {
+    const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
+    ctx.save();
+    ctx.textAlign = 'center';
+    ctx.fillStyle = options.fontColor;
+    ctx.fillRect(width / 2 , top + (height / 2), 10, 10);
+
+    ctx.font = '24px Montserrat';
+    ctx.fillText('260 голосов', width / 2 , top + (height / 2));
+  }
+};
+// settings of chart.js
 const myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -86,10 +101,10 @@ const myChart = new Chart(ctx, {
       'Великолепно',
       'Хорошо',
       'Удовлетворительно',
-      'Разочарован'
+      'Разочарован',
     ],
     datasets: [{
-      label: 'My First Dataset',
+      label: 'Doughnut dataset',
       data: [130, 65, 65, 0],
       backgroundColor: [
         gradientOfOrange,
@@ -100,27 +115,32 @@ const myChart = new Chart(ctx, {
       hoverOffset: 4,
       offset: 4,
       rotation: 180,
+      cutout: 100,
     }]
   },
+  plugins: [counter],
   options: {
     plugins: {
-        legend: {
-          position: 'right',
-          maxWidth: 161,
-          maxHeight: 96,
-            labels: {
-              boxWidth: 10,
-              boxHeight: 10,
-              color: 'rgba(31, 32, 65, 0.75)',
-              padding: 14,
-              usePointStyle: true,
-              pointStyle: 'circle',
-                font: {
-                    family: 'Montserrat',
-                    size: 14
-                }
+      counter: {
+        fontColor: 'blue'
+      },
+      legend: {
+        position: 'right',
+        maxWidth: 161,
+        maxHeight: 96,
+        labels: {
+          boxWidth: 10,
+          boxHeight: 10,
+          color: 'rgba(31, 32, 65, 0.75)',
+          padding: 14,
+          usePointStyle: true,
+          pointStyle: 'circle',
+            font: {
+                family: 'Montserrat',
+                size: 14
             }
         }
+      }
     }
-}
+  }
 });
