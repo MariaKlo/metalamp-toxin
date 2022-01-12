@@ -79,20 +79,40 @@ let gradientOfBlack = canvasOfBlack.createLinearGradient(0,0,0,170);
 gradientOfBlack.addColorStop(0, 'rgba(144, 144, 144, 1)');
 gradientOfBlack.addColorStop(1, 'rgba(61, 73, 117, 1)');
 
-// function to add text in the center of doughnut (responsive)
-const counter = {
-  id: 'counter',
+// add text in the center of doughnut
+
+const votes = {
+  id: 'votes',
   beforeDraw(chart, args, options) {
     const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
     ctx.save();
-    ctx.textAlign = 'center';
+    ctx.font = options.fontSize + 'px' + options.fontFamily;
+    ctx.fontStyle = options.fontStyle;
+    ctx.textAlign = options.position;
     ctx.fillStyle = options.fontColor;
-    ctx.fillRect(width / 2 , top + (height / 2), 10, 10);
-
-    ctx.font = '24px Montserrat';
-    ctx.fillText('260 голосов', width / 2 , top + (height / 2));
+    ctx.allVotesText = options.allVotesText;
+    ctx.fillText(options.allVotesText, 110, 180);
   }
 };
+
+const bigText = {
+  id: 'bigText',
+  beforeDraw(chart, args, options) {
+    const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
+    ctx.save();
+    ctx.font = options.fontSize + 'px' + options.fontFamily + options.fontStyle;
+    ctx.fontStyle = options.fontStyle;
+    ctx.textAlign = options.position;
+    ctx.fillStyle = options.fontColor;
+    ctx.text = options.text;
+    // ctx.fillText(options.text, width / 2 , top + (height / 2) + (options.fontSize * 1.7));
+      ctx.fillText(options.text, 110, 200);
+  }
+}
+
+// count all votes
+const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
 // settings of chart.js
 const myChart = new Chart(ctx, {
   type: 'doughnut',
@@ -105,7 +125,7 @@ const myChart = new Chart(ctx, {
     ],
     datasets: [{
       label: 'Doughnut dataset',
-      data: [130, 65, 65, 0],
+      data:[130, 65, 65, 0],
       backgroundColor: [
         gradientOfOrange,
         gradientOfGreen,
@@ -118,11 +138,25 @@ const myChart = new Chart(ctx, {
       cutout: 100,
     }]
   },
-  plugins: [counter],
+  plugins: [votes, bigText],
   options: {
+    // add text to the center
     plugins: {
-      counter: {
-        fontColor: 'blue'
+      votes: {
+        fontColor: 'rgba(188, 156, 255, 1)',
+        fontSize: 24,
+        fontFamily: 'Montserrat',
+        fontStyle: 'bold',
+        position: 'center',
+        allVotesText: [130, 65, 65, 0].reduce(reducer),
+      },
+      bigText: {
+        fontColor: 'rgba(188, 156, 255, 1)',
+        fontSize: 12,
+        fontFamily: 'Montserrat',
+        fontStyle: 'bold',
+        position: 'center',
+        text: 'голосов',
       },
       legend: {
         position: 'right',
