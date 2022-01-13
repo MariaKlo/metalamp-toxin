@@ -86,8 +86,10 @@ const votes = {
   beforeDraw(chart, args, options) {
     const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
     ctx.save();
-    ctx.font = options.fontSize + 'px' + options.fontFamily;
-    ctx.fontStyle = options.fontStyle;
+    options.fontSize = 24;
+    options.fontFamily = 'Montserrat';
+    options.fontWeight = '700';
+    ctx.font = options.fontWeight + ' ' + options.fontSize + 'px ' + options.fontFamily;
     ctx.textAlign = options.position;
     ctx.fillStyle = options.fontColor;
     ctx.allVotesText = options.allVotesText;
@@ -100,13 +102,15 @@ const bigText = {
   beforeDraw(chart, args, options) {
     const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
     ctx.save();
-    ctx.font = options.fontSize + 'px' + options.fontFamily + options.fontStyle;
-    ctx.fontStyle = options.fontStyle;
+    options.fontSize = 12;
+    options.fontFamily = 'Montserrat';
+    options.fontWeight = '700';
+    ctx.font = options.fontWeight + ' ' + options.fontSize + 'px ' + options.fontFamily;
     ctx.textAlign = options.position;
     ctx.fillStyle = options.fontColor;
     ctx.text = options.text;
     // ctx.fillText(options.text, width / 2 , top + (height / 2) + (options.fontSize * 1.7));
-      ctx.fillText(options.text, 110, 200);
+    ctx.fillText(options.text, 110, 200);
   }
 }
 
@@ -135,7 +139,7 @@ const myChart = new Chart(ctx, {
       hoverOffset: 4,
       offset: 4,
       rotation: 180,
-      cutout: 100,
+      cutout: '95%',
     }]
   },
   plugins: [votes, bigText],
@@ -144,17 +148,11 @@ const myChart = new Chart(ctx, {
     plugins: {
       votes: {
         fontColor: 'rgba(188, 156, 255, 1)',
-        fontSize: 24,
-        fontFamily: 'Montserrat',
-        fontStyle: 'bold',
         position: 'center',
         allVotesText: [130, 65, 65, 0].reduce(reducer),
       },
       bigText: {
         fontColor: 'rgba(188, 156, 255, 1)',
-        fontSize: 12,
-        fontFamily: 'Montserrat',
-        fontStyle: 'bold',
         position: 'center',
         text: 'голосов',
       },
@@ -169,12 +167,12 @@ const myChart = new Chart(ctx, {
           padding: 14,
           usePointStyle: true,
           pointStyle: 'circle',
-            font: {
-                family: 'Montserrat',
-                size: 14
-            }
+          font: {
+              family: 'Montserrat',
+              size: 14
+          }
         }
-      }
+      },
     }
   }
 });
