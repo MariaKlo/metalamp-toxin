@@ -93,7 +93,7 @@ const votes = {
     ctx.textAlign = options.position;
     ctx.fillStyle = options.fontColor;
     ctx.allVotesText = options.allVotesText;
-    ctx.fillText(options.allVotesText, 110, 180);
+    ctx.fillText(options.allVotesText, 63, 150);
   }
 };
 
@@ -102,7 +102,7 @@ const bigText = {
   beforeDraw(chart, args, options) {
     const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
     ctx.save();
-    options.fontSize = 12;
+    options.fontSize = 14;
     options.fontFamily = 'Montserrat';
     options.fontWeight = '700';
     ctx.font = options.fontWeight + ' ' + options.fontSize + 'px ' + options.fontFamily;
@@ -110,7 +110,7 @@ const bigText = {
     ctx.fillStyle = options.fontColor;
     ctx.text = options.text;
     // ctx.fillText(options.text, width / 2 , top + (height / 2) + (options.fontSize * 1.7));
-    ctx.fillText(options.text, 110, 200);
+    ctx.fillText(options.text, 63, 170);
   }
 }
 
@@ -139,7 +139,7 @@ const myChart = new Chart(ctx, {
       hoverOffset: 4,
       offset: 4,
       rotation: 180,
-      cutout: '95%',
+      cutout: '90%',
     }]
   },
   plugins: [votes, bigText],
@@ -158,13 +158,13 @@ const myChart = new Chart(ctx, {
       },
       legend: {
         position: 'right',
-        maxWidth: 161,
+        maxWidth: 180,
         maxHeight: 96,
         labels: {
-          boxWidth: 10,
-          boxHeight: 10,
+          boxWidth: 8,
+          boxHeight: 8,
           color: 'rgba(31, 32, 65, 0.75)',
-          padding: 14,
+          padding: 10,
           usePointStyle: true,
           pointStyle: 'circle',
           font: {

@@ -11,29 +11,43 @@
 .main
   @include container()
   padding-top: 4.375rem
-  padding-bottom: 4.375rem
+  height: 58.5625rem
   display: flex
+  border-bottom: 1px solid rgb(190,190,190)
 
   &__wrap
-    margin: 0 auto
+    margin-right: 4.6875rem
 
   &__wrapper
-    margin-bottom: 1.875rem
+    height: 18.8125rem
 
     &_additional
       @include flex-between()
 
+  &__info
+    margin-right: 5.0625rem
+
   &__title
+    @include flex-between()
     font-size: 1.1875rem
     text-transform: none
-    margin-bottom: 1.25rem
-    @include flex-between()
+    margin-bottom: 1rem
 
     span
       color: $medium-blue
       text-transform: none
       font-size: .875rem
       font-weight: 400
+      display: flex
+      align-self: end
+
+  &__title
+    &_bigger-margin
+      margin-bottom: 1.5rem
+
+    &_additional-margin
+      margin-bottom: 1.5rem
+      margin-left: 1.25rem
 
   &__comments
     margin-bottom: 1.875rem

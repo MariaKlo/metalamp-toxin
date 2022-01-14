@@ -3,21 +3,27 @@
 @import "../../partials/__variables.sass"
 
 .gallery
-  display: grid
-  grid-template-columns: 1fr 1fr
   height: 30.3125rem
+  display: grid
+  grid-template-columns: 55.125rem
 
   &__img_first
     background: url("../img/gallery-first.png") no-repeat right center
     width: 55.16rem
     min-height: 30.3125rem
+    grid-column: 1
+    grid-row: 1 / 3
 
   &__img_second
     background: url("../img/gallery-second.png") no-repeat center center
     width: 28.8125rem
     min-height: 15.1875rem
+    grid-column: 2
+    grid-row: 1
 
   &__img_third
     background: url("../img/gallery-third.png") no-repeat center center
     width: 28.8125rem
     min-height: 15.1875rem
+    grid-column: 2
+    grid-row: 2
