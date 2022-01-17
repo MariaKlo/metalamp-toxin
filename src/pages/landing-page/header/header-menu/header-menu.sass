@@ -9,6 +9,7 @@
   @include header-shadow()
   align-items: center
   background-color: $white
+  // border-bottom: 1px solid #E2E8F0
   padding-top: 1.0375em
   padding-bottom: 0.975em
     
@@ -43,3 +44,27 @@
 
 .button__sign-in:hover, .button__sign-up:hover
   @include button-hover()
+
+// .hamburger
+//   display: none
+
+// .bar 
+//   display: block
+//   width: 25px
+//   height: 3px
+//   margin: 5px auto
+//   -webkit-transition: all 0.3s ease-in-out
+//   transition: all 0.3s ease-in-out
+//   background-color: #101010
+
+// responsive design
+
+@media only screen and (max-width: 74.9988rem) //1199px
+  .header
+    padding: 0 calc(50% - 30rem)
+
+@media only screen and (max-width: 60.625rem) //970px
+  .header
+    padding: 0 calc(50% - 27.5rem)
+
+// @media only screen and (max-width: 55.75rem) //892px add hamburger to header
