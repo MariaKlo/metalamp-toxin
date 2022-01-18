@@ -9,7 +9,6 @@
   @include header-shadow()
   align-items: center
   background-color: $white
-  // border-bottom: 1px solid #E2E8F0
   padding-top: 1.0375em
   padding-bottom: 0.975em
     
@@ -45,26 +44,55 @@
 .button__sign-in:hover, .button__sign-up:hover
   @include button-hover()
 
-// .hamburger
-//   display: none
-
-// .bar 
-//   display: block
-//   width: 25px
-//   height: 3px
-//   margin: 5px auto
-//   -webkit-transition: all 0.3s ease-in-out
-//   transition: all 0.3s ease-in-out
-//   background-color: #101010
-
 // responsive design
 
 @media only screen and (max-width: 74.9988rem) //1199px
   .header
     padding: 0 calc(50% - 30rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
 
 @media only screen and (max-width: 60.625rem) //970px
   .header
     padding: 0 calc(50% - 27.5rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
 
-// @media only screen and (max-width: 55.75rem) //892px add hamburger to header
+@media only screen and (max-width: 55.75rem) //892px 
+  .header
+    padding: 0 calc(50% - 25rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
+
+    &__wrapper
+      width: inherit
+
+@media only screen and (max-width: 51.875rem) //830px
+  .header
+    padding: 0 calc(50% - 22rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
+
+@media only screen and (max-width: 45.625rem) //730px
+  .header
+    padding: 0 calc(50% - 19rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
+
+@media only screen and (max-width: 39.375rem) //630px
+  .header
+    padding: 0 calc(50% - 17rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
+
+@media only screen and (max-width: 35.625rem) //570px
+  .header
+    padding: 0 calc(50% - 15rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
+
+@media only screen and (max-width: 29.375rem) //470px
+  .header
+    padding: 0 calc(50% - 8rem)
+    padding-top: 1.0375em
+    padding-bottom: 0.975em
