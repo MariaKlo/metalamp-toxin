@@ -52,8 +52,8 @@
 
 #female:checked + label:after,
 #female:not(:checked) + label:after
-  left: 0.28em
-  top: 0.3em
+  left: 0.35em
+  top: 0.35em
 
 #sex-f:checked + label:after,
 #sex-f:not(:checked) + label:after
@@ -62,8 +62,8 @@
 
 #male:checked + label:after,
 #male:not(:checked) + label:after
-  left: 0.3em
-  top: 0.3em
+  left: 0.35em
+  top: 0.35em
 
 .radio-buttons__field:not(:checked) + label:after 
   opacity: 0
@@ -103,3 +103,7 @@
 .radio-buttons__field:checked + label::before 
   border: 1px solid $purple
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
+
+@media only screen and (max-width: 29.375rem) //470px
+  .radio-buttons__field:checked + label, .radio-buttons__field:not(:checked) + label
+    margin-right: 0
