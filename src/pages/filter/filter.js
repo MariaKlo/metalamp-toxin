@@ -8,3 +8,5 @@ import './filter-main/filter-result/filter-card/swiper/swiper.js';
 
 import '../landing-page/header/header-main/header-cards/plugins/datepicker/datepicker.js';
 import '../landing-page/header/header-main/header-cards/plugins/item-quantity-dropdown/item-quantity-dropdown.js';
+import '../landing-page/header/header-menu/hamburger/hamburger.js';
+import './filter-main/filter-options/filter-buttons/hamburger/filter-hamburger.js';
