@@ -12,5 +12,4 @@ filter.addEventListener("click", closeMenu);
 
 function closeMenu() {
     hamburger.classList.remove("filter_active");
-    filter.classList.remove("filter_active");
 }
