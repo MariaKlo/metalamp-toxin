@@ -128,3 +128,44 @@
 
     &::after
       @include arrow($right: 0.8em)
+
+@media only screen and (max-width: 74.9988rem) //1199px
+  .book
+    margin: 0 auto
+
+@media only screen and (max-width: 45.625rem) //730px
+  .book
+    margin: 0 auto
+    margin-top: 1.5625rem
+
+@media only screen and (max-width: 29.375rem) //470px
+  .book
+    width: 17.75rem
+    max-height: 42.5rem
+
+    &__wrap
+      display: block
+
+      &:nth-child(2)
+        display: block      
+
+    &__wrapper:nth-child(1)
+      margin-right: 0
+
+    &__datepicker-wrap::after
+      top: 1.3em
+
+    &__total
+      width: 15.2em
+
+      &-wrap
+        display: block
+
+      &-price-wrap
+        display: block
+
+    &__text
+      display: block
+
+    &__btn
+      width: 14rem
