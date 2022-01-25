@@ -1,6 +1,6 @@
 // переменные
-- var textField = 'TEXT FIELD'
-- var dropdown = 'DROPDOWN'
+- var textField = "TEXT FIELD"
+- var dropdown = "DROPDOWN"
 // поля ввода
 div.elements
   form(action="#")
@@ -8,11 +8,11 @@ div.elements
       h3.elements__info #{textField}
       p.elements__state DEFAULT
     include inputs/regular-input/regular-input.pug
-    +input("e-mail", "Email")(class="elements__field") 
+    +input("email", "e-mail", "Email")(class="elements__field") 
     div.elements__description
       h3.elements__info #{textField}
       p.elements__state HOVER/FOCUS
-    +input("text", "This is pretty awesome")(class="elements__field") 
+    +input("text", "text", "This is pretty awesome")(class="elements__field") 
     h3.elements__info #{dropdown}
     include plugins/item-quantity-dropdown/item-quantity-dropdown.pug
     +item-quantity-dropdown("iqdropdowns", "Взрослые", "Дети", "Младенцы")
@@ -35,7 +35,7 @@ div.elements
       input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-filter-date").elements__field-filter
     h3.elements__info SUBSCRIPTION #{textField}
     div.elements__field-wrap
-      +input("e-mail", "Email")(class="elements__field-subscription")
+      +input("email", "e-mail", "Email")(class="elements__field-subscription")
   // кнопки
   div.buttons
     div.checkbox-buttons

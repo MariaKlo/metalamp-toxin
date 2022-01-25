@@ -12,8 +12,8 @@ form.registration(action="#")
       input(type="text" name="date" class="registration__datepick" placeholder="ДД.ММ.ГГГГ" id="datepicker-birthday")
     div.registration__data
       h3.registration__data-title Данные для входа в сервис
-      input(type="text" name="email" class="registration__input" placeholder="Email")
-      input(type="text" name="password" class="registration__input" placeholder="Пароль")
+      input(type="email" name="email" class="registration__input" placeholder="Email")
+      input(type="password" name="password" class="registration__input" placeholder="Пароль")
     include ../../form-elements/buttons/toggle-button/toggle-button.pug
     +toggle-button()
     button(type="submit" class="registration__btn") Перейти к оплате

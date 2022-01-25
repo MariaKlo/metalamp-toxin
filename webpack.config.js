@@ -43,7 +43,7 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),
     new FaviconsWebpackPlugin({
-      logo: '/metalamp/TOXIN/src/img/Group.png',
+      logo: '/metalamp/ui-kit/src/img/Group.png',
       cache: true,
     }),
   ],
