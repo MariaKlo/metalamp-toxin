@@ -3,9 +3,15 @@
 @import "../../../partials/__mixins.sass"
 
 .fab
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  -webkit-text-fill-color: transparent
+  -moz-text-fill-color: transparent
+  border-color: #bc9cff
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  background-size: 100%
   margin-right: 0.95em
   font-size: 1.5rem
-  color: #BC9CFF
 
   &:hover
     @include button-hover() 
