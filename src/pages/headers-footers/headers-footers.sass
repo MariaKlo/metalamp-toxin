@@ -101,12 +101,9 @@
       position: relative
 
       &::after
-        content: '\2192'
-        position: absolute
+        @include arrow-purple()
         top: -0.12em
         right: 0.5em
-        font-size: 2.5rem
-        color: $purple
 
   &__copy
     color: $dark-blue

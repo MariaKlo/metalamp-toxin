@@ -84,9 +84,11 @@
 @mixin arrow-purple()
   content: '→'
   position: absolute
-  top: -0.2em
-  right: 1.6em
-  width: 10px
-  height: 10px
-  color: #bc9cff
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  -webkit-text-fill-color: transparent
+  -moz-text-fill-color: transparent
+  border-color: #bc9cff
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  background-size: 100%
   font-size: 2.5rem
