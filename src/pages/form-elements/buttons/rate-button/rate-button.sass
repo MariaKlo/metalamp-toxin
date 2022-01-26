@@ -14,7 +14,7 @@
 .rate-buttons__wrapper
   display: flex
 
-input[name="star"], input[name="stars"] 
+input[name='star'], input[name='stars'] 
   display: inline-block
   width: 0
   opacity: 0
@@ -40,20 +40,20 @@ input[name="star"], input[name="stars"]
 
 label:hover ~ label .star,
 svg.star:hover,
-input[name="star"]:focus ~ label .star,
-input[name="star"]:checked ~ label .star,
-input[name="stars"]:focus ~ label .star,
-input[name="stars"]:checked ~ label .star  
+input[name='star']:focus ~ label .star,
+input[name='star']:checked ~ label .star,
+input[name='stars']:focus ~ label .star,
+input[name='stars']:checked ~ label .star  
   color: rgba(188, 156, 255, 1)
 
 
-input[name="star"]:checked + label .star,
-input[name="stars"]:checked + label .star  
+input[name='star']:checked + label .star,
+input[name='stars']:checked + label .star  
   animation: starred 0.5s
 
 
-input[name="star"]:checked + label,
-input[name="stars"]:checked + label 
+input[name='star']:checked + label,
+input[name='stars']:checked + label 
   animation: scaleup 1s
 
 @keyframes scaleup 
@@ -76,7 +76,7 @@ input[name="stars"]:checked + label
   padding-top: 0.5em
   padding-left: 1.25em
 
-input[name="star-room"], input[name="stars-rooms"] 
+input[name='star-room'], input[name='stars-rooms'] 
   display: inline-block
   width: 0
   opacity: 0
@@ -93,16 +93,16 @@ input[name="star-room"], input[name="stars-rooms"]
   justify-content: center
   margin-right: 1.25em
 
-input[name="star-room"]:focus ~ label .star,
-input[name="star-room"]:checked ~ label .star,
-input[name="stars-rooms"]:focus ~ label .star,
-input[name="stars-rooms"]:checked ~ label .star  
+input[name='star-room']:focus ~ label .star,
+input[name='star-room']:checked ~ label .star,
+input[name='stars-rooms']:focus ~ label .star,
+input[name='stars-rooms']:checked ~ label .star  
   color: rgba(188, 156, 255, 1)
 
-input[name="star-room"]:checked + label .star,
-input[name="stars-rooms"]:checked + label .star  
+input[name='star-room']:checked + label .star,
+input[name='stars-rooms']:checked + label .star  
   animation: starred 0.5s
 
-input[name="star-room"]:checked + label,
-input[name="stars-rooms"]:checked + label 
+input[name='star-room']:checked + label,
+input[name='stars-rooms']:checked + label 
   animation: scaleup 1s
