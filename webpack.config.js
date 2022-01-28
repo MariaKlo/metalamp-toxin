@@ -4,7 +4,6 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const ESLintPlugin = require('eslint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -37,11 +36,6 @@ module.exports = {
     },
   },
   plugins: [
-    // new ESLintPlugin({
-    //   context: 'src/pages',
-    //   fix: true,
-    //   exclude: 'node_modules'
-    // }),
     new MiniCssExtractPlugin(
       {
       filename: isDev ? '[name].css' : '[name].[hash].css',
@@ -50,27 +44,27 @@ module.exports = {
     ),
     new HtmlWebpackPlugin({
     template: 'src/pages/landing-page/landing-page.pug',
-    filename: "./index.html",
+    filename: "./main.html",
     chunks: ['main', 'landingPage'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/sign-in/sign-in.pug',
-    filename: "./sign-in.html",
+    filename: "./sign-in-dev.html",
     chunks: ['main', 'signIn'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/registration/registration.pug',
-    filename: "./registration.html",
+    filename: "./registration-dev.html",
     chunks: ['main', 'registration'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/filter/filter.pug',
-    filename: "./filter.html",
+    filename: "./filter-dev.html",
     chunks: ['main', 'filter'],
   }),
   new HtmlWebpackPlugin({
     template: 'src/pages/room-details/room-details.pug',
-    filename: "./room-details.html",
+    filename: "./room-details-dev.html",
     chunks: ['main', 'roomDetails'],
   }),
     new webpack.ProvidePlugin( {
