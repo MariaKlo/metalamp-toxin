@@ -1,7 +1,7 @@
 # toxin
 Учебный проект от комании Metalamp. Состоит из двух частей: ui-kit и сам сайт toxin. При открытии ссылки на github-pages, вы увидите ссылки на обе части.<br>
 Как скачать проект: Чтобы скачать все пакеты и модули, напишите в терминале <b>npm i</b><br>
-Как запустить проект: в терминале напишите <b>npm start</b><br>
+Как запустить проект: откройте папку website или ui-kit, затем в терминале напишите <b>npm run start</b><br>
 При создании были использованы: <i>Pug, Sass, JavaScript, Webpack v.5.60.0, FontAwesome, Material Icons.</i><br>
 Были использованы плагины: <br>
 <ul>
@@ -19,8 +19,8 @@
 <br>
 <br>
 Educational project from Metalamp company. Consists of two parts: ui-kit and site toxin itself. When you open the link to github-pages, you will see links to both parts.<br>
-How to download: To download all utilities, type in the terminal <b>npm i</b><br>
-How to run: in the terminal type <b>npm start</b><br>
+How to download: To download all utilities, open the folder "website" or "ui-kit", then type in the terminal <b>npm i</b><br>
+How to run: in the terminal type <b>npm run start</b><br>
 Next tools had been used: <i>Pug, Sass, JavaScript, Webpack v.5.60.0, FontAwesome, Material Icons.</i><br>
 Next plugins had been used: <br>
 <ul>
