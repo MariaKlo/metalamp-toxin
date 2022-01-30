@@ -1,0 +1,15 @@
+mixin comment(classOfImg, username, time, text, svgClass, gClass, firstPathClass, secondPathClass, counterClass)
+  div.comment
+    div.comment__info
+      div(class=classOfImg)
+      div.comment__wrapper
+        p.comment__username= username
+        p.comment__time= time
+    div.comment__wrap
+      div(class!=attributes.class) 
+        svg(class=svgClass viewBox="0 0 100 100")
+          g(class=gClass)
+            path(class=firstPathClass d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z")
+            path(class=secondPathClass d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z")
+        div(class=counterClass) 0
+      p.comment__text= text

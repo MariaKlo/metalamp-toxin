@@ -1,0 +1,170 @@
+@import "../../../../partials/__mixins.sass"
+@import "../../../../partials/__variables.sass"
+@import "../../../../partials/__tegs.sass"
+
+@import "swiper/swiper.sass"
+@import "rate-button/rate-button.sass"
+
+// first room styles
+.luxury-room
+  margin-right: .75rem
+  margin-bottom: 1.25rem
+  background-color: $white
+  border-radius: 0.25em
+  width: 19.6em
+  height: 18.5em
+  @include shadows-wide()
+
+  &__img
+    background: url('../img/room-luxury.png') no-repeat center center
+    height: 10.9em
+    width: 19.5em
+    border-top-left-radius: .25rem
+    border-top-right-radius: .25rem
+
+    &-third
+      background: url('../img/third-room.png') no-repeat center center
+      height: 10.9em
+      width: 19.5em
+      border-top-left-radius: .25rem
+      border-top-right-radius: .25rem
+
+  &__wrap
+    margin-top: 0.6em
+    display: flex
+    align-items: baseline
+    padding: 0 1.25em 1em 1.25em
+  
+    &_border
+      height: .0225rem
+      margin: 0 auto
+      width: 14.375rem
+      background-color: $thin-blue 
+
+  &__link
+    text-decoration: none
+    color: #1F2041
+
+  &__title
+    font-size: .875rem
+    margin-right: 2.1em
+
+    span:nth-child(1)
+      font-size: 1.2rem
+      margin-left: 0.2em
+
+    span:nth-child(2)
+      font-size: $font-small
+      color: $purple
+      margin-left: 0.2em
+
+  &__price
+    color: $medium-blue
+    font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
+    
+  &__comments
+    color: $medium-blue
+    font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
+
+// second room styles
+.usual-room
+  margin-right: .8125rem
+  margin-bottom: 1.25rem
+  background-color: $white
+  border-radius: 0.25em
+  width: 19.6em
+  height: 18.5em
+  @include shadows-wide()
+
+  &__img
+    background: url('../img/room.png') no-repeat center center
+    height: 9.5rem
+    width: 17rem
+    border-top-left-radius: .25rem
+    border-top-right-radius: .25rem
+
+    &-fourth, &-fifth, &-sixth, &-seventh, &-eighth, &-ninth, &-tenth,
+    &-eleventh, &-twelfth
+      height: 10.9em
+      width: 19.5em
+      border-top-left-radius: .25rem
+      border-top-right-radius: .25rem
+
+    &-fourth
+      background: url('../img/fourth-room.png') no-repeat center center
+      
+    &-fifth
+      background: url('../img/fifth-room.png') no-repeat center center
+
+    &-sixth
+      background: url('../img/sixth-room.png') no-repeat center center
+
+    &-seventh
+      background: url('../img/seventh-room.png') no-repeat center center
+
+    &-eighth
+      background: url('../img/eighth-room.png') no-repeat center center
+
+    &-ninth
+      background: url('../img/ninth-room.png') no-repeat center center
+
+    &-tenth
+      background: url('../img/tenth-room.png') no-repeat center center
+
+    &-eleventh
+      background: url('../img/eleventh-room.png') no-repeat center center
+    
+    &-twelfth
+      background: url('../img/twelfth-room.png') no-repeat center center
+
+  &__wrap
+    @include flex-between()
+    align-items: center
+    margin-top: 0.9em
+    padding: 0 1.25em 0.6em 1.25em
+
+    &_border
+      height: .0225rem
+      margin: 0 auto
+      width: 14.375rem
+      background-color: $thin-blue
+  
+  &__link
+    text-decoration: none
+    color: #1F2041
+
+  &__title
+    font-size: .875rem
+    margin-right: 2.1em
+
+    span:nth-child(1)
+      font-size: 1.2rem
+      margin-left: 0.2em
+
+  &__price
+    color: $medium-blue
+    font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400
+
+  &__comments
+    color: $medium-blue
+    font-weight: 700
+
+    span
+      margin-left: 0.189em
+      font-size: $font-small
+      font-weight: 400

@@ -1,0 +1,21 @@
+@import "../partials/__mixins.sass"
+@import "../partials/__variables.sass"
+@import "../partials/__tegs.sass"
+@import "colors/colors.sass"
+@import "type/type.sass"
+
+.wrapper
+  @include flex-between()
+  @include container()
+  padding-top: 9.06em
+
+.logo
+  background: #ffffff url('../img/Group.svg') no-repeat top left
+
+.colors
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.titles
+  max-width: 36.9em

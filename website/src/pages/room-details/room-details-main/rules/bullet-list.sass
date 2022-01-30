@@ -1,0 +1,32 @@
+.lists__bullet
+  &-title
+    font-size: $font-small
+    margin-bottom: 1.4em
+
+  &-wrap
+    display: flex
+    align-items: baseline
+    margin-bottom: 1.2em
+
+  &-design
+    border-radius: 50%
+    background-color: $light-blue
+    margin-right: 0.725em
+    width: .625rem
+    height: .625rem
+
+  &-item
+    color: $dark-blue
+    display: flex
+    flex-direction: row
+    align-items: center
+    max-width: 14.9375rem
+
+    &:nth-child(3)
+      width: 15.0625rem
+      line-height: 1.6em
+
+@media only screen and (max-width: 29.375rem) //470px
+  .lists
+    &__bullet-item
+      max-width: 12.9375rem

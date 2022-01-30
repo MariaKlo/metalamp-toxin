@@ -1,0 +1,47 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__variables.sass"
+@import "../../../partials/__tegs.sass"
+@import "like-button/like-button.sass"
+
+.comment
+  display: flex
+  flex-direction: column
+  align-self: center
+  margin-bottom: 1.7rem
+
+  &__wrap
+    display: flex
+    align-items: flex-start
+
+  &__info
+   display: flex
+   align-items: flex-start
+
+  &__img
+    background: url('../img/image.png') no-repeat center center 
+    width: 3.4em
+    height: 4.6em
+    margin-right: 0.725em
+
+    &_second
+      background: url('../img/woman.png') no-repeat center center
+      width: 3.4em
+      height: 4.6em
+      margin-right: 0.725em
+
+  &__username
+    font-weight: 700
+    margin-bottom: 0.5375em
+    color: $dark-blue
+
+  &__text
+    max-width: 40.5125rem
+    line-height: 1.5
+
+  &__time, &__text
+  color: $dark-blue
+
+@media only screen and (max-width: 45.625rem) //730px
+  .comment
+    &__wrap
+      display: block

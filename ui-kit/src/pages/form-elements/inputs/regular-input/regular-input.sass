@@ -1,0 +1,23 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__variables.sass"
+@import "../../../partials/__tegs.sass"
+@import "../../../fonts.sass"
+
+.elements
+    &__field
+      @include input-style()
+      margin-bottom: 1.65em
+      letter-spacing: 0.07em
+
+      &-wrap
+        position: relative
+
+        &::after
+          top: -0.15em
+          right: 1.6em
+          @include arrow-purple()
+
+      &-subscription
+        letter-spacing: 0.12em
+        @include input-style()
+        padding: 0.9125em 6.6em 0.9125em 0.9375em

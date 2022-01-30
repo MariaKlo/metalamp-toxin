@@ -1,0 +1,38 @@
+@import "../../../../../partials/__variables.sass"
+@import "../../../../../partials/__mixins.sass"
+@import "../../../../../partials/__tegs.sass"
+
+.filter
+  &__hamburger
+    display: none
+
+  &__bar
+    display: block
+    width: 25px
+    height: 3px
+    margin: 5px auto
+    -webkit-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    background-color: $purple
+
+@media only screen and (max-width: 55.75rem) //892px
+  .filter
+    display: none
+
+    &.filter_active
+      display: block
+      margin: 0 auto
+      padding-top: .6875rem
+
+  .filter__hamburger
+    display: block
+    cursor: pointer
+
+    &.filter_active .filter__bar:nth-child(2)
+      opacity: 0
+
+    &.filter_active .filter__bar:nth-child(1)
+      transform: translateY(.5rem) rotate(45deg)
+
+    &.filter_active .filter__bar:nth-child(3)
+      transform: translateY(-0.5rem) rotate(-45deg)

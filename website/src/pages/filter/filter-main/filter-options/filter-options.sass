@@ -1,0 +1,33 @@
+@import "../../../partials/__mixins.sass"
+@import "../../../partials/__tegs.sass"
+@import "../../../partials/__variables.sass"
+    
+@import "filter-buttons/filter-buttons.sass"
+@import "filter-plugins/filter-plugins.sass"
+
+
+.filter
+  &__wrapper
+    margin-bottom: 1.875rem
+
+    &:nth-child(2)
+      margin-bottom: 2.2rem
+    
+    &_last
+      margin-bottom: 1.1rem
+
+  &__title
+    font-size: .75rem
+    text-transform: uppercase
+    color: #1F2041
+    margin-bottom: .3125rem
+
+    &_below
+      margin-bottom: 1rem
+
+  &__input
+    @include input-style()
+
+  &__text
+    color: $medium-blue
+    font-size: .75rem

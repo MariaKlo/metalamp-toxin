@@ -1,0 +1,10 @@
+mixin checkbox-button(id, option)
+  div.checkbox-buttons__item
+    input(type="checkbox" name="agreement" id=id).checkbox-buttons__field
+    label(for=id)
+    div.checkbox-buttons__wrap
+      p(class!=attributes.class)= option
+      if block 
+        block 
+      else 
+        div

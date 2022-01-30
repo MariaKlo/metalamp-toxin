@@ -1,0 +1,54 @@
+mixin filter-card-luxury(swiperId, imgSwiperClass, roomNumber, price, linearGradientId, symbolId, polygonId, polygonUrl, name, firstIdStar, secondIdStar, thirdIdStar, fourthIdStar, fifthIdStar, href, commentsNumber)
+  form.luxury-room(action="room-details.html")
+    div(class!=attributes.class id=swiperId)
+      div.swiper-wrapper
+        div.swiper-slide
+          div(class=imgSwiperClass)
+        div.swiper-slide
+          div(class=imgSwiperClass)
+        div.swiper-slide
+          div(class=imgSwiperClass)
+        div.swiper-slide
+          div(class=imgSwiperClass)
+      div.swiper-pagination.swiper-pagination-position
+      div.swiper-button-prev
+      div.swiper-button-next
+    div.luxury-room__wrap
+      a(href="room-details.html").luxury-room__link
+        h1.luxury-room__title №
+          span= roomNumber
+          span Люкс
+      p.luxury-room__price= price
+        span в сутки
+    div.luxury-room__wrap_border
+    div.luxury-room__wrapper
+      div.luxury-room__source
+      svg(class="gradient")
+        linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id=linearGradientId)
+          stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
+          stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
+        symbol(id=symbolId viewBox="153 89 106 108")
+          polygon(id=polygonId stroke=polygonUrl stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
+      div.luxury-room__wraps
+        input(type="radio" name=name id=firstIdStar)
+        label(for=firstIdStar)
+          svg.star
+            use(xlink:href=href)
+        input(type="radio" name=name id=secondIdStar)
+        label(for=secondIdStar)
+          svg.star
+            use(xlink:href=href)
+        input(type="radio" name=name id=thirdIdStar)
+        label(for=thirdIdStar)
+          svg.star
+            use(xlink:href=href)
+        input(type="radio" name=name id=fourthIdStar)
+        label(for=fourthIdStar)
+          svg.star
+            use(xlink:href=href)
+        input(type="radio" name=name id=fifthIdStar)
+        label(for=fifthIdStar)
+          svg.star
+            use(xlink:href=href)
+      p.luxury-room__comments= commentsNumber
+        span Отзывов   
