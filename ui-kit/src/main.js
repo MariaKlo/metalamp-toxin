@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import './pages/main.sass';
-import './pages/fonts.sass';
+import './fonts/fonts.sass';
 
 import './pages/form-elements/plugins/datepicker/datepicker.js';
 import './pages/form-elements/plugins/item-quantity-dropdown/item-quantity-dropdown.js';

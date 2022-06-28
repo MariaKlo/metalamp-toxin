@@ -1,5 +1,5 @@
 import $ from 'jquery';
 import './pages/main.sass';
-import './pages/fonts.sass';
+import './fonts/fonts.sass';
 
 global.jQuery = global.$ = $;
