@@ -43,7 +43,7 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),
     new FaviconsWebpackPlugin({
-      logo: '/metalamp/ui-kit/src/img/Group.png',
+      logo: './src/img/group.png',
       cache: true,
     }),
   ],
