@@ -1,0 +1,69 @@
+{
+  "name": "metalamp",
+  "version": "1.0.0",
+  "description": "Учебный проект от комании Metalamp. Состоит из двух частей: ui-kit и сам сайт toxin. При открытии ссылки на github-pages, вы увидите ссылки на обе части.<br>\r Как скачать проект: Чтобы скачать все пакеты и модули, напишите в терминале <b>npm i</b><br>\r Как запустить проект: откройте папку website или ui-kit, затем в терминале напишите <b>npm run start</b><br>\r При создании были использованы: <i>Pug, Sass, JavaScript, Webpack v.5.60.0, FontAwesome, Material Icons.</i><br>\r Были использованы плагины: <br>\r <ul>\r   <li><i>Air-datepicker v.3.0.1</i></li>\r   <li><i>Chart.js v.3.6.2</i></li>\r   <li><i>Item-quantity-dropdown v.2.1.0</i></li>\r   <li><i>Nouislider v.15.5.0</i></li>\r   <li><i>Paginationjs v.2.1.5</i></li>\r   <li><i>Swiper v.7.2.0</i></li>\r </ul>\r Респонсив: есть у сайта, но нет у ui-kit<br>\r Окончательный вариант исходных файлов есть на ветке toxin-pages. Остальные ветки содержат историю разработки и старые файлы.<br>\r <b>Ознакомиться с сайтом можете по ссылке на Github pages:</b> https://mariaklo.github.io/metalamp-toxin/\r <br>\r <br>\r <br>\r Educational project from Metalamp company. Consists of two parts: ui-kit and site toxin itself. When you open the link to github-pages, you will see links to both parts.<br>\r How to download: To download all utilities, open the folder \"website\" or \"ui-kit\", then type in the terminal <b>npm i</b><br>\r How to run: in the terminal type <b>npm run start</b><br>\r Next tools had been used: <i>Pug, Sass, JavaScript, Webpack v.5.60.0, FontAwesome, Material Icons.</i><br>\r Next plugins had been used: <br>\r <ul>\r   <li><i>Air-datepicker v.3.0.1</i></li>\r   <li><i>Chart.js v.3.6.2</i></li>\r   <li><i>Item-quantity-dropdown v.2.1.0</i></li>\r   <li><i>Nouislider v.15.5.0</i></li>\r   <li><i>Paginationjs v.2.1.5</i></li>\r   <li><i>Swiper v.7.2.0</i></li>\r </ul>\r Responsive: the website has it but not ui-kit<br>\r The final version of the source files is on the toxin-pages branch. The rest of the branches contain development history and old files.<br>\r <b>You can see the project on Github pages:</b> https://mariaklo.github.io/metalamp-toxin/",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "./node_modules/.bin/webpack --watch",
+    "start": "webpack serve --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaKlo/metalamp-toxin.git%20toxin-pages.git"
+  },
+  "author": "Maria Klochkova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaKlo/metalamp-toxin.git%20toxin-pages/issues"
+  },
+  "homepage": "https://github.com/MariaKlo/metalamp-toxin.git%20toxin-pages#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "chart.js": "^3.8.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "expose-loader": "^4.0.0",
+    "favicons": "^7.0.0-beta.4",
+    "favicons-webpack-plugin": "^5.0.2",
+    "html-webpack-externals-plugin": "^3.8.0",
+    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-pug-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.1",
+    "node-sass-svg": "^2.0.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.7.2",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "svgo-loader": "^3.0.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "air-datepicker": "^3.2.0",
+    "chartjs-plugin-datalabels": "^2.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "item-quantity-dropdown": "^2.1.0",
+    "jquery": "^3.6.0",
+    "nouislider": "^15.6.0",
+    "paginationjs": "^2.1.5",
+    "pug-html-loader": "^1.1.5",
+    "swiper": "^8.2.5",
+    "underscore": "^1.13.4",
+    "webpack-merge": "^5.8.0"
+  }
+}
