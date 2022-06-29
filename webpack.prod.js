@@ -17,8 +17,8 @@ module.exports = merge(config, {
       new CssMinimizerPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
-        template: 'src/pages/landing-page/landing-page.pug',
-        filename: "./index.html",
+        template: 'src/pages/website/landing-page/landing-page.pug',
+        filename: "./landing-page.html",
         chunks: ['main', 'landingPage'],
         minify: {
           removeAttributeQuotes: true,
@@ -27,7 +27,7 @@ module.exports = merge(config, {
         }
       }),
       new HtmlWebpackPlugin({
-        template: 'src/pages/sign-in/sign-in.pug',
+        template: 'src/pages/website/sign-in/sign-in.pug',
         filename: "./sign-in.html",
         chunks: ['main', 'signIn'],
         minify: {
@@ -37,7 +37,7 @@ module.exports = merge(config, {
         }
       }),
       new HtmlWebpackPlugin({
-        template: 'src/pages/registration/registration.pug',
+        template: 'src/pages/website/registration/registration.pug',
         filename: "./registration.html",
         chunks: ['main', 'registration'],
         minify: {
@@ -47,7 +47,7 @@ module.exports = merge(config, {
         }
       }),
       new HtmlWebpackPlugin({
-        template: 'src/pages/filter/filter.pug',
+        template: 'src/pages/website/filter/filter.pug',
         filename: "./filter.html",
         chunks: ['main', 'filter'],
         minify: {
@@ -57,9 +57,49 @@ module.exports = merge(config, {
         }
       }),
       new HtmlWebpackPlugin({
-        template: 'src/pages/room-details/room-details.pug',
+        template: 'src/pages/website/room-details/room-details.pug',
         filename: "./room-details.html",
         chunks: ['main', 'roomDetails'],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/pages/ui-kit/cards/cards.pug',
+        filename: "./cards.html",
+        chunks: ['main', 'cards'],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/pages/ui-kit/colors-type/colors-type.pug',
+        filename: "./colors-type.html",
+        chunks: ['main', 'colorsType'],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/pages/ui-kit/form-elements/form-elements.pug',
+        filename: "./form-elements.html",
+        chunks: ['main', 'formElements'],
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/pages/ui-kit/headers-footers/headers-footers.pug',
+        filename: "./headers-footers.html",
+        chunks: ['main', 'headersFooters'],
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
