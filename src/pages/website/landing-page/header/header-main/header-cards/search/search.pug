@@ -1,3 +1,5 @@
+include ../../../../../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+
 form.rooms(action="filter.html")
     h1.rooms__title Найдём номера под ваши пожелания
     div.rooms__wrapper
@@ -11,7 +13,6 @@ form.rooms(action="filter.html")
           input(type="text" name="date" class="rooms__date" placeholder="ДД.ММ.ГГГГ" id="datepicker-rooms-departure")
     div.rooms__guests
       h3.rooms__info Гости
-      include ../plugins/item-quantity-dropdown/item-quantity-dropdown.pug
       +item-quantity-dropdown("iqdropdown-fourth", "Взрослые", "Дети", "Младенцы")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить

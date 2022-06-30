@@ -1,10 +1,13 @@
+include ../../../../components/info/info.pug
+include comments/comment.pug
+include ../../../../components/bullet-list/bullet-list.pug
+
 div.main
   div.main__wrap
     div.main__wrapper
       div.main__wrapper_additional
         div.main__info
           h3.main__title Сведения о номере
-          include info/info.pug
           +info("Комфорт", "Шумопоглащающие стены")(class="info__img")
           +info("Удобство", "Окно в каждой из спален")(class="info__img_second")
           +info("Уют", "Номер оснащён камином")(class="info__img_third")
@@ -14,7 +17,6 @@ div.main
     div.main__comments
       h3.main__title.main__title_bigger-margin Отзывы посетителей номера
         span 2 отзыва
-      include comments/comment.pug
       +comment("comment__img", "Мурад Сарафанов", "5 дней назад", 
       "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
       "one", "heart", "heartEX", "heart", "like-buttons__counter")(class="like-buttons__border")
@@ -25,7 +27,6 @@ div.main
       div.main__wrapper_additional
         div.main__rules
           h3.main__title.main__title_additional-margin Правила
-          include rules/bullet-list.pug
           +bullet-list("Нельзя с питомцами")
           +bullet-list("Без вечеринок и мероприятий")
           +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")

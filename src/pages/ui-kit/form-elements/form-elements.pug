@@ -1,3 +1,21 @@
+include ../../../components/inputs/regular-input/regular-input.pug
+include ../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+include ../../../components/buttons/checkbox-button/checkbox-button.pug
+include ../../../components/buttons/radio-button/radio-button.pug
+include ../../../components/buttons/toggle-button/toggle-button.pug
+include ../../../components/buttons/like-button/like-button.pug
+include ../../../components/buttons/rate-button/rate-button.pug
+include ../../../components/plugins/range-slider/range-slider.pug
+include ../../../components/buttons/solid-button/solid-button.pug
+include ../../../components/buttons/transparent-button/transparent-button.pug
+include ../../../components/buttons/link-button/link-button.pug
+include ../../../components/buttons/solid-big-button/solid-big-button.pug
+include ../../../components/plugins/pagination/pagination.pug
+include ../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../../components/bullet-list/bullet-list.pug
+include ../../../components/comment/comment.pug
+include ../../../components/feedback/feedback.pug
+
 // переменные
 - var textField = "TEXT FIELD"
 - var dropdown = "DROPDOWN"
@@ -7,14 +25,12 @@ div.elements
     div.elements__description
       h3.elements__info #{textField}
       p.elements__state DEFAULT
-    include inputs/regular-input/regular-input.pug
     +input("email", "e-mail", "Email")(class="elements__field") 
     div.elements__description
       h3.elements__info #{textField}
       p.elements__state HOVER/FOCUS
     +input("text", "text", "This is pretty awesome")(class="elements__field") 
     h3.elements__info #{dropdown}
-    include plugins/item-quantity-dropdown/item-quantity-dropdown.pug
     +item-quantity-dropdown("iqdropdowns", "Взрослые", "Дети", "Младенцы")
       div(class="iqdropdown-menu-btn-wrap")
         a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
@@ -40,26 +56,22 @@ div.elements
   div.buttons
     div.checkbox-buttons
       h3.checkbox-buttons__name CHECKBOX BUTTONS
-      include buttons/checkbox-button/checkbox-button.pug
       +checkbox-button("checkbox", "Можно курить")
       +checkbox-button("checkbox-second", "Можно с питомцами")
       +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)") 
     div.radio-buttons
       h3.radio-buttons__name RADIO BUTTONS
       div.radio-buttons__wrapper
-        include buttons/radio-button/radio-button.pug
         +radio-button("sex-m", "Мужчина")
         +radio-button("sex-f", "Женщина")
     div.toggle-buttons
       h3.toggle-buttons__name TOGGLE
       div.toggle-buttons__wrapper
-        include buttons/toggle-button/toggle-button.pug
         +toggle-button()
         +toggle-button()
     div.like-buttons
       h3.like-buttons__name LIKE BUTTON
       div.like-buttons__wrapper
-        include buttons/like-button/like-button.pug
         +like-button("one", "heartOne", "heartEX", "heart", "like-buttons__counter")(class="like-buttons__border")
         +like-button("two", "heartTwo", "heartEX-two", "heart-two", "like-buttons__counter_second-like-button")(class="like-buttons__border_second-like-button")
     div.rate-buttons
@@ -73,7 +85,6 @@ div.elements
           symbol(id="star" viewBox="153 89 106 108")
             polygon(id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
         div.rate-buttons__wrap
-          include buttons/rate-button/rate-button.pug
           +rate-button("star", "five", "#star")
           +rate-button("star", "four", "#star")
           +rate-button("star", "three", "#star")
@@ -95,28 +106,22 @@ div.elements
   div.other-buttons
     div.range-button
       div.range-button__info
-        include plugins/range-slider/range-slider.pug
         +range-slider()
     // кнопки + пагинация
     div.buttons
       h3.buttons__name BUTTONS
       div.ellipse-buttons
         div.ellipse-buttons__wrap
-          include buttons/solid-button/solid-button.pug
           +solid-button()
           +solid-button()
         div.ellipse-buttons__wrap
-          include buttons/transparent-button/transparent-button.pug
           +transparent-button()
           +transparent-button()
       div.link-buttons
-        include buttons/link-button/link-button.pug
         +link-button()
         +link-button()
-      include buttons/solid-big-button/solid-big-button.pug
     div.pagination
       h3.pagination__name PAGINATION
-      include plugins/pagination/pagination.pug
       +pagination()
 // фильтры по поиску номеров
 div.elements__filter    
@@ -132,7 +137,6 @@ div.elements__filter
     div.filter__checkbox_expanded
       div.filter__checkbox-list Expandable checkbox list
         i.filter__checkbox-list-arrow_first
-        include buttons/expandable-checkbox-list/expandable-checkbox-list.pug
         +expandable-list("Завтрак", "filter")(class="filter__checkbox filter__checkbox_first")
         +expandable-list("Письменный стол", "filter_second")(class="filter__checkbox filter__checkbox_second")
         +expandable-list("Стул для кормления", "filter_third")(class="filter__checkbox filter__checkbox_third")
@@ -177,15 +181,12 @@ div.elements__filter
         a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
     h3.lists__bullet-title Bullet list
     ul.lists__bullet
-    include bullet-list/bullet-list.pug
     +bullet-list("Нельзя с питомцами")
     +bullet-list("Без вечеринок и мероприятий")
     +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
 // комментарии
 div.elements__comments
   div.comments
-    include comment/comment.pug
     +comment("Комфорт", "Шумопоглащающие стены")(class="comment__img")
     +comment("Удобство", "Окно в каждой из спален")(class="comment__img_second")
-  include feedback/feedback.pug
   +feedback("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")

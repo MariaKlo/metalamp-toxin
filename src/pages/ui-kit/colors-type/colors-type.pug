@@ -1,8 +1,10 @@
+include colors/colors.pug
+include type/type.pug
+
 // цвета
 div.logo 
   div.wrapper
     div.colors
-      include colors/colors.pug
       +colors("Dark Shade 100%", "#1F2041")(class="rectangle rectangle_first")
       +colors("Dark Shade 75%", "#1F2041")(class="rectangle rectangle_second")
       +colors("Dark Shade 50%", "#1F2041")(class="rectangle rectangle_third")
@@ -12,7 +14,6 @@ div.logo
       +colors("Green", "#6FCF97")(class="rectangle rectangle_seventh")
         // шрифты, заголовки
     div.titles
-      include type/type.pug
       +titles("H1")(class="title title_first")
         h1.title__name This one is the sub-section or widget title
       +titles("H2")(class="title title_second")

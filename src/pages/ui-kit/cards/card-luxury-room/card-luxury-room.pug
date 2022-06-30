@@ -1,27 +1,28 @@
+include ../../../../components/plugins/swiper/swiper.pug
+include ../../../../components/buttons/rate-button/rate-button.pug
+
 form.luxury-room(action="#")
-    include ../../form-elements/plugins/swiper/swiper.pug
-    +swiper("swiper", "luxury-room__img")(class="swiper luxury-room__swiper")
-    div.luxury-room__wrap
-      h1.luxury-room__title №
-        span 888
-        span Люкс
-      p.luxury-room__price 9 990&#x20bd;
-        span в сутки
-    div.luxury-room__wrap_border
-    div.luxury-room__wrapper
-      div.luxury-room__source
-      svg(class="gradient")
-        linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grad-room")
-          stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
-          stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
-        symbol(id="star-room" viewBox="153 89 106 108")
-          polygon(id="star-shape-room" stroke="url(#grad-room)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
-      div.luxury-room__wraps
-        include ../../form-elements/buttons/rate-button/rate-button.pug
-        +rate-button("star-room", "five-room", "#star-room")
-        +rate-button("star-room", "four-room", "#star-room")
-        +rate-button("star-room", "three-room", "#star-room")
-        +rate-button("star-room", "two-room", "#star-room")
-        +rate-button("star-room", "one-room", "#star-room")
-      p.luxury-room__comments 145
-        span Отзывов
+  +swiper("swiper", "luxury-room__img")(class="swiper luxury-room__swiper")
+  div.luxury-room__wrap
+    h1.luxury-room__title №
+      span 888
+      span Люкс
+    p.luxury-room__price 9 990&#x20bd;
+      span в сутки
+  div.luxury-room__wrap_border
+  div.luxury-room__wrapper
+    div.luxury-room__source
+    svg(class="gradient")
+      linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grad-room")
+        stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
+        stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
+      symbol(id="star-room" viewBox="153 89 106 108")
+        polygon(id="star-shape-room" stroke="url(#grad-room)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
+    div.luxury-room__wraps
+      +rate-button("star-room", "five-room", "#star-room")
+      +rate-button("star-room", "four-room", "#star-room")
+      +rate-button("star-room", "three-room", "#star-room")
+      +rate-button("star-room", "two-room", "#star-room")
+      +rate-button("star-room", "one-room", "#star-room")
+    p.luxury-room__comments 145
+      span Отзывов

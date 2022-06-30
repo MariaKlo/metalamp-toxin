@@ -1,3 +1,5 @@
+include ../buttons/like-button/like-button.pug
+
 mixin feedback(username, time, text)
   div.feedback
     div.feedback__info
@@ -6,6 +8,5 @@ mixin feedback(username, time, text)
         p.feedback__username= username
         p.feedback__time= time
     div.feedback__wrap
-      include ../buttons/like-button/like-button.pug
       +like-button("three", "heart-three", "heartEX-three", "heart-three", "like-buttons__counter_third-like-button")(class="like-buttons__border_third-like-button")
       p.feedback__text= text

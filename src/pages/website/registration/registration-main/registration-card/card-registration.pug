@@ -1,10 +1,12 @@
+include ../../../../../components/buttons/radio-button/radio-button.pug
+include ../../../../../components/buttons/toggle-button/toggle-button.pug
+
 form.registration(action="#")
     h1.registration__title Регистрация аккаунта
     div.registration__info
       input(type="text" name="first name" class="registration__input" placeholder="Имя")
       input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
     div.registration__username
-      include buttons/radio-button/radio-button.pug
       +radio-button("male", "Мужчина")
       +radio-button("female", "Женщина")
     div.registration__birth
@@ -14,7 +16,6 @@ form.registration(action="#")
       h3.registration__data-title Данные для входа в сервис
       input(type="email" name="email" class="registration__input" placeholder="Email")
       input(type="text" name="password" class="registration__input" placeholder="Пароль")
-    include buttons/toggle-button/toggle-button.pug
     +toggle-button()
     button(type="submit" class="registration__btn") Зарегистрироваться
     div.registration_exist

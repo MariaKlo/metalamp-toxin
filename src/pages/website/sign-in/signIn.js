@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import '../../../assets/fonts/fonts.sass';
+import './sign-in.sass';
 global.jQuery = global.$ = $;
 
-import '../landing-page/header/header-menu/hamburger/hamburger.js';
+import '../../../components/hamburger/hamburger.js';

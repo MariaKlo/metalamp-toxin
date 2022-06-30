@@ -1,5 +1,7 @@
 import $ from 'jquery';
+import '../../../assets/fonts/fonts.sass';
+import './registration.sass';
 global.jQuery = global.$ = $;
 
-import '../landing-page/header/header-main/header-cards/plugins/datepicker/datepicker.js';
-import '../landing-page/header/header-menu/hamburger/hamburger.js';
+import '../../../components/plugins/datepicker/datepicker.js';
+import '../../../components/hamburger/hamburger.js';
