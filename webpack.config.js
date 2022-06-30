@@ -1,6 +1,6 @@
 const path = require('path');
 var webpack = require('webpack');
-const fs = require('fs');
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -28,6 +28,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext]',
     clean: true,
   },
   resolve: {
@@ -47,7 +48,7 @@ module.exports = {
     }
     ),
     new HtmlWebpackPlugin({
-      template: 'src/pages/index.pug',
+      template: 'src/index.pug',
       filename: "./index-dev.html",
       chunks: ['main'],
     }),
@@ -104,6 +105,12 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: './src/assets/favicon/group.png',
       cache: true,
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/assets/img/uikit", to: "dist/img/uikit" },
+        { from: "src/assets/img/website", to: "dist/img/website" },
+      ],
     }),
   ],
   devServer: {
