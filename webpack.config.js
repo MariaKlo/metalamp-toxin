@@ -13,7 +13,7 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/pages/index.js',
+    main: './src/index.js',
     landingPage: './src/pages/website/landing-page/landingPage.js',
     signIn: './src/pages/website/sign-in/signIn.js',
     registration: './src/pages/website/registration/registration.js',
@@ -108,8 +108,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/assets/img/uikit", to: "dist/img/uikit" },
-        { from: "src/assets/img/website", to: "dist/img/website" },
+        { from: "src/assets/img/uikit", to: "assets/img/uikit" },
+        { from: "src/assets/img/website", to: "assets/img/website" },
       ],
     }),
   ],
@@ -163,6 +163,9 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]'
+        }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
