@@ -1,7 +1,3 @@
-@import "../../../../assets/styles/__mixins.sass"
-@import "../../../../assets/styles/__tegs.sass"
-@import "../../../../assets/styles/__variables.sass"
-
 .gallery
   height: 30.3125rem
   display: grid
@@ -12,7 +8,8 @@
     width: 55.16rem
     min-height: 30.3125rem
     grid-column: 1
-    grid-row: 1 / 3
+    grid-row-start: 1
+    grid-row-end: 3
 
   &__img_second
     background: url('../../../assets/img/website/gallery-second.jpeg') no-repeat center center
@@ -32,11 +29,12 @@
 
 @media only screen and (max-width: 74.9988rem) //1199px
   .gallery
-    height:45.3125rem
+    height: 45.3125rem
     grid-template-columns: 1fr 1fr
 
     &__img_first
-      grid-column: 1/3
+      grid-column-start: 1
+      grid-column-end: 3
       grid-row: 1
       width: 100%
       background-size: cover

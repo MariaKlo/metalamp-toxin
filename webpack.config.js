@@ -49,7 +49,7 @@ module.exports = {
     ),
     new HtmlWebpackPlugin({
       template: 'src/index.pug',
-      filename: "./index-dev.html",
+      filename: "./index.html",
       chunks: ['main'],
     }),
     new HtmlWebpackPlugin({
@@ -180,5 +180,8 @@ module.exports = {
         ]
       },
     ]
-  }
+  },
+  stats: {
+    errorDetails: true,
+  },
 };
