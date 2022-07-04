@@ -17,8 +17,8 @@
   cursor: pointer
   margin-right: 1.0625rem
 
-.radio-buttons__field:checked + label:before, 
-.radio-buttons__field:not(:checked) + label:before 
+.radio-buttons__field:checked + label::before, 
+.radio-buttons__field:not(:checked) + label::before 
   content: ''
   position: absolute
   left: 0px
@@ -28,12 +28,12 @@
   border: 1px solid #dddddd
   background-color: rgba(255, 255, 255, 1)
 
-.radio-buttons__field:checked + label:before, 
-.radio-buttons__field:not(:checked) + label:before 
+.radio-buttons__field:checked + label::before, 
+.radio-buttons__field:not(:checked) + label::before 
   border-radius: 100%
   
-.radio-buttons__field:checked + label:after, 
-.radio-buttons__field:not(:checked) + label:after 
+.radio-buttons__field:checked + label::after, 
+.radio-buttons__field:not(:checked) + label::after 
   content: ''
   position: absolute
   -webkit-transition: all 0.2s ease
@@ -41,8 +41,8 @@
   -o-transition: all 0.2s ease
   transition: all 0.2s ease
 
-.radio-buttons__field:checked + label:after, 
-.radio-buttons__field:not(:checked) + label:after 
+.radio-buttons__field:checked + label::after, 
+.radio-buttons__field:not(:checked) + label::after 
   left: .25rem
   top: .25rem
   width: 12px
@@ -50,25 +50,25 @@
   border-radius: 100%
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
-#female:checked + label:after,
-#female:not(:checked) + label:after
+#female:checked + label::after,
+#female:not(:checked) + label::after
   left: 0.28em
   top: 0.3em
 
-#sex-f:checked + label:after,
-#sex-f:not(:checked) + label:after
+#sex-f:checked + label::after,
+#sex-f:not(:checked) + label::after
   left: 0.28rem
   top: 0.29rem
 
-#male:checked + label:after,
-#male:not(:checked) + label:after
+#male:checked + label::after,
+#male:not(:checked) + label::after
   left: 0.3em
   top: 0.3em
 
-.radio-buttons__field:not(:checked) + label:after 
+.radio-buttons__field:not(:checked) + label::after 
   opacity: 0
  
-.radio-buttons__field:checked + label:after 
+.radio-buttons__field:checked + label::after 
   opacity: 1
 
 .radio-buttons

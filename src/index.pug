@@ -6,9 +6,10 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     meta(name="description", content="Ui-kit")
     meta(name="keywords", content="metalamp, toxin, ui-kit")
-    link(rel="stylesheet" href="index.sass")
+    link(href="index.sass")
     title Preview page
   body
+    - var pages = {'Colors-Types': 'colors-type-dev.html', 'Form-elements': 'form-elements-dev.html', 'Cards': 'cards-dev.html', 'Headers-Footers': 'headers-footers-dev.html', 'Filter': 'filter-dev.html', 'Landing-page': 'landing-page-dev.html', 'Registration': 'registration-dev.html', 'Room-details': 'room-details-dev.html', 'Sign-in': 'sign-in-dev.html'}
     div.preview
-      a(href="ui-kit/dist/index.html" class="preview__link") Ui-kit
-      a(href="website/dist/index.html" class="preview__link") Website
+      each val, key in pages 
+        a(href=val)= key
