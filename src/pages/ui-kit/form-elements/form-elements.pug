@@ -9,7 +9,6 @@ include ../../../components/plugins/range-slider/range-slider.pug
 include ../../../components/buttons/solid-button/solid-button.pug
 include ../../../components/buttons/transparent-button/transparent-button.pug
 include ../../../components/buttons/link-button/link-button.pug
-include ../../../components/buttons/solid-big-button/solid-big-button.pug
 include ../../../components/plugins/pagination/pagination.pug
 include ../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../../components/bullet-list/bullet-list.pug
@@ -120,6 +119,7 @@ div.elements
       div.link-buttons
         +link-button()
         +link-button()
+      include ../../../components/buttons/solid-big-button/solid-big-button.pug
     div.pagination
       h3.pagination__name PAGINATION
       +pagination()

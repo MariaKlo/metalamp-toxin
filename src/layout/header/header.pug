@@ -1,0 +1,17 @@
+include ../../components/headers/headers.pug
+
+block header
+  div.header
+    a(href="index.html")
+      div.header__logo
+      div.header__wrapper
+        +header("О нас", "Услуги", "Вакансии", "Новости", "Соглашения")
+        div.header__buttons
+          a(href="sign-in.html")
+            button(type="submit" class="header__button button__sign-in") Войти
+          a(href="registration.html")
+            button(type="submit" class="header__button button__sign-up") Зарегистрироваться
+        div.hamburger
+          span.bar
+          span.bar
+          span.bar

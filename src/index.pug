@@ -12,4 +12,4 @@ html
     - var pages = {'Colors-Types': 'colors-type-dev.html', 'Form-elements': 'form-elements-dev.html', 'Cards': 'cards-dev.html', 'Headers-Footers': 'headers-footers-dev.html', 'Filter': 'filter-dev.html', 'Landing-page': 'landing-page-dev.html', 'Registration': 'registration-dev.html', 'Room-details': 'room-details-dev.html', 'Sign-in': 'sign-in-dev.html'}
     div.preview
       each val, key in pages 
-        a(href=val)= key
+        a(href=val class="preview__link")= key
