@@ -1,192 +1,194 @@
-include ../../../components/inputs/regular-input/regular-input.pug
-include ../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
-include ../../../components/buttons/checkbox-button/checkbox-button.pug
-include ../../../components/buttons/radio-button/radio-button.pug
-include ../../../components/buttons/toggle-button/toggle-button.pug
-include ../../../components/buttons/like-button/like-button.pug
-include ../../../components/buttons/rate-button/rate-button.pug
-include ../../../components/plugins/range-slider/range-slider.pug
-include ../../../components/buttons/solid-button/solid-button.pug
-include ../../../components/buttons/transparent-button/transparent-button.pug
-include ../../../components/buttons/link-button/link-button.pug
-include ../../../components/plugins/pagination/pagination.pug
-include ../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
-include ../../../components/bullet-list/bullet-list.pug
-include ../../../components/comment/comment.pug
-include ../../../components/feedback/feedback.pug
+extends ../../../layout/page.pug
+block content
+  include ../../../components/inputs/regular-input/regular-input.pug
+  include ../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+  include ../../../components/buttons/checkbox-button/checkbox-button.pug
+  include ../../../components/buttons/radio-button/radio-button.pug
+  include ../../../components/buttons/toggle-button/toggle-button.pug
+  include ../../../components/buttons/like-button/like-button.pug
+  include ../../../components/buttons/rate-button/rate-button.pug
+  include ../../../components/plugins/range-slider/range-slider.pug
+  include ../../../components/buttons/solid-button/solid-button.pug
+  include ../../../components/buttons/transparent-button/transparent-button.pug
+  include ../../../components/buttons/link-button/link-button.pug
+  include ../../../components/plugins/pagination/pagination.pug
+  include ../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
+  include ../../../components/bullet-list/bullet-list.pug
+  include ../../../components/comment/comment.pug
+  include ../../../components/feedback/feedback.pug
 
-// переменные
-- var textField = "TEXT FIELD"
-- var dropdown = "DROPDOWN"
-// поля ввода
-div.elements
-  form(action="#")
-    div.elements__description
-      h3.elements__info #{textField}
-      p.elements__state DEFAULT
-    +input("email", "e-mail", "Email")(class="elements__field") 
-    div.elements__description
-      h3.elements__info #{textField}
-      p.elements__state HOVER/FOCUS
-    +input("text", "text", "This is pretty awesome")(class="elements__field") 
-    h3.elements__info #{dropdown}
-    +item-quantity-dropdown("iqdropdowns", "Взрослые", "Дети", "Младенцы")
-      div(class="iqdropdown-menu-btn-wrap")
-        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
-        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-    h3.elements__info MASKED #{textField}
-    input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field" data-position="right top" id="datepicker-here")
-    div.date-dropdown
-      div.date-dropdown_before
-        h3.elements__info DATE #{dropdown}
-        div.elements__field-wrap-datepicker
-          input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" id="datepicker").elements__field-date
-      div.date-dropdown_after
-        h3.elements__info DATE #{dropdown}
-        div.elements__field-wrap-datepicker
-          input(type="text" name="date" placeholder="19.08.2019" id="datepicker-date").elements__field-date
-    h3.elements__info FILTER DATE #{dropdown}
-    div.elements__field-wrap-datepicker_short
-      input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-filter-date").elements__field-filter
-    h3.elements__info SUBSCRIPTION #{textField}
-    div.elements__field-wrap
-      +input("email", "e-mail", "Email")(class="elements__field-subscription")
-  // кнопки
-  div.buttons
-    div.checkbox-buttons
-      h3.checkbox-buttons__name CHECKBOX BUTTONS
-      +checkbox-button("checkbox", "Можно курить")
-      +checkbox-button("checkbox-second", "Можно с питомцами")
-      +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)") 
-    div.radio-buttons
-      h3.radio-buttons__name RADIO BUTTONS
-      div.radio-buttons__wrapper
-        +radio-button("sex-m", "Мужчина")
-        +radio-button("sex-f", "Женщина")
-    div.toggle-buttons
-      h3.toggle-buttons__name TOGGLE
-      div.toggle-buttons__wrapper
-        +toggle-button()
-        +toggle-button()
-    div.like-buttons
-      h3.like-buttons__name LIKE BUTTON
-      div.like-buttons__wrapper
-        +like-button("one", "heartOne", "heartEX", "heart", "like-buttons__counter")(class="like-buttons__border")
-        +like-button("two", "heartTwo", "heartEX-two", "heart-two", "like-buttons__counter_second-like-button")(class="like-buttons__border_second-like-button")
-    div.rate-buttons
-      h3.rate-buttons__name RATE BUTTON
-      div.rate-buttons__wrapper
-        div.rate-buttons__source
-        svg.gradient
-          linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grad")
-            stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
-            stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
-          symbol(id="star" viewBox="153 89 106 108")
-            polygon(id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
-        div.rate-buttons__wrap
-          +rate-button("star", "five", "#star")
-          +rate-button("star", "four", "#star")
-          +rate-button("star", "three", "#star")
-          +rate-button("star", "two", "#star")
-          +rate-button("star", "one", "#star")
-        div.rate-buttons__source
-        svg.gradient
-          linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grads")
-            stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
-            stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
-          symbol(id="stars" viewBox="153 89 106 108")
-            polygon(id="stars-shapes" stroke="url(#grads)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
-        div.rate-buttons__wrap
-          +rate-button("stars", "fives", "#stars")
-          +rate-button("stars", "fours", "#stars")
-          +rate-button("stars", "threes", "#stars")
-          +rate-button("stars", "twos", "#stars")
-          +rate-button("stars", "ones", "#stars")
-  div.other-buttons
-    div.range-button
-      div.range-button__info
-        +range-slider()
-    // кнопки + пагинация
+  // переменные
+  - var textField = "TEXT FIELD"
+  - var dropdown = "DROPDOWN"
+  // поля ввода
+  div.elements
+    form(action="#")
+      div.elements__description
+        h3.elements__info #{textField}
+        p.elements__state DEFAULT
+      +input("email", "e-mail", "Email")(class="elements__field") 
+      div.elements__description
+        h3.elements__info #{textField}
+        p.elements__state HOVER/FOCUS
+      +input("text", "text", "This is pretty awesome")(class="elements__field") 
+      h3.elements__info #{dropdown}
+      +item-quantity-dropdown("iqdropdowns", "Взрослые", "Дети", "Младенцы")
+        div(class="iqdropdown-menu-btn-wrap")
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+      h3.elements__info MASKED #{textField}
+      input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field" data-position="right top" id="datepicker-here")
+      div.date-dropdown
+        div.date-dropdown_before
+          h3.elements__info DATE #{dropdown}
+          div.elements__field-wrap-datepicker
+            input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" id="datepicker").elements__field-date
+        div.date-dropdown_after
+          h3.elements__info DATE #{dropdown}
+          div.elements__field-wrap-datepicker
+            input(type="text" name="date" placeholder="19.08.2019" id="datepicker-date").elements__field-date
+      h3.elements__info FILTER DATE #{dropdown}
+      div.elements__field-wrap-datepicker_short
+        input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-filter-date").elements__field-filter
+      h3.elements__info SUBSCRIPTION #{textField}
+      div.elements__field-wrap
+        +input("email", "e-mail", "Email")(class="elements__field-subscription")
+    // кнопки
     div.buttons
-      h3.buttons__name BUTTONS
-      div.ellipse-buttons
-        div.ellipse-buttons__wrap
-          +solid-button()
-          +solid-button()
-        div.ellipse-buttons__wrap
-          +transparent-button()
-          +transparent-button()
-      div.link-buttons
-        +link-button()
-        +link-button()
-      include ../../../components/buttons/solid-big-button/solid-big-button.pug
-    div.pagination
-      h3.pagination__name PAGINATION
-      +pagination()
-// фильтры по поиску номеров
-div.elements__filter    
-  div.filter
-    div.filter__description
-      h3.filter__info #{dropdown}
-      p.filter__state DEFAULT
-    +item-quantity-dropdown("iqdropdown-sixth", "Спальни", "Кровати", "Ванные комнаты")
-    div.filter__description
-      h3.filter__info #{dropdown}
-      p.filter__state EXPANDED
-    +item-quantity-dropdown("iqdropdown-seventh", "Спальни", "Кровати", "Ванные комнаты")
-    div.filter__checkbox_expanded
-      div.filter__checkbox-list Expandable checkbox list
-        i.filter__checkbox-list-arrow_first
-        +expandable-list("Завтрак", "filter")(class="filter__checkbox filter__checkbox_first")
-        +expandable-list("Письменный стол", "filter_second")(class="filter__checkbox filter__checkbox_second")
-        +expandable-list("Стул для кормления", "filter_third")(class="filter__checkbox filter__checkbox_third")
-        +expandable-list("Кроватка", "filter_fourth")(class="filter__checkbox filter__checkbox_fourth")
-        +expandable-list("Телевизор", "filter_fifth")(class="filter__checkbox filter__checkbox_fifth")
-        +expandable-list("Шампнуь", "filter_sixth")(class="filter__checkbox filter__checkbox_sixth")
-      div.filter__checkbox-list_second Expandable checkbox list
-        i.filter__checkbox-list-arrow_second
-        +expandable-list("Завтрак", "filter_seventh")(class="filter__checkbox filter__checkbox_seventh")
-        +expandable-list("Письменный стол", "filter_eighth")(class="filter__checkbox filter__checkbox_eighth")
-        +expandable-list("Стул для кормления", "filter_ninth")(class="filter__checkbox filter__checkbox_ninth")
-        +expandable-list("Кроватка", "filter_tenth")(class="filter__checkbox filter__checkbox_tenth")
-        +expandable-list("Телевизор", "filter_eleventh")(class="filter__checkbox filter__checkbox_eleventh")
-        +expandable-list("Шампнуь", "filter_twelfth")(class="filter__checkbox filter__checkbox_twelfth")
-  // dropdown с гостями
-  div.guests
-    h3.guests__info #{dropdown}
-    +item-quantity-dropdown("iqdropdown-second", "Взрослые", "Дети", "Младенцы")
-      div(class="iqdropdown-menu-btn-wrap")
-        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
-        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-    h3.guests__title Rich Checkbox Buttons
-    div.guests__checkbox-wrapper
-      div.checkbox-buttons__item
-        input(type="checkbox" name="agreement" id="guests").checkbox-buttons__field
-        label(for="guests")
-        div.guests__checkbox-wrap
-          p.guests__option-title Широкий коридор
-          p.guests__option-text Ширина коридоров в номере не менее 91 см.
-      div.checkbox-buttons__item
-        input(type="checkbox" name="agreement" id="guests__second").checkbox-buttons__field
-        label(for="guests__second")
-        div.guests__checkbox-wrap
-          p.guests__option-title Помощник для инвалидов
-          p.guests__option-text На 1 этаже вас встретит специалист  и проводит до номера.
-  // dropdown и списки
-  div.lists
-    h3.lists__info #{dropdown}
-    +item-quantity-dropdown("iqdropdown-third", "Взрослые", "Дети", "Младенцы")
-      div(class="iqdropdown-menu-btn-wrap")
-        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
-        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-    h3.lists__bullet-title Bullet list
-    ul.lists__bullet
-    +bullet-list("Нельзя с питомцами")
-    +bullet-list("Без вечеринок и мероприятий")
-    +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
-// комментарии
-div.elements__comments
-  div.comments
-    +comment("Комфорт", "Шумопоглащающие стены")(class="comment__img")
-    +comment("Удобство", "Окно в каждой из спален")(class="comment__img_second")
-  +feedback("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+      div.checkbox-buttons
+        h3.checkbox-buttons__name CHECKBOX BUTTONS
+        +checkbox-button("checkbox", "Можно курить")
+        +checkbox-button("checkbox-second", "Можно с питомцами")
+        +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)") 
+      div.radio-buttons
+        h3.radio-buttons__name RADIO BUTTONS
+        div.radio-buttons__wrapper
+          +radio-button("sex-m", "Мужчина")
+          +radio-button("sex-f", "Женщина")
+      div.toggle-buttons
+        h3.toggle-buttons__name TOGGLE
+        div.toggle-buttons__wrapper
+          +toggle-button()
+          +toggle-button()
+      div.like-buttons
+        h3.like-buttons__name LIKE BUTTON
+        div.like-buttons__wrapper
+          +like-button("like-buttons__heart js-like-buttons__heart", "like-buttons__counter js-like-buttons__counter")(class="like-buttons__border js-like-buttons__border")
+          +like-button("like-buttons__heart_second js-like-buttons__heart_second", "like-buttons__counter_second-like-button js-like-buttons__counter_second-like-button")(class="like-buttons__border_second-like-button js-like-buttons__border_second-like-button")
+      div.rate-buttons
+        h3.rate-buttons__name RATE BUTTON
+        div.rate-buttons__wrapper
+          div.rate-buttons__source
+          svg.gradient
+            linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grad")
+              stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
+              stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
+            symbol(id="star" viewBox="153 89 106 108")
+              polygon(id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
+          div.rate-buttons__wrap
+            +rate-button("star", "five", "#star")
+            +rate-button("star", "four", "#star")
+            +rate-button("star", "three", "#star")
+            +rate-button("star", "two", "#star")
+            +rate-button("star", "one", "#star")
+          div.rate-buttons__source
+          svg.gradient
+            linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grads")
+              stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
+              stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
+            symbol(id="stars" viewBox="153 89 106 108")
+              polygon(id="stars-shapes" stroke="url(#grads)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
+          div.rate-buttons__wrap
+            +rate-button("stars", "fives", "#stars")
+            +rate-button("stars", "fours", "#stars")
+            +rate-button("stars", "threes", "#stars")
+            +rate-button("stars", "twos", "#stars")
+            +rate-button("stars", "ones", "#stars")
+    div.other-buttons
+      div.range-button
+        div.range-button__info
+          +range-slider()
+      // кнопки + пагинация
+      div.buttons
+        h3.buttons__name BUTTONS
+        div.ellipse-buttons
+          div.ellipse-buttons__wrap
+            +solid-button()
+            +solid-button()
+          div.ellipse-buttons__wrap
+            +transparent-button()
+            +transparent-button()
+        div.link-buttons
+          +link-button()
+          +link-button()
+        include ../../../components/buttons/solid-big-button/solid-big-button.pug
+      div.pagination
+        h3.pagination__name PAGINATION
+        +pagination()
+  // фильтры по поиску номеров
+  div.elements__filter    
+    div.filter
+      div.filter__description
+        h3.filter__info #{dropdown}
+        p.filter__state DEFAULT
+      +item-quantity-dropdown("iqdropdown-sixth", "Спальни", "Кровати", "Ванные комнаты")
+      div.filter__description
+        h3.filter__info #{dropdown}
+        p.filter__state EXPANDED
+      +item-quantity-dropdown("iqdropdown-seventh", "Спальни", "Кровати", "Ванные комнаты")
+      div.filter__checkbox_expanded
+        div.filter__checkbox-list Expandable checkbox list
+          i.filter__checkbox-list-arrow_first
+          +expandable-list("Завтрак", "filter")(class="filter__checkbox filter__checkbox_first")
+          +expandable-list("Письменный стол", "filter_second")(class="filter__checkbox filter__checkbox_second")
+          +expandable-list("Стул для кормления", "filter_third")(class="filter__checkbox filter__checkbox_third")
+          +expandable-list("Кроватка", "filter_fourth")(class="filter__checkbox filter__checkbox_fourth")
+          +expandable-list("Телевизор", "filter_fifth")(class="filter__checkbox filter__checkbox_fifth")
+          +expandable-list("Шампнуь", "filter_sixth")(class="filter__checkbox filter__checkbox_sixth")
+        div.filter__checkbox-list_second Expandable checkbox list
+          i.filter__checkbox-list-arrow_second
+          +expandable-list("Завтрак", "filter_seventh")(class="filter__checkbox filter__checkbox_seventh")
+          +expandable-list("Письменный стол", "filter_eighth")(class="filter__checkbox filter__checkbox_eighth")
+          +expandable-list("Стул для кормления", "filter_ninth")(class="filter__checkbox filter__checkbox_ninth")
+          +expandable-list("Кроватка", "filter_tenth")(class="filter__checkbox filter__checkbox_tenth")
+          +expandable-list("Телевизор", "filter_eleventh")(class="filter__checkbox filter__checkbox_eleventh")
+          +expandable-list("Шампнуь", "filter_twelfth")(class="filter__checkbox filter__checkbox_twelfth")
+    // dropdown с гостями
+    div.guests
+      h3.guests__info #{dropdown}
+      +item-quantity-dropdown("iqdropdown-second", "Взрослые", "Дети", "Младенцы")
+        div(class="iqdropdown-menu-btn-wrap")
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+      h3.guests__title Rich Checkbox Buttons
+      div.guests__checkbox-wrapper
+        div.checkbox-buttons__item
+          input(type="checkbox" name="agreement" id="guests").checkbox-buttons__field
+          label(for="guests")
+          div.guests__checkbox-wrap
+            p.guests__option-title Широкий коридор
+            p.guests__option-text Ширина коридоров в номере не менее 91 см.
+        div.checkbox-buttons__item
+          input(type="checkbox" name="agreement" id="guests__second").checkbox-buttons__field
+          label(for="guests__second")
+          div.guests__checkbox-wrap
+            p.guests__option-title Помощник для инвалидов
+            p.guests__option-text На 1 этаже вас встретит специалист  и проводит до номера.
+    // dropdown и списки
+    div.lists
+      h3.lists__info #{dropdown}
+      +item-quantity-dropdown("iqdropdown-third", "Взрослые", "Дети", "Младенцы")
+        div(class="iqdropdown-menu-btn-wrap")
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+      h3.lists__bullet-title Bullet list
+      ul.lists__bullet
+      +bullet-list("Нельзя с питомцами")
+      +bullet-list("Без вечеринок и мероприятий")
+      +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
+  // комментарии
+  div.elements__comments
+    div.comments
+      +comment("Комфорт", "Шумопоглащающие стены")(class="comment__img")
+      +comment("Удобство", "Окно в каждой из спален")(class="comment__img_second")
+    +feedback("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")

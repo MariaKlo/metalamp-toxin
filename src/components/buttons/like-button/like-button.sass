@@ -6,6 +6,26 @@
 .like-buttons
   margin-bottom: 2.8em
 
+  &__heart
+    background: url('../../../assets/img/uikit/favorite_border.svg') no-repeat center center
+    width: .625rem
+    height: .625rem
+
+    &_clicked
+      background: url('../../../assets/img/uikit/favorite.svg') no-repeat center center
+      width: .625rem
+      height: .625rem
+  
+    &_second, &_third
+      background: url('../../../assets/img/uikit/favorite_border.svg') no-repeat center center
+      width: .625rem
+      height: .625rem
+
+      &_clicked
+        background: url('../../../assets/img/uikit/favorite.svg') no-repeat center center
+        width: .625rem
+        height: .625rem
+
   &__name
     font-size: $font-small
     margin-bottom: 1.425em
@@ -38,36 +58,3 @@
 
     &.on
       color: $purple
-
-svg.one, svg.two, svg.three
-  width: 0.5rem
-
-  .heart, .heart-two, .heart-three  
-    fill: transparent
-    stroke: $light-blue
-    stroke-width: 6
-    transition: all .6s ease-out
-
-  .heartEX, .heartEX-two, .heartEX-three 
-    fill: none
-    stroke: transparent
-    transform-box: border-box
-    transform-origin: 50% 50%
-    stroke-width: 12px
-    transform: scale(.5)
-    transition: none
-
-  &.on 
-    .heartEX, .heartEX-two, .heartEX-three  
-      transform: scale(2)
-      opacity: 0
-      stroke: #BC9CFF
-      transform-box: border-box
-      transform-origin: 50% 50%
-      transition: transform, stroke, opacity
-      transition-duration: .6s, .01s, .4s
-      transition-delay: 0s, 0s, .2s
-
-    .heart, .heart-two, .heart-three  
-      fill: #BC9CFF
-      stroke: #BC9CFF

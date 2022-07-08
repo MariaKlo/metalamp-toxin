@@ -67,23 +67,13 @@
 
 .checkbox-buttons__field:checked + label:after, 
 .checkbox-buttons__field:not(:checked) + label:after 
+  position: absolute
+  content: ''
+  background: url('../../../assets/img/uikit/tick.svg') no-repeat center center
   left: 4px
-  top: 4px
+  top: 5px
   width: 10px
   height: 8px
-  background-image: linear-gradient(rgba(188, 156, 255, 1), rgba(188, 156, 255, 1)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  background-origin: border-box
-  background-clip: content-box, border-box
-  box-shadow: 2px 1000px 1px #fff inset
-  -moz-border-image: -moz-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  -webkit-border-image: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  border-left: 4px solid $purple
-  border-bottom: 4px solid #8BA4F9
-  -webkit-transform: rotate(-45deg)
-  -moz-transform: rotate(-45deg)
-  -o-transform: rotate(-45deg)
-  -ms-transform: rotate(-45deg)
-  transform: rotate(-45deg)
 
 .checkbox-buttons__field:not(:checked) + label:after
   opacity: 0

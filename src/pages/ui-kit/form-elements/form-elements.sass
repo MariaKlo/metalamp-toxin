@@ -13,65 +13,65 @@
   background: #ffffff url('../../../assets/img/uikit/group.svg') no-repeat top left
 
 .elements, .elements__filter, .elements__comments
-    background-color: $white
+  background-color: $white
+  @include flex-between()
+  @include container()
+  padding-top: 8.9375em
+
+  &__description
     @include flex-between()
-    @include container()
-    padding-top: 8.9375em
+    font-size: $font-small
 
-    &__description
-      @include flex-between()
-      font-size: $font-small
+  &__info
+    font-size: $font-small
+    margin-bottom: 0.4875em
 
-    &__info
-      font-size: $font-small
-      margin-bottom: 0.4875em
+  &__field
+    @include input-style()
+    margin-bottom: 1.65em
+    letter-spacing: 0.07em
 
-    &__field
-      @include input-style()
-      margin-bottom: 1.65em
-      letter-spacing: 0.07em
+    &-wrap
+      position: relative
 
-      &-wrap
+      &::after
+        @include arrow-purple()
+        top: -0.15em
+        right: 1.55em
+
+      &-datepicker
         position: relative
 
         &::after
-          @include arrow-purple()
-          top: -0.15em
-          right: 1.55em
+          @include arrow()
+          top: 1.2em
+          right: 1.1em
 
-        &-datepicker
+        &_short
           position: relative
+          margin-bottom: 3em
 
           &::after
-            @include arrow()
-            top: 1.2em
-            right: 1.1em
+            @include arrow($right: 4.9em)
+            top: 1.3em
+            
+    &-date
+      @include input-style()
+      width: 11.275em
+      border: 0.0625em solid rgba(31, 32, 65, 0.25)
+      border-radius: 0.31em
+      padding: 0.9125em 0 0.9125em 0.9375em
+      letter-spacing: 0.1em
 
-          &_short
-            position: relative
-            margin-bottom: 3em
+    &-filter
+      letter-spacing: 0.04em
 
-            &::after
-              @include arrow($right: 4.9em)
-              top: 1.3em
-              
-      &-date
-        @include input-style()
-        width: 11.275em
-        border: 0.0625em solid rgba(31, 32, 65, 0.25)
-        border-radius: 0.31em
-        padding: 0.9125em 0 0.9125em 0.9375em
-        letter-spacing: 0.1em
+    &-subscription
+      letter-spacing: 0.12em
 
-      &-filter
-        letter-spacing: 0.04em
-
-      &-subscription
-        letter-spacing: 0.12em
-
-      &-filter, &-subscription
-        @include input-style()
-        padding: 0.9125em 6.6em 0.9125em 0.9375em
+    &-filter, &-subscription
+      @include input-style()
+      padding: 0.9125em 6.6em 0.9125em 0.9375em
 
 .date-dropdown
   @include flex-between()

@@ -1,7 +1,4 @@
-mixin like-button(svgClass, gClass, firstPathClass, secondPathClass, counterClass)
+mixin like-button(likeClass, counterClass)
   div(class!=attributes.class) 
-    svg(class=svgClass viewBox="0 0 100 100")
-      g(class=gClass)
-        path(class=firstPathClass d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z")
-        path(class=secondPathClass d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z")
+    div(class=likeClass)
     div(class=counterClass) 0
