@@ -1,24 +1,26 @@
-include colors/colors.pug
-include type/type.pug
+extends ../../../layout/page.pug
+block content
+  include colors/colors.pug
+  include type/type.pug
 
-// цвета
-div.logo 
-  div.wrapper
-    div.colors
-      +colors("Dark Shade 100%", "#1F2041")(class="rectangle rectangle_first")
-      +colors("Dark Shade 75%", "#1F2041")(class="rectangle rectangle_second")
-      +colors("Dark Shade 50%", "#1F2041")(class="rectangle rectangle_third")
-      +colors("Dark Shade 25%", "#1F2041")(class="rectangle rectangle_fourth")
-      +colors("Dark Shade 5%", "#1F2041")(class="rectangle rectangle_fifth")
-      +colors("Purple", "#BC9CFF")(class="rectangle rectangle_sixth")
-      +colors("Green", "#6FCF97")(class="rectangle rectangle_seventh")
-        // шрифты, заголовки
-    div.titles
-      +titles("H1")(class="title title_first")
-        h1.title__name This one is the sub-section or widget title
-      +titles("H2")(class="title title_second")
-        h2.title__name Next one is the item title inside widgets
-      +titles("H3")(class="title title_third")
-        h3.title__name This is a label or CTA text
-      +titles("Body")(class="title title_fourth")
-        p.title__name This is the body text which is used for most of the design, like paragraphs, lists, etc.
+  // цвета
+  div.logo 
+    div.wrapper
+      div.colors
+        +color("Dark Shade 100%", "#1F2041")(class="color__rectangle color__rectangle_first")
+        +color("Dark Shade 75%", "#1F2041")(class="color__rectangle color__rectangle_second")
+        +color("Dark Shade 50%", "#1F2041")(class="color__rectangle color__rectangle_third")
+        +color("Dark Shade 25%", "#1F2041")(class="color__rectangle color__rectangle_fourth")
+        +color("Dark Shade 5%", "#1F2041")(class="color__rectangle color__rectangle_fifth")
+        +color("Purple", "#BC9CFF")(class="color__rectangle color__rectangle_sixth")
+        +color("Green", "#6FCF97")(class="color__rectangle color__rectangle_seventh")
+          // шрифты, заголовки
+      div.types
+        +type("H1")(class="type type_first")
+          h1.type__name This one is the sub-section or widget title
+        +type("H2")(class="type type_second")
+          h2.type__name Next one is the item title inside widgets
+        +type("H3")(class="type type_third")
+          h3.type__name This is a label or CTA text
+        +type("Body")(class="type type_fourth")
+          p.type__name This is the body text which is used for most of the design, like paragraphs, lists, etc.

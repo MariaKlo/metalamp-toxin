@@ -85,7 +85,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/pages/ui-kit/colors-type/colors-type.pug',
       filename: "./colors-type-dev.html",
-      chunks: ['main', 'colorsType'],
+      chunks: ['colorsTypes'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/ui-kit/form-elements/form-elements.pug',
