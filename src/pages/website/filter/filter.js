@@ -5,7 +5,7 @@ global.jQuery = global.$ = $;
 
 import '../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.js';
 import '../../../components/plugins/range-slider/range-slider.js';
-import '../../../components/plugins/pagination/paginationjs.js';
+import '../../../components/plugins/pagination/pagination.js';
 import '../../../components/plugins/swiper/swiper.js';
 
 import '../../../components/plugins/datepicker/datepicker.js';

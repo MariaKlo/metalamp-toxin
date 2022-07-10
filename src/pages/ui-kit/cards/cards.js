@@ -4,7 +4,7 @@ import './cards.sass';
 
 import '../../../components/plugins/datepicker/datepicker.js';
 import '../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.js';
-import '../../../components/plugins/pagination/paginationjs.js';
+import '../../../components/plugins/pagination/pagination.js';
 import '../../../components/plugins/range-slider/range-slider.js';
 import '../../../components/plugins/swiper/swiper.js';
 import '../../../components/buttons/like-button/like-button.js';
