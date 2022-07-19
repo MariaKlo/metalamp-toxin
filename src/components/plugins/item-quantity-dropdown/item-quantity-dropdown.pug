@@ -1,5 +1,5 @@
 mixin item-quantity-dropdown(id, firstOption, secondOption, thirdOption)
-  div(class="iqdropdown" id=id)
+  div(class!=attributes.class id=id)
     p(class="iqdropdown-selection" data-seleсtion-text="гость" data-text-plural="гостей")
     div(class="iqdropdown-menu")
       div(class="iqdropdown-menu-option" data-id="item1")

@@ -4,11 +4,11 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 class ItemQuantityDropdown {
 
   dropdownGuestsId = [
-    '#iqdropdowns', '#iqdropdown-second', '#iqdropdown-third', '#iqdropdown-fourth',
-    '#iqdropdown-fifth'
+    '.js-iqdropdown_first', '.js-iqdropdown_second', '.js-iqdropdown_third', '.js-iqdropdown_fourth',
+    '.js-iqdropdown_fifth'
   ];
 
-  dropdownRoomId = ['#iqdropdown-sixth', '#iqdropdown-seventh'];
+  dropdownRoomId = ['.js-iqdropdown_sixth', '.js-iqdropdown_seventh'];
 
   constructor() {
     this.init();

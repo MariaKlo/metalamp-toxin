@@ -4,11 +4,13 @@ import 'air-datepicker/air-datepicker.css';
 class Datepicker {
 
   datepickerId = [
-    '#datepicker-here', '#datepicker', '#datepicker-date', '#datepicker-rooms-arrival', 
-    '#datepicker-rooms-departure',
+    '.js-datepicker_first', '.js-datepicker_second', '.js-datepicker_third', '.js-datepicker_fifth', 
+    '.js-datepicker_sixth', '.js-datepicker_seventh', '.js-datepicker_eight', '.js-datepicker_ninth',
+    '.js-datepicker_tenth', '.js-datepicker_eleventh', '.js-datepicker_twelfth', '.js-datepicker-thirteenth',
+    '.js-datepicker_fourteenth', '.js-datepicker_fifteenth', 
   ];
 
-  datepickerIdWithRange = ['#datepicker-filter-date', '#datepicker-calendar',];
+  datepickerIdWithRange = ['.js-datepicker_fourth', '#datepicker-calendar',];
         
   button = {
     content: 'Применить',

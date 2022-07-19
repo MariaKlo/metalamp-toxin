@@ -32,24 +32,24 @@ block content
         p.elements__state HOVER/FOCUS
       +input("text", "text", "This is pretty awesome")(class="elements__field") 
       h3.elements__info #{dropdown}
-      +item-quantity-dropdown("iqdropdowns", "Взрослые", "Дети", "Младенцы")
+      +item-quantity-dropdown("iqdropdown_first", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_first")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
       h3.elements__info MASKED #{textField}
-      input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field" data-position="right top" id="datepicker-here")
+      input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field js-datepicker_first" data-position="right top" id="datepicker_first")
       div.date-dropdown
         div.date-dropdown_before
           h3.elements__info DATE #{dropdown}
           div.elements__field-wrap-datepicker
-            input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" id="datepicker").elements__field-date
+            input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" id="datepicker_second").elements__field-date.js-datepicker_second
         div.date-dropdown_after
           h3.elements__info DATE #{dropdown}
           div.elements__field-wrap-datepicker
-            input(type="text" name="date" placeholder="19.08.2019" id="datepicker-date").elements__field-date
+            input(type="text" name="date" placeholder="19.08.2019" id="datepicker_third").elements__field-date.js-datepicker_third
       h3.elements__info FILTER DATE #{dropdown}
       div.elements__field-wrap-datepicker_short
-        input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-filter-date").elements__field-filter
+        input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker_fourth").elements__field-filter.js-datepicker_fourth
       h3.elements__info SUBSCRIPTION #{textField}
       div.elements__field-wrap
         +input("email", "e-mail", "Email")(class="elements__field-subscription")
@@ -131,11 +131,11 @@ block content
       div.filter__description
         h3.filter__info #{dropdown}
         p.filter__state DEFAULT
-      +item-quantity-dropdown("iqdropdown-sixth", "Спальни", "Кровати", "Ванные комнаты")
+      +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
       div.filter__description
         h3.filter__info #{dropdown}
         p.filter__state EXPANDED
-      +item-quantity-dropdown("iqdropdown-seventh", "Спальни", "Кровати", "Ванные комнаты")
+      +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       div.filter__checkbox_expanded
         div.filter__checkbox-list.js-filter__checkbox-list Expandable checkbox list
           i.filter__checkbox-list-arrow_first.js-filter__checkbox-list-arrow_first
@@ -156,7 +156,7 @@ block content
     // dropdown с гостями
     div.guests
       h3.guests__info #{dropdown}
-      +item-quantity-dropdown("iqdropdown-second", "Взрослые", "Дети", "Младенцы")
+      +item-quantity-dropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
@@ -177,7 +177,7 @@ block content
     // dropdown и списки
     div.lists
       h3.lists__info #{dropdown}
-      +item-quantity-dropdown("iqdropdown-third", "Взрослые", "Дети", "Младенцы")
+      +item-quantity-dropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить

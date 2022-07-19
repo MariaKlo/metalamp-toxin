@@ -3,15 +3,15 @@ include ../../../../../components/plugins/range-slider/range-slider.pug
 include ../../../../../components/buttons/checkbox-button/checkbox-button.pug
 include ../../../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
 
-div.filter__hamburger
+div.filter__hamburger.js-filter__hamburger
   span.filter__bar
   span.filter__bar
   span.filter__bar
-div.filter
+div.filter.js-filter
   h3.filter__title Даты пребывания в отеле
-  input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker-here").filter__input
+  input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker_tenth").filter__input.js-datepicker_tenth
   h3.filter__title Гости
-  +item-quantity-dropdown("iqdropdown-second", "Взрослые", "Дети", "Младенцы")
+  +item-quantity-dropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
     div(class="iqdropdown-menu-btn-wrap")
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
@@ -29,12 +29,12 @@ div.filter
     +checkbox-button("checkbox-fifth", "Помощник для инвалидов")(class="checkbox-buttons__option_bold")
       p.filter__text На 1 этаже вас встретит специалист  и проводит до номера.
   h3.filter__title Удобства номера
-  +item-quantity-dropdown("iqdropdown-sixth", "Спальни", "Кровати", "Ванные комнаты")
-  div.filter__checkbox-list Дополнительные удобства
-    i.filter__checkbox-list-arrow_first
-    +expandable-list("Завтрак", "filter")(class="filter__checkbox filter__checkbox_first")
-    +expandable-list("Письменный стол", "filter_second")(class="filter__checkbox filter__checkbox_second")
-    +expandable-list("Стул для кормления", "filter_third")(class="filter__checkbox filter__checkbox_third")
-    +expandable-list("Кроватка", "filter_fourth")(class="filter__checkbox filter__checkbox_fourth")
-    +expandable-list("Телевизор", "filter_fifth")(class="filter__checkbox filter__checkbox_fifth")
-    +expandable-list("Шампнуь", "filter_sixth")(class="filter__checkbox filter__checkbox_sixth")
+  +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
+  div.filter__checkbox-list.js-filter__checkbox-list Дополнительные удобства
+    i.filter__checkbox-list-arrow_first.js-filter__checkbox-list-arrow_first
+    +expandable-list("Завтрак", "filter")(class="filter__checkbox filter__checkbox_first js-filter__checkbox_first")
+    +expandable-list("Письменный стол", "filter_second")(class="filter__checkbox filter__checkbox_second js-filter__checkbox_second")
+    +expandable-list("Стул для кормления", "filter_third")(class="filter__checkbox filter__checkbox_third js-filter__checkbox_third")
+    +expandable-list("Кроватка", "filter_fourth")(class="filter__checkbox filter__checkbox_fourth js-filter__checkbox_fourth")
+    +expandable-list("Телевизор", "filter_fifth")(class="filter__checkbox filter__checkbox_fifth js-filter__checkbox_fifth")
+    +expandable-list("Шампнуь", "filter_sixth")(class="filter__checkbox filter__checkbox_sixth js-filter__checkbox_sixth")
