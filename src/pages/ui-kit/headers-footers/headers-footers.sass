@@ -5,9 +5,11 @@
 @import "../../../components/footers/footers.sass"
 @import "../../../components/fontawesome/fontawesome.sass"
 
+
+body
+  background-color: #E5E5E5
 // headers
 .headers
-  background-color: #E5E5E5
   background: url('../../../assets/img/uikit/group.svg') no-repeat top left
   padding-top: 7.75em
 
@@ -16,9 +18,7 @@
   align-items: center
   background-color: $white
   margin-bottom: 2.8em 
-  padding-top: 1.0375em
-  padding-bottom: 0.975em
-  @include container()
+  padding: 1.0375rem 4.375rem 0.975rem 4.375rem
   @include shadows()
     
   &__logo
@@ -66,9 +66,7 @@
 .footer
   background-color: $white
   margin-bottom: 2.5em
-  padding-top: 7.4em
-  padding-bottom: 1.625em
-  @include container()
+  padding: 7.4rem 4.375rem 1.625rem 4.375rem
   @include shadows()
 
   &__nav

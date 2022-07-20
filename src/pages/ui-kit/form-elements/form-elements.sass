@@ -18,6 +18,9 @@
   @include container()
   padding-top: 8.9375em
 
+  &__filter
+    padding-top: 7.9375rem
+
   &__description
     @include flex-between()
     font-size: $font-small
@@ -26,10 +29,16 @@
     font-size: $font-small
     margin-bottom: 0.4875em
 
+  &__state
+    margin-top: -0.2rem
+
+    &:nth-child(2)
+      letter-spacing: 0.033rem
+
   &__field
     @include input-style()
-    margin-bottom: 1.65em
-    letter-spacing: 0.07em
+    margin-bottom: 1.4rem
+    letter-spacing: 0.055rem
 
     &-wrap
       position: relative
@@ -71,18 +80,19 @@
 
     &-filter, &-subscription
       @include input-style()
-      padding: 0.9125em 6.6em 0.9125em 0.9375em
+      padding: 0.9125rem 5rem 0.9125rem 0.9375rem
 
 .date-dropdown
   @include flex-between()
-  margin-top: 2.5em
-  margin-bottom: 2.9625em
+  margin-top: 2.5rem
+  margin-bottom: 2.5rem
 
 // стили для кнопок
 
 // эллипсовые кнопки
 .buttons
   margin-bottom: 2.5em
+  margin-right: -0.5rem
 
   &__name
     font-size: $font-small
@@ -93,41 +103,50 @@
     display: flex
     margin-bottom: 1.8125rem
 
+.other-buttons
+  padding-right: 0.6rem
+
 // пагинация
 .pagination__name
   font-size: $font-small
   margin-bottom: 1.2em
 
 // dropdown с гостями
-.guests__info
-  margin-bottom: 0.4125em
-  font-size: $font-small
+.guests
+  margin-left: 6.5rem
 
-.guests__field, .lists__field
-  width: 20em
-  padding: 0.75em 0 0.5em 0.9375em
-  border-radius: 0.325em
-  border: 1px solid $light-blue
-  margin-bottom: 6.125em
+  &__info
+    margin-bottom: 0.4125em
+    font-size: $font-small
 
-.guests__title
-  font-size: $font-small
-  margin-bottom: 1.4em
+  &__field, .lists__field
+    width: 20em
+    padding: 0.75em 0 0.5em 0.9375em
+    border-radius: 0.325em
+    border: 1px solid $light-blue
+    margin-bottom: 6.125em
 
-.guests__checkbox
-  display: flex
-  margin-bottom: 0.6875em
+  &__title
+    font-size: $font-small
+    margin-bottom: 1.4em
 
-.guests__option-title
-  color: $dark-blue
-  font-weight: 700
-  margin-bottom: 0.3125em
+  &__checkbox
+    display: flex
+    margin-bottom: 0.6875em
 
-.guests__option-text
-  color: $medium-blue
-  max-width: 17rem
+  &__option-title
+    color: $dark-blue
+    font-weight: 700
+    margin-bottom: 0.3125em
+
+  &__option-text
+    color: $medium-blue
+    max-width: 17rem
 
 // dropdown и списки
-.lists__info
-  font-size: $font-small
-  margin-bottom: .3125rem
+.lists
+  margin-right: -2.5rem
+
+  &__info
+    font-size: $font-small
+    margin-bottom: .3125rem
