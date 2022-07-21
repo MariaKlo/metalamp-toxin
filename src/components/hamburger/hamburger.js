@@ -1,33 +1,37 @@
 class Hamburger {
 
-  hamburger = document.querySelector('.js-filter__hamburger');
+  hamburgerFilter = document.querySelector('.js-filter__hamburger');
+
+  hamburgerFilterStyle = document.querySelector('.filter__hamburger');
 
   filter = document.querySelector('.js-filter');
+
+  filterStyle = document.querySelector('.filter');
 
   constructor() {
     this.init();
   }
 
   init() {
-    this.openMenu();
-    this.closeMenu();
-  }
-
-  openMenu() {
-    hamburger.addEventListener('click', hamburgerMenu);
-
-    function hamburgerMenu() {
-        hamburger.classList.toggle('filter_active');
-        filter.classList.toggle('filter_active');
+    if (this.hamburgerFilter && this.filter) {
+      this.openFilterMenu();
+      this.closeFilterMenu();
     }
   }
 
-  closeMenu() {
-    filter.addEventListener('click', closeHamburger);
+  openFilterMenu() {
+    this.hamburgerFilter.addEventListener('click', () => {
+  //     this.hamburgerFilter.classList.add('filter_active');
+  //     this.filter.classList.add('filter_active');
+      this.hamburgerFilterStyle.classList.toggle('filter_active');
+      this.filterStyle.classList.toggle('filter_active');
+    });
+  }
 
-    function closeHamburger() {
-        hamburger.classList.remove('filter_active');
-    }
+  closeFilterMenu() {
+  //   this.filter.addEventListener('click', () => {
+  //     this.hamburgerFilter.classList.remove('filter_active');
+  //   });
   }
 }
 
