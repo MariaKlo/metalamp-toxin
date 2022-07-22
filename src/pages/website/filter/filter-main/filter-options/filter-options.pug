@@ -2,11 +2,9 @@ include ../../../../../components/plugins/item-quantity-dropdown/item-quantity-d
 include ../../../../../components/plugins/range-slider/range-slider.pug
 include ../../../../../components/buttons/checkbox-button/checkbox-button.pug
 include ../../../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../../../../components/hamburger/hamburger.pug
 
-div.filter__hamburger.js-filter__hamburger
-  span.filter__bar
-  span.filter__bar
-  span.filter__bar
++hamburger()(class="filter__hamburger js-filter__hamburger")
 div.filter.js-filter
   h3.filter__title Даты пребывания в отеле
   input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker_tenth").filter__input.js-datepicker_tenth
@@ -16,7 +14,7 @@ div.filter.js-filter
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
   div.filter__wrapper
-    +range-slider()
+    +range-slider("Диапазон цены")
   div.filter__wrapper  
     h3.filter__title.filter__title_below Правила дома
     +checkbox-button("checkbox", "Можно курить")(class="checkbox-buttons__option")

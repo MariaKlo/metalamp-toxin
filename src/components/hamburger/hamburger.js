@@ -1,37 +1,40 @@
 class Hamburger {
 
-  hamburgerFilter = document.querySelector('.js-filter__hamburger');
+  hamburger = document.querySelector('.js-hamburger');
 
-  hamburgerFilterStyle = document.querySelector('.filter__hamburger');
+  filterHamburger = document.querySelector('.js-filter__hamburger');
 
   filter = document.querySelector('.js-filter');
 
   filterStyle = document.querySelector('.filter');
+
+  filterMain = document.querySelector('.filter-main');
+
+  header = document.querySelector('.js-header__wrapper');
+
+  headerStyle = document.querySelector('.header__wrapper');
 
   constructor() {
     this.init();
   }
 
   init() {
-    if (this.hamburgerFilter && this.filter) {
-      this.openFilterMenu();
-      this.closeFilterMenu();
-    }
+    this.openFilterMenu();
+    this.openHeaderMenu();
   }
 
   openFilterMenu() {
-    this.hamburgerFilter.addEventListener('click', () => {
-  //     this.hamburgerFilter.classList.add('filter_active');
-  //     this.filter.classList.add('filter_active');
-      this.hamburgerFilterStyle.classList.toggle('filter_active');
+    this.filterHamburger.addEventListener('click', () => {
+      this.filterHamburger.classList.toggle('filter__hamburger_active');
       this.filterStyle.classList.toggle('filter_active');
     });
   }
 
-  closeFilterMenu() {
-  //   this.filter.addEventListener('click', () => {
-  //     this.hamburgerFilter.classList.remove('filter_active');
-  //   });
+  openHeaderMenu() {
+    this.hamburger.addEventListener('click', () => {
+      this.hamburger.classList.toggle('hamburger_active');
+      this.headerStyle.classList.toggle('header__wrapper_active');
+    });
   }
 }
 

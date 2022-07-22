@@ -1,6 +1,6 @@
-mixin range-slider()
+mixin range-slider(name)
   div.range-button__wrap
-    h3.range-button__name RANGE SLIDER
+    h3.range-button__name= name
     p.range-button__price
       div.slider-non-linear-step-value#js-slider-non-linear-step-value
   div#js-slider

@@ -58,14 +58,41 @@
     padding-top: 1.0375em
     padding-bottom: 0.975em
 
+    &__wrapper
+      display: none
+
+      &_active
+        display: block
+        margin: 0 auto
+        padding-top: .6875rem
+
+  .hamburger
+    display: block
+    cursor: pointer
+
+    &_active .hamburger__bar:nth-child(2)
+      opacity: 0
+
+    &_active .hamburger__bar:nth-child(1)
+      transform: translateY(.5rem) rotate(45deg)
+
+    &_active .hamburger__bar:nth-child(3)
+      transform: translateY(-0.5rem) rotate(-45deg)
+
 @media only screen and (max-width: 55.75rem) //892px 
   .header
     padding: 0 calc(50% - 25rem)
     padding-top: 1.0375em
     padding-bottom: 0.975em
+    position: relative
 
-    &__wrapper
-      width: inherit
+    &__wrapper_active
+      position: absolute
+      top: 4.375rem
+      padding: .625rem
+      width: 94%
+      background: white
+      text-align: center
 
 @media only screen and (max-width: 51.875rem) //830px
   .header
@@ -91,8 +118,29 @@
     padding-top: 1.0375em
     padding-bottom: 0.975em
 
+    &__menu
+      flex-direction: column
+
+      li
+        margin-right: 0
+        display: flex
+        justify-content: center
+        margin-bottom: .8125rem
+
 @media only screen and (max-width: 29.375rem) //470px
   .header
     padding: 0 calc(50% - 8rem)
     padding-top: 1.0375em
     padding-bottom: 0.975em
+
+    &__wrapper
+      text-align: inherit
+
+      &_active
+        width: 90%
+
+    &__buttons
+      text-align: center
+
+    &__button.button__sign-in
+      margin-bottom: .625rem
