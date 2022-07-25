@@ -57,6 +57,7 @@
     padding: 0 calc(50% - 27.5rem)
     padding-top: 1.0375em
     padding-bottom: 0.975em
+    position: relative
 
     &__wrapper
       display: none
@@ -65,6 +66,19 @@
         display: block
         margin: 0 auto
         padding-top: .6875rem
+        position: absolute
+        top: 4rem
+        right: 0
+        padding: .625rem
+        width: 100%
+        background: white
+        text-align: center
+        z-index: 2
+
+    &__menu
+      display: flex
+      justify-content: space-between
+      margin-bottom: 1.25rem
 
   .hamburger
     display: block
@@ -88,11 +102,13 @@
 
     &__wrapper_active
       position: absolute
-      top: 4.375rem
+      top: 4rem
+      right: 0
       padding: .625rem
-      width: 94%
+      width: 100%
       background: white
       text-align: center
+      z-index: 2
 
 @media only screen and (max-width: 51.875rem) //830px
   .header
@@ -135,9 +151,6 @@
 
     &__wrapper
       text-align: inherit
-
-      &_active
-        width: 90%
 
     &__buttons
       text-align: center

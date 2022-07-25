@@ -1,4 +1,6 @@
-mixin comment(classOfImg, username, time, text, svgClass, gClass, firstPathClass, secondPathClass, counterClass)
+include ../../../../../components/buttons/like-button/like-button.pug
+
+mixin comment(classOfImg, username, time, text)
   div.comment
     div.comment__info
       div(class=classOfImg)
@@ -6,10 +8,16 @@ mixin comment(classOfImg, username, time, text, svgClass, gClass, firstPathClass
         p.comment__username= username
         p.comment__time= time
     div.comment__wrap
-      div(class!=attributes.class) 
-        svg(class=svgClass viewBox="0 0 100 100")
-          g(class=gClass)
-            path(class=firstPathClass d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z")
-            path(class=secondPathClass d="M 90,40 a 20 20 0 1 0 -40,-25 a 20 20 0 1 0 -40,25 l 40,50  z")
-        div(class=counterClass) 0
+      +like-button("like-buttons__border js-like-buttons__border", "like-buttons__heart js-like-buttons__heart", "like-buttons__counter js-like-buttons__counter")
+      p.comment__text= text
+
+mixin secondComment(classOfImg, username, time, text)
+  div.comment
+    div.comment__info
+      div(class=classOfImg)
+      div.comment__wrapper
+        p.comment__username= username
+        p.comment__time= time
+    div.comment__wrap
+      +like-button("like-buttons__border_second-like-button js-like-buttons__border_second-like-button", "like-buttons__heart_second js-like-buttons__heart_second", "like-buttons__counter_second-like-button js-like-buttons__counter_second-like-button")
       p.comment__text= text

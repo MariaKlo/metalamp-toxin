@@ -19,7 +19,10 @@ class Hamburger {
   }
 
   init() {
-    this.openFilterMenu();
+    if (this.filter !== null && this.filterHamburger !== null && 
+      this.filterMain !== null && this.filterStyle !== null) {
+      this.openFilterMenu();
+    }
     this.openHeaderMenu();
   }
 
