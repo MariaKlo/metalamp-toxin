@@ -17,6 +17,20 @@
     transition: all 0.3s ease-in-out
     background-color: $purple
 
+@media only screen and (max-width: 60.625rem) //970px
+  .hamburger
+    display: block
+    cursor: pointer
+
+    &_active .hamburger__bar:nth-child(2)
+      opacity: 0
+
+    &_active .hamburger__bar:nth-child(1)
+      transform: translateY(.5rem) rotate(45deg)
+
+    &_active .hamburger__bar:nth-child(3)
+      transform: translateY(-0.5rem) rotate(-45deg)
+
 @media only screen and (max-width: 55.75rem) //892px  
   .filter
     display: none
