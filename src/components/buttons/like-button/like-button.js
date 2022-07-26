@@ -15,25 +15,29 @@ class likeButton {
   countOnClick() {
     let btnClicked = false;
     let count = 0;
-    this.border.addEventListener('click', e => {
-      if (btnClicked === false) {
-        count += 1;
-        this.counter.innerHTML = count;
-      }
-      if (btnClicked === true) {
-        count -= 1;
-        this.counter.innerHTML = count;
-      }
-      btnClicked = !btnClicked;
-    }, false);
+    if (this.border !== null) {
+      this.border.addEventListener('click', e => {
+        if (btnClicked === false) {
+          count += 1;
+          this.counter.innerHTML = count;
+        }
+        if (btnClicked === true) {
+          count -= 1;
+          this.counter.innerHTML = count;
+        }
+        btnClicked = !btnClicked;
+      }, false);
+    }
   }
 
   addClassToDom() {
-    this.border.addEventListener('click', e => {
-      this.heart.classList.toggle('clicked');
-      this.border.classList.toggle('on');
-      this.counter.classList.toggle('on');
-    }, false);
+    if (this.border !== null) {
+      this.border.addEventListener('click', e => {
+        this.heart.classList.toggle('clicked');
+        this.border.classList.toggle('on');
+        this.counter.classList.toggle('on');
+      }, false);
+    }
   }
 }
 
