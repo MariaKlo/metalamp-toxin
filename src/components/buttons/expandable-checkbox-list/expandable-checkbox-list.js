@@ -13,18 +13,28 @@ class expandableCheckboxList {
   openList() {
     if (this.list !== null) {
       this.list.addEventListener('click', e => {
-        const itemArrOfFirstList = ['.js-filter__checkbox_first', '.js-filter__checkbox_second', 
-        '.js-filter__checkbox_third', '.js-filter__checkbox_fourth', '.js-filter__checkbox_fifth', 
-        '.js-filter__checkbox_sixth']; 
-        const itemArrOfSecondList = ['.js-filter__checkbox_seventh', 
-          '.js-filter__checkbox_eighth', '.js-filter__checkbox_ninth', '.js-filter__checkbox_tenth', 
-          '.js-filter__checkbox_eleventh', '.js-filter__checkbox_twelfth'];
+        const itemArrOfFirstList = [
+          '.js-expandable-checkbox-list__checkbox_first', 
+          '.js-expandable-checkbox-list__checkbox_second', 
+          '.js-expandable-checkbox-list__checkbox_third', 
+          '.js-expandable-checkbox-list__checkbox_fourth', 
+          '.js-expandable-checkbox-list__checkbox_fifth', 
+          '.js-expandable-checkbox-list__checkbox_sixth'
+        ]; 
+        const itemArrOfSecondList = [
+          '.js-expandable-checkbox-list__checkbox_seventh', 
+          '.js-expandable-checkbox-list__checkbox_eighth', 
+          '.js-expandable-checkbox-list__checkbox_ninth', 
+          '.js-expandable-checkbox-list__checkbox_tenth', 
+          '.js-expandable-checkbox-list__checkbox_eleventh', 
+          '.js-expandable-checkbox-list__checkbox_twelfth'
+        ];
   
-        let firstList = document.querySelector('.js-filter__checkbox-list');
-        let secondList = document.querySelector('.js-filter__checkbox-list_second');
+        let firstList = document.querySelector('.js-expandable-checkbox-list__checkbox-list');
+        let secondList = document.querySelector('.js-expandable-checkbox-list__checkbox-list_second');
   
-        let firstArrow = document.querySelector('.js-filter__checkbox-list-arrow_first');
-        let secondArrow = document.querySelector('.js-filter__checkbox-list-arrow_second');
+        let firstArrow = document.querySelector('.js-expandable-checkbox-list__checkbox-list-arrow_first');
+        let secondArrow = document.querySelector('.js-expandable-checkbox-list__checkbox-list-arrow_second');
   
         if (this.list === firstList && this.arrow === firstArrow) {
           for (let i = 0; i < itemArrOfFirstList.length; i++) {
@@ -44,8 +54,14 @@ class expandableCheckboxList {
   }
 }
 
-const list = ['.js-filter__checkbox-list', '.js-filter__checkbox-list_second'];
-const arrow = ['.js-filter__checkbox-list-arrow_first', '.js-filter__checkbox-list-arrow_second'];
+const list = [
+  '.js-expandable-checkbox-list__checkbox-list', 
+  '.js-expandable-checkbox-list__checkbox-list_second'
+];
+const arrow = [
+  '.js-expandable-checkbox-list__checkbox-list-arrow_first', 
+  '.js-expandable-checkbox-list__checkbox-list-arrow_second'
+];
 
 for (let i = 0; i < list.length; i++) {
   let listDom = document.querySelector(list[i]);

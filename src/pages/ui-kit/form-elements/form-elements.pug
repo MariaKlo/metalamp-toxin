@@ -55,19 +55,19 @@ block content
         +input("email", "e-mail", "Email")(class="elements__field-subscription")
     // кнопки
     div.buttons
-      div.checkbox-buttons
-        h3.checkbox-buttons__name CHECKBOX BUTTONS
+      div.checkbox-button
+        h3.checkbox-button__name CHECKBOX BUTTONS
         +checkbox-button("checkbox", "Можно курить")
         +checkbox-button("checkbox-second", "Можно с питомцами")
         +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)") 
-      div.radio-buttons
-        h3.radio-buttons__name RADIO BUTTONS
-        div.radio-buttons__wrapper
+      div.radio-button
+        h3.radio-button__name RADIO BUTTONS
+        div.radio-button__wrapper
           +radio-button("sex-m", "Мужчина")
           +radio-button("sex-f", "Женщина")
-      div.toggle-buttons
-        h3.toggle-buttons__name TOGGLE
-        div.toggle-buttons__wrapper
+      div.toggle-button
+        h3.toggle-button__name TOGGLE
+        div.toggle-button__wrapper
           +toggle-button()
           +toggle-button()
       div.like-buttons
@@ -113,12 +113,12 @@ block content
         h3.buttons__name BUTTONS
         div.ellipse-buttons
           div.ellipse-buttons__wrap
-            +solid-button()
-            +solid-button()
+            +ellipse-button-solid()
+            +ellipse-button-solid()
           div.ellipse-buttons__wrap
-            +transparent-button()
-            +transparent-button()
-        div.link-buttons
+            +ellipse-button-transparent()
+            +ellipse-button-transparent()
+        div.link-button
           +link-button()
           +link-button()
         include ../../../components/buttons/solid-big-button/solid-big-button.pug
@@ -137,22 +137,22 @@ block content
         p.filter__state EXPANDED
       +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       div.filter__checkbox_expanded
-        div.filter__checkbox-list.js-filter__checkbox-list Expandable checkbox list
-          i.filter__checkbox-list-arrow_first.js-filter__checkbox-list-arrow_first
-          +expandable-list("Завтрак", "filter")(class="filter__checkbox filter__checkbox_first js-filter__checkbox_first")
-          +expandable-list("Письменный стол", "filter_second")(class="filter__checkbox filter__checkbox_second js-filter__checkbox_second")
-          +expandable-list("Стул для кормления", "filter_third")(class="filter__checkbox filter__checkbox_third js-filter__checkbox_third")
-          +expandable-list("Кроватка", "filter_fourth")(class="filter__checkbox filter__checkbox_fourth js-filter__checkbox_fourth")
-          +expandable-list("Телевизор", "filter_fifth")(class="filter__checkbox filter__checkbox_fifth js-filter__checkbox_fifth")
-          +expandable-list("Шампнуь", "filter_sixth")(class="filter__checkbox filter__checkbox_sixth js-filter__checkbox_sixth")
-        div.filter__checkbox-list_second.js-filter__checkbox-list_second Expandable checkbox list
-          i.filter__checkbox-list-arrow_second.js-filter__checkbox-list-arrow_second
-          +expandable-list("Завтрак", "filter_seventh")(class="filter__checkbox filter__checkbox_seventh js-filter__checkbox_seventh")
-          +expandable-list("Письменный стол", "filter_eighth")(class="filter__checkbox filter__checkbox_eighth js-filter__checkbox_eighth")
-          +expandable-list("Стул для кормления", "filter_ninth")(class="filter__checkbox filter__checkbox_ninth js-filter__checkbox_ninth")
-          +expandable-list("Кроватка", "filter_tenth")(class="filter__checkbox filter__checkbox_tenth js-filter__checkbox_tenth")
-          +expandable-list("Телевизор", "filter_eleventh")(class="filter__checkbox filter__checkbox_eleventh js-filter__checkbox_eleventh")
-          +expandable-list("Шампнуь", "filter_twelfth")(class="filter__checkbox filter__checkbox_twelfth js-filter__checkbox_twelfth")
+        div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Expandable checkbox list
+          i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
+          +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
+          +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
+          +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_third")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_third js-expandable-checkbox-list__checkbox_third")
+          +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_fourth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fourth js-expandable-checkbox-list__checkbox_fourth")
+          +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_fifth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fifth js-expandable-checkbox-list__checkbox_fifth")
+          +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_sixth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_sixth js-expandable-checkbox-list__checkbox_sixth")
+        div.expandable-checkbox-list__checkbox-list_second.js-expandable-checkbox-list__checkbox-list_second Expandable checkbox list
+          i.expandable-checkbox-list__checkbox-list-arrow_second.js-expandable-checkbox-list__checkbox-list-arrow_second
+          +expandable-checkbox-list("Завтрак", "expandable-checkbox-list_seventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_seventh js-expandable-checkbox-list__checkbox_seventh")
+          +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_eighth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eighth js-expandable-checkbox-list__checkbox_eighth")
+          +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_ninth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_ninth js-expandable-checkbox-list__checkbox_ninth")
+          +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_tenth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_tenth js-expandable-checkbox-list__checkbox_tenth")
+          +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_eleventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eleventh js-expandable-checkbox-list__checkbox_eleventh")
+          +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_twelfth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_twelfth js-expandable-checkbox-list__checkbox_twelfth")
     // dropdown с гостями
     div.guests
       h3.guests__info #{dropdown}
@@ -162,14 +162,14 @@ block content
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
       h3.guests__title Rich Checkbox Buttons
       div.guests__checkbox-wrapper
-        div.checkbox-buttons__item
-          input(type="checkbox" name="agreement" id="guests").checkbox-buttons__field
+        div.checkbox-button__item
+          input(type="checkbox" name="agreement" id="guests").checkbox-button__field
           label(for="guests")
           div.guests__checkbox-wrap
             p.guests__option-title Широкий коридор
             p.guests__option-text Ширина коридоров в номере не менее 91 см.
-        div.checkbox-buttons__item
-          input(type="checkbox" name="agreement" id="guests__second").checkbox-buttons__field
+        div.checkbox-button__item
+          input(type="checkbox" name="agreement" id="guests__second").checkbox-button__field
           label(for="guests__second")
           div.guests__checkbox-wrap
             p.guests__option-title Помощник для инвалидов
@@ -181,8 +181,8 @@ block content
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-      h3.lists__bullet-title Bullet list
-      ul.lists__bullet
+      h3.bullet-list__title Bullet list
+      ul.bullet-list__bullet
       +bullet-list("Нельзя с питомцами")
       +bullet-list("Без вечеринок и мероприятий")
       +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")

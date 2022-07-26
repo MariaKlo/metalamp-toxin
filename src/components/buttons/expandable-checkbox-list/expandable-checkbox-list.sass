@@ -6,7 +6,7 @@
 .elements__filter
   padding-top: 7.24em
 
-.filter
+.expandable-checkbox-list
   &__description
     @include flex-between()
     margin-bottom: 0.4em
@@ -62,8 +62,83 @@
           top: .375rem
           right: 1rem
   
-  &__field-option
+  &__option
     color: $medium-blue
     font-weight: 400
     text-transform: none
     font-size: .875rem
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.3625em
+
+  &__item
+    display: flex
+    margin-bottom: 1.1em
+
+  &__field
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+  &__option
+    color: $medium-blue
+    margin-left: 0.2em
+    align-items: center
+    display: flex
+    max-width: 12rem
+
+.expandable-checkbox-list__field:checked, 
+.expandable-checkbox-list__field:not(:checked)
+  position: absolute
+  left: -9999px
+
+
+.expandable-checkbox-list__field:checked + label, 
+.expandable-checkbox-list__field:not(:checked) + label
+  display: inline-block
+  position: relative
+  padding-left: 26px
+  line-height: 20px
+  cursor: pointer
+
+.expandable-checkbox-list__field:checked + label:before, 
+.expandable-checkbox-list__field:not(:checked) + label:before
+  content: ''
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 18px
+  height: 18px
+  border: 1px solid #dddddd
+  background-color: rgba(255, 255, 255, 1)
+
+.expandable-checkbox-list__field:checked + label:before, 
+.expandable-checkbox-list__field:not(:checked) + label:before 
+  border-radius: 4px
+  border: 1px solid $purple
+
+.expandable-checkbox-list__field:checked + label:after, 
+.expandable-checkbox-list__field:not(:checked) + label:after
+  content: ''
+  position: absolute
+  -webkit-transition: all 0.2s ease
+  -moz-transition: all 0.2s ease
+  -o-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+.expandable-checkbox-list__field:checked + label:after, 
+.expandable-checkbox-list__field:not(:checked) + label:after 
+  position: absolute
+  content: ''
+  background: url('../../../assets/img/uikit/tick.svg') no-repeat center center
+  left: 4px
+  top: 5px
+  width: 10px
+  height: 8px
+
+.expandable-checkbox-list__field:not(:checked) + label:after
+  opacity: 0
+
+.expandable-checkbox-list__field:checked + label:after
+  opacity: 1

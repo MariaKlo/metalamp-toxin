@@ -1,5 +1,5 @@
-mixin expandable-list(option, id)
+mixin expandable-checkbox-list(option, id)
   div(class!=attributes.class)
-    input(type="checkbox" name="agreement" id=id).checkbox-buttons__field
+    input(type="checkbox" name="agreement" id=id).expandable-checkbox-list__field
     label(for=id)
-    p.filter__field-option= option
+    p.expandable-checkbox-list__option= option

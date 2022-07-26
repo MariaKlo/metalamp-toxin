@@ -39,12 +39,15 @@ class likeButton {
 
 const button = [
   '.js-like-buttons__border', '.js-like-buttons__border_second-like-button',
+  '.js-like-buttons__border_third-like-button'
 ];
 const counter = [
-  '.js-like-buttons__counter', '.js-like-buttons__counter_second-like-button', 
+  '.js-like-buttons__counter', '.js-like-buttons__counter_second-like-button',
+  '.js-like-buttons__counter_third-like-button'
 ];
 const heart = [
   '.js-like-buttons__heart', '.js-like-buttons__heart_second',
+  '.js-like-buttons__heart_third'
 ];
 
 for (let i = 0; i < heart.length; i++) {

@@ -3,7 +3,7 @@
 @import "../../../assets/styles/__tegs.sass"
 @import "../../../assets/fonts/fonts.sass"
 
-.checkbox-buttons
+.checkbox-button
   margin-bottom: 3em
   
   &__name
@@ -26,22 +26,22 @@
     display: flex
     max-width: 12rem
 
-.checkbox-buttons__field:checked, 
-.checkbox-buttons__field:not(:checked)
+.checkbox-button__field:checked, 
+.checkbox-button__field:not(:checked)
   position: absolute
   left: -9999px
 
 
-.checkbox-buttons__field:checked + label, 
-.checkbox-buttons__field:not(:checked) + label
+.checkbox-button__field:checked + label, 
+.checkbox-button__field:not(:checked) + label
   display: inline-block
   position: relative
   padding-left: 26px
   line-height: 20px
   cursor: pointer
 
-.checkbox-buttons__field:checked + label:before, 
-.checkbox-buttons__field:not(:checked) + label:before
+.checkbox-button__field:checked + label:before, 
+.checkbox-button__field:not(:checked) + label:before
   content: ''
   position: absolute
   left: 0px
@@ -51,13 +51,13 @@
   border: 1px solid #dddddd
   background-color: rgba(255, 255, 255, 1)
 
-.checkbox-buttons__field:checked + label:before, 
-.checkbox-buttons__field:not(:checked) + label:before 
+.checkbox-button__field:checked + label:before, 
+.checkbox-button__field:not(:checked) + label:before 
   border-radius: 4px
   border: 1px solid $purple
 
-.checkbox-buttons__field:checked + label:after, 
-.checkbox-buttons__field:not(:checked) + label:after
+.checkbox-button__field:checked + label:after, 
+.checkbox-button__field:not(:checked) + label:after
   content: ''
   position: absolute
   -webkit-transition: all 0.2s ease
@@ -65,8 +65,8 @@
   -o-transition: all 0.2s ease
   transition: all 0.2s ease
 
-.checkbox-buttons__field:checked + label:after, 
-.checkbox-buttons__field:not(:checked) + label:after 
+.checkbox-button__field:checked + label:after, 
+.checkbox-button__field:not(:checked) + label:after 
   position: absolute
   content: ''
   background: url('../../../assets/img/uikit/tick.svg') no-repeat center center
@@ -75,8 +75,8 @@
   width: 10px
   height: 8px
 
-.checkbox-buttons__field:not(:checked) + label:after
+.checkbox-button__field:not(:checked) + label:after
   opacity: 0
 
-.checkbox-buttons__field:checked + label:after
+.checkbox-button__field:checked + label:after
   opacity: 1
