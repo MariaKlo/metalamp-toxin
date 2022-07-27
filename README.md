@@ -2,11 +2,9 @@
 Учебный проект от комании Metalamp. Состоит из двух частей: ui-kit и сайт toxin. При открытии ссылки на github-pages, вы увидите ссылки на все страницы.
 <br>
 <h3>Github Pages</h3>
-<br>
 <p>Ознакомиться с сайтом можете по ссылке на Github pages:</b> https://mariaklo.github.io/metalamp-toxin/</p>
 <br>
 <h3>NPM команды:</h3>
-<br>
 <b>npm i</b> - скачать все пакеты и модули.
 <br>
 <b>npm run dev</b> - запустить режим "development".
