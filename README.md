@@ -1,9 +1,9 @@
 # toxin
+<h2>Русский:</h2>
 Учебный проект от комании Metalamp. Состоит из двух частей: ui-kit и сайт toxin. При открытии ссылки на github-pages, вы увидите ссылки на все страницы.
 <br>
 <h3>Github Pages</h3>
 <p>Ознакомиться с сайтом можете по ссылке на Github pages:</b> https://mariaklo.github.io/metalamp-toxin/</p>
-<br>
 <h3>NPM команды:</h3>
 <b>npm i</b> - скачать все пакеты и модули.
 <br>
@@ -15,9 +15,7 @@
 <br>
 <br>npm run deploy</b> - загрузить файлы из папки dist в ветку gh-pages для запуска Github Pages.
 <br>
-
 <h3>При создании были использованы:</h3>
-<br>
 <ul>
   <li>Pug v.3.0.2</li>
   <li>SASS v.1.43.3</li>
@@ -29,9 +27,7 @@
   <li>Material Icons</li>
   <li>gh-pages v.4.0.0</li>
 </ul>
-
 <h3>Были использованы плагины:</h3> 
-<br>
 <ul>
   <li><i>Air-datepicker v.3.2.0</i></li>
   <li><i>Chart.js v.3.8.0</i></li>
@@ -41,20 +37,17 @@
   <li><i>Swiper v.8.2.5</i></li>
 </ul>
 <h3>Респонсив:</h3>
-<br>
 <p>Eсть у сайта toxin, но нет у ui-kit</p>
-<br>
 <p>Окончательный вариант исходных файлов есть на ветке main. Остальные ветки содержат историю разработки и старые файлы.</p>
 <br>
 <h3>Макет:</h3>
-<br>
 <h5>Colors-Type:</h5>
 <br>
 <img width="1440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
 <br>
 <h5>Form elements:</h5>
 <br>
-<img width="1440" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
+<img width="720" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
 <br>
 <h5>Cards:</h5>
 <br>
@@ -101,14 +94,12 @@
 <br>
 <br>
 <br>
+<h2>English:</h2>
 A project from Metalamp company for educational purposes. Consists of two parts: ui-kit and toxin website. By clicking on github-pages link, you'll see links on all pages.
 <br>
 <h3>Github Pages</h3>
-<br>
 <p>To check out the project on Github pages:</b> https://mariaklo.github.io/metalamp-toxin/</p>
-<br>
 <h3>NPM commands:</h3>
-<br>
 <b>npm i</b> - download all packages and modules.
 <br>
 <b>npm run dev</b> - run "development" mode.
@@ -120,7 +111,6 @@ A project from Metalamp company for educational purposes. Consists of two parts:
 <br>npm run deploy</b> - download files from dist folder into gh-pages branch to enable Github Pages.
 <br>
 <h3>The following technologies were used:</h3>
-<br>
 <ul>
   <li>Pug v.3.0.2</li>
   <li>SASS v.1.43.3</li>
@@ -132,9 +122,7 @@ A project from Metalamp company for educational purposes. Consists of two parts:
   <li>Material Icons</li>
   <li>gh-pages v.4.0.0</li>
 </ul>
-
 <h3>The following plugins were used:</h3> 
-<br>
 <ul>
   <li><i>Air-datepicker v.3.2.0</i></li>
   <li><i>Chart.js v.3.8.0</i></li>
@@ -144,13 +132,11 @@ A project from Metalamp company for educational purposes. Consists of two parts:
   <li><i>Swiper v.8.2.5</i></li>
 </ul>
 <h3>Responsive:</h3>
-<br>
 <p>Only toxin webiste has it, not ui-kit</p>
 <br>
 <p>The main branch contain the final files of the project. The rest of branches keep old files and history of development.</p>
 <br>
 <h3>Layout:</h3>
-<br>
 <h5>Colors-Type:</h5>
 <br>
 <img width="1440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
