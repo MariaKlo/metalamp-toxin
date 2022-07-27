@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "./node_modules/.bin/webpack --watch",
-    "start": "webpack serve --mode development"
+    "start": "webpack serve --mode development",
+    "deploy": "gh-pages -d dist -r https://github.com/MariaKlo/metalamp-toxin.git"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "expose-loader": "^4.0.0",
     "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
+    "gh-pages": "^4.0.0",
     "html-webpack-externals-plugin": "^3.8.0",
     "html-webpack-plugin": "^5.5.0",
     "html-webpack-pug-plugin": "^4.0.0",
