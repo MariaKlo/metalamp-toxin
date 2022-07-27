@@ -77,7 +77,7 @@
 <br>
 <img width="440" alt="Room details" src="https://user-images.githubusercontent.com/56316185/181352128-e2027b86-e9b5-4780-b827-bcc979d47013.png">
 <br>
-<h3Структура проекта:</h3>
+<h3>Структура проекта:</h3>
 <ul>
   <li>.git - папка локального репо</li>
   <li>assets/fonts/montserrat - папка хранения шрифта</li>
