@@ -43,11 +43,11 @@
 <h3>Макет:</h3>
 <h5>Colors-Type:</h5>
 <br>
-<img width="440" height="440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
+<img width="440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
 <br>
 <h5>Form elements:</h5>
 <br>
-<img width="440" height="440" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
+<img width="440" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
 <br>
 <h5>Cards:</h5>
 <br>
