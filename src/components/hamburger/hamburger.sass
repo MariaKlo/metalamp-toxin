@@ -1,0 +1,66 @@
+@import "../../assets/styles/__variables.sass"
+@import "../../assets/styles/__mixins.sass"
+@import "../../assets/styles/__tegs.sass"
+
+.filter__hamburger
+  display: none
+
+.hamburger
+  display: none
+
+  &__bar
+    display: block
+    width: 25px
+    height: 3px
+    margin: 5px auto
+    transition: all 0.3s ease-in-out
+    background-color: $purple
+
+@media only screen and (max-width: 60.625rem) //970px
+  .hamburger
+    display: block
+    cursor: pointer
+
+    &_active .hamburger__bar:nth-child(2)
+      opacity: 0
+
+    &_active .hamburger__bar:nth-child(1)
+      transform: translateY(.5rem) rotate(45deg)
+
+    &_active .hamburger__bar:nth-child(3)
+      transform: translateY(-0.5rem) rotate(-45deg)
+
+@media only screen and (max-width: 55.75rem) //892px  
+  .filter
+    display: none
+
+    &_active
+      display: block
+      margin: 0 auto
+      padding-top: .6875rem
+
+    &__hamburger
+      display: block
+      cursor: pointer
+
+      &_active .hamburger__bar:nth-child(2)
+        opacity: 0
+
+      &_active .hamburger__bar:nth-child(1)
+        transform: translateY(.5rem) rotate(45deg)
+
+      &_active .hamburger__bar:nth-child(3)
+        transform: translateY(-0.5rem) rotate(-45deg)
+
+  .hamburger
+    display: block
+    cursor: pointer
+
+    &_active .hamburger__bar:nth-child(2)
+      opacity: 0
+
+    &_active .hamburger__bar:nth-child(1)
+      transform: translateY(.5rem) rotate(45deg)
+
+    &_active .hamburger__bar:nth-child(3)
+      transform: translateY(-0.5rem) rotate(-45deg)

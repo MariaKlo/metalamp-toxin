@@ -1,0 +1,12 @@
+include ../buttons/like-button/like-button.pug
+
+mixin feedback(username, time, text)
+  div.feedback
+    div.feedback__info
+      div.feedback__img
+      div.feedback__wrapper
+        p.feedback__username= username
+        p.feedback__time= time
+    div.feedback__wrap
+      +like-button("like-buttons__border_third-like-button js-like-buttons__border_third-like-button", "like-buttons__heart_third js-like-buttons__heart_third", "like-buttons__counter_third-like-button js-like-buttons__counter_third-like-button")
+      p.feedback__text= text

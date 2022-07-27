@@ -1,0 +1,43 @@
+@import "../../assets/styles/__mixins.sass"
+@import "../../assets/styles/__variables.sass"
+@import "../../assets/styles/__tegs.sass"
+
+.header  
+  &__nav
+    margin-right: .6875rem
+
+  &__menu
+    display: flex
+
+    li
+      margin-right: 1.55em
+
+  &__item
+    color: $medium-blue
+    text-decoration: none
+    display: flex
+    align-items: center
+
+    &:hover
+      font-weight: 700
+      color: $dark-blue
+      transition: all 0.2s ease
+
+  &__dropdown
+    border: solid $medium-blue
+    border-width: 0 2px 2px 0
+    display: inline-block
+    transform: rotate(45deg)
+    width: 0.525rem
+    height: 0.525rem
+    margin-left: .625rem
+
+@media only screen and (max-width: 55.75rem) //892px 
+  .header
+    &__nav
+      margin-bottom: .9375rem
+      margin-right: 0
+
+    &__menu
+      display: flex
+      justify-content: space-between

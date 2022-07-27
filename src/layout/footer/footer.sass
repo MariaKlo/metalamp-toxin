@@ -1,0 +1,122 @@
+@import "../../assets/styles/__mixins.sass"
+@import "../../assets/styles/__variables.sass"
+@import "../../assets/styles/__tegs.sass"
+@import "../../components/footers/footers.sass"
+@import "../../components/fontawesome/fontawesome.sass"
+@import "../../components/inputs/regular-input/regular-input.sass"
+
+.footer
+  background-color: $white
+  @include container()
+
+  &__nav
+    border-bottom: 1px solid rgba(31, 32, 65, 0.05)
+    @include flex-between()
+    padding-top: 7.4em
+    padding-bottom: 6.25em
+
+  &__copyright
+    @include flex-between()
+    padding-top: 2em
+    padding-bottom: 1.625em
+
+  &__logo
+    background: url('../../../assets/img/website/logo.svg') no-repeat top left
+    height: 3em
+    margin-bottom: 1.15em
+
+  &__title
+    margin-bottom: 1.3125rem
+    font-size: .75rem
+
+  &__text
+    color: $dark-blue
+    max-width: 19.25em
+    line-height: 1.9em
+    margin-bottom: 1.6rem
+
+  &__input
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    color: rgba(31, 32, 65, 0.25)
+    padding: 1em 6.1em 1em 0.9375em
+    border-radius: 0.2em
+
+    &-wrap
+      position: relative
+
+      &::after
+        content: '\2192'
+        position: absolute
+        top: -0.12em
+        right: 0.5em
+        font-size: 2.5rem
+        color: $purple
+
+  &__copy
+    color: $dark-blue
+
+  &__wrapper
+    display: flex
+    justify-content: space-evenly
+
+// responsive design
+
+@media only screen and (max-width: 74.9988rem) //1199px
+  .footer
+    padding: 0 calc(50% - 30rem)
+
+@media only screen and (max-width: 60.625rem) //970px
+  .footer
+    padding: 0 calc(50% - 27.5rem)
+
+    &__navigation
+      width: inherit
+
+@media only screen and (max-width: 55.75rem) //892px
+  .footer
+    padding: 0 calc(50% - 25rem)
+
+@media only screen and (max-width: 51.875rem) //830px
+  .footer
+    padding: 0 calc(50% - 22rem)
+
+    &__nav
+      flex-wrap: wrap
+
+@media only screen and (max-width: 45.625rem) //730px
+  .footer
+    padding: 0 calc(50% - 19rem)
+
+@media only screen and (max-width: 39.375rem) //630px
+  .footer
+    padding: 0 calc(50% - 17rem)
+
+@media only screen and (max-width: 35.625rem) //570px
+  .footer
+    padding: 0 calc(50% - 15rem)
+
+    &__nav
+      justify-content: space-around
+
+@media only screen and (max-width: 29.375rem) //470px
+  .footer
+    padding: 0 calc(50% - 8rem)
+
+    &__nav
+      display: inherit
+      text-align: center
+
+    &__logo
+      width: 6.625rem
+      margin: 0 auto
+
+    &__input-wrap
+      &::after
+        right: 0
+
+    &__copyright
+      display: inherit
+
+    &__copy
+      margin-bottom: .9375rem
+      text-align: center

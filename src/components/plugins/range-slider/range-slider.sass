@@ -1,0 +1,47 @@
+@import "../../../assets/styles/__variables.sass"
+
+.range-button
+  margin-bottom: 2.6875rem
+
+  &__wrap  
+    display: flex
+    justify-content: space-between
+    margin-bottom: 1.4375rem
+
+  &__info
+    @include flex-between()
+    flex-direction: column
+    margin-bottom: 1.4375rem
+    
+  &__name
+    font-size: $font-small
+    text-transform: uppercase
+
+.slider-non-linear-step-value
+  font-size: $font-small
+  color: $medium-blue
+
+#js-slider
+  height: .375rem
+  width: 16.5625rem
+
+  .noUi-base .noUi-connects .noUi-connect
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+
+  .noUi-base .noUi-origin .noUi-handle
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    border: 3px solid $white
+    width: 1rem
+    border-radius: 50%
+    height: 1rem
+    right: -0.625rem
+    top: -0.35rem
+
+    &::after, &::before
+      content: ''
+      display: block
+      position: absolute
+      height: 0
+      width: 0
+      left: 0
+      top: 0

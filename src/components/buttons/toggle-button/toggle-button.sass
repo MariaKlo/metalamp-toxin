@@ -1,0 +1,53 @@
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
+@import "../../../assets/fonts/fonts.sass"
+
+.toggle-button
+  margin-bottom: 3.2em
+
+  &__wrap
+    margin-bottom: 1.1em
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.2625em
+
+  &__field 
+    position: relative
+    width: 2.9em
+    height: 1.45em
+    margin: 0
+    vertical-align: top
+    background: transparent
+    border: 1px solid $light-blue
+    border-radius: 1.875em
+    outline: none
+    cursor: pointer
+    @include no-item()
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
+
+    &::after 
+      content: ''
+      position: absolute
+      left: 0.275em
+      top: 0.21em
+      width: 0.9em
+      height: 0.9em
+      background-color: $light-blue
+      border-radius: 50%
+      transform: translateX(0)
+      transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
+
+    &:checked::after 
+      transform: translateX(calc(100% + 0.4375em))
+      border-color: #bc9cff
+      background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      background-size: 100%
+
+    &:checked 
+      border-color: $purple
+
+  &__text
+    color: $dark-blue
+    margin-left: 0.425rem

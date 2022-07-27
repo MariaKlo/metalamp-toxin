@@ -1,0 +1,27 @@
+@import "../../assets/styles/__mixins.sass"
+@import "../../assets/styles/__variables.sass"
+@import "../../assets/styles/__tegs.sass"
+
+.footer
+  &__wrap
+    display: flex
+    flex-direction: column
+
+  &__navigation
+    width: 17%
+
+    li
+      margin-bottom: 1.25rem
+
+  &-list__title
+    font-size: 0.75rem
+    margin-bottom: 1.25rem
+
+  &-list__item
+    color: $medium-blue
+    text-decoration: none
+
+    &:hover
+      color: $dark-blue
+      font-weight: 700
+      transition: all 0.2s ease

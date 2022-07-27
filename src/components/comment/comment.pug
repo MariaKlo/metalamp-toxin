@@ -1,0 +1,7 @@
+mixin comment(title, description)
+  div.comment
+    div(class!=attributes.class)
+    div.comment__wrap
+      h3.comment__title= title
+      p.comment__description= description
+  div.comment__border

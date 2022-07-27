@@ -1,0 +1,141 @@
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
+@import "../../../assets/fonts/fonts.sass"
+
+.elements__filter
+  padding-top: 7.24em
+
+.expandable-checkbox-list
+  &__description
+    @include flex-between()
+    margin-bottom: 0.4em
+
+  &__info, &__state
+    font-size: $font-small
+
+  &__checkbox
+    display: none
+
+    &_first, &_seventh
+      margin-top: 1.0625rem
+
+    &.show
+      display: flex
+      margin-bottom: .925rem
+
+    &-list 
+      margin-bottom: 3rem
+
+    &-list, &-list_second
+      display: flex
+      flex-direction: column
+      align-content: center
+      justify-content: space-between
+      color: #1F2041
+      font-weight: 700
+      text-transform: uppercase
+      font-size: $font-small
+      position: relative
+
+      &-arrow_first, &-arrow_second
+        position: absolute
+        border: solid rgba(31, 32, 65, 0.5)
+        width: .625rem
+        height: .625rem
+        border-width: 0 2px 2px 0
+        display: inline-block
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+        top: 0
+        right: 1rem
+
+        &.rotate
+          position: absolute
+          border: solid rgba(31, 32, 65, 0.5)
+          width: .625rem
+          height: .625rem
+          border-width: 0 2px 2px 0
+          display: inline-block
+          -webkit-transform: rotate(-135deg)
+          transform: rotate(-135deg)
+          top: .375rem
+          right: 1rem
+  
+  &__option
+    color: $medium-blue
+    font-weight: 400
+    text-transform: none
+    font-size: .875rem
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.3625em
+
+  &__item
+    display: flex
+    margin-bottom: 1.1em
+
+  &__field
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+  &__option
+    color: $medium-blue
+    margin-left: 0.2em
+    align-items: center
+    display: flex
+    max-width: 12rem
+
+.expandable-checkbox-list__field:checked, 
+.expandable-checkbox-list__field:not(:checked)
+  position: absolute
+  left: -9999px
+
+
+.expandable-checkbox-list__field:checked + label, 
+.expandable-checkbox-list__field:not(:checked) + label
+  display: inline-block
+  position: relative
+  padding-left: 26px
+  line-height: 20px
+  cursor: pointer
+
+.expandable-checkbox-list__field:checked + label:before, 
+.expandable-checkbox-list__field:not(:checked) + label:before
+  content: ''
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 18px
+  height: 18px
+  border: 1px solid #dddddd
+  background-color: rgba(255, 255, 255, 1)
+
+.expandable-checkbox-list__field:checked + label:before, 
+.expandable-checkbox-list__field:not(:checked) + label:before 
+  border-radius: 4px
+  border: 1px solid $purple
+
+.expandable-checkbox-list__field:checked + label:after, 
+.expandable-checkbox-list__field:not(:checked) + label:after
+  content: ''
+  position: absolute
+  transition: all 0.2s ease
+
+.expandable-checkbox-list__field:checked + label:after, 
+.expandable-checkbox-list__field:not(:checked) + label:after 
+  position: absolute
+  content: ''
+  background: url('../../../assets/img/uikit/tick.svg') no-repeat center center
+  left: 4px
+  top: 5px
+  width: 10px
+  height: 8px
+
+.expandable-checkbox-list__field:not(:checked) + label:after
+  opacity: 0
+
+.expandable-checkbox-list__field:checked + label:after
+  opacity: 1

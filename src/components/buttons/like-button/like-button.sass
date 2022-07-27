@@ -1,0 +1,48 @@
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
+@import "../../../assets/fonts/fonts.sass"
+
+.like-buttons
+  margin-bottom: 2.8em
+
+  &__heart, &__heart_second, &__heart_third
+    background: url('../../../assets/img/uikit/favorite_border.svg') no-repeat center center
+    width: .625rem
+    height: .625rem
+
+    &.clicked
+      background: url('../../../assets/img/uikit/favorite.svg') no-repeat center center
+      width: .625rem
+      height: .625rem
+
+  &__name
+    font-size: $font-small
+    margin-bottom: 1.425em
+
+  &__wrapper
+    display: flex
+
+  &__border
+    margin-right: .7rem
+
+  &__border, &__border_second-like-button, &__border_third-like-button
+    display: flex
+    justify-content: space-around
+    align-items: center
+    border: 1px solid $light-blue
+    width: 2.5rem
+    height: 1.25rem
+    border-radius: 10px
+    margin-right: .8125rem
+
+    &.on
+      border-color: $purple
+
+  &__counter, &__counter_second-like-button, &__counter_third-like-button
+    color: $light-blue
+    font-size: .625rem
+    margin-right: 7px
+
+    &.on
+      color: $purple

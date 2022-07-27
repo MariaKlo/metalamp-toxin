@@ -1,0 +1,5 @@
+mixin expandable-checkbox-list(option, id)
+  div(class!=attributes.class)
+    input(type="checkbox" name="agreement" id=id).expandable-checkbox-list__field
+    label(for=id)
+    p.expandable-checkbox-list__option= option
