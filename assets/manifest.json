@@ -1,0 +1,59 @@
+{
+  "name": "metalamp",
+  "short_name": "metalamp",
+  "description": "Учебный проект от комании Metalamp. Состоит из двух частей: ui-kit и сам сайт toxin. При открытии ссылки на github-pages, вы увидите ссылки на обе части.<br>\r Как скачать проект: Чтобы скачать все пакеты и модули, напишите в терминале <b>npm i</b><br>\r Как запустить проект: откройте папку website или ui-kit, затем в терминале напишите <b>npm run start</b><br>\r При создании были использованы: <i>Pug, Sass, JavaScript, Webpack v.5.60.0, FontAwesome, Material Icons.</i><br>\r Были использованы плагины: <br>\r <ul>\r   <li><i>Air-datepicker v.3.0.1</i></li>\r   <li><i>Chart.js v.3.6.2</i></li>\r   <li><i>Item-quantity-dropdown v.2.1.0</i></li>\r   <li><i>Nouislider v.15.5.0</i></li>\r   <li><i>Paginationjs v.2.1.5</i></li>\r   <li><i>Swiper v.7.2.0</i></li>\r </ul>\r Респонсив: есть у сайта, но нет у ui-kit<br>\r Окончательный вариант исходных файлов есть на ветке toxin-pages. Остальные ветки содержат историю разработки и старые файлы.<br>\r <b>Ознакомиться с сайтом можете по ссылке на Github pages:</b> https://mariaklo.github.io/metalamp-toxin/\r <br>\r <br>\r <br>\r Educational project from Metalamp company. Consists of two parts: ui-kit and site toxin itself. When you open the link to github-pages, you will see links to both parts.<br>\r How to download: To download all utilities, open the folder \"website\" or \"ui-kit\", then type in the terminal <b>npm i</b><br>\r How to run: in the terminal type <b>npm run start</b><br>\r Next tools had been used: <i>Pug, Sass, JavaScript, Webpack v.5.60.0, FontAwesome, Material Icons.</i><br>\r Next plugins had been used: <br>\r <ul>\r   <li><i>Air-datepicker v.3.0.1</i></li>\r   <li><i>Chart.js v.3.6.2</i></li>\r   <li><i>Item-quantity-dropdown v.2.1.0</i></li>\r   <li><i>Nouislider v.15.5.0</i></li>\r   <li><i>Paginationjs v.2.1.5</i></li>\r   <li><i>Swiper v.7.2.0</i></li>\r </ul>\r Responsive: the website has it but not ui-kit<br>\r The final version of the source files is on the toxin-pages branch. The rest of the branches contain development history and old files.<br>\r <b>You can see the project on Github pages:</b> https://mariaklo.github.io/metalamp-toxin/",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "/?homescreen=1",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "android-chrome-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
