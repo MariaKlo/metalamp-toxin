@@ -1,0 +1,126 @@
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
+@import "../../../components/headers/headers.sass"
+@import "../../../components/footers/footers.sass"
+@import "../../../components/fontawesome/fontawesome.sass"
+
+
+body
+  background-color: #E5E5E5
+// headers
+.headers
+  background: url('../../../assets/img/uikit/group.svg') no-repeat top left
+  padding-top: 7.75em
+
+.header
+  @include flex-between()
+  align-items: center
+  background-color: $white
+  margin-bottom: 2.8em 
+  padding: 1.0375rem 4.375rem 0.975rem 4.375rem
+  @include shadows()
+    
+  &__logo
+    background: url('../../../assets/img/uikit/logo.svg') no-repeat top left
+    height: 3em
+    width: 7.925em
+
+  &__wrapper
+    display: flex
+    align-items: center
+    width: 51.8125rem
+
+    &_second
+      width: 40.6125rem
+
+  &__button
+    text-transform: uppercase
+
+  &__vertical-line
+    width: .0625rem
+    height: 1.875rem
+    background-color: $thin-blue
+
+  &__username
+    color: $medium-blue
+    padding-left: 1.25em
+
+.button__sign-in 
+  @include ellipse-button-style-transparent()
+  margin-right: 1.25em
+  padding: 0.625em 1.25em
+
+.button__sign-up
+  @include ellipse-button-style-solid()
+  font-weight: 700
+  padding: 0.725em 1.25em
+
+.button__sign-in:hover, .button__sign-up:hover
+  @include button-hover()
+
+// footer
+.footers
+  margin-bottom: 3.125em
+
+.footer
+  background-color: $white
+  margin-bottom: 2.5em
+  padding: 7.4rem 4.375rem 1.625rem 4.375rem
+  @include shadows()
+
+  &__nav
+    border-bottom: 1px solid rgba(31, 32, 65, 0.05)
+    @include flex-between()
+    padding-bottom: 6.25em
+
+  &__copyright
+    @include flex-between()
+    padding-top: 2em
+
+  &__logo
+    background: url('../../../assets/img/uikit/logo.svg') no-repeat top left
+    height: 3em
+    margin-bottom: 1.15em
+
+  &__text
+    color: $dark-blue
+    max-width: 19.25em
+    line-height: 1.7em
+    margin-bottom: 1.4375rem
+
+  &__input
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    color: rgba(31, 32, 65, 0.25)
+    padding: 1em 6.1em 1em 0.9375em
+    border-radius: 0.2em
+
+    &-wrap
+      position: relative
+
+      &::after
+        @include arrow-purple()
+        top: -0.12em
+        right: 0.5em
+
+  &__copy
+    color: $dark-blue
+
+  &__wrapper
+    display: flex
+    justify-content: space-evenly
+
+.footer_center
+  max-width: 55em
+  margin: 0 auto
+  text-align: center
+  padding-top: 8.6em
+  padding-bottom: 8.6em
+
+.footer__text_center
+  max-width: 35em
+  margin: 0 auto
+  margin-bottom: 1.5625em
+
+.footer__logo_center
+  background: url('../../../assets/img/uikit/logo.svg') no-repeat center center

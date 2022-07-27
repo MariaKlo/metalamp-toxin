@@ -1,0 +1,11 @@
+extends ../../../layout/page.pug
+block content
+  div.cards
+    include card-room/card-room.pug
+    include card-registration/card-registration.pug    
+    include card-book/card-book.pug
+    include card-sign-in/card-sign-in.pug
+    div(id="datepicker-calendar")
+    div.cards__wrapper
+      include card-luxury-room/card-luxury-room.pug
+      include card-usual-room/card-usual-room.pug  

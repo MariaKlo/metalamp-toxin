@@ -1,0 +1,31 @@
+@import "../../../../../components/plugins/pagination/pagination.sass"
+@import "filter-card/filter-card.sass"
+
+.filter-result
+  &__title
+    text-transform: none
+    font-size: 1.5rem
+    color: #1F2041
+    margin-bottom: 1.375rem
+
+  &__wrap
+    padding-left: 2.8125rem
+
+  &__page
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+
+@media only screen and (max-width: 74.9988rem) //1199px
+  .filter-result
+    &__page
+      grid-template-columns: 1fr 1fr
+
+@media only screen and (max-width: 39.375rem) //630px
+  .filter-result
+    &__page
+      grid-template-columns: 1fr
+
+@media only screen and (max-width: 29.375rem) //470px
+  .filter-result
+    &__wrap
+      padding-left: 0

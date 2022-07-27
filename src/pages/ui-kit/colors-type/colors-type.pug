@@ -1,0 +1,26 @@
+extends ../../../layout/page.pug
+block content
+  include colors/colors.pug
+  include type/type.pug
+
+  // цвета
+  div.logo 
+    div.wrapper
+      div.colors
+        +color("Dark Shade 100%", "#1F2041")(class="color__rectangle color__rectangle_first")
+        +color("Dark Shade 75%", "#1F2041")(class="color__rectangle color__rectangle_second")
+        +color("Dark Shade 50%", "#1F2041")(class="color__rectangle color__rectangle_third")
+        +color("Dark Shade 25%", "#1F2041")(class="color__rectangle color__rectangle_fourth")
+        +color("Dark Shade 5%", "#1F2041")(class="color__rectangle color__rectangle_fifth")
+        +color("Purple", "#BC9CFF")(class="color__rectangle color__rectangle_sixth")
+        +color("Green", "#6FCF97")(class="color__rectangle color__rectangle_seventh")
+          // шрифты, заголовки
+      div.types
+        +type("H1")(class="type type_first")
+          h1.type__name This one is the sub-section or widget title
+        +type("H2")(class="type type_second")
+          h2.type__name Next one is the item title inside widgets
+        +type("H3")(class="type type_third")
+          h3.type__name This is a label or CTA text
+        +type("Body")(class="type type_fourth")
+          p.type__name This is the body text which is used for most of the design, like paragraphs, lists, etc.

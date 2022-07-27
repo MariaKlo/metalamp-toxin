@@ -1,0 +1,79 @@
+@import "../../../../../assets/styles/__mixins.sass"
+@import "../../../../../assets/styles/__variables.sass"
+@import "../../../../../assets/styles/__tegs.sass"
+
+.sign-in
+  @include shadows-wide()
+  background-color: $white
+  border-radius: 0.25em
+  padding: 2.5rem 1.875rem 2rem 1.875rem
+  width: 27.3em
+  height: 25.5em
+  margin: 0 auto
+
+  &__title
+    font-size: $big-size
+    margin-bottom: 0.8em
+    text-transform: none
+
+  &__input
+    border-radius: 0.25em
+    width: 24em
+    height: 3.3em
+    padding-left: 0.9375em
+    margin-bottom: 0.825em
+    border: 1px solid $light-blue
+
+  &__input_second
+    margin-bottom: 1.4em
+
+  &__btn
+    width: 20rem
+    border-radius: 1.775em
+    @include button-style()
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+    font-size: $font-small
+    color: $white
+    position: relative
+    height: 3.7em
+    margin-bottom: 2.6em
+    letter-spacing: 0.06em
+
+    &::after
+      @include arrow-right($color: #ffffff)
+      margin-bottom: .3125rem
+
+    &:hover
+      @include button-hover()
+
+  &__wrap
+    @include flex-between()
+    align-items: center
+
+  &__btn_sign-up
+    width: 6.1875em
+    height: 2.75em
+    font-size: $font-small
+    text-transform: uppercase
+    width: 6.1875rem
+    height: 2.75rem
+    font-size: 0.75rem
+    @include ellipse-button-style-transparent()
+    margin-right: 1.2em
+
+    &:hover
+      @include button-hover()
+
+@media only screen and (max-width: 29.375rem) //470px
+  .sign-in
+    width: 16.3rem
+    padding: 2.5rem 1.5rem 2rem 1.5rem
+
+    &__input
+      width: 13.5rem
+
+    &__btn
+      width: 13.5rem
+
+      &_sign-up
+        margin-right: 0

@@ -1,0 +1,41 @@
+include ../../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+
+form.book(action="#")
+    div.book__wrap
+      h1.book__title №
+        span 888
+        span Люкс
+      p.book__price 9 990&#x20bd;
+        span в сутки
+    div.book__wrap
+      div.book__wrapper
+        h3.book__title_small Прибытие
+        div.book__datepicker-wrap
+          input(type="text" name="arrival" class="book__input js-datepicker_fifth" placeholder="19.08.2019" id="datepicker_fifth")
+      div.book__wrapper
+        h3.book__title_small Выезд
+        div.book__datepicker-wrap
+          input(type="text" name="departure" class="book__input js-datepicker_sixth" placeholder="23.08.2019" id="datepicker_sixth")
+    h3.book__title_small Гости
+    +item-quantity-dropdown("iqdropdown_fifth", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_fifth")
+      div(class="iqdropdown-menu-btn-wrap")
+        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+        a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+    div.book__total
+      div.book__total-main-wrap
+        div.book__total-wrap
+          p.book__text 9 990&#x20bd; х 4 суток
+          p.book__total-price 39 960&#x20bd;
+        div.book__total-wrap
+          p.book__text Сбор за услуги: скидка 2 179&#x20bd; 
+            span &#9432;
+          p.book__total-price 0&#x20bd;
+        div.book__total-wrap
+          p.book__text Сбор за дополнительные услуги
+            span &#9432;
+          p.book__total-price 300&#x20bd;
+      div.book__total-price-wrap
+        p.book__result Итого
+        div.book__line
+        p.book__result 38 081&#x20bd;
+    button(type="submit" class="book__btn") Забронировать

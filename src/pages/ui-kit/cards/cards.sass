@@ -1,0 +1,39 @@
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
+
+@import "card-book/card-book.sass"
+@import "card-luxury-room/card-luxury-room.sass"
+@import "card-usual-room/card-usual-room.sass"
+@import "card-registration/card-registration.sass"
+@import "card-room/card-room.sass"
+@import "card-sign-in/card-sign-in.sass"
+
+@import "../../../components/plugins/datepicker/datepicker.sass"
+
+.cards
+  @include container()
+  display: flex
+  flex-wrap: wrap
+  background-color: $grey
+  padding-top: 9.375em
+  margin-bottom: 8.75em
+  background: url('../../../assets/img/uikit/group.svg') no-repeat top left
+
+  &__wrapper
+    order: 2
+
+.rooms, .registration, .book, .sign-in
+  background-color: $white
+  border-radius: 0.25em
+  padding: 2.9em 1em 1.875em 2em
+  @include shadows-wide()
+
+// luxury room card
+.luxury-room, .usual-room
+  background-color: $white
+  border-radius: 0.25em
+  width: 19em
+  height: 18.5em
+  order: 2
+  @include shadows-wide()

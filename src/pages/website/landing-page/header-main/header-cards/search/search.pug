@@ -1,0 +1,20 @@
+include ../../../../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+
+form.rooms(action="filter.html")
+    h1.rooms__title Найдём номера под ваши пожелания
+    div.rooms__wrapper
+      div.rooms__wrap
+        h3.rooms__info Прибытие
+        div.rooms__datepicker-wrap
+          input(type="text" name="date" class="rooms__date js-datepicker_eleventh" placeholder="ДД.ММ.ГГГГ" id="datepicker_eleventh")
+      div.rooms__wrap
+        h3.rooms__info Выезд
+        div.rooms__datepicker-wrap
+          input(type="text" name="date" class="rooms__date js-datepicker_twelfth" placeholder="ДД.ММ.ГГГГ" id="datepicker_twelfth")
+    div.rooms__guests
+      h3.rooms__info Гости
+      +item-quantity-dropdown("iqdropdown_fourth", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_fourth")
+        div(class="iqdropdown-menu-btn-wrap")
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+    button(type="submit" class="rooms__btn") Подобрать номер
