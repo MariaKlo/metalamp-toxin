@@ -1,0 +1,101 @@
+@import "__variables.sass"
+
+// container
+@mixin container()
+  max-width: 73.125rem
+  margin: 0 auto
+
+// flex display
+
+@mixin flex-between()
+  display: flex
+  justify-content: space-between
+
+// nullification
+
+@mixin zeroOffset()
+  margin: 0
+  padding: 0
+
+@mixin no-item()
+  appearance: none
+
+// input style
+
+@mixin input-style()
+  border: 0.0625em solid $light-blue
+  border-radius: 0.27rem
+  padding: 0.8125rem 8.5rem 0.7125rem 0.9rem
+
+// buttons styles
+
+@mixin button-style()
+  font-weight: 700
+  text-transform: uppercase
+  border: none
+  height: 2.75em
+
+@mixin ellipse-button-style-solid()
+  color: rgba(255, 255, 255, 1)
+  background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
+  border: none
+  border-radius: 1.375rem
+  
+@mixin ellipse-button-style-transparent()
+  border-radius: 1.375rem
+  color: $purple
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5)
+  border: solid 2px transparent
+  background-image: linear-gradient(rgba(188, 156, 255, 1), rgba(188, 156, 255, 1)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  background-origin: border-box
+  background-clip: content-box, border-box
+  box-shadow: 2px 1000px 1px #fff inset
+  font-weight: 700
+
+@mixin button-hover()
+  opacity: 0.7
+  transition: all 0.2s ease
+
+// shadows
+
+@mixin shadows()
+  box-shadow: 0px 11px 19px -11px rgba(130,130,130,0.75)
+
+@mixin shadows-wide()
+  box-shadow: 0px 1px 26px 4px rgba(34, 60, 80, 0.2)
+
+@mixin header-shadow()
+  box-shadow: 0px 26px 86px -25px rgba(34, 60, 80, 0.22)
+
+// arrows
+
+@mixin arrow($right: 0.8em)
+  background: url('../../../assets/img/uikit/expand-more.svg') no-repeat
+  content: ''
+  position: absolute
+  top: 1em
+  right: $right
+  width: 0.855em
+  height: 0.625em
+  color: $medium-blue
+
+@mixin arrow-right($color: #bc9cff)
+  font-family: 'Material Icons'
+  content: '\e5c8'
+  position: absolute
+  top: 0.8rem
+  right: 0.45em
+  font-weight: 500
+  font-size: 1.2rem
+  color: $color
+
+@mixin arrow-purple()
+  content: '→'
+  position: absolute
+  background-clip: text
+  -webkit-text-fill-color: transparent
+  -moz-text-fill-color: transparent
+  border-color: #bc9cff
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  background-size: 100%
+  font-size: 2.5rem
