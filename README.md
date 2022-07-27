@@ -43,39 +43,39 @@
 <h3>Макет:</h3>
 <h5>Colors-Type:</h5>
 <br>
-<img width="1440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
+<img width="440" height="440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
 <br>
 <h5>Form elements:</h5>
 <br>
-<img width="720" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
+<img width="440" height="440" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
 <br>
 <h5>Cards:</h5>
 <br>
-<img width="1440" alt="Cards" src="https://user-images.githubusercontent.com/56316185/181351301-ecc71125-b78f-45a3-8177-33321df9d541.jpg">
+<img width="440" height="440" alt="Cards" src="https://user-images.githubusercontent.com/56316185/181351301-ecc71125-b78f-45a3-8177-33321df9d541.jpg">
 <br>
 <h5>Headers-footers:</h5>
 <br>
-<img width="1440" alt="Headers-footers" src="https://user-images.githubusercontent.com/56316185/181351507-5918fafe-cba1-4820-9f60-2916a8227e2a.jpg">
+<img width="440" height="440" alt="Headers-footers" src="https://user-images.githubusercontent.com/56316185/181351507-5918fafe-cba1-4820-9f60-2916a8227e2a.jpg">
 <br>
 <h5>Landing page:</h5>
 <br>
-<img width="1440" alt="Landing-page" src="https://user-images.githubusercontent.com/56316185/181351673-7449f1b1-2698-4bd9-b83b-3d0ea3fd1eca.png">
+<img width="440" height="440" alt="Landing-page" src="https://user-images.githubusercontent.com/56316185/181351673-7449f1b1-2698-4bd9-b83b-3d0ea3fd1eca.png">
 <br>
 <h5>Registration:</h5>
 <br>
-<img width="1440" alt="Registration" src="https://user-images.githubusercontent.com/56316185/181351820-beac02f9-1138-4770-95ba-182cbb7c49c8.png">
+<img width="440" height="440" alt="Registration" src="https://user-images.githubusercontent.com/56316185/181351820-beac02f9-1138-4770-95ba-182cbb7c49c8.png">
 <br>
 <h5>Sign-in:</h5>
 <br>
-<img width="1440" alt="Sign-in" src="https://user-images.githubusercontent.com/56316185/181351952-49d9adb3-579a-4e90-ba34-bb5d1934b609.png">
+<img width="440" height="440" alt="Sign-in" src="https://user-images.githubusercontent.com/56316185/181351952-49d9adb3-579a-4e90-ba34-bb5d1934b609.png">
 <br>
 <h5>Search room/filter:</h5>
 <br>
-<img width="1440" alt="Search room/filter" src="https://user-images.githubusercontent.com/56316185/181352482-ac587658-8a81-4b05-a8d1-5c1d400a919d.png">
+<img width="440" height="440" alt="Search room/filter" src="https://user-images.githubusercontent.com/56316185/181352482-ac587658-8a81-4b05-a8d1-5c1d400a919d.png">
 <br>
 <h5>Room details:</h5>
 <br>
-<img width="1440" alt="Room details" src="https://user-images.githubusercontent.com/56316185/181352128-e2027b86-e9b5-4780-b827-bcc979d47013.png">
+<img width="440" height="440" alt="Room details" src="https://user-images.githubusercontent.com/56316185/181352128-e2027b86-e9b5-4780-b827-bcc979d47013.png">
 <br>
 <h3Структура проекта:</h3>
 <ul>
@@ -139,39 +139,39 @@ A project from Metalamp company for educational purposes. Consists of two parts:
 <h3>Layout:</h3>
 <h5>Colors-Type:</h5>
 <br>
-<img width="1440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
+<img width="440" height="440" alt="Colors-Type" src="https://user-images.githubusercontent.com/56316185/181350849-c56583b4-dfdf-4285-9c75-a94ba03225b0.png">
 <br>
 <h5>Form elements:</h5>
 <br>
-<img width="1440" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
+<img width="440" height="440" alt="Form-elements" src="https://user-images.githubusercontent.com/56316185/181351041-9650def8-b0f2-4551-b0a5-f3683a032486.jpg">
 <br>
 <h5>Cards:</h5>
 <br>
-<img width="1440" alt="Cards" src="https://user-images.githubusercontent.com/56316185/181351301-ecc71125-b78f-45a3-8177-33321df9d541.jpg">
+<img width="440" height="440" alt="Cards" src="https://user-images.githubusercontent.com/56316185/181351301-ecc71125-b78f-45a3-8177-33321df9d541.jpg">
 <br>
 <h5>Headers-footers:</h5>
 <br>
-<img width="1440" alt="Headers-footers" src="https://user-images.githubusercontent.com/56316185/181351507-5918fafe-cba1-4820-9f60-2916a8227e2a.jpg">
+<img width="440" height="440" alt="Headers-footers" src="https://user-images.githubusercontent.com/56316185/181351507-5918fafe-cba1-4820-9f60-2916a8227e2a.jpg">
 <br>
 <h5>Landing page:</h5>
 <br>
-<img width="1440" alt="Landing-page" src="https://user-images.githubusercontent.com/56316185/181351673-7449f1b1-2698-4bd9-b83b-3d0ea3fd1eca.png">
+<img width="440" height="440" alt="Landing-page" src="https://user-images.githubusercontent.com/56316185/181351673-7449f1b1-2698-4bd9-b83b-3d0ea3fd1eca.png">
 <br>
 <h5>Registration:</h5>
 <br>
-<img width="1440" alt="Registration" src="https://user-images.githubusercontent.com/56316185/181351820-beac02f9-1138-4770-95ba-182cbb7c49c8.png">
+<img width="440" height="440" alt="Registration" src="https://user-images.githubusercontent.com/56316185/181351820-beac02f9-1138-4770-95ba-182cbb7c49c8.png">
 <br>
 <h5>Sign-in:</h5>
 <br>
-<img width="1440" alt="Sign-in" src="https://user-images.githubusercontent.com/56316185/181351952-49d9adb3-579a-4e90-ba34-bb5d1934b609.png">
+<img width="440" height="440" alt="Sign-in" src="https://user-images.githubusercontent.com/56316185/181351952-49d9adb3-579a-4e90-ba34-bb5d1934b609.png">
 <br>
 <h5>Search room/filter:</h5>
 <br>
-<img width="1440" alt="Search room/filter" src="https://user-images.githubusercontent.com/56316185/181352482-ac587658-8a81-4b05-a8d1-5c1d400a919d.png">
+<img width="440" height="440" alt="Search room/filter" src="https://user-images.githubusercontent.com/56316185/181352482-ac587658-8a81-4b05-a8d1-5c1d400a919d.png">
 <br>
 <h5>Room details:</h5>
 <br>
-<img width="1440" alt="Room details" src="https://user-images.githubusercontent.com/56316185/181352128-e2027b86-e9b5-4780-b827-bcc979d47013.png">
+<img width="440" height="440" alt="Room details" src="https://user-images.githubusercontent.com/56316185/181352128-e2027b86-e9b5-4780-b827-bcc979d47013.png">
 <br>
 <h3>The project's structure:</h3>
 <ul>
