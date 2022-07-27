@@ -24,7 +24,6 @@ module.exports = {
     formElements: './src/pages/ui-kit/form-elements/formElements.js',
     headersFooters: './src/pages/ui-kit/headers-footers/headersFooters.js',
   },
-  devtool: 'source-map',
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),

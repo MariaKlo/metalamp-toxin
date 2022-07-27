@@ -10,12 +10,15 @@ module.exports = merge(config, {
   mode: "production",
   output: {
     filename: "[name].[contentHash].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   optimization: {
     minimizer: [
       new CssMinimizerPlugin(),
-      new TerserPlugin(),
+      new TerserPlugin({
+        parallel: true,
+      }),
       new HtmlWebpackPlugin({
         template: 'src/pages/website/landing-page/landing-page.pug',
         filename: "./landing-page.html",
@@ -106,7 +109,7 @@ module.exports = merge(config, {
           removeComments: true
         }
       }),
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
