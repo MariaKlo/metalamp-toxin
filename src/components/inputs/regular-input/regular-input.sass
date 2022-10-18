@@ -3,6 +3,22 @@
 @import "../../../assets/styles/__tegs.sass"
 @import "../../../assets/fonts/fonts.sass"
 
+.input-arrow
+  position: absolute
+  top: 0.4rem
+  right: 6.5rem
+  cursor: pointer
+  background-color: transparent
+  border: none
+
+.material-symbols-outlined
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+  font-weight: 700
+
 .elements
   &__field
     @include input-style()
@@ -11,11 +27,6 @@
 
     &-wrap
       position: relative
-
-      &::after
-        top: -0.15em
-        right: 1.6em
-        @include arrow-purple()
 
     &-subscription
       letter-spacing: 0.12em

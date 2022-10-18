@@ -55,27 +55,27 @@ block content
         +input("email", "e-mail", "Email")(class="elements__field-subscription")
     // кнопки
     div.buttons
-      div.checkbox-button
+      form.checkbox-button
         h3.checkbox-button__name CHECKBOX BUTTONS
         +checkbox-button("checkbox", "Можно курить")
         +checkbox-button("checkbox-second", "Можно с питомцами")
         +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)") 
-      div.radio-button
+      form.radio-button
         h3.radio-button__name RADIO BUTTONS
         div.radio-button__wrapper
           +radio-button("sex-m", "Мужчина")
           +radio-button("sex-f", "Женщина")
-      div.toggle-button
+      form.toggle-button
         h3.toggle-button__name TOGGLE
         div.toggle-button__wrapper
           +toggle-button()
           +toggle-button()
-      div.like-buttons
+      form.like-buttons
         h3.like-buttons__name LIKE BUTTON
         div.like-buttons__wrapper
           +like-button("like-buttons__border js-like-buttons__border", "like-buttons__heart js-like-buttons__heart", "like-buttons__counter js-like-buttons__counter")
           +like-button("like-buttons__border_second-like-button js-like-buttons__border_second-like-button", "like-buttons__heart_second js-like-buttons__heart_second", "like-buttons__counter_second-like-button js-like-buttons__counter_second-like-button")
-      div.rate-buttons
+      form.rate-buttons
         h3.rate-buttons__name RATE BUTTON
         div.rate-buttons__wrapper
           div.rate-buttons__source
@@ -109,7 +109,7 @@ block content
         div.range-button__info
           +range-slider("range slider")
       // кнопки + пагинация
-      div.buttons
+      form.buttons
         h3.buttons__name BUTTONS
         div.ellipse-buttons
           div.ellipse-buttons__wrap
@@ -131,12 +131,14 @@ block content
       div.filter__description
         h3.filter__info #{dropdown}
         p.filter__state DEFAULT
-      +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
+      form.filter__form
+        +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
       div.filter__description
         h3.filter__info #{dropdown}
         p.filter__state EXPANDED
-      +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
-      div.filter__checkbox_expanded
+      form.filter__form
+        +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
+      form.filter__checkbox_expanded
         div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Expandable checkbox list
           i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
           +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
@@ -154,7 +156,7 @@ block content
           +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_eleventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eleventh js-expandable-checkbox-list__checkbox_eleventh")
           +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_twelfth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_twelfth js-expandable-checkbox-list__checkbox_twelfth")
     // dropdown с гостями
-    div.guests
+    form.guests
       h3.guests__info #{dropdown}
       +item-quantity-dropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
         div(class="iqdropdown-menu-btn-wrap")
@@ -175,17 +177,18 @@ block content
             p.guests__option-title Помощник для инвалидов
             p.guests__option-text На 1 этаже вас встретит специалист  и проводит до номера.
     // dropdown и списки
-    div.lists
-      h3.lists__info #{dropdown}
-      +item-quantity-dropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
-        div(class="iqdropdown-menu-btn-wrap")
-          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
-          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-      h3.bullet-list__title Bullet list
-      ul.bullet-list__bullet
-      +bullet-list("Нельзя с питомцами")
-      +bullet-list("Без вечеринок и мероприятий")
-      +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
+    form.lists__form
+      div.lists
+        h3.lists__info #{dropdown}
+        +item-quantity-dropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
+          div(class="iqdropdown-menu-btn-wrap")
+            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
+            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+        h3.bullet-list__title Bullet list
+        ul.bullet-list__bullet
+        +bullet-list("Нельзя с питомцами")
+        +bullet-list("Без вечеринок и мероприятий")
+        +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
   // комментарии
   div.elements__comments
     div.comments

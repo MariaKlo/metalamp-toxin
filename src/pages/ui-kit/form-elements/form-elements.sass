@@ -43,11 +43,6 @@
     &-wrap
       position: relative
 
-      &::after
-        @include arrow-purple()
-        top: -0.15em
-        right: 1.55em
-
       &-datepicker
         position: relative
 
@@ -81,6 +76,22 @@
     &-filter, &-subscription
       @include input-style()
       padding: 0.9125rem 5rem 0.9125rem 0.9375rem
+
+.input-arrow
+  position: absolute
+  top: 0.65rem
+  right: 3.5rem
+  cursor: pointer
+  background-color: transparent
+  border: none 
+
+.material-symbols-outlined
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+  font-weight: 700
 
 .filter
   &__description

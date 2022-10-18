@@ -98,11 +98,6 @@ body
     &-wrap
       position: relative
 
-      &::after
-        @include arrow-purple()
-        top: -0.12em
-        right: 0.5em
-
   &__copy
     color: $dark-blue
 
@@ -124,3 +119,19 @@ body
 
 .footer__logo_center
   background: url('../../../assets/img/uikit/logo.svg') no-repeat center center
+
+.input-arrow
+  position: absolute
+  top: 0.6rem
+  right: 1rem
+  cursor: pointer
+  background-color: transparent
+  border: none
+
+.material-symbols-outlined
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+  font-weight: 700
