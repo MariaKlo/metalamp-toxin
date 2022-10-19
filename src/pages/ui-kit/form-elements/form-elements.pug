@@ -26,11 +26,11 @@ block content
       div.elements__description
         h3.elements__info #{textField}
         p.elements__state DEFAULT
-      +input("email", "e-mail", "Email")(class="elements__field") 
+      input(type="email" name="e-mail" placeholder="Email").elements__field
       div.elements__description
         h3.elements__info #{textField}
         p.elements__state HOVER/FOCUS
-      +input("text", "text", "This is pretty awesome")(class="elements__field") 
+      input(type="text" name="text" placeholder="This is pretty awesome").elements__field
       h3.elements__info #{dropdown}
       +item-quantity-dropdown("iqdropdown_first", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_first")
         div(class="iqdropdown-menu-btn-wrap")
