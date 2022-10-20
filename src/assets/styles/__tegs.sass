@@ -3,7 +3,8 @@
 @import "../fonts/fonts.sass"
 
 body 
-  @include zeroOffset()
+  @include zero-offset()
+  height: 100%
   background-color: #fff
   font-family: 'Montserrat'
   font-size: 0.87rem
@@ -13,14 +14,14 @@ div, p, form, input, a, span, button
   box-sizing: border-box
 
 p
-  @include zeroOffset()
+  @include zero-offset()
 
 ul, li 
   display: block
-  @include zeroOffset()
+  @include zero-offset()
 
 h1, h2, h3, h4, h5, h6 
-  @include zeroOffset()
+  @include zero-offset()
   font-weight: 700
   text-transform: uppercase
 

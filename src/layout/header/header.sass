@@ -5,12 +5,14 @@
 
 .header
   @include flex-between()
-  @include container()
   @include header-shadow()
   align-items: center
   background-color: $white
-  padding-top: 1.0375em
-  padding-bottom: 0.975em
+  padding-top: 1rem
+  padding-left: 3rem
+  padding-right: 3rem
+  padding-bottom: 0.9rem
+  flex: 1 0 auto
     
   &__logo
     background: url('../../../assets/img/uikit/logo.svg') no-repeat top left
