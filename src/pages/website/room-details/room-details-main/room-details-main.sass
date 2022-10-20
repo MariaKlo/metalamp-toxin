@@ -11,7 +11,6 @@
 .main
   @include container()
   padding-top: 4.375rem
-  height: 58.5625rem
   display: flex
   border-bottom: 1px solid rgb(190,190,190)
   flex: 1 0 auto
@@ -20,7 +19,8 @@
     margin-right: 4.6875rem
 
   &__wrapper
-    height: 18.8125rem
+    display: flex
+    justify-content: space-between
 
     &_additional
       @include flex-between()
