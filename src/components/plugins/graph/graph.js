@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-shadow */
 import {
   Chart,
   ArcElement,
@@ -23,7 +25,7 @@ import {
   Legend,
   Title,
   Tooltip,
-  SubTitle
+  SubTitle,
 } from 'chart.js';
 
 Chart.register(
@@ -50,30 +52,30 @@ Chart.register(
   Legend,
   Title,
   Tooltip,
-  SubTitle
+  SubTitle,
 );
 
 // green gradient
-let canvasOfGreen = document.querySelector('.js-myChart').getContext('2d');
-let gradientOfGreen = canvasOfGreen.createLinearGradient(0, 0, 0, 170);
+const canvasOfGreen = document.querySelector('.js-myChart').getContext('2d');
+const gradientOfGreen = canvasOfGreen.createLinearGradient(0, 0, 0, 170);
 gradientOfGreen.addColorStop(0, 'rgba(111, 207, 151, 1)');
 gradientOfGreen.addColorStop(1, 'rgba(102, 210, 234, 1)');
 
 // orange gradinet
-let canvasOfOrange = document.querySelector('.js-myChart').getContext('2d');
-let gradientOfOrange = canvasOfOrange.createLinearGradient(0, 0, 0, 170);
+const canvasOfOrange = document.querySelector('.js-myChart').getContext('2d');
+const gradientOfOrange = canvasOfOrange.createLinearGradient(0, 0, 0, 170);
 gradientOfOrange.addColorStop(0, 'rgba(255, 227, 156, 1)');
 gradientOfOrange.addColorStop(1, 'rgba(255, 186, 156, 1)');
 
 // purple gradient
-let canvasOfPurple = document.querySelector('.js-myChart').getContext('2d');
-let gradientOfPurple = canvasOfPurple.createLinearGradient(0, 0, 0, 170);
+const canvasOfPurple = document.querySelector('.js-myChart').getContext('2d');
+const gradientOfPurple = canvasOfPurple.createLinearGradient(0, 0, 0, 170);
 gradientOfPurple.addColorStop(0, 'rgba(188, 156, 255, 1)');
 gradientOfPurple.addColorStop(1, 'rgba(139, 164, 249, 1)');
 
 // black gradinet
-let canvasOfBlack = document.querySelector('.js-myChart').getContext('2d');
-let gradientOfBlack = canvasOfBlack.createLinearGradient(0, 0, 0, 170);
+const canvasOfBlack = document.querySelector('.js-myChart').getContext('2d');
+const gradientOfBlack = canvasOfBlack.createLinearGradient(0, 0, 0, 170);
 gradientOfBlack.addColorStop(0, 'rgba(144, 144, 144, 1)');
 gradientOfBlack.addColorStop(1, 'rgba(61, 73, 117, 1)');
 
@@ -92,7 +94,7 @@ class Graph {
       ],
       datasets: [{
         label: 'Doughnut dataset',
-        data:[130, 65, 65, 0],
+        data: [130, 65, 65, 0],
         backgroundColor: [
           gradientOfOrange,
           gradientOfGreen,
@@ -103,39 +105,39 @@ class Graph {
         offset: 4,
         rotation: 180,
         cutout: '90%',
-      }]
+      }],
     },
     plugins: [
       {
         id: 'votes',
         beforeDraw(chart, args, options) {
-          const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
+          const { ctx } = chart;
           ctx.save();
           options.fontSize = 24;
           options.fontFamily = 'Montserrat';
           options.fontWeight = '700';
-          ctx.font = options.fontWeight + ' ' + options.fontSize + 'px ' + options.fontFamily;
+          ctx.font = `${options.fontWeight} ${options.fontSize}px ${options.fontFamily}`;
           ctx.textAlign = options.position;
           ctx.fillStyle = options.fontColor;
           ctx.allVotesText = options.allVotesText;
           ctx.fillText(options.allVotesText, 63, 150);
-        }
-      }, 
+        },
+      },
       {
         id: 'bigText',
         beforeDraw(chart, args, options) {
-          const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
+          const { ctx } = chart;
           ctx.save();
           options.fontSize = 14;
           options.fontFamily = 'Montserrat';
           options.fontWeight = '700';
-          ctx.font = options.fontWeight + ' ' + options.fontSize + 'px ' + options.fontFamily;
+          ctx.font = `${options.fontWeight} ${options.fontSize}px ${options.fontFamily}`;
           ctx.textAlign = options.position;
           ctx.fillStyle = options.fontColor;
           ctx.text = options.text;
           ctx.fillText(options.text, 63, 170);
-        }
-      }
+        },
+      },
     ],
     options: {
       // add text to the center
@@ -143,6 +145,7 @@ class Graph {
         votes: {
           fontColor: 'rgba(188, 156, 255, 1)',
           position: 'center',
+          // eslint-disable-next-line max-len
           allVotesText: [130, 65, 65, 0].reduce((previousValue, currentValue) => previousValue + currentValue),
         },
         bigText: {
@@ -163,13 +166,13 @@ class Graph {
             pointStyle: 'circle',
             font: {
               family: 'Montserrat',
-              size: 10
-            }
-          }
+              size: 10,
+            },
+          },
         },
-      }
-    }
+      },
+    },
   });
 }
 
-let graph = new Graph();
+const graph = new Graph();

@@ -2,11 +2,12 @@ import $ from 'jquery';
 import '../../../assets/fonts/fonts.sass';
 import './room-details.sass';
 
-import '../../../components/buttons/like-button/like-button.js';
-import '../../../components/plugins/graph/graph.js';
+import '../../../components/buttons/like-button/like-button';
+import '../../../components/plugins/graph/graph';
 
-import '../../../components/plugins/datepicker/datepicker.js';
-import '../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.js';
-import '../../../components/hamburger/hamburger.js';
+import '../../../components/plugins/datepicker/datepicker';
+import '../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown';
+import '../../../components/hamburger/hamburger';
 
-global.jQuery = global.$ = $;
+global.jQuery = global.$;
+global.$ = $;

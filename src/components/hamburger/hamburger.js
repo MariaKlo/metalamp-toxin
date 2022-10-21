@@ -1,5 +1,4 @@
 class Hamburger {
-
   hamburger = document.querySelector('.js-hamburger');
 
   filterHamburger = document.querySelector('.js-filter__hamburger');
@@ -19,8 +18,8 @@ class Hamburger {
   }
 
   init() {
-    if (this.filter !== null && this.filterHamburger !== null && 
-      this.filterMain !== null && this.filterStyle !== null) {
+    if (this.filter !== null && this.filterHamburger !== null
+      && this.filterMain !== null && this.filterStyle !== null) {
       this.openFilterMenu();
     }
     this.openHeaderMenu();
@@ -41,4 +40,4 @@ class Hamburger {
   }
 }
 
-let hamburgerMenu = new Hamburger();
+const hamburgerMenu = new Hamburger();

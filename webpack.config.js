@@ -4,6 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -104,6 +105,10 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: './src/assets/favicon/group.png',
       cache: true,
+    }),
+    new ESLintPlugin({
+      extensions: ['.js'],
+      exclude: 'node_modules'
     }),
     new CopyPlugin({
       patterns: [

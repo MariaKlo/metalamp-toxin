@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "import"
+    ],
+    "rules": {
+        "class-methods-use-this": "off",
+        "no-param-reassign": "off",
+        "no-use-before-define": ["error", { "variables": false }],
+        "space-before-blocks": "off",
+        "no-unused-vars": "off"
+    }
+}

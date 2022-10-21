@@ -1,11 +1,11 @@
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
+/* eslint-disable consistent-return */
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 class ItemQuantityDropdown {
-
   dropdownGuestsId = [
     '.js-iqdropdown_first', '.js-iqdropdown_second', '.js-iqdropdown_third', '.js-iqdropdown_fourth',
-    '.js-iqdropdown_fifth'
+    '.js-iqdropdown_fifth',
   ];
 
   dropdownRoomId = ['.js-iqdropdown_sixth', '.js-iqdropdown_seventh'];
@@ -26,66 +26,66 @@ class ItemQuantityDropdown {
   }
 
   callGuestPlugin() {
-    for (let i = 0; i < this.dropdownGuestsId.length; i++) {
+    for (let i = 0; i < this.dropdownGuestsId.length; i += 1) {
       $(this.dropdownGuestsId[i]).iqDropdown({
         maxItems: 10,
         setSelectionText: (itemCount, totalItems) => {
-        const words = {
-          textPlural: `гостей`,
-          selectionText: `гость`,
-          placeholderText: `Сколько гостей`,
-          secondSelectionText: `гостя`,
-          baby: `младенец`,
-          babiesSelectionText: `младенца`,
-        }
+          const words = {
+            textPlural: 'гостей',
+            selectionText: 'гость',
+            placeholderText: 'Сколько гостей',
+            secondSelectionText: 'гостя',
+            baby: 'младенец',
+            babiesSelectionText: 'младенца',
+          };
 
-        // check for non-baby guests
-        let howManyBabies = Object.values(itemCount)[2];
+          // check for non-baby guests
+          const howManyBabies = Object.values(itemCount)[2];
 
-        if (totalItems === 0 && howManyBabies === 0) return words.placeholderText;
-        // with one baby
-        if (totalItems === 1 && howManyBabies === 1) {
-          return `${totalItems} ${words.selectionText}, ${howManyBabies} ${words.baby}`;
-        } else if (totalItems < 5 && howManyBabies === 1) {
-          return `${totalItems} ${words.secondSelectionText}, ${howManyBabies} ${words.baby}`;
-        } else if (totalItems <= 10 && howManyBabies === 1) {
-          return `${totalItems} ${words.textPlural}, ${howManyBabies} ${words.baby}`;
-        }
-        // with two babies
-        if (totalItems === 1 && howManyBabies === 2) {
-          return `${totalItems} ${words.selectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
-        } else if (totalItems < 5 && howManyBabies === 2) {
-          return `${totalItems} ${words.secondSelectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
-        } else if (totalItems <= 10 && howManyBabies === 2) {
-          return `${totalItems} ${words.textPlural}, ${howManyBabies} ${words.babiesSelectionText}`;
-        }
-        // with three babies
-        if (totalItems === 1 && howManyBabies === 3) {
-          return `${totalItems} ${words.selectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
-        } else if (totalItems < 5 && howManyBabies === 3) {
-          return `${totalItems} ${words.secondSelectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
-        } else if (totalItems <= 10 && howManyBabies === 3) {
-          return `${totalItems} ${words.textPlural}, ${howManyBabies} ${words.babiesSelectionText}`;
-        }
-        // without babies
-        if (totalItems === 1) {
-          return `${totalItems} ${words.selectionText}`;
-        } else if (totalItems >= 2 && totalItems <= 4) {
-          return `${totalItems} ${words.secondSelectionText}`;
-        } else if (totalItems >= 5 && totalItems <= 10) {
-          return `${totalItems} ${words.textPlural}`;
-        }
-      },
+          if (totalItems === 0 && howManyBabies === 0) return words.placeholderText;
+          // with one baby
+          if (totalItems === 1 && howManyBabies === 1) {
+            return `${totalItems} ${words.selectionText}, ${howManyBabies} ${words.baby}`;
+          } if (totalItems < 5 && howManyBabies === 1) {
+            return `${totalItems} ${words.secondSelectionText}, ${howManyBabies} ${words.baby}`;
+          } if (totalItems <= 10 && howManyBabies === 1) {
+            return `${totalItems} ${words.textPlural}, ${howManyBabies} ${words.baby}`;
+          }
+          // with two babies
+          if (totalItems === 1 && howManyBabies === 2) {
+            return `${totalItems} ${words.selectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
+          } if (totalItems < 5 && howManyBabies === 2) {
+            return `${totalItems} ${words.secondSelectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
+          } if (totalItems <= 10 && howManyBabies === 2) {
+            return `${totalItems} ${words.textPlural}, ${howManyBabies} ${words.babiesSelectionText}`;
+          }
+          // with three babies
+          if (totalItems === 1 && howManyBabies === 3) {
+            return `${totalItems} ${words.selectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
+          } if (totalItems < 5 && howManyBabies === 3) {
+            return `${totalItems} ${words.secondSelectionText}, ${howManyBabies} ${words.babiesSelectionText}`;
+          } if (totalItems <= 10 && howManyBabies === 3) {
+            return `${totalItems} ${words.textPlural}, ${howManyBabies} ${words.babiesSelectionText}`;
+          }
+          // without babies
+          if (totalItems === 1) {
+            return `${totalItems} ${words.selectionText}`;
+          } if (totalItems >= 2 && totalItems <= 4) {
+            return `${totalItems} ${words.secondSelectionText}`;
+          } if (totalItems >= 5 && totalItems <= 10) {
+            return `${totalItems} ${words.textPlural}`;
+          }
+        },
         onChange: (id, count, totalItems) => {
           const $firstDecrementButton = $('.iqdropdown-menu-option:nth-child(1)').find('.button-decrement');
           const $secondDecrementButton = $('.iqdropdown-menu-option:nth-child(2)').find('.button-decrement');
           const $thirdDecrementButton = $('.iqdropdown-menu-option:nth-child(3)').find('.button-decrement');
           // confirm button
-          $('.iqdropdown-btn-confirm').click(function() {
+          $('.iqdropdown-btn-confirm').click(() => {
             $('.iqdropdown').removeClass('.menu-open');
           });
 
-          $('.iqdropdown-btn-clear').click(function() {
+          $('.iqdropdown-btn-clear').click(() => {
             $('.iqdropdown-selection').text('Сколько гостей');
             $('.counter').text('0');
             $('.iqdropdown-btn-clear').hide();
@@ -96,7 +96,7 @@ class ItemQuantityDropdown {
           if (totalItems === 0) {
             $('.iqdropdown-btn-clear').hide();
             $('.iqdropdown-menu-btn-wrap').css('justify-content', 'end');
-          } 
+          }
           if (totalItems > 0) {
             $('.iqdropdown-btn-clear').show();
             $('.iqdropdown-menu-btn-wrap').css('justify-content', 'space-between');
@@ -129,39 +129,39 @@ class ItemQuantityDropdown {
   }
 
   callRoomPlugin() {
-    for (let i = 0; i < this.dropdownRoomId.length; i++) {
+    for (let i = 0; i < this.dropdownRoomId.length; i += 1) {
       $(this.dropdownRoomId[i]).iqDropdown({
         maxItems: 3,
-        setSelectionText: (itemCount, totalItems) => {
+        setSelectionText: (itemCount) => {
           const words = {
-            placeholder: `Что должно входить в номер?`,
-            oneBedroom: `спальня`,
-            severalBedrooms: `спальни`,
-            oneBed: `кровать`,
-            severalBeds: `кровати`,
-            oneBathroom: `ванная комната`,
-            severalBathrooms: `ванные комнаты`,
-          }
+            placeholder: 'Что должно входить в номер?',
+            oneBedroom: 'спальня',
+            severalBedrooms: 'спальни',
+            oneBed: 'кровать',
+            severalBeds: 'кровати',
+            oneBathroom: 'ванная комната',
+            severalBathrooms: 'ванные комнаты',
+          };
           // quantity of each item
-          let firstItem = Object.values(itemCount)[0];
-          let secondItem = Object.values(itemCount)[1];
-          let thirdItem = Object.values(itemCount)[2];
+          const firstItem = Object.values(itemCount)[0];
+          const secondItem = Object.values(itemCount)[1];
+          const thirdItem = Object.values(itemCount)[2];
           // return default phrase
           if (firstItem === 0 && secondItem === 0 && thirdItem === 0) return words.placeholder;
           // one: one item
           if (firstItem === 1 && secondItem === 0 && thirdItem === 0) {
             return `${firstItem} ${words.oneBedroom}`;
-          } else if (firstItem === 0 && secondItem === 1 && thirdItem === 0) {
+          } if (firstItem === 0 && secondItem === 1 && thirdItem === 0) {
             return `${secondItem} ${words.oneBed}`;
-          } else if (firstItem === 0 && secondItem === 0 && thirdItem === 1) {
+          } if (firstItem === 0 && secondItem === 0 && thirdItem === 1) {
             return `${thirdItem} ${words.oneBathroom}`;
           }
           // two items
           if (firstItem === 0 && secondItem === 1 && thirdItem === 1) {
             return `${secondItem} ${words.oneBed}, ${thirdItem} ${words.oneBathroom}`;
-          } else if (firstItem === 1 && secondItem === 0 && thirdItem === 1) {
+          } if (firstItem === 1 && secondItem === 0 && thirdItem === 1) {
             return `${firstItem} ${words.oneBedroom}, ${thirdItem} ${words.oneBathroom}`;
-          } else if (firstItem === 1 && secondItem === 1 && thirdItem === 0) {
+          } if (firstItem === 1 && secondItem === 1 && thirdItem === 0) {
             return `${firstItem} ${words.oneBedroom}, ${secondItem} ${words.oneBed}`;
           }
           // three items
@@ -172,28 +172,28 @@ class ItemQuantityDropdown {
           // two: two items
           if (firstItem === 2 && secondItem === 0 && thirdItem === 0) {
             return `${firstItem} ${words.severalBedrooms}`;
-          } else if (firstItem === 0 && secondItem === 2 && thirdItem === 0) {
+          } if (firstItem === 0 && secondItem === 2 && thirdItem === 0) {
             return `${secondItem} ${words.severalBeds}`;
-          } else if (firstItem === 0 && secondItem === 0 && thirdItem === 2) {
+          } if (firstItem === 0 && secondItem === 0 && thirdItem === 2) {
             return `${thirdItem} ${words.severalBathrooms}`;
           }
           // three: three items
           if (firstItem === 3 && secondItem === 0 && thirdItem === 0) {
             return `${firstItem} ${words.severalBedrooms}`;
-          } else if (firstItem === 0 && secondItem === 3 && thirdItem === 0) {
+          } if (firstItem === 0 && secondItem === 3 && thirdItem === 0) {
             return `${secondItem} ${words.severalBeds}`;
-          } else if (firstItem === 0 && secondItem === 0 && thirdItem === 3) {
+          } if (firstItem === 0 && secondItem === 0 && thirdItem === 3) {
             return `${thirdItem} ${words.severalBathrooms}`;
           }
           if (firstItem === 2 && secondItem === 1 && thirdItem === 0) {
             return `${firstItem} ${words.severalBedrooms}, ${secondItem} ${words.severalBeds}`;
-          } else if (firstItem === 2 && secondItem === 0 && thirdItem === 1) {
+          } if (firstItem === 2 && secondItem === 0 && thirdItem === 1) {
             return `${firstItem} ${words.severalBedrooms}, ${thirdItem} ${words.severalBathrooms}`;
-          } else if (firstItem === 1 && secondItem === 2 && thirdItem === 0) {
+          } if (firstItem === 1 && secondItem === 2 && thirdItem === 0) {
             return `${firstItem} ${words.oneBedroom}, ${secondItem} ${words.severalBeds}`;
-          } else if (firstItem === 0 && secondItem === 2 && thirdItem === 1) {
+          } if (firstItem === 0 && secondItem === 2 && thirdItem === 1) {
             return `${secondItem} ${words.severalBeds}, ${thirdItem} ${words.oneBathroom}`;
-          } else if (firstItem === 1 && secondItem === 0 && thirdItem === 2) {
+          } if (firstItem === 1 && secondItem === 0 && thirdItem === 2) {
             return `${firstItem} ${words.oneBedroom}, ${thirdItem} ${words.severalBathrooms}`;
           }
         },
@@ -202,4 +202,4 @@ class ItemQuantityDropdown {
   }
 }
 
-let dropdown = new ItemQuantityDropdown();
+const dropdown = new ItemQuantityDropdown();

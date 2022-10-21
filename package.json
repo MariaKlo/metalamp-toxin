@@ -7,6 +7,7 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "./node_modules/.bin/webpack --watch",
     "start": "webpack serve --mode development",
+    "lint": "./node_modules/.bin/eslint",
     "deploy": "gh-pages -d dist -r https://github.com/MariaKlo/metalamp-toxin.git"
   },
   "repository": {

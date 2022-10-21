@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -20,4 +21,4 @@ class SwiperPlugin {
   });
 }
 
-let swiper = new SwiperPlugin();
+const swiper = new SwiperPlugin();
