@@ -152,18 +152,18 @@ class Graph {
         },
         legend: {
           position: 'right',
-          maxWidth: 180,
-          maxHeight: 96,
+          maxWidth: 160,
+          maxHeight: 136,
           labels: {
             boxWidth: 8,
             boxHeight: 8,
             color: 'rgba(31, 32, 65, 0.75)',
-            padding: 10,
+            padding: 8,
             usePointStyle: true,
             pointStyle: 'circle',
             font: {
               family: 'Montserrat',
-              size: 14
+              size: 10
             }
           }
         },

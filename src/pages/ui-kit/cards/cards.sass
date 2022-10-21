@@ -13,6 +13,7 @@
 
 .cards
   @include container()
+  max-width: 82.125rem
   display: flex
   flex-wrap: wrap
   background-color: $grey
@@ -33,6 +34,9 @@
 .luxury-room, .usual-room
   background-color: $white
   border-radius: 0.25em
-  max-width: 19rem
+  max-width: 17.6rem
   order: 2
   @include shadows-wide()
+
+.usual-room
+  max-width: 17rem
