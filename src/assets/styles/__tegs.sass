@@ -2,12 +2,15 @@
 @import "__variables.sass"
 @import "../fonts/fonts.sass"
 
+html
+  font-family: 'Montserrat'
+  font-size: 0.87rem
+  color: $dark-blue
+
 body 
   @include zero-offset()
   height: 100%
   background-color: #fff
-  font-family: 'Montserrat'
-  font-size: 0.87rem
   overflow-x: hidden
 
 div, p, form, input, a, span, button 
@@ -29,9 +32,18 @@ input, input:hover, input:focus, input:active,
 button, button:hover, button:focus, button:active 
   outline: none
 
-button, button:hover, button:focus, button:active 
-  cursor: pointer
+input:focus, input:focus-within, input:focus-visible
+  border: 1px solid $medium-blue
+  color: $medium-blue
 
 input, input:hover, input:focus, input:active
   border: 1px solid $medium-blue
   color: $medium-blue
+  cursor: pointer
+
+button, button:hover, button:focus, button:active 
+  cursor: pointer
+
+button:focus, button:focus-within, button:focus-visible
+  opacity: 0.7
+  transition: all 0.2s ease
