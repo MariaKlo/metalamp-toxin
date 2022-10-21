@@ -68,8 +68,8 @@ block content
       form.toggle-button
         h3.toggle-button__name TOGGLE
         div.toggle-button__wrapper
-          +toggle-button()
-          +toggle-button()
+          +toggle-button("toggle")
+          +toggle-button("toggle_second")
       form.like-buttons
         h3.like-buttons__name LIKE BUTTON
         div.like-buttons__wrapper
@@ -160,8 +160,8 @@ block content
       h3.guests__info #{dropdown}
       +item-quantity-dropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
         div(class="iqdropdown-menu-btn-wrap")
-          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
-          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
       h3.guests__title Rich Checkbox Buttons
       div.guests__checkbox-wrapper
         div.checkbox-button__item
@@ -182,8 +182,8 @@ block content
         h3.lists__info #{dropdown}
         +item-quantity-dropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
           div(class="iqdropdown-menu-btn-wrap")
-            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
-            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
+            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
+            a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
         h3.bullet-list__title Bullet list
         ul.bullet-list__bullet
           +bullet-list("Нельзя с питомцами")
