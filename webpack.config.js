@@ -6,11 +6,6 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'development';
-const isProd = !isDev;
-
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
-
 module.exports = {
   mode: 'development',
   entry: {
@@ -26,7 +21,7 @@ module.exports = {
     headersFooters: './src/pages/ui-kit/headers-footers/headersFooters.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].[fullhash].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext]',
     clean: true,
@@ -41,12 +36,7 @@ module.exports = {
     },
   },
   plugins: [
-    new MiniCssExtractPlugin(
-      {
-      filename: isDev ? '[name].css' : '[name].[hash].css',
-      chunkFilename: isDev ? '[id].css' : '[id].[hash].css',
-    }
-    ),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.pug',
       filename: "./index.html",
@@ -54,47 +44,47 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
     template: 'src/pages/website/landing-page/landing-page.pug',
-    filename: "./landing-page-dev.html",
+    filename: "./landing-page.html",
     chunks: ['main', 'landingPage'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/website/sign-in/sign-in.pug',
-      filename: "./sign-in-dev.html",
+      filename: "./sign-in.html",
       chunks: ['main', 'signIn'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/website/registration/registration.pug',
-      filename: "./registration-dev.html",
+      filename: "./registration.html",
       chunks: ['main', 'registration'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/website/filter/filter.pug',
-      filename: "./filter-dev.html",
+      filename: "./filter.html",
       chunks: ['main', 'filter'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/website/room-details/room-details.pug',
-      filename: "./room-details-dev.html",
+      filename: "./room-details.html",
       chunks: ['main', 'roomDetails'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/ui-kit/cards/cards.pug',
-      filename: "./cards-dev.html",
+      filename: "./cards.html",
       chunks: ['main', 'cards'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/ui-kit/colors-type/colors-type.pug',
-      filename: "./colors-type-dev.html",
-      chunks: ['colorsTypes'],
+      filename: "./colors-type.html",
+      chunks: ['main', 'colorsTypes'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/ui-kit/form-elements/form-elements.pug',
-      filename: "./form-elements-dev.html",
+      filename: "./form-elements.html",
       chunks: ['main', 'formElements'],
     }),
     new HtmlWebpackPlugin({
       template: 'src/pages/ui-kit/headers-footers/headers-footers.pug',
-      filename: "./headers-footers-dev.html",
+      filename: "./headers-footers.html",
       chunks: ['main', 'headersFooters'],
     }),
     new webpack.ProvidePlugin( {
@@ -105,6 +95,15 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: './src/assets/favicon/group.png',
       cache: true,
+      favicons: {
+        icons: {
+          android: false,
+          appleIcon: false,
+          appleStartup: false,
+          coast: false,
+          yandex: false
+        }
+      }
     }),
     new ESLintPlugin({
       extensions: ['.js'],
@@ -140,20 +139,12 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-            ('development') ? "style-loader" : MiniCssExtractPlugin.loader,
-            "css-loader",
-            {
-              loader: "postcss-loader",
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    [
-                      "postcss-preset-env",
-                    ],
-                  ],
-                },
-              },
-            },
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: "" },
+          },
+          "css-loader",
+          "postcss-loader",
           "sass-loader",
         ],
       },
