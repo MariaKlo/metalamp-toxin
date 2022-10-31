@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import '../../../assets/fonts/fonts.sass';
 import './landing-page.sass';
 
 import '../../../components/hamburger/hamburger';

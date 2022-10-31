@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import '../../../assets/fonts/fonts.sass';
 import './filter.sass';
 
 import '../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list';

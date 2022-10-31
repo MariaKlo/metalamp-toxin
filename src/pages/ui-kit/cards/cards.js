@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import '../../../assets/fonts/fonts.sass';
 import './cards.sass';
 
 import '../../../components/plugins/datepicker/datepicker';

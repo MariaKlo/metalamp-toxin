@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import '../../../assets/fonts/fonts.sass';
 import './room-details.sass';
 
 import '../../../components/buttons/like-button/like-button';

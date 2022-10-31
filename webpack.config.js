@@ -113,6 +113,7 @@ module.exports = {
       patterns: [
         { from: "src/assets/img/uikit", to: "assets/img/uikit" },
         { from: "src/assets/img/website", to: "assets/img/website" },
+        { from: "src/assets/fonts/montserrat", to: "assets/fonts/montserrat" }
       ],
     }),
   ],
@@ -159,7 +160,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[name][ext]'
+          filename: 'assets/fonts/montserrat/[name][ext]'
         }
       },
       {
