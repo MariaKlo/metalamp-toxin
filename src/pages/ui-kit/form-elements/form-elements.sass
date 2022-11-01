@@ -16,7 +16,7 @@
   background-color: $white
   @include flex-between()
   @include container()
-  padding-top: 8.9375em
+  padding-top: 8.9375rem
 
   &__filter
     padding-top: 7.9375rem
@@ -26,11 +26,12 @@
     font-size: $font-small
 
   &__info
-    font-size: $font-small
-    margin-bottom: 0.4875em
+    font-size: 0.85rem
+    margin-bottom: 0.4875rem
 
   &__state
     margin-top: 0.01rem
+    font-size: 0.85rem
 
     &:nth-child(2)
       letter-spacing: 0.033rem
@@ -39,8 +40,8 @@
     @include input-style()
     margin-bottom: 1.4rem
     letter-spacing: 0.055rem
-    padding: 0.7rem
-    width: 21.4rem
+    padding: 0.9rem
+    width: 23rem
 
     &-wrap
       position: relative
@@ -50,40 +51,40 @@
 
         &::after
           @include arrow()
-          top: 1.2em
-          right: 1.1em
+          top: 1.2rem
+          right: 1.1rem
 
         &_short
           position: relative
-          margin-bottom: 3em
+          margin-bottom: 3rem
 
           &::after
-            @include arrow($right: 4.9em)
-            top: 1.3em
+            @include arrow($right: 4.9rem)
+            top: 1.3rem
             
     &-date
       @include input-style()
-      width: 11.275em
-      border: 0.0625em solid rgba(31, 32, 65, 0.25)
-      border-radius: 0.31em
-      padding: 0.9125em 0 0.9125em 0.9375em
-      letter-spacing: 0.1em
+      width: 11.275rem
+      border: 0.0625rem solid rgba(31, 32, 65, 0.25)
+      border-radius: 0.31rem
+      padding: 0.9125rem 0 0.9125rem 0.9375rem
+      letter-spacing: 0.1rem
 
     &-filter
-      letter-spacing: 0.04em
+      letter-spacing: 0.04rem
 
     &-subscription
-      letter-spacing: 0.12em
+      letter-spacing: 0.12rem
 
     &-filter, &-subscription
       @include input-style()
       padding: 1rem 2.2rem 1rem 0.9rem
-      width: 18rem
+      width: 19.1rem
 
 .input-arrow
   position: absolute
-  top: 0.65rem
-  right: 3.5rem
+  top: 0.5rem
+  right: 4.1rem
   cursor: pointer
   background-color: transparent
   border: none 
@@ -103,7 +104,7 @@
     margin-bottom: .3125rem
   
   &__info, &__state
-    font-size: .75rem
+    font-size: .85rem
 
 .date-dropdown
   @include flex-between()
@@ -114,11 +115,11 @@
 
 // эллипсовые кнопки
 .buttons
-  margin-bottom: 2.5em
+  margin-bottom: 2.5rem
 
   &__name
-    font-size: $font-small
-    margin-bottom: 1.5em
+    font-size: 0.85rem
+    margin-bottom: 1.5rem
 
 .ellipse-buttons
   &__wrap
@@ -130,36 +131,36 @@
 
 // пагинация
 .pagination__name
-  font-size: $font-small
-  margin-bottom: 1.2em
+  font-size: 0.85rem
+  margin-bottom: 1.2rem
 
 // dropdown с гостями
 .guests
   margin-left: 6.5rem
 
   &__info
-    margin-bottom: 0.4125em
-    font-size: $font-small
+    margin-bottom: 0.4125rem
+    font-size: .85rem
 
   &__field, .lists__field
-    width: 20em
-    padding: 0.75em 0 0.5em 0.9375em
-    border-radius: 0.325em
+    width: 20rem
+    padding: 0.75rem 0 0.5rem 0.9375rem
+    border-radius: 0.325rem
     border: 1px solid $light-blue
-    margin-bottom: 6.125em
+    margin-bottom: 6.125rem
 
   &__title
-    font-size: $font-small
-    margin-bottom: 1.4em
+    font-size: .85rem
+    margin-bottom: 1.4rem
 
   &__checkbox
     display: flex
-    margin-bottom: 0.6875em
+    margin-bottom: 0.6875rem
 
   &__option-title
     color: $dark-blue
     font-weight: 700
-    margin-bottom: 0.3125em
+    margin-bottom: 0.3125rem
 
   &__option-text
     color: $medium-blue
@@ -168,5 +169,8 @@
 // dropdown и списки
 .lists
   &__info
-    font-size: $font-small
+    font-size: .85rem
     margin-bottom: .3125rem
+
+  &__form
+    margin-left: 4.4375rem

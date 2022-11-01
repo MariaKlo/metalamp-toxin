@@ -9,8 +9,8 @@
   margin-bottom: 1.25rem
 
 #datepicker-calendar .air-datepicker.-inline-
-  width: 21.3em
-  height: 24.7em
+  width: 20.9rem
+  height: 25rem
   padding: .625rem
 
 #datepicker-calendar .air-datepicker.-inline- .air-datepicker-nav
@@ -41,6 +41,9 @@
 #datepicker-calendar .air-datepicker.-inline- .air-datepicker--buttons .air-datepicker-buttons
   display: flex
   justify-content: space-between
+
+.air-datepicker--navigation
+  margin-bottom: .625rem
 
 .air-datepicker
   --adp-font-family: 'Montserrat'
@@ -164,12 +167,21 @@
     z-index: -45
     opacity: 0.35
 
+.air-datepicker-buttons
+  padding-top: 3.125rem
+
 .air-datepicker-button 
   color: var(--adp-btn-color)
   background: rgba(255, 255, 255, 0)
   font-size: .75rem
   text-transform: uppercase
   font-weight: 700
+
+.air-datepicker-button span
+  font-size: 0.9rem
+
+.air-datepicker-button .custom-button-classname
+  font-size: 0.9rem
 
 #datepicker_eight, #datepicker_ninth, #datepicker_eleventh, #datepicker_twelfth
   max-width: 11.3em

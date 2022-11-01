@@ -10,6 +10,7 @@
   padding: 0.7rem
   margin-bottom: 1.9em
   font-family: 'Montserrat'
+  width: 19rem
 
   &:active
     border-color: #1F204180
@@ -25,7 +26,7 @@
 
   .iqdropdown-menu
     box-shadow: none
-    top: 2.45rem
+    top: 3.2rem
 
   .iqdropdown-menu-option
     height: 2.8375em
@@ -97,6 +98,9 @@
       &:hover
         @include button-hover()
 
+#iqdropdown_first
+  width: 23rem
+
 .iqdropdown.menu-open .iqdropdown-menu
   border-bottom-left-radius: 5px
   border-bottom-right-radius: 5px
@@ -111,7 +115,7 @@
 
   .iqdropdown-selection::after
     top: .4375rem
-    left: 13.9375rem
+    left: 16rem
 
 #iqdropdown_second, #iqdropdown_third
   width: 20rem
@@ -121,16 +125,23 @@
     top: .5rem
     left: 17.3125rem
 
+#iqdropdown_third .iqdropdown-selection::after
+  top: 0.5rem
+  left: 20.3125rem
+
 #iqdropdown_second
-  width: 16.625rem
+  width: 22.9rem
 
   .iqdropdown-selection::after
-    top: .5rem
-    left: 14rem
+    top: 0.3rem
+    left: 20rem
+
+#iqdropdown_third
+  width: 23rem
 
 #iqdropdown_fourth
   height: 3.1em
-  max-width: 23em
+  width: 23rem
   margin-bottom: 2.3em
 
 #iqdropdown_fifth
@@ -139,9 +150,14 @@
   margin-bottom: 1.3125rem
 
 #iqdropdown_sixth
+  width: 19rem
+
   .iqdropdown-selection::after
     top: .4375rem
-    left: 14.9375rem
+    left: 16rem
+
+#iqdropdown_seventh
+  width: 19rem
 
 @media only screen and (max-width: 29.375rem) //470px
   #iqdropdown_fifth
