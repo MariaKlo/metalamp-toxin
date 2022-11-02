@@ -23,15 +23,14 @@ div.main
       +secondComment("comment__img_second", "Патрисия Стёклышкова", "Неделю назад", 
       "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
     div.main__wrapper
-      div.main__wrapper_additional
-        div.main__rules
-          h3.main__title.main__title_additional-margin Правила
-          ul.bullet-list
-            +bullet-list("Нельзя с питомцами")
-            +bullet-list("Без вечеринок и мероприятий")
-            +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
-        div.main__cancel
-          h3.main__title Отмена
-          p.main__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      div.main__rules
+        h3.main__title.main__title_additional-margin Правила
+        ul.bullet-list
+          +bullet-list("Нельзя с питомцами")
+          +bullet-list("Без вечеринок и мероприятий")
+          +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
+      div.main__cancel
+        h3.main__title Отмена
+        p.main__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
   div.main__wrap
     include card/card-book.pug

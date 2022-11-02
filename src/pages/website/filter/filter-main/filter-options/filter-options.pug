@@ -15,6 +15,7 @@ form.filter.js-filter
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
   div.filter__wrapper
     +range-slider("Диапазон цены")
+    p.filter__rules Стоимость за сутки пребывания в номере
   div.filter__wrapper  
     h3.filter__title.filter__title_below Правила дома
     +checkbox-button("checkbox", "Можно курить")(class="checkbox-buttons__option")
@@ -23,9 +24,9 @@ form.filter.js-filter
   div.filter__wrapper.filter__wrapper_last
     h3.filter__title.filter__title_below Доступность
     +checkbox-button("checkbox-fourth", "Широкий коридор")(class="checkbox-buttons__option_bold")
-      p.filter__text Ширина коридоров в номере не менее 91 см.
+    p.filter__text Ширина коридоров в номере не менее 91 см.
     +checkbox-button("checkbox-fifth", "Помощник для инвалидов")(class="checkbox-buttons__option_bold")
-      p.filter__text На 1 этаже вас встретит специалист  и проводит до номера.
+    p.filter__text На 1 этаже вас встретит специалист  и проводит до номера.
   h3.filter__title Удобства номера
   +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
   div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Дополнительные удобства

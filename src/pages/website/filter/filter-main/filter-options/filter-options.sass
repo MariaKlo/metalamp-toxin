@@ -5,16 +5,20 @@
 
 .filter
   &__wrapper
-    margin-bottom: 1.875rem
+    margin-bottom: 2.2rem
+    width: 90%
 
     &:nth-child(2)
       margin-bottom: 2.2rem
     
     &_last
-      margin-bottom: 1.1rem
+      margin-bottom: 1.9rem
+
+      .checkbox-button__item .checkbox-button__option
+        font-weight: 700
 
   &__title
-    font-size: .75rem
+    font-size: .85rem
     text-transform: uppercase
     color: #1F2041
     margin-bottom: .3125rem
@@ -24,7 +28,16 @@
 
   &__input
     @include input-style()
+    padding: 0.8125rem 2.5rem 1rem 0.9rem
 
   &__text
     color: $medium-blue
     font-size: .75rem
+    margin-left: 2rem
+    margin-bottom: 1rem
+    width: 70%
+
+  &__rules
+    font-size: $font-small
+    color: $medium-blue
+    margin-top: 1.3rem

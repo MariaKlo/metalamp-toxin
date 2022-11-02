@@ -11,7 +11,7 @@
 .main
   @include container()
   max-width: 82.125rem
-  padding-top: 4.375rem
+  padding-top: 5rem
   display: flex
   border-bottom: 1px solid rgb(190,190,190)
   flex: 1 0 auto
@@ -31,7 +31,7 @@
 
   &__title
     @include flex-between()
-    font-size: 1.1875rem
+    font-size: 1.38rem
     text-transform: none
     margin-bottom: 1rem
 
@@ -66,7 +66,8 @@
   .main
     padding: 0 calc(50% - 30rem)
     padding-top: 4.375rem
-    display: inherit
+    display: flex
+    flex-direction: column
     height: inherit
     padding-bottom: 5rem
 
@@ -133,9 +134,11 @@
 
 @media only screen and (max-width: 29.375rem) //470px
   .main
-    padding: 0 calc(50% - 10rem)
+    padding: 0 calc(50% - 12rem)
     padding-top: 4.375rem
     padding-bottom: 5rem
+    display: flex
+    flex-direction: column
 
     &__title
       display: block
