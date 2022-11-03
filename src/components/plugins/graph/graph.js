@@ -155,10 +155,10 @@ class Graph {
         },
         legend: {
           position: 'right',
-          maxWidth: 160,
+          maxWidth: 330,
           maxHeight: 136,
           labels: {
-            boxWidth: 8,
+            boxWidth: 18,
             boxHeight: 8,
             color: 'rgba(31, 32, 65, 0.75)',
             padding: 8,
@@ -166,7 +166,7 @@ class Graph {
             pointStyle: 'circle',
             font: {
               family: 'Montserrat',
-              size: 10,
+              size: 12,
             },
           },
         },
