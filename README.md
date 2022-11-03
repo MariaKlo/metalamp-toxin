@@ -30,7 +30,7 @@
 <h3>Были использованы плагины:</h3> 
 <ul>
   <li><i>Air-datepicker v.3.2.0</i></li>
-  <li><i>Chart.js v.3.8.0</i></li>
+  <li><i>Chart.js v.3.9.1</i></li>
   <li><i>Item-quantity-dropdown v.2.1.0</i></li>
   <li><i>Nouislider v.15.6.0</i></li>
   <li><i>Paginationjs v.2.1.5</i></li>
