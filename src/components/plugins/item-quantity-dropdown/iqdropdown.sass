@@ -5,10 +5,10 @@
 #iqdropdown_first, #iqdropdown_second, #iqdropdown_third, #iqdropdown_fourth, #iqdropdown_fifth, #iqdropdown_sixth,
 #iqdropdown_seventh
   @include input-style()
-  border: 0.0625em solid rgba(31, 32, 65, 0.25)
-  border-radius: 0.375em
+  border: 1px solid rgba(31, 32, 65, 0.25)
+  border-radius: 6px
   padding: 0.7rem
-  height: 2.6875rem
+  height: 43px
   margin-bottom: 2.3rem
   font-family: 'Montserrat'
   width: 19rem
@@ -19,19 +19,19 @@
   .iqdropdown-selection
     color: $dark-blue
     font-family: 'Montserrat'
-    font-size: .875rem
+    font-size: 14px
 
     &::after 
       background-image: url('../../../assets/img/website/expand-more.svg')
-      right: .8125rem
+      right: 13px
 
   .iqdropdown-menu
     box-shadow: none
     top: 2.7rem
 
   .iqdropdown-menu-option
-    height: 2.8375em
-    padding: 0 .625rem 0 .9375rem
+    height: 45px
+    padding: 0 10px 0 15px
 
   .iqdropdown-item
     text-transform: uppercase
@@ -50,7 +50,7 @@
       font-weight: 700
       border-bottom: none
       border-top: none
-      padding: .5em 1em
+      padding: 8px 16px
 
     button.button-decrement 
       border-radius: 50%
@@ -61,33 +61,33 @@
 
     button
       border: 1px solid $light-blue
-      height: 2.2em
-      width: 2.2em
-      padding: 0 .625em
+      height: 2.2rem
+      width: 2.2rem
+      padding: 0 10px
 
   .icon-decrement::after 
     background: $medium-blue
     content: ''
     display: block
-    height: .0625em
+    height: 1px
     position: absolute
-    top: 0.5em
-    right: 0.5em
-    width: .4375em
+    top: 8px
+    right: 8px
+    width: 7px
 
   .icon-decrement.icon-increment::before
     background: $medium-blue
     content: ''
     display: block
-    height: .0625em
+    height: 1px
     position: absolute
-    top: 0.5em
-    right: 0.4em
-    width: .5625em
+    top: 8px
+    right: 6px
+    width: 9px
 
   .iqdropdown-menu-btn-wrap
     @include flex-between()
-    padding: 1.25rem .4375rem .8125rem .4375rem
+    padding: 20px 7px 13px 7px
 
     .iqdropdown-btn
       text-transform: uppercase
@@ -109,26 +109,26 @@
 
 #iqdropdown_sixth, #iqdropdown_seventh
   padding: 0.7rem 2.5rem 0.7rem 0.7rem
-  border-top-left-radius: 0.375em
-  border-top-right-radius: 0.375em
+  border-top-left-radius: 6px
+  border-top-right-radius: 6px
   border-bottom-left-radius: 0
   border-bottom-right-radius: 0
 
   .iqdropdown-selection::after
-    top: .4375rem
+    top: 7px
     left: 16rem
 
 #iqdropdown_second, #iqdropdown_third
   width: 20rem
-  border-radius: 0.375em
+  border-radius: 6px
 
   .iqdropdown-selection::after
-    top: .5rem
-    left: 17.3125rem
+    top: 8px
+    left: 277px
 
 #iqdropdown_third .iqdropdown-selection::after
-  top: 0.5rem
-  left: 20.3125rem
+  top: 8px
+  left: 325px
 
 #iqdropdown_second
   width: 18.9rem
@@ -141,7 +141,7 @@
   width: 23rem
 
 #iqdropdown_fourth
-  height: 3.1em
+  height: 3.1rem
   width: 23rem
   margin-bottom: 2.3em
 
@@ -154,13 +154,13 @@
   width: 19rem
 
   .iqdropdown-selection::after
-    top: .4375rem
+    top: 7px
     left: 16rem
 
 #iqdropdown_seventh
   width: 19rem
 
-@media only screen and (max-width: 29.375rem) //470px
+@media only screen and (max-width: 470px) //470px
   #iqdropdown_fifth
     width: 100%
 

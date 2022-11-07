@@ -18,7 +18,7 @@
     transition: all 0.3s ease-in-out
     background-color: $purple
 
-@media only screen and (max-width: 60.625rem) //970px
+@media only screen and (max-width: 970px) //970px
   .hamburger
     display: block
     cursor: pointer
@@ -27,19 +27,19 @@
       opacity: 0
 
     &_active .hamburger__bar:nth-child(1)
-      transform: translateY(.5rem) rotate(45deg)
+      transform: translateY(8px) rotate(45deg)
 
     &_active .hamburger__bar:nth-child(3)
-      transform: translateY(-0.5rem) rotate(-45deg)
+      transform: translateY(-8px) rotate(-45deg)
 
-@media only screen and (max-width: 55.75rem) //892px  
+@media only screen and (max-width: 892px) //892px  
   .filter
     display: none
 
     &_active
       display: block
       margin: 0 auto
-      padding-top: .6875rem
+      padding-top: 11px
 
     &__hamburger
       display: block
@@ -51,10 +51,10 @@
         opacity: 0
 
       &_active .hamburger__bar:nth-child(1)
-        transform: translateY(.5rem) rotate(45deg)
+        transform: translateY(8px) rotate(45deg)
 
       &_active .hamburger__bar:nth-child(3)
-        transform: translateY(-0.5rem) rotate(-45deg)
+        transform: translateY(-8px) rotate(-45deg)
 
   .hamburger
     display: block
@@ -64,7 +64,7 @@
       opacity: 0
 
     &_active .hamburger__bar:nth-child(1)
-      transform: translateY(.5rem) rotate(45deg)
+      transform: translateY(8px) rotate(45deg)
 
     &_active .hamburger__bar:nth-child(3)
-      transform: translateY(-0.5rem) rotate(-45deg)
+      transform: translateY(-8px) rotate(-45deg)

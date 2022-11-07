@@ -10,14 +10,14 @@
 
 .main
   @include container()
-  max-width: 82.125rem
+  max-width: 1314px
   padding-top: 5rem
   display: flex
   border-bottom: 1px solid rgb(190,190,190)
   flex: 1 0 auto
 
   &__wrap
-    margin-right: 4.6875rem
+    margin-right: 75px
 
   &__wrapper
     display: flex
@@ -27,18 +27,18 @@
       @include flex-between()
 
   &__info
-    margin-right: 5.0625rem
+    margin-right: 81px
 
   &__title
     @include flex-between()
-    font-size: 1.38rem
+    font-size: 22px
     text-transform: none
     margin-bottom: 1rem
 
     span
       color: $medium-blue
       text-transform: none
-      font-size: .875rem
+      font-size: 14px
       font-weight: 400
       display: flex
       align-self: end
@@ -46,26 +46,26 @@
   &__title
     &_bigger-margin
       margin-bottom: 1.5rem
-      margin-top: 1.875rem
+      margin-top: 30px
 
     &_additional-margin
       margin-bottom: 1.5rem
-      margin-left: 1.25rem
+      margin-left: 20px
 
   &__comments
-    margin-bottom: 1.875rem
+    margin-bottom: 30px
 
   &__text
-    line-height: 1.5rem
-    max-width: 21.3125rem
+    line-height: 24px
+    max-width: 341px
     color: $dark-blue
 
 // responsive design
 
-@media only screen and (max-width: 74.9988rem) //1199px
+@media only screen and (max-width: 1199px) //1199px
   .main
     padding: 0 calc(50% - 30rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     display: flex
     flex-direction: column
     height: inherit
@@ -74,10 +74,10 @@
     &__wrap
       margin-right: 0
 
-@media only screen and (max-width: 60.625rem) //970px
+@media only screen and (max-width: 970px) //970px
   .main
     padding: 0 calc(50% - 27.5rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
 
   .hamburger
@@ -88,27 +88,27 @@
       opacity: 0
 
     &_active .hamburger__bar:nth-child(1)
-      transform: translateY(.5rem) rotate(45deg)
+      transform: translateY(8px) rotate(45deg)
 
     &_active .hamburger__bar:nth-child(3)
-      transform: translateY(-0.5rem) rotate(-45deg)
+      transform: translateY(-8px) rotate(-45deg)
 
-@media only screen and (max-width: 55.75rem) //892px 
+@media only screen and (max-width: 892px) //892px 
   .main
     padding: 0 calc(50% - 25rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
 
-@media only screen and (max-width: 51.875rem) //830px
+@media only screen and (max-width: 830px) //830px
   .main
     padding: 0 calc(50% - 22rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
 
-@media only screen and (max-width: 45.625rem) //730px
+@media only screen and (max-width: 730px) //730px
   .main
     padding: 0 calc(50% - 19rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
 
     &__wrapper
@@ -120,22 +120,22 @@
     &__info
       margin-right: 0
 
-@media only screen and (max-width: 39.375rem) //630px
+@media only screen and (max-width: 630px) //630px
   .main
     padding: 0 calc(50% - 17rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
 
-@media only screen and (max-width: 35.625rem) //570px
+@media only screen and (max-width: 570px) //570px
   .main
     padding: 0 calc(50% - 15rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
 
-@media only screen and (max-width: 29.375rem) //470px
+@media only screen and (max-width: 470px) //470px
   .main
     padding: 0 calc(50% - 12rem)
-    padding-top: 4.375rem
+    padding-top: 70px
     padding-bottom: 5rem
     display: flex
     flex-direction: column

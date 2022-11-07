@@ -1,14 +1,14 @@
 .gallery
   height: 35rem
   display: grid
-  grid-template-columns: 55.125rem
+  grid-template-columns: 882px
   flex: 1 0 auto
 
   &__img_first
     background: url('../../../assets/img/website/gallery-first.jpeg') no-repeat right center
     background-size: cover
-    width: 55.16rem
-    min-height: 30.3125rem
+    width: 882px
+    min-height: 485px
     grid-column: 1
     grid-row-start: 1
     grid-row-end: 3
@@ -16,23 +16,23 @@
   &__img_second
     background: url('../../../assets/img/website/gallery-second.jpeg') no-repeat center center
     background-size: cover
-    width: 35.8125rem
-    min-height: 15.1875rem
+    width: 573px
+    min-height: 243px
     grid-column: 2
     grid-row: 1
 
   &__img_third
     background: url('../../../assets/img/website/gallery-third.jpeg') no-repeat center center
     background-size: cover
-    width: 35.8125rem
-    min-height: 15.1875rem
+    width: 573px
+    min-height: 243px
     grid-column: 2
     grid-row: 2
 
 // responsive design
-@media only screen and (max-width: 74.9988rem) //1199px
+@media only screen and (max-width: 1199px) //1199px
   .gallery
-    height: 45.3125rem
+    height: 725px
     grid-template-columns: 1fr 1fr
 
     &__img_first
@@ -57,8 +57,8 @@
       height: 50%
       background-size: cover
 
-@media only screen and (max-width: 35.625rem) //570px
+@media only screen and (max-width: 570px) //570px
   .gallery
-    min-height: 61.3125rem
+    min-height: 981px
     display: flex
     flex-direction: column

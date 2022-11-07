@@ -14,7 +14,7 @@
   padding-left: 29px
   line-height: 20px
   cursor: pointer
-  margin-right: 1.0625rem
+  margin-right: 17px
 
 .radio-button__field:checked + label::before, 
 .radio-button__field:not(:checked) + label::before 
@@ -39,8 +39,8 @@
 
 .radio-button__field:checked + label::after, 
 .radio-button__field:not(:checked) + label::after 
-  left: .25rem
-  top: .25rem
+  left: 4px
+  top: 4px
   width: 12px
   height: 12px
   border-radius: 100%
@@ -48,23 +48,23 @@
 
 #female:checked + label::after,
 #female:not(:checked) + label::after
-  left: 0.34rem
-  top: 0.34rem
+  left: 5px
+  top: 5px
 
 #sex-f:checked + label::after,
 #sex-f:not(:checked) + label::after
-  left: 0.29rem
-  top: 0.27rem
+  left: 5px
+  top: 5px
 
 #sex-m:checked + label::after,
 #sex-m:not(:Checked) + label::after
-  left: 0.27rem
-  top: 0.27rem
+  left: 5px
+  top: 5px
 
 #male:checked + label::after,
 #male:not(:checked) + label::after
-  left: 0.34rem
-  top: 0.34rem
+  left: 5px
+  top: 5px
 
 .radio-button__field:not(:checked) + label::after 
   opacity: 0
@@ -73,11 +73,11 @@
   opacity: 1
 
 .radio-button
-  margin-bottom: 3em
+  margin-bottom: 3rem
 
   &__name
-    font-size: 0.85rem
-    margin-bottom: 1.1625rem
+    font-size: 14px
+    margin-bottom: 19px
 
   &__field
     position: absolute
@@ -93,13 +93,13 @@
 .radio-button__field + label::before 
   content: ''
   display: inline-block
-  width: 1em
-  height: 1em
+  width: 1rem
+  height: 1rem
   flex-shrink: 0
   flex-grow: 0
   border: 1px solid #adb5bd
   border-radius: 50%
-  margin-right: 0.5em
+  margin-right: 8px
 
 .radio-button__field:checked + label::before 
   border: 1px solid $purple
