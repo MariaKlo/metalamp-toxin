@@ -1,5 +1,12 @@
-mixin expandable-checkbox-list(option, id)
-  div(class!=attributes.class)
-    input(type="checkbox" name="agreement" id=id).expandable-checkbox-list__field
-    label(for=id)
-    p.expandable-checkbox-list__option= option
+include ../checkbox-button/checkbox-button.pug
+
+mixin expandable-checkbox-list(classWrapper, option, classArrow)
+  div(class= classWrapper)= option
+    i(class= classArrow)
+    div(class!=attributes.class)
+      +checkbox-button("Завтрак", "checkbox")(class="checkbox-button__title")
+      +checkbox-button("Письменный стол", "checkbox")(class="checkbox-button__title")
+      +checkbox-button("Стул для кормления", "checkbox")(class="checkbox-button__title")
+      +checkbox-button("Кроватка", "checkbox")(class="checkbox-button__title")
+      +checkbox-button("Телевизор", "checkbox")(class="checkbox-button__title")
+      +checkbox-button("Шампунь", "checkbox")(class="checkbox-button__title")

@@ -18,22 +18,21 @@ form.filter.js-filter
     p.filter__rules Стоимость за сутки пребывания в номере
   div.filter__wrapper  
     h3.filter__title.filter__title_below Правила дома
-    +checkbox-button("checkbox", "Можно курить")(class="checkbox-buttons__option")
-    +checkbox-button("checkbox-second", "Можно с питомцами")(class="checkbox-buttons__option")
-    +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)")(class="checkbox-buttons__option") 
+    +checkbox-button("Можно курить", "checkbox-filter")(class="checkbox-button__title")
+    +checkbox-button("Можно с питомцами", "checkbox-filter-second")(class="checkbox-button__title")
+    +checkbox-button("Можно пригласить гостей (до 10 человек)", "checkbox-filter-third")(class="checkbox-button__title")
   div.filter__wrapper.filter__wrapper_last
     h3.filter__title.filter__title_below Доступность
-    +checkbox-button("checkbox-fourth", "Широкий коридор")(class="checkbox-buttons__option_bold")
-    p.filter__text Ширина коридоров в номере не менее 91 см.
-    +checkbox-button("checkbox-fifth", "Помощник для инвалидов")(class="checkbox-buttons__option_bold")
-    p.filter__text На 1 этаже вас встретит специалист  и проводит до номера.
+    +checkbox-button("Широкий коридор", "checkbox-filter-fourth", "Ширина коридоров в номере не менее 91 см.")(class="checkbox-button__title checkbox-button__title_bold")
+    +checkbox-button("Помощник для инвалидов", "checkbox-filter-fifth", "На 1 этаже вас встретит специалист  и проводит до номера.")(class="checkbox-button__title checkbox-button__title_bold")
   h3.filter__title Удобства номера
   +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
-  div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Дополнительные удобства
-    i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
-    +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
-    +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
-    +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_third")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_third js-expandable-checkbox-list__checkbox_third")
-    +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_fourth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fourth js-expandable-checkbox-list__checkbox_fourth")
-    +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_fifth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fifth js-expandable-checkbox-list__checkbox_fifth")
-    +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_sixth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_sixth js-expandable-checkbox-list__checkbox_sixth")
+  +expandable-checkbox-list("expandable-checkbox-list__checkbox-list js-expandable-checkbox-list__checkbox-list", "Дополнительные удобства", "expandable-checkbox-list__checkbox-list-arrow_first js-expandable-checkbox-list__checkbox-list-arrow_first expandable-checkbox-list__checkbox-list-arrow_wider")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
+  //- div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Дополнительные удобства
+  //-   i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
+  //-   +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
+  //-   +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
+  //-   +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_third")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_third js-expandable-checkbox-list__checkbox_third")
+  //-   +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_fourth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fourth js-expandable-checkbox-list__checkbox_fourth")
+  //-   +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_fifth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fifth js-expandable-checkbox-list__checkbox_fifth")
+  //-   +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_sixth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_sixth js-expandable-checkbox-list__checkbox_sixth")

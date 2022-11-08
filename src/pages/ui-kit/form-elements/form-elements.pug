@@ -57,9 +57,9 @@ block content
     div.buttons
       form.checkbox-button
         h3.checkbox-button__name CHECKBOX BUTTONS
-        +checkbox-button("checkbox", "Можно курить")
-        +checkbox-button("checkbox-second", "Можно с питомцами")
-        +checkbox-button("checkbox-third", "Можно пригласить гостей (до 10 человек)") 
+        +checkbox-button("Можно курить", "checkbox")(class="checkbox-button__title")
+        +checkbox-button("Можно с питомцами", "checkbox-second")(class="checkbox-button__title")
+        +checkbox-button("Можно пригласить гостей (до 10 человек)", "checkbox-third")(class="checkbox-button__title")
       form.radio-button
         h3.radio-button__name RADIO BUTTONS
         div.radio-button__wrapper
@@ -139,22 +139,24 @@ block content
       form.filter__form
         +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       form.filter__checkbox_expanded
-        div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Expandable checkbox list
-          i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
-          +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
-          +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
-          +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_third")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_third js-expandable-checkbox-list__checkbox_third")
-          +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_fourth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fourth js-expandable-checkbox-list__checkbox_fourth")
-          +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_fifth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fifth js-expandable-checkbox-list__checkbox_fifth")
-          +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_sixth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_sixth js-expandable-checkbox-list__checkbox_sixth")
-        div.expandable-checkbox-list__checkbox-list_second.js-expandable-checkbox-list__checkbox-list_second Expandable checkbox list
-          i.expandable-checkbox-list__checkbox-list-arrow_second.js-expandable-checkbox-list__checkbox-list-arrow_second
-          +expandable-checkbox-list("Завтрак", "expandable-checkbox-list_seventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_seventh js-expandable-checkbox-list__checkbox_seventh")
-          +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_eighth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eighth js-expandable-checkbox-list__checkbox_eighth")
-          +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_ninth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_ninth js-expandable-checkbox-list__checkbox_ninth")
-          +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_tenth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_tenth js-expandable-checkbox-list__checkbox_tenth")
-          +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_eleventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eleventh js-expandable-checkbox-list__checkbox_eleventh")
-          +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_twelfth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_twelfth js-expandable-checkbox-list__checkbox_twelfth")
+        +expandable-checkbox-list("expandable-checkbox-list__checkbox-list js-expandable-checkbox-list__checkbox-list", "expandable checkbox list", "expandable-checkbox-list__checkbox-list-arrow_first js-expandable-checkbox-list__checkbox-list-arrow_first")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
+        //- div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Expandable checkbox list
+        //-   i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
+        //-   +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
+        //-   +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
+        //-   +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_third")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_third js-expandable-checkbox-list__checkbox_third")
+        //-   +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_fourth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fourth js-expandable-checkbox-list__checkbox_fourth")
+        //-   +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_fifth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fifth js-expandable-checkbox-list__checkbox_fifth")
+        //-   +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_sixth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_sixth js-expandable-checkbox-list__checkbox_sixth")
+        +expandable-checkbox-list("expandable-checkbox-list__checkbox-list_second js-expandable-checkbox-list__checkbox-list_second", "expandable checkbox list", "expandable-checkbox-list__checkbox-list-arrow_second js-expandable-checkbox-list__checkbox-list-arrow_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
+        //- div.expandable-checkbox-list__checkbox-list_second.js-expandable-checkbox-list__checkbox-list_second Expandable checkbox list
+        //-   i.expandable-checkbox-list__checkbox-list-arrow_second.js-expandable-checkbox-list__checkbox-list-arrow_second
+        //-   +expandable-checkbox-list("Завтрак", "expandable-checkbox-list_seventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_seventh js-expandable-checkbox-list__checkbox_seventh")
+        //-   +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_eighth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eighth js-expandable-checkbox-list__checkbox_eighth")
+        //-   +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_ninth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_ninth js-expandable-checkbox-list__checkbox_ninth")
+        //-   +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_tenth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_tenth js-expandable-checkbox-list__checkbox_tenth")
+        //-   +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_eleventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eleventh js-expandable-checkbox-list__checkbox_eleventh")
+        //-   +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_twelfth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_twelfth js-expandable-checkbox-list__checkbox_twelfth")
     // dropdown с гостями
     form.guests
       h3.guests__info #{dropdown}
@@ -164,18 +166,8 @@ block content
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
       h3.guests__title Rich Checkbox Buttons
       div.guests__checkbox-wrapper
-        div.checkbox-button__item
-          input(type="checkbox" name="agreement" id="guests").checkbox-button__field
-          label(for="guests")
-          div.guests__checkbox-wrap
-            p.guests__option-title Широкий коридор
-            p.guests__option-text Ширина коридоров в номере не менее 91 см.
-        div.checkbox-button__item
-          input(type="checkbox" name="agreement" id="guests__second").checkbox-button__field
-          label(for="guests__second")
-          div.guests__checkbox-wrap
-            p.guests__option-title Помощник для инвалидов
-            p.guests__option-text На 1 этаже вас встретит специалист  и проводит до номера.
+        +checkbox-button("Широкий коридор", "checkbox-fourth", "Ширина коридоров в номере не менее 91 см.")(class="checkbox-button__title checkbox-button__title_bold")
+        +checkbox-button("Помощник для инвалидов", "checkbox-fifth", "На 1 этаже вас встретит специалист и проводит до номера.")(class="checkbox-button__title checkbox-button__title_bold")
     // dropdown и списки
     form.lists__form
       div.lists

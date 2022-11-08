@@ -1,5 +1,8 @@
-mixin checkbox-button(id, option)
+mixin checkbox-button(title, name, description)
   div.checkbox-button__item
-    input(type="checkbox" name="agreement" id=id).checkbox-button__field
-    label(for=id)
-    p.checkbox-button__option= option
+    label.checkbox-button__field
+      input(type="checkbox" name=name)
+      span.checkbox-button__option
+      div.checkbox-button__wrap
+        p(class!=attributes.class)= title
+        p.checkbox-button__description= description
