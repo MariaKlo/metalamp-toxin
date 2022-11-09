@@ -1,3 +1,5 @@
-mixin radio-button(id, option)
-  input(type="radio" name="sex" value="Мужчина" id=id).radio-button__field
-  label(for=id)= option
+mixin radio-button(option, name, value)
+  label.radio-button__field= option
+    input(type="radio" name=name value=value)
+    span
+  

@@ -63,13 +63,13 @@ block content
       form.radio-button
         h3.radio-button__name RADIO BUTTONS
         div.radio-button__wrapper
-          +radio-button("sex-m", "Мужчина")
-          +radio-button("sex-f", "Женщина")
+          +radio-button("Мужчина", "human", "мужчина")
+          +radio-button("Женщина", "human", "женщина")
       form.toggle-button
         h3.toggle-button__name TOGGLE
         div.toggle-button__wrapper
-          +toggle-button("toggle")
-          +toggle-button("toggle_second")
+          +toggle-button("toggle", "news")
+          +toggle-button("toggle_second", "news-second")
       form.like-buttons
         h3.like-buttons__name LIKE BUTTON
         div.like-buttons__wrapper
@@ -78,32 +78,37 @@ block content
       form.rate-buttons
         h3.rate-buttons__name RATE BUTTON
         div.rate-buttons__wrapper
-          div.rate-buttons__source
-          svg.gradient
-            linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grad")
-              stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
-              stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
-            symbol(id="star" viewBox="153 89 106 108")
-              polygon(id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
-          div.rate-buttons__wrap
-            +rate-button("star", "five", "#star")
-            +rate-button("star", "four", "#star")
-            +rate-button("star", "three", "#star")
-            +rate-button("star", "two", "#star")
-            +rate-button("star", "one", "#star")
-          div.rate-buttons__source
-          svg.gradient
-            linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grads")
-              stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
-              stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
-            symbol(id="stars" viewBox="153 89 106 108")
-              polygon(id="stars-shapes" stroke="url(#grads)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
-          div.rate-buttons__wrap
-            +rate-button("stars", "fives", "#stars")
-            +rate-button("stars", "fours", "#stars")
-            +rate-button("stars", "threes", "#stars")
-            +rate-button("stars", "twos", "#stars")
-            +rate-button("stars", "ones", "#stars")
+          +rate-button("star")
+          +rate-button("star")
+          +rate-button("star")
+          +rate-button("star")
+          +rate-button("star")
+          //- div.rate-buttons__source
+          //- svg.gradient
+          //-   linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grad")
+          //-     stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
+          //-     stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
+          //-   symbol(id="star" viewBox="153 89 106 108")
+          //-     polygon(id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
+          //- div.rate-buttons__wrap
+          //-   +rate-button("star", "five", "#star")
+          //-   +rate-button("star", "four", "#star")
+          //-   +rate-button("star", "three", "#star")
+          //-   +rate-button("star", "two", "#star")
+          //-   +rate-button("star", "one", "#star")
+          //- div.rate-buttons__source
+          //- svg.gradient
+          //-   linearGradient(x1="50%" y1="0%" x2="50%" y2="100%" id="grads")
+          //-     stop(offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00")
+          //-     stop(offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00")
+          //-   symbol(id="stars" viewBox="153 89 106 108")
+          //-     polygon(id="stars-shapes" stroke="url(#grads)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085")
+          //- div.rate-buttons__wrap
+          //-   +rate-button("stars", "fives", "#stars")
+          //-   +rate-button("stars", "fours", "#stars")
+          //-   +rate-button("stars", "threes", "#stars")
+          //-   +rate-button("stars", "twos", "#stars")
+          //-   +rate-button("stars", "ones", "#stars")
     div.other-buttons
       div.range-button
         div.range-button__info
@@ -140,23 +145,7 @@ block content
         +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       form.filter__checkbox_expanded
         +expandable-checkbox-list("expandable-checkbox-list__checkbox-list js-expandable-checkbox-list__checkbox-list", "expandable checkbox list", "expandable-checkbox-list__checkbox-list-arrow_first js-expandable-checkbox-list__checkbox-list-arrow_first")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
-        //- div.expandable-checkbox-list__checkbox-list.js-expandable-checkbox-list__checkbox-list Expandable checkbox list
-        //-   i.expandable-checkbox-list__checkbox-list-arrow_first.js-expandable-checkbox-list__checkbox-list-arrow_first
-        //-   +expandable-checkbox-list("Завтрак", "expandable-checkbox-list")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
-        //-   +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
-        //-   +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_third")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_third js-expandable-checkbox-list__checkbox_third")
-        //-   +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_fourth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fourth js-expandable-checkbox-list__checkbox_fourth")
-        //-   +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_fifth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_fifth js-expandable-checkbox-list__checkbox_fifth")
-        //-   +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_sixth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_sixth js-expandable-checkbox-list__checkbox_sixth")
         +expandable-checkbox-list("expandable-checkbox-list__checkbox-list_second js-expandable-checkbox-list__checkbox-list_second", "expandable checkbox list", "expandable-checkbox-list__checkbox-list-arrow_second js-expandable-checkbox-list__checkbox-list-arrow_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
-        //- div.expandable-checkbox-list__checkbox-list_second.js-expandable-checkbox-list__checkbox-list_second Expandable checkbox list
-        //-   i.expandable-checkbox-list__checkbox-list-arrow_second.js-expandable-checkbox-list__checkbox-list-arrow_second
-        //-   +expandable-checkbox-list("Завтрак", "expandable-checkbox-list_seventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_seventh js-expandable-checkbox-list__checkbox_seventh")
-        //-   +expandable-checkbox-list("Письменный стол", "expandable-checkbox-list_eighth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eighth js-expandable-checkbox-list__checkbox_eighth")
-        //-   +expandable-checkbox-list("Стул для кормления", "expandable-checkbox-list_ninth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_ninth js-expandable-checkbox-list__checkbox_ninth")
-        //-   +expandable-checkbox-list("Кроватка", "expandable-checkbox-list_tenth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_tenth js-expandable-checkbox-list__checkbox_tenth")
-        //-   +expandable-checkbox-list("Телевизор", "expandable-checkbox-list_eleventh")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_eleventh js-expandable-checkbox-list__checkbox_eleventh")
-        //-   +expandable-checkbox-list("Шампнуь", "expandable-checkbox-list_twelfth")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_twelfth js-expandable-checkbox-list__checkbox_twelfth")
     // dropdown с гостями
     form.guests
       h3.guests__info #{dropdown}

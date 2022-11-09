@@ -1,4 +1,4 @@
-mixin toggle-button(id)
-  div.toggle-button__wrap
-    input(type="checkbox" name="news" value="Получать спецпредложения" id=id).toggle-button__field
-    label(for=id class="toggle-button__text") Получать спецпредложения
+mixin toggle-button(name, value)
+  label.toggle-button__wrap
+    input(type="checkbox" name=name value=value).toggle-button__field
+    span(class="toggle-button__text")   Получать спецпредложения

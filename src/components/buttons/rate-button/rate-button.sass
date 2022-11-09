@@ -2,70 +2,157 @@
 @import "../../../assets/styles/__variables.sass"
 @import "../../../assets/styles/__tegs.sass"
 
-.gradient
-  width: 0
-  height: 0
-
-.rate-buttons__name
-  margin-bottom: 1.2rem
-  font-size: 14px
-
-.rate-buttons__wrapper
-  display: flex
-
-input[name="star"], input[name="stars"] 
-  display: inline-block
-  width: 0
-  opacity: 0
-  margin-left: 2px
-
-.rate-buttons__source 
-  width: 0
-  height: 0
-  visibility: hidden
-
-.star 
-  color: transparent
-  transition: color 0.2s ease-in-out
-  width: 1.5rem
-  height: 1.5rem
-  padding: 2px
-
-.rate-buttons__wrap
-  display: flex
-  flex-direction: row-reverse
-  justify-content: center
-  margin-right: 14px
-
-label:hover ~ label .star,
-svg.star:hover,
-input[name="star"]:focus ~ label .star,
-input[name="star"]:checked ~ label .star,
-input[name="stars"]:focus ~ label .star,
-input[name="stars"]:checked ~ label .star  
-  color: rgba(188, 156, 255, 1)
+.material-icons_border
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
   cursor: pointer
+  display: inline-flex
+  align-items: center
+  user-select: none
+  margin-right: 10px
+  font-size: 1.5rem
+  z-index: 2
 
-input[name="star"]:checked + label .star,
-input[name="stars"]:checked + label .star  
-  animation: starred 0.5s
+.rate-button__wrap
+  position: relative
+
+.rate-button__star 
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.material-icons_filled
+  display: none
+
+.show-star 
+  display: block
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  background-clip: text
+  -webkit-text-fill-color: transparent
+  position: absolute
+  top: -8px
+  left: -1px
+
+.hide-star
+  display: none
+
+// .rate-button__star:checked+.material-icons_filled
+//   background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%) 
+//   background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%) 
+//   background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%)
+//   -webkit-background-clip: text
+//   -moz-background-clip: text
+//   background-clip: text
+//   -webkit-text-fill-color: transparent
+
+// .rate-button__wrap > span::after 
+//   content: ''
+//   display: inline-block
+//   position: absolute
+//   top: 1px
+//   left: 3px
+//   width: 14px
+//   height: 14px
+//   flex-shrink: 0
+//   flex-grow: 0
+//   margin-right: 8px
+//   background-repeat: no-repeat
+//   background-position: center center
+//   background-size: 50% 50%
+
+// .rate-button__wrap > input:checked + span::after 
+//   // width: 13px
+//   // height: 13px
+//   // position: absolute
+//   // top: 2px
+//   // left: 4px
+//   // border-radius: 100%
+//   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+// .rate-button__wrap > span::before 
+//   content: ''
+//   display: inline-block
+//   width: 1.5rem
+//   height: 1.5rem
+//   flex-shrink: 0
+//   flex-grow: 0
+//   border: 1px solid #adb5bd
+//   border-radius: 50%
+//   margin-right: 8px
+
+// .rate-button__wrap > input:checked + span::before 
+//   border: 1px solid $purple
+//   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
+
+// .gradient
+//   width: 0
+//   height: 0
+
+// .rate-buttons__name
+//   margin-bottom: 1.2rem
+//   font-size: 14px
+
+// .rate-buttons__wrapper
+//   display: flex
+
+// input[name="star"], input[name="stars"] 
+//   display: inline-block
+//   width: 0
+//   opacity: 0
+//   margin-left: 2px
+
+// .rate-buttons__source 
+//   width: 0
+//   height: 0
+//   visibility: hidden
+
+// .star 
+//   color: transparent
+//   transition: color 0.2s ease-in-out
+//   width: 1.5rem
+//   height: 1.5rem
+//   padding: 2px
+
+// .rate-buttons__wrap
+//   display: flex
+//   flex-direction: row-reverse
+//   justify-content: center
+//   margin-right: 14px
+
+// label:hover ~ label .star,
+// svg.star:hover,
+// input[name="star"]:focus ~ label .star,
+// input[name="star"]:checked ~ label .star,
+// input[name="stars"]:focus ~ label .star,
+// input[name="stars"]:checked ~ label .star  
+//   color: rgba(188, 156, 255, 1)
+//   cursor: pointer
+
+// input[name="star"]:checked + label .star,
+// input[name="stars"]:checked + label .star  
+//   animation: starred 0.5s
 
 
-input[name="star"]:checked + label,
-input[name="stars"]:checked + label 
-  animation: scaleup 1s
+// input[name="star"]:checked + label,
+// input[name="stars"]:checked + label 
+//   animation: scaleup 1s
 
-@keyframes scaleup 
-  from 
-    transform: scale(1.2)
-  to 
-    transform: scale(1)
+// @keyframes scaleup 
+//   from 
+//     transform: scale(1.2)
+//   to 
+//     transform: scale(1)
 
-@keyframes starred 
-  from 
-    color: rgba(139, 164, 249, 1)
-  to 
-    color: rgba(188, 156, 255, 1)
+// @keyframes starred 
+//   from 
+//     color: rgba(139, 164, 249, 1)
+//   to 
+//     color: rgba(188, 156, 255, 1)
 
 // rate buttons for cards
 
@@ -76,97 +163,97 @@ input[name="stars"]:checked + label
   padding-left: 0.7rem
   padding-bottom: 0.6rem
 
-input[name="star-room"], input[name="stars-rooms"] 
-  display: inline-block
-  width: 0
-  opacity: 0
-  margin-left: 2px
+// input[name="star-room"], input[name="stars-rooms"] 
+//   display: inline-block
+//   width: 0
+//   opacity: 0
+//   margin-left: 2px
 
-input[name="star-room-third"],
-input[name="star-room-fifth"],
-input[name="star-room-sixth"],
-input[name="star-room-seventh"],
-input[name="star-room-eighth"],
-input[name="star-room-ninth"],
-input[name="star-room-tenth"],
-input[name="star-room-eleventh"],
-input[name="star-room-twelfth"]
-  display: inline-block
-  width: 0
-  opacity: 0
-  margin-left: 2px
+// input[name="star-room-third"],
+// input[name="star-room-fifth"],
+// input[name="star-room-sixth"],
+// input[name="star-room-seventh"],
+// input[name="star-room-eighth"],
+// input[name="star-room-ninth"],
+// input[name="star-room-tenth"],
+// input[name="star-room-eleventh"],
+// input[name="star-room-twelfth"]
+//   display: inline-block
+//   width: 0
+//   opacity: 0
+//   margin-left: 2px
 
-.luxury-room__source, .usual-room__source 
-  width: 0
-  height: 0
-  visibility: hidden
+// .luxury-room__source, .usual-room__source 
+//   width: 0
+//   height: 0
+//   visibility: hidden
 
-.luxury-room__wraps, .usual-room__wraps
-  display: flex
-  flex-direction: row-reverse
-  justify-content: center
-  margin-right: 1.25rem
+// .luxury-room__wraps, .usual-room__wraps
+//   display: flex
+//   flex-direction: row-reverse
+//   justify-content: center
+//   margin-right: 1.25rem
 
-input[name="star-room"]:focus ~ label .star,
-input[name="star-room"]:checked ~ label .star,
-input[name="stars-rooms"]:focus ~ label .star,
-input[name="stars-rooms"]:checked ~ label .star
-  color: rgba(188, 156, 255, 1)
+// input[name="star-room"]:focus ~ label .star,
+// input[name="star-room"]:checked ~ label .star,
+// input[name="stars-rooms"]:focus ~ label .star,
+// input[name="stars-rooms"]:checked ~ label .star
+//   color: rgba(188, 156, 255, 1)
 
-input[name="star-room-third"]:focus ~ label .star,
-input[name="star-room-third"]:checked ~ label .star,
-input[name="star-room-fifth"]:focus ~ label .star,
-input[name="star-room-fifth"]:checked ~ label .star
-  color: rgba(188, 156, 255, 1)
+// input[name="star-room-third"]:focus ~ label .star,
+// input[name="star-room-third"]:checked ~ label .star,
+// input[name="star-room-fifth"]:focus ~ label .star,
+// input[name="star-room-fifth"]:checked ~ label .star
+//   color: rgba(188, 156, 255, 1)
 
-input[name="star-room-sixth"]:focus ~ label .star,
-input[name="star-room-sixth"]:checked ~ label .star,
-input[name="star-room-seventh"]:focus ~ label .star,
-input[name="star-room-seventh"]:checked ~ label .star
-  color: rgba(188, 156, 255, 1)
+// input[name="star-room-sixth"]:focus ~ label .star,
+// input[name="star-room-sixth"]:checked ~ label .star,
+// input[name="star-room-seventh"]:focus ~ label .star,
+// input[name="star-room-seventh"]:checked ~ label .star
+//   color: rgba(188, 156, 255, 1)
 
-input[name="star-room-eighth"]:focus ~ label .star,
-input[name="star-room-eighth"]:checked ~ label .star,
-input[name="star-room-ninth"]:focus ~ label .star,
-input[name="star-room-ninth"]:checked ~ label .star
-  color: rgba(188, 156, 255, 1)
+// input[name="star-room-eighth"]:focus ~ label .star,
+// input[name="star-room-eighth"]:checked ~ label .star,
+// input[name="star-room-ninth"]:focus ~ label .star,
+// input[name="star-room-ninth"]:checked ~ label .star
+//   color: rgba(188, 156, 255, 1)
 
-input[name="star-room-tenth"]:focus ~ label .star,
-input[name="star-room-tenth"]:checked ~ label .star,
-input[name="star-room-eleventh"]:focus ~ label .star,
-input[name="star-room-eleventh"]:checked ~ label .star
-  color: rgba(188, 156, 255, 1)  
+// input[name="star-room-tenth"]:focus ~ label .star,
+// input[name="star-room-tenth"]:checked ~ label .star,
+// input[name="star-room-eleventh"]:focus ~ label .star,
+// input[name="star-room-eleventh"]:checked ~ label .star
+//   color: rgba(188, 156, 255, 1)  
 
-input[name="star-room-twelfth"]:focus ~ label .star,
-input[name="star-room-twelfth"]:checked ~ label .star
-  color: rgba(188, 156, 255, 1) 
+// input[name="star-room-twelfth"]:focus ~ label .star,
+// input[name="star-room-twelfth"]:checked ~ label .star
+//   color: rgba(188, 156, 255, 1) 
 
-input[name="star-room"]:checked + label .star,
-input[name="stars-rooms"]:checked + label .star
-  animation: starred 0.5s
+// input[name="star-room"]:checked + label .star,
+// input[name="stars-rooms"]:checked + label .star
+//   animation: starred 0.5s
 
-input[name="star-room-third"]:checked + label .star,
-input[name="star-room-fifth"]:checked + label .star,
-input[name="star-room-sixth"]:checked + label .star,
-input[name="star-room-seventh"]:checked + label .star,
-input[name="star-room-eighth"]:checked + label .star,
-input[name="star-room-ninth"]:checked + label .star,
-input[name="star-room-tenth"]:checked + label .star,
-input[name="star-room-eleventh"]:checked + label .star,
-input[name="star-room-twelfth"]:checked + label .star
-  animation: starred 0.5s
+// input[name="star-room-third"]:checked + label .star,
+// input[name="star-room-fifth"]:checked + label .star,
+// input[name="star-room-sixth"]:checked + label .star,
+// input[name="star-room-seventh"]:checked + label .star,
+// input[name="star-room-eighth"]:checked + label .star,
+// input[name="star-room-ninth"]:checked + label .star,
+// input[name="star-room-tenth"]:checked + label .star,
+// input[name="star-room-eleventh"]:checked + label .star,
+// input[name="star-room-twelfth"]:checked + label .star
+//   animation: starred 0.5s
 
-input[name="star-room"]:checked + label,
-input[name="stars-rooms"]:checked + label 
-  animation: scaleup 1s
+// input[name="star-room"]:checked + label,
+// input[name="stars-rooms"]:checked + label 
+//   animation: scaleup 1s
 
-input[name="star-room-third"]:checked + label,
-input[name="star-room-fifth"]:checked + label,
-input[name="star-room-sixth"]:checked + label,
-input[name="star-room-seventh"]:checked + label,
-input[name="star-room-eighth"]:checked + label,
-input[name="star-room-ninth"]:checked + label,
-input[name="star-room-tenth"]:checked + label,
-input[name="star-room-eleventh"]:checked + label,
-input[name="star-room-twelfth"]:checked + label
-  animation: scaleup 1s
+// input[name="star-room-third"]:checked + label,
+// input[name="star-room-fifth"]:checked + label,
+// input[name="star-room-sixth"]:checked + label,
+// input[name="star-room-seventh"]:checked + label,
+// input[name="star-room-eighth"]:checked + label,
+// input[name="star-room-ninth"]:checked + label,
+// input[name="star-room-tenth"]:checked + label,
+// input[name="star-room-eleventh"]:checked + label,
+// input[name="star-room-twelfth"]:checked + label
+//   animation: scaleup 1s
