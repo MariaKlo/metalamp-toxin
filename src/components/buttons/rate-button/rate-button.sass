@@ -3,31 +3,22 @@
 @import "../../../assets/styles/__tegs.sass"
 
 .material-icons_border
+  border: none
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   background-clip: text
   text-fill-color: transparent
   cursor: pointer
-  display: inline-flex
-  align-items: center
-  user-select: none
-  margin-right: 10px
-  font-size: 1.5rem
-  z-index: 2
-
-.rate-button__wrap
-  position: relative
-
-.rate-button__star 
-  position: absolute
-  z-index: -1
-  opacity: 0
+  display: block
+  padding: 0
+  font-size: 1.9rem
 
 .material-icons_filled
   display: none
 
 .show-star 
+  border: none
   display: block
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   -webkit-background-clip: text
@@ -35,11 +26,24 @@
   background-clip: text
   -webkit-text-fill-color: transparent
   position: absolute
-  top: -8px
-  left: -1px
+  top: 0
+  left: -5px
 
-.hide-star
-  display: none
+.rate-buttons__name
+  margin-bottom: 1rem
+
+.rate-buttons__wrapper, .rate-button__main-wrap
+  display: flex
+  justify-content: space-between
+  margin-right: 20px
+
+.rate-button__wrap
+  position: relative
+
+// .rate-button__star 
+//   position: absolute
+//   z-index: -1
+//   opacity: 0
 
 // .rate-button__star:checked+.material-icons_filled
 //   background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%) 

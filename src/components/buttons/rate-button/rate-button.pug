@@ -1,9 +1,21 @@
-mixin rate-button(name)
+mixin rate-button()
   //- input(type="radio" name=name id=id)
   //- label(for=id)
   //-   svg.star
   //-     use(xlink:href=href)
-  label(class="rate-button__wrap js-rate-button__wrap")
-    input(type="checkbox" name=name).rate-button__star
-    span(class="material-icons material-icons_border js-material-icons_border") star_border
-    span(class="material-icons material-icons_filled js-material-icon_filled") star
+  div.rate-button__main-wrap
+    div(class="rate-button__wrap js-rate-button__wrap")
+      button(class="material-icons material-icons_border js-material-icons_border") star_border
+      button(class="material-icons material-icons_filled js-material-icon_filled") star
+    div(class="rate-button__wrap js-rate-button__wrap")
+      button(class="material-icons material-icons_border js-material-icons_border") star_border
+      button(class="material-icons material-icons_filled js-material-icon_filled") star
+    div(class="rate-button__wrap js-rate-button__wrap")
+      button(class="material-icons material-icons_border js-material-icons_border") star_border
+      button(class="material-icons material-icons_filled js-material-icon_filled") star
+    div(class="rate-button__wrap js-rate-button__wrap")
+      button(class="material-icons material-icons_border js-material-icons_border") star_border
+      button(class="material-icons material-icons_filled js-material-icon_filled") star
+    div(class="rate-button__wrap js-rate-button__wrap")
+      button(class="material-icons material-icons_border js-material-icons_border") star_border
+      button(class="material-icons material-icons_filled js-material-icon_filled") star
