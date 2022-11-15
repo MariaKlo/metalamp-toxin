@@ -2,8 +2,19 @@
 @import "../../../assets/styles/__variables.sass"
 @import "../../../assets/styles/__tegs.sass"
 
-.like-buttons
-  margin-bottom: 2.8rem
+.like-button
+  margin-right: 11px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  border: 1px solid $light-blue
+  width: 3rem
+  height: 1.4rem
+  border-radius: 10px
+  margin-right: 13px
+
+  &:hover
+    cursor: pointer
 
   &__heart, &__heart_second, &__heart_third
     background: url('../../../assets/img/uikit/favorite_border.svg') no-repeat center center
@@ -14,27 +25,14 @@
       background: url('../../../assets/img/uikit/favorite.svg') no-repeat center center
       width: 10px
       height: 10px
-
-  &__name
-    font-size: $font-small
-    margin-bottom: 23px
-
-  &__wrapper
-    display: flex
-
-  &__border
-    margin-right: 11px
-
-    &:hover
-      cursor: pointer
     
-  &__border_second-like-button:hover
+  &_second-like-button:hover
     cursor: pointer
 
-  &__border_third-like-button:hover
+  &_third-like-button:hover
     cursor: pointer
 
-  &__border, &__border_second-like-button, &__border_third-like-button
+  &_second-like-button, &_third-like-button
     display: flex
     justify-content: space-around
     align-items: center

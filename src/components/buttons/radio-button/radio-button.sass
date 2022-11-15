@@ -3,27 +3,16 @@
 @import "../../../assets/styles/__tegs.sass"
 
 .radio-button
-  margin-bottom: 3rem
+  display: flex
+  flex-direction: row-reverse
+  cursor: pointer
 
-  &__name
-    font-size: 14px
-    margin-bottom: 19px
-
-  &__wrapper
-    display: flex
-    justify-content: space-between
-
-  &__field
-    display: flex
-    flex-direction: row-reverse
-    cursor: pointer
-
-.radio-button__field > input 
+.radio-button > input 
   position: absolute
   z-index: -1
   opacity: 0
 
-.radio-button__field > span 
+.radio-button > span 
   display: inline-flex
   align-items: center
   position: relative
@@ -32,7 +21,7 @@
   height: 17px
   margin-right: 10px
 
-.radio-button__field > span::after 
+.radio-button > span::after 
   content: ''
   display: inline-block
   position: absolute
@@ -47,7 +36,7 @@
   background-position: center center
   background-size: 50% 50%
 
-.radio-button__field > input:checked+span::after 
+.radio-button > input:checked+span::after 
   width: 13px
   height: 13px
   position: absolute
@@ -56,7 +45,7 @@
   border-radius: 100%
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
-.radio-button__field > span::before 
+.radio-button > span::before 
   content: ''
   display: inline-block
   width: 1.5rem
@@ -67,6 +56,6 @@
   border-radius: 50%
   margin-right: 8px
 
-.radio-button__field > input:checked + span::before 
+.radio-button > input:checked + span::before 
   border: 1px solid $purple
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")

@@ -6,6 +6,30 @@
   padding-top: 116px
 
 .expandable-checkbox-list
+  margin-bottom: 3rem
+  display: flex
+  flex-direction: column
+  align-content: center
+  justify-content: space-between
+  color: #1F2041
+  font-weight: 700
+  text-transform: uppercase
+  font-size: $font-small
+  position: relative
+  cursor: pointer
+
+  &_second
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: space-between
+    color: #1F2041
+    font-weight: 700
+    text-transform: uppercase
+    font-size: $font-small
+    position: relative
+    cursor: pointer
+
   &__description
     @include flex-between()
     margin-bottom: 6px
@@ -24,68 +48,53 @@
       flex-direction: column
       margin-bottom: 15px
 
-    &-list 
-      margin-bottom: 3rem
+    &-arrow_first, &-arrow_second
+      position: absolute
+      border: solid rgba(31, 32, 65, 0.5)
+      width: 10px
+      height: 10px
+      border-width: 0 2px 2px 0
+      display: inline-block
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+      top: 0
+      right: 0
 
-    &-list, &-list_second
-      display: flex
-      flex-direction: column
-      align-content: center
-      justify-content: space-between
-      color: #1F2041
-      font-weight: 700
-      text-transform: uppercase
-      font-size: $font-small
-      position: relative
-      cursor: pointer
-
-      &-arrow_first, &-arrow_second
+      &.rotate
         position: absolute
         border: solid rgba(31, 32, 65, 0.5)
         width: 10px
         height: 10px
         border-width: 0 2px 2px 0
         display: inline-block
-        -webkit-transform: rotate(45deg)
-        transform: rotate(45deg)
-        top: 0
+        -webkit-transform: rotate(-135deg)
+        transform: rotate(-135deg)
+        top: 6px
         right: 0
 
-        &.rotate
-          position: absolute
-          border: solid rgba(31, 32, 65, 0.5)
-          width: 10px
-          height: 10px
-          border-width: 0 2px 2px 0
-          display: inline-block
-          -webkit-transform: rotate(-135deg)
-          transform: rotate(-135deg)
-          top: 6px
-          right: 0
+    &-arrow_wider
+      position: absolute
+      border: solid rgba(31, 32, 65, 0.5)
+      width: 10px
+      height: 10px
+      border-width: 0 2px 2px 0
+      display: inline-block
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+      top: 0
+      right: 3.5rem
 
-      &-arrow_wider
+      &.rotate
         position: absolute
         border: solid rgba(31, 32, 65, 0.5)
         width: 10px
         height: 10px
         border-width: 0 2px 2px 0
         display: inline-block
-        -webkit-transform: rotate(45deg)
-        transform: rotate(45deg)
+        -webkit-transform: rotate(-135deg)
+        transform: rotate(-135deg)
         top: 0
         right: 3.5rem
-
-        &.rotate
-          position: absolute
-          border: solid rgba(31, 32, 65, 0.5)
-          width: 10px
-          height: 10px
-          border-width: 0 2px 2px 0
-          display: inline-block
-          -webkit-transform: rotate(-135deg)
-          transform: rotate(-135deg)
-          top: 0
-          right: 3.5rem
   
   &__option
     color: $medium-blue

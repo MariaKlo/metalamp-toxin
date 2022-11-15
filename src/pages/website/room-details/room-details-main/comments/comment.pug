@@ -8,7 +8,7 @@ mixin comment(classOfImg, username, time, text)
         p.comment__username= username
         p.comment__time= time
     div.comment__wrap
-      +like-button("like-buttons__border js-like-buttons__border", "like-buttons__heart js-like-buttons__heart", "like-buttons__counter js-like-buttons__counter")
+      +like-button("like-button js-like-button", "like-button__heart js-like-button__heart", "like-button__counter js-like-button__counter")
       p.comment__text= text
 
 mixin secondComment(classOfImg, username, time, text)
@@ -19,5 +19,5 @@ mixin secondComment(classOfImg, username, time, text)
         p.comment__username= username
         p.comment__time= time
     div.comment__wrap
-      +like-button("like-buttons__border_second-like-button js-like-buttons__border_second-like-button", "like-buttons__heart_second js-like-buttons__heart_second", "like-buttons__counter_second-like-button js-like-buttons__counter_second-like-button")
+      +like-button("like-button_second-like-button js-like-button_second-like-button", "like-button__heart_second js-like-button__heart_second", "like-button__counter_second-like-button js-like-button__counter_second-like-button")
       p.comment__text= text

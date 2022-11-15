@@ -55,14 +55,14 @@ block content
         +input("email", "e-mail", "Email")(class="elements__field-subscription")
     // кнопки
     div.buttons
-      form.checkbox-button
-        h3.checkbox-button__name CHECKBOX BUTTONS
+      form.buttons-checkbox
+        h3.buttons-checkbox__name CHECKBOX BUTTONS
         +checkbox-button("Можно курить", "checkbox")(class="checkbox-button__title")
         +checkbox-button("Можно с питомцами", "checkbox-second")(class="checkbox-button__title")
         +checkbox-button("Можно пригласить гостей (до 10 человек)", "checkbox-third")(class="checkbox-button__title")
-      form.radio-button
-        h3.radio-button__name RADIO BUTTONS
-        div.radio-button__wrapper
+      form.buttons-radio
+        h3.buttons-radio__name RADIO BUTTONS
+        div.buttons-radio__wrapper
           +radio-button("Мужчина", "human", "мужчина")
           +radio-button("Женщина", "human", "женщина")
       form.toggle-button
@@ -70,14 +70,14 @@ block content
         div.toggle-button__wrapper
           +toggle-button("toggle", "news")
           +toggle-button("toggle_second", "news-second")
-      form.like-buttons
-        h3.like-buttons__name LIKE BUTTON
-        div.like-buttons__wrapper
-          +like-button("like-buttons__border js-like-buttons__border", "like-buttons__heart js-like-buttons__heart", "like-buttons__counter js-like-buttons__counter")
-          +like-button("like-buttons__border_second-like-button js-like-buttons__border_second-like-button", "like-buttons__heart_second js-like-buttons__heart_second", "like-buttons__counter_second-like-button js-like-buttons__counter_second-like-button")
-      form.rate-buttons
-        h3.rate-buttons__name RATE BUTTON
-        div.rate-buttons__wrapper
+      form.buttons-like
+        h3.buttons-like__name LIKE BUTTON
+        div.buttons-like__wrapper
+          +like-button("like-button js-like-button", "like-button__heart js-like-button__heart", "like-button__counter js-like-button__counter")
+          +like-button("like-button_second-like-button js-like-button_second-like-button", "like-button__heart_second js-like-button__heart_second", "like-button__counter_second-like-button js-like-button__counter_second-like-button")
+      form.buttons-rate
+        h3.buttons-rate__name RATE BUTTON
+        div.buttons-rate__wrapper
           +rate-button()
           +rate-button()
     div.other-buttons
@@ -94,9 +94,7 @@ block content
           div.ellipse-buttons__wrap
             +ellipse-button-transparent()
             +ellipse-button-transparent()
-        div.link-button
-          +link-button()
-          +link-button()
+        +link-button()
         include ../../../components/buttons/solid-big-button/solid-big-button.pug
       div.pagination
         h3.pagination__name PAGINATION
@@ -115,8 +113,8 @@ block content
       form.filter__form
         +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       form.filter__checkbox_expanded
-        +expandable-checkbox-list("expandable-checkbox-list__checkbox-list js-expandable-checkbox-list__checkbox-list", "expandable checkbox list", "expandable-checkbox-list__checkbox-list-arrow_first js-expandable-checkbox-list__checkbox-list-arrow_first")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
-        +expandable-checkbox-list("expandable-checkbox-list__checkbox-list_second js-expandable-checkbox-list__checkbox-list_second", "expandable checkbox list", "expandable-checkbox-list__checkbox-list-arrow_second js-expandable-checkbox-list__checkbox-list-arrow_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
+        +expandable-checkbox-list("expandable-checkbox-list js-expandable-checkbox-list", "expandable checkbox list", "expandable-checkbox-list__checkbox-arrow_first js-expandable-checkbox-list__checkbox-arrow_first")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
+        +expandable-checkbox-list("expandable-checkbox-list_second js-expandable-checkbox-list_second", "expandable checkbox list", "expandable-checkbox-list__checkbox-arrow_second js-expandable-checkbox-list__checkbox-arrow_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
     // dropdown с гостями
     form.guests
       h3.guests__info #{dropdown}
@@ -136,11 +134,8 @@ block content
           div(class="iqdropdown-menu-btn-wrap")
             a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
             a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
-        h3.bullet-list__title Bullet list
-        ul.bullet-list__bullet
-          +bullet-list("Нельзя с питомцами")
-          +bullet-list("Без вечеринок и мероприятий")
-          +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
+        h3.lists__title Bullet list
+        +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
   // комментарии
   div.elements__comments
     div.comments
