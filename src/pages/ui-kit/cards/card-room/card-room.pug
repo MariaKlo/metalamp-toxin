@@ -1,4 +1,4 @@
-include ../../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+include ../../../../components/plugins/iqdropdown/iqdropdown.pug
 
 form.rooms(action="#")
   h1.rooms__title Найдём номера под ваши пожелания
@@ -13,7 +13,7 @@ form.rooms(action="#")
         input(type="text" name="date" class="rooms__date js-datepicker_ninth" placeholder="ДД.ММ.ГГГГ" id="datepicker_ninth")
   div.rooms__guests
     h3.rooms__info Гости
-    +item-quantity-dropdown("iqdropdown_fourth", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_fourth")
+    +iqdropdown("iqdropdown_fourth", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_fourth")
       div(class="iqdropdown-menu-btn-wrap")
         a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
         a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить

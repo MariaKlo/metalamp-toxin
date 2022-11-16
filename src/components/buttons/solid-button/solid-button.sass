@@ -2,21 +2,19 @@
 @import "../../../assets/styles/__variables.sass"
 @import "../../../assets/styles/__tegs.sass"
 
-.ellipse-buttons
+.solid-button
   @include flex-between()
   flex-flow: column
+  padding: 15px 20px
+  font-size: $font-small
+  text-transform: uppercase
+  font-weight: 700
 
-  &__button
-    padding: 15px 20px
-    font-size: $font-small
-    text-transform: uppercase
-    font-weight: 700
-
-    &:nth-child(1)
-      margin-right: 19px
+  &:nth-child(1)
+    margin-right: 19px
 
   &_solid
     @include ellipse-button-style-solid()
 
-.ellipse-buttons_solid:hover
+.solid-button_solid:hover
   @include button-hover()

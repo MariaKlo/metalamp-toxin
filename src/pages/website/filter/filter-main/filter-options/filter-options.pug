@@ -1,4 +1,4 @@
-include ../../../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+include ../../../../../components/plugins/iqdropdown/iqdropdown.pug
 include ../../../../../components/plugins/range-slider/range-slider.pug
 include ../../../../../components/buttons/checkbox-button/checkbox-button.pug
 include ../../../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
@@ -9,7 +9,7 @@ form.filter.js-filter
   h3.filter__title Даты пребывания в отеле
   input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker_tenth").filter__input.js-datepicker_tenth
   h3.filter__title Гости
-  +item-quantity-dropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
+  +iqdropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
     div(class="iqdropdown-menu-btn-wrap")
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
       a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
@@ -26,5 +26,5 @@ form.filter.js-filter
     +checkbox-button("Широкий коридор", "checkbox-filter-fourth", "Ширина коридоров в номере не менее 91 см.")(class="checkbox-button__title checkbox-button__title_bold")
     +checkbox-button("Помощник для инвалидов", "checkbox-filter-fifth", "На 1 этаже вас встретит специалист  и проводит до номера.")(class="checkbox-button__title checkbox-button__title_bold")
   h3.filter__title Удобства номера
-  +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
+  +iqdropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
   +expandable-checkbox-list("expandable-checkbox-list js-expandable-checkbox-list", "Дополнительные удобства", "expandable-checkbox-list__checkbox-arrow_first js-expandable-checkbox-list__checkbox-arrow_first expandable-checkbox-list__checkbox-arrow_wider")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")

@@ -6,7 +6,7 @@ import '../../../components/buttons/like-button/like-button';
 import '../../../components/buttons/rate-button/rate-button';
 
 import '../../../components/plugins/datepicker/datepicker';
-import '../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown';
+import '../../../components/plugins/iqdropdown/iqdropdown';
 import '../../../components/plugins/pagination/pagination';
 import '../../../components/plugins/range-slider/range-slider';
 import '../../../components/plugins/swiper/swiper';

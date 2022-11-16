@@ -1,7 +1,7 @@
 extends ../../../layout/page.pug
 block content
   include ../../../components/inputs/regular-input/regular-input.pug
-  include ../../../components/plugins/item-quantity-dropdown/item-quantity-dropdown.pug
+  include ../../../components/plugins/iqdropdown/iqdropdown.pug
   include ../../../components/buttons/checkbox-button/checkbox-button.pug
   include ../../../components/buttons/radio-button/radio-button.pug
   include ../../../components/buttons/toggle-button/toggle-button.pug
@@ -11,6 +11,7 @@ block content
   include ../../../components/buttons/solid-button/solid-button.pug
   include ../../../components/buttons/transparent-button/transparent-button.pug
   include ../../../components/buttons/link-button/link-button.pug
+  include ../../../components/buttons/solid-big-button/solid-big-button.pug
   include ../../../components/plugins/pagination/pagination.pug
   include ../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
   include ../../../components/bullet-list/bullet-list.pug
@@ -32,7 +33,7 @@ block content
         p.elements__state HOVER/FOCUS
       input(type="text" name="text" placeholder="This is pretty awesome").elements__field
       h3.elements__info #{dropdown}
-      +item-quantity-dropdown("iqdropdown_first", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_first")
+      +iqdropdown("iqdropdown_first", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_first")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
@@ -52,7 +53,7 @@ block content
         input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker_fourth").elements__field-filter.js-datepicker_fourth
       h3.elements__info SUBSCRIPTION #{textField}
       div.elements__field-wrap
-        +input("email", "e-mail", "Email")(class="elements__field-subscription")
+        +regular-input("email", "e-mail", "Email")(class="regular-input__field-subscription")
     // кнопки
     div.buttons
       form.buttons-checkbox
@@ -65,9 +66,9 @@ block content
         div.buttons-radio__wrapper
           +radio-button("Мужчина", "human", "мужчина")
           +radio-button("Женщина", "human", "женщина")
-      form.toggle-button
-        h3.toggle-button__name TOGGLE
-        div.toggle-button__wrapper
+      form.buttons-toggle
+        h3.buttons-toggle__name TOGGLE
+        div.buttons-toggle__wrapper
           +toggle-button("toggle", "news")
           +toggle-button("toggle_second", "news-second")
       form.buttons-like
@@ -89,15 +90,15 @@ block content
         h3.buttons__name BUTTONS
         div.ellipse-buttons
           div.ellipse-buttons__wrap
-            +ellipse-button-solid()
-            +ellipse-button-solid()
+            +solid-button()
+            +solid-button()
           div.ellipse-buttons__wrap
             +ellipse-button-transparent()
             +ellipse-button-transparent()
         +link-button()
-        include ../../../components/buttons/solid-big-button/solid-big-button.pug
-      div.pagination
-        h3.pagination__name PAGINATION
+        +solid-big-button()
+      div.pagination-section
+        h3.pagination-section__name PAGINATION
         +pagination()
   // фильтры по поиску номеров
   div.elements__filter    
@@ -106,19 +107,19 @@ block content
         h3.filter__info #{dropdown}
         p.filter__state DEFAULT
       form.filter__form
-        +item-quantity-dropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
+        +iqdropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
       div.filter__description
         h3.filter__info #{dropdown}
         p.filter__state EXPANDED
       form.filter__form
-        +item-quantity-dropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
+        +iqdropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       form.filter__checkbox_expanded
         +expandable-checkbox-list("expandable-checkbox-list js-expandable-checkbox-list", "expandable checkbox list", "expandable-checkbox-list__checkbox-arrow_first js-expandable-checkbox-list__checkbox-arrow_first")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_first js-expandable-checkbox-list__checkbox_first")
         +expandable-checkbox-list("expandable-checkbox-list_second js-expandable-checkbox-list_second", "expandable checkbox list", "expandable-checkbox-list__checkbox-arrow_second js-expandable-checkbox-list__checkbox-arrow_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
     // dropdown с гостями
     form.guests
       h3.guests__info #{dropdown}
-      +item-quantity-dropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
+      +iqdropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
@@ -130,12 +131,12 @@ block content
     form.lists__form
       div.lists
         h3.lists__info #{dropdown}
-        +item-quantity-dropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
+        +iqdropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
           div(class="iqdropdown-menu-btn-wrap")
             a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
             a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
         h3.lists__title Bullet list
-        +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+        +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
   // комментарии
   div.elements__comments
     div.comments

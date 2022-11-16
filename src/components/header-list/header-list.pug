@@ -1,0 +1,15 @@
+mixin header-list(firstItem, secondItem, thirdItem, fourthItem, fifthItem)
+  nav.header-list 
+    ul.header-list__menu 
+      li
+        a(href="/mock-address/change-me" class="header-list__item")= firstItem
+      li
+        a(href="/mock-address/change-me" class="header-list__item")= secondItem
+          div.header-list__dropdown
+      li
+        a(href="/mock-address/change-me" class="header-list__item")= thirdItem
+      li
+        a(href="/mock-address/change-me" class="header-list__item")= fourthItem
+      li
+        a(href="/mock-address/change-me" class="header-list__item")= fifthItem
+          div.header-list__dropdown

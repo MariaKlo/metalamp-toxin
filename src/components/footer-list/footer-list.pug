@@ -1,0 +1,6 @@
+mixin footer-list(title, list)
+  ul(class="footer-list footer-list_showed")
+    li.footer-list__header= title
+      each item in list
+        li 
+          a(href="/mock-address/change-me" class="footer-list__item")= item
