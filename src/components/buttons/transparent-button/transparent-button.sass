@@ -10,11 +10,8 @@
   text-transform: uppercase
   font-weight: 700
 
-  &:nth-child(1)
-    margin-right: 19px
-
   &_transparented
     @include ellipse-button-style-transparent()
 
-.ellipse-button-transparent_transparented:hover
-  @include button-hover()
+    &:hover
+      @include button-hover()

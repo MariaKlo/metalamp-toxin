@@ -35,13 +35,13 @@
     text-transform: none
     margin-bottom: 1rem
 
-    span
-      color: $medium-blue
-      text-transform: none
-      font-size: 14px
-      font-weight: 400
-      display: flex
-      align-self: end
+  &__total-comments
+    color: $medium-blue
+    text-transform: none
+    font-size: 14px
+    font-weight: 400
+    display: flex
+    align-self: end
 
   &__title
     &_bigger-margin
@@ -84,13 +84,13 @@
     display: block
     cursor: pointer
 
-    &_active .hamburger__bar:nth-child(2)
+    &_active .hamburger__bar_second
       opacity: 0
 
-    &_active .hamburger__bar:nth-child(1)
+    &_active .hamburger__bar_first
       transform: translateY(8px) rotate(45deg)
 
-    &_active .hamburger__bar:nth-child(3)
+    &_active .hamburger__bar_third
       transform: translateY(-8px) rotate(-45deg)
 
 @media only screen and (max-width: 892px) //892px 

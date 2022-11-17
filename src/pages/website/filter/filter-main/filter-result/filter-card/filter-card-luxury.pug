@@ -18,12 +18,12 @@ mixin filter-card-luxury(swiperId, imgSwiperClass, roomNumber, price, commentsNu
     div.luxury-room__wrap
       a(href="room-details.html").luxury-room__link
         h1.luxury-room__title №
-          span= roomNumber
-          span Люкс
+          span.luxury-room__number= roomNumber
+          span.luxury-room__luxury Люкс
       p.luxury-room__price= price
-        span в сутки
+        span.luxury-room__time в сутки
     div.luxury-room__wrap_border
     div.luxury-room__wrapper
       +rate-button()
       p.luxury-room__comments= commentsNumber
-        span Отзывов   
+        span.luxury-room__total-comments Отзывов   

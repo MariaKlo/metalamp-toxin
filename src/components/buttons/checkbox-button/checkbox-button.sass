@@ -27,17 +27,17 @@
       font-weight: 700
       margin-bottom: 10px
 
-.checkbox-button__field > input
+.checkbox-button__input
   position: absolute
   z-index: -1
   opacity: 0
 
-.checkbox-button__field > span
+.checkbox-button__option
   display: inline-flex
   align-items: center
   user-select: none
 
-.checkbox-button__field > span::before
+.checkbox-button__option::before
   content: ''
   display: inline-block
   width: 17px
@@ -51,7 +51,7 @@
   background-position: center center
   background-size: 50% 50%
 
-.checkbox-button__field > input:checked+span::before
+.checkbox-button__input:checked + .checkbox-button__option::before
   background: url('../../../assets/img/uikit/tick.svg') no-repeat center center
   width: 17px
   height: 17px

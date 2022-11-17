@@ -10,11 +10,8 @@
   text-transform: uppercase
   font-weight: 700
 
-  &:nth-child(1)
-    margin-right: 19px
-
   &_solid
     @include ellipse-button-style-solid()
 
-.solid-button_solid:hover
-  @include button-hover()
+    &:hover
+      @include button-hover()

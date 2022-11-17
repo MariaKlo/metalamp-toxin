@@ -1,7 +1,7 @@
 @import "../../../../assets/styles/__mixins.sass"
 @import "../../../../assets/styles/__variables.sass"
 @import "../../../../assets/styles/__tegs.sass"
-@import "../../../../components/plugins/item-quantity-dropdown/iqdropdown.sass"
+@import "../../../../components/plugins/iqdropdown/iqdropdown.sass"
 
 .book
   margin-right: 2.5rem
@@ -14,34 +14,34 @@
     margin-bottom: 2rem
     align-items: flex-end
 
-  &__wrapper:nth-child(1)
+    &_second
+      display: flex
+      align-items: center
+
+  &__wrapper_spaced
     margin-right: 20px
 
   &__title
     font-size: 14px
     margin-right: 7.4rem
 
-    span:nth-child(1)
-      font-size: 1.5rem
-      margin-left: 3.2px
+  &__number
+    font-size: 1.5rem
+    margin-left: 3.2px
 
-    span:nth-child(2)
-      font-size: $font-small
-      color: $purple
-      margin-left: 0.7rem
+  &__luxury
+    font-size: $font-small
+    color: $purple
+    margin-left: 0.7rem
 
   &__price
     color: $medium-blue
     font-weight: 700
 
-    span
-      margin-left: 3px
-      font-size: $font-small
-      font-weight: 400
-
-  &__wrap:nth-child(2)
-    display: flex
-    align-items: center
+  &__time
+    margin-left: 3px
+    font-size: $font-small
+    font-weight: 400
 
   &__title_small
     font-size: $font-small
@@ -61,8 +61,10 @@
   &__text
     width: 16rem
 
-    span
-      color: $light-blue
+  &__information
+    color: $light-blue
+    font-size: 20px
+    margin-left: 9px
   
   &__total
     width: 23.2rem
@@ -85,10 +87,6 @@
     display: flex
     width: 17.4rem
     line-height: 1
-
-    span
-      font-size: 20px
-      margin-left: 9px
 
   &__text, &__total-price
     color: $dark-blue

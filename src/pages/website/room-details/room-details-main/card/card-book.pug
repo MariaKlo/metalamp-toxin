@@ -3,11 +3,11 @@ include ../../../../../components/plugins/iqdropdown/iqdropdown.pug
 form.book(action="#")
     div.book__wrap
       h1.book__title №
-        span 888
-        span Люкс
+        span.book__number 888
+        span.book__luxury Люкс
       p.book__price 9 990&#x20bd;
-        span в сутки
-    div.book__wrap
+        span.book__time в сутки
+    div.book__wrap.book__wrap_second
       div.book__wrapper
         h3.book__title_small Прибытие
         div.book__datepicker-wrap
@@ -28,11 +28,11 @@ form.book(action="#")
           p.book__total-price 39 960&#x20bd;
         div.book__total-wrap
           p.book__text Сбор за услуги: скидка 2 179&#x20bd; 
-            span &#9432;
+            span.book__information &#9432;
           p.book__total-price 0&#x20bd;
         div.book__total-wrap
           p.book__text Сбор за дополнительные услуги
-            span &#9432;
+            span.book__information &#9432;
           p.book__total-price 300&#x20bd;
       div.book__total-price-wrap
         p.book__result Итого

@@ -18,11 +18,11 @@ mixin filter-card-usual(swiperId, imgSwiperClass, roomNumber, price, commentsNum
     div.usual-room__wrap
       a(href="room-details.html").usual-room__link
         h1.usual-room__title №
-          span= roomNumber
+          span.usual-room__number= roomNumber
       p.usual-room__price= price
-        span в сутки
+        span.usual-room__time в сутки
     div.usual-room__wrap_border
     div.usual-room__wrapper
       +rate-button()
       p.usual-room__comments= commentsNumber
-        span Отзывов     
+        span.usual-room__total-comments Отзывов     
