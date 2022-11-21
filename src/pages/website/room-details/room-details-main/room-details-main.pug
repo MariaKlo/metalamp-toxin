@@ -2,6 +2,7 @@ include ../../../../components/info/info.pug
 include comments/comment.pug
 include ../../../../components/bullet-list/bullet-list.pug
 include ../../../../components/plugins/graph/graph.pug
+include ../../../../components/cards/book/book.pug
 
 div.main
   div.main__wrap
@@ -30,4 +31,4 @@ div.main
         h3.main__title Отмена
         p.main__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
   div.main__wrap
-    include card/card-book.pug
+    +book()

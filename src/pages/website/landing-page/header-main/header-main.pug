@@ -1,6 +1,8 @@
+include ../../../../components/cards/rooms/rooms.pug
+
 section.header__bg
   div.header__container
-    include header-cards/search/search.pug
+    +rooms()
     div.header__wrap
       p.header__text Лучшие номера для вашей работы, 
       p.header__text.header__text_separated отдыха и просто вдохновения

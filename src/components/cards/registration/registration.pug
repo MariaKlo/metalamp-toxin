@@ -1,23 +1,24 @@
-include ../../../../../components/buttons/radio-button/radio-button.pug
-include ../../../../../components/buttons/toggle-button/toggle-button.pug
+include ../../buttons/radio-button/radio-button.pug
+include ../../buttons/toggle-button/toggle-button.pug
 
-form.registration(action="#")
+mixin registration()
+  form.registration(action="#")
     h1.registration__title Регистрация аккаунта
     div.registration__info
       input(type="text" name="first name" class="registration__input" placeholder="Имя")
       input(type="text" name="last name" class="registration__input" placeholder="Фамилия")
     div.registration__username
-      +radio-button("Мужчина", "user", "man")
-      +radio-button("Женщина", "user", "woman")
+      +radio-button("Мужчина", "guest", "male-sex")
+      +radio-button("Женщина", "guest", "female-sex")
     div.registration__birth
       h3.registration__birth-title Дата Рождения
-      input(type="text" name="date" class="registration__datepick js-datepicker-thirteenth" placeholder="ДД.ММ.ГГГГ" id="atepicker-thirteenth")
+      input(type="text" name="date" class="registration__datepick js-datepicker_seventh" placeholder="ДД.ММ.ГГГГ" id="datepicker_seventh")
     div.registration__data
       h3.registration__data-title Данные для входа в сервис
       input(type="email" name="email" class="registration__input" placeholder="Email")
-      input(type="text" name="password" class="registration__input" placeholder="Пароль")
-    +toggle-button("toggle_fourth", "news_fourth")
-    button(type="submit" class="registration__btn") Зарегистрироваться
+      input(type="password" name="password" class="registration__input" placeholder="Пароль")
+    +toggle-button("toggle_third", "news_third")
+    button(type="submit" class="registration__btn") Перейти к оплате
     div.registration_exist
       p.registration__text_exist Уже есть аккаунт на Toxin
       a(href="sign-in.html" class="registration__btn_sign-in") Войти

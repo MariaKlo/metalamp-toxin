@@ -1,0 +1,17 @@
+include ../../plugins/swiper/swiper.pug
+include ../../buttons/rate-button/rate-button.pug
+
+mixin luxury-room(number, price, comments, swiperImgClass)
+  div.luxury-room
+    +swiper("swiper", swiperImgClass)(class="swiper js-swiper luxury-room__swiper")
+    div.luxury-room__wrap
+      h1.luxury-room__title №
+        span.luxury-room__number= number
+        span.luxury-room__luxury Люкс
+      p.luxury-room__price= price
+        span.luxury-room__time в сутки
+    div.luxury-room__wrap_border
+    div.luxury-room__wrapper
+      +rate-button()
+      p.luxury-room__comments= comments
+        span.luxury-room__total-comments Отзывов

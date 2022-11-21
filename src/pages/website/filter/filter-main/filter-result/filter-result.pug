@@ -1,32 +1,32 @@
-include filter-card/filter-card-luxury.pug
-include filter-card/filter-card.pug
+include ../../../../../components/cards/luxury-room/luxury-room.pug
+include ../../../../../components/cards/usual-room/usual-room.pug
 include ../../../../../components/plugins/pagination/pagination.pug
 
 div.filter-result__wrap
   h2.filter-result__title Номера, которые мы для вас подобрали
   div.filter-result__page
     // first room
-    +filter-card-luxury("swiper", "luxury-room__img", "888", "9 990₽", "145")(class="swiper js-swiper luxury-room__swiper")
+    +luxury-room("888", "9 990₽", "145", "luxury-room__img")
     // second room
-    +filter-card-usual("swiper_second", "usual-room__img", "840", "9 990₽", "65")(class="swiper js-swiper")
+    +usual-room("840", "9 990₽", "65", "usual-room__img")
     // third room
-    +filter-card-luxury("swiper_third", "luxury-room__img luxury-room__img_third", "980", "8 500₽", "35")(class="swiper js-swiper luxury-room__swiper-third")
+    +luxury-room("980", "8 500₽", "35", "luxury-room__img_second")
     // fourth room 
-    +filter-card-usual("swiper_fourth", "usual-room__img usual-room__img_fourth", "856", "7 300₽", "19")(class="swiper js-swiper")
+    +usual-room("856", "7 300₽", "19", "usual-room__img_second")
     // fifth room 
-    +filter-card-usual("swiper_fifth", "usual-room__img usual-room__img_fifth", "740", "6 000₽", "44")(class="swiper js-swiper")
+    +usual-room("740", "6 000₽", "44", "usual-room__img_third")
     // sixth room
-    +filter-card-usual("swiper_sixth", "usual-room__img usual-room__img_sixth", "982", "5 800₽", "56")(class="swiper js-swiper")
+    +usual-room("982", "5 800₽", "56", "usual-room__img_fourth")
     // seventh room
-    +filter-card-usual("swiper_seventh", "usual-room__img usual-room__img_seventh", "678", "5 500₽", "45")(class="swiper js-swiper")
+    +usual-room("678", "5 500₽", "45", "usual-room__img_fifth")
     // eighth room 
-    +filter-card-usual("swiper_eighth", "usual-room__img usual-room__img_eighth", "450", "5 300₽", "39")(class="swiper js-swiper")
+    +usual-room("450", "5 300₽", "39", "usual-room__img_sixth")
     // ninth room
-    +filter-card-usual("swiper_ninth", "usual-room__img usual-room__img_ninth", "350", "5 000₽", "77")(class="swiper js-swiper")
+    +usual-room("350", "5 000₽", "77", "usual-room__img_seventh")
     // tenth room
-    +filter-card-usual("swiper_tenth", "usual-room__img usual-room__img_tenth", "666", "5 000₽", "25")(class="swiper js-swiper")
+    +usual-room("666", "5 000₽", "25", "usual-room__img_eighth")
     // eleventh room
-    +filter-card-usual("swiper_eleventh", "usual-room__img usual-room__img_eleventh", "444", "5 000₽", "15")(class="swiper js-swiper")
+    +usual-room("444", "5 000₽", "15", "usual-room__img_ninth")
     // twelfth
-    +filter-card-usual("swiper_twelfth", "usual-room__img usual-room__img_twelfth", "352", "5 000₽", "55")(class="swiper js-swiper")
+    +usual-room("352", "5 000₽", "55", "usual-room__img_tenth")
   +pagination()

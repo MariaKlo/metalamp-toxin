@@ -1,4 +1,5 @@
-form.sign-in(action="#")
+mixin sign-in()
+  form.sign-in(action="#")
     h1.sign-in__title Войти
     input(type="email" name="email" class="sign-in__input" placeholder="Email")
     input(type="password" name="password" class="sign-in__input sign-in__input_second" placeholder="Пароль")

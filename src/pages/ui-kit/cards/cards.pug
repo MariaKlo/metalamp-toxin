@@ -1,11 +1,18 @@
 extends ../../../layout/page.pug
 block content
+  include ../../../components/cards/rooms/rooms.pug
+  include ../../../components/cards/registration/registration.pug    
+  include ../../../components/cards/book/book.pug
+  include ../../../components/cards/sign-in/sign-in.pug
+  include ../../../components/cards/luxury-room/luxury-room.pug
+  include ../../../components/cards/usual-room/usual-room.pug  
+
   div.cards
-    include card-room/card-room.pug
-    include card-registration/card-registration.pug    
-    include card-book/card-book.pug
-    include card-sign-in/card-sign-in.pug
+    +rooms()
+    +registration()
+    +book()
+    +sign-in()
     div(id="datepicker-calendar")
     div.cards__wrapper
-      include card-luxury-room/card-luxury-room.pug
-      include card-usual-room/card-usual-room.pug  
+      +luxury-room("888", "9 990₽", "145", "luxury-room__img")
+      +usual-room("840", "9 990₽", "65", "usual-room__img")

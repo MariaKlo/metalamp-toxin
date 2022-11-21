@@ -1,19 +1,23 @@
-@import "../../../../../../assets/styles/__mixins.sass"
-@import "../../../../../../assets/styles/__tegs.sass"
-@import "../../../../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
+
+@import "../../plugins/iqdropdown/iqdropdown.sass"
 
 .rooms
-  @include shadows-wide()
-  background-color: $white
-  border-radius: 4px
-  padding: 2.9rem 1.2rem 2rem 2rem
   margin-right: 3rem
-  margin-bottom: 2.5rem
-  max-width: 27rem
+  margin-bottom: 10rem
+  width: 27.1rem
+  order: 0
+  background-color: #fff
+  padding: 40px 30px 30px 30px
+  border-radius: 4px
+  @include shadows-wide()
 
   &__title
-    font-size: 1.7rem
-    margin-bottom: 1.8rem
+    font-size: 27px
+    max-width: 19rem
+    margin-bottom: 1.6rem
     text-transform: none
 
   &__wrapper
@@ -21,7 +25,7 @@
     margin-bottom: 23px
 
   &__wrap_first
-    margin-right: 1.4rem
+    margin-right: 22px
 
   &__info
     font-size: $font-small
@@ -43,7 +47,7 @@
     border: 1px solid $light-blue
 
   &__btn
-    padding: 15px 107px
+    padding: 1rem 7rem
     border-radius: 28px
     @include button-style()
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%)
@@ -56,7 +60,6 @@
     &::after
       @include arrow-right($color: #ffffff)
       margin-bottom: 5px
-      top: 10px
 
     &:hover
       @include button-hover()
@@ -66,35 +69,3 @@
 
     &::after
       @include arrow($right: 0.8rem)
-
-.material-icons
-  color: #ffffff 
-  font-size: 24px
-
-@media only screen and (max-width: 470px) //470px
-  .rooms
-    padding: 2rem
-    margin-right: 0
-    margin-bottom: 0
-    max-height: inherit
-    max-width: inherit
-
-    &__title
-      font-size: 1.2rem
-      text-align: center
-
-    &__wrapper
-      display: inherit
-
-    &__wrap_first
-      margin-right: 0
-
-    &__date
-      margin-bottom: 10px
-
-    &__btn
-      padding: 15px 59px
-      font-size: 9px
-
-      &::after
-        top: 0.7rem

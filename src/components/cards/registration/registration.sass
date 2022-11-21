@@ -1,15 +1,20 @@
-@import "../../../../assets/styles/__mixins.sass"
-@import "../../../../assets/styles/__variables.sass"
-@import "../../../../assets/styles/__tegs.sass"
+@import "../../../assets/styles/__mixins.sass"
+@import "../../../assets/styles/__variables.sass"
+@import "../../../assets/styles/__tegs.sass"
 
-@import "../../../../components/buttons/radio-button/radio-button.sass"
-@import "../../../../components/buttons/toggle-button/toggle-button.sass"
+@import "../../buttons/radio-button/radio-button.sass"
+@import "../../buttons/toggle-button/toggle-button.sass"
 
 .registration
   margin-right: 2.5rem
   margin-bottom: 2.5rem
   width: 27.1rem
   order: 1
+  background-color: #fff
+  padding: 40px 30px 30px 30px
+  border-radius: 4px
+  margin: 0 auto
+  @include shadows-wide()
 
   &__title
     font-size: 28px

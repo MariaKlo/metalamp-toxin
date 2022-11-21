@@ -1,0 +1,21 @@
+include ../../plugins/iqdropdown/iqdropdown.pug
+
+mixin rooms()
+  form.rooms(action="#")
+    h1.rooms__title Найдём номера под ваши пожелания
+    div.rooms__wrapper
+      div.rooms__wrap.rooms__wrap_first
+        h3.rooms__info Прибытие
+        div.rooms__datepicker-wrap
+          input(type="text" name="date" class="rooms__date js-datepicker_eight" placeholder="ДД.ММ.ГГГГ" id="datepicker_eight")
+      div.rooms__wrap
+        h3.rooms__info Выезд
+        div.rooms__datepicker-wrap
+          input(type="text" name="date" class="rooms__date js-datepicker_ninth" placeholder="ДД.ММ.ГГГГ" id="datepicker_ninth")
+    div.rooms__guests
+      h3.rooms__info Гости
+      +iqdropdown("iqdropdown_fourth", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_fourth")
+        div(class="iqdropdown-menu-btn-wrap")
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
+          a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
+    button(type="submit" class="rooms__btn") Подобрать номер
