@@ -8,28 +8,58 @@
   &__menu
     display: flex
 
-  &__item
-    margin-right: 25px
-
   &__link
     color: $medium-blue
     text-decoration: none
     display: flex
     align-items: center
+    letter-spacing: 0.255px
 
     &:hover
       font-weight: 700
       color: $dark-blue
       transition: all 0.2s ease
 
-  &__dropdown
-    border: solid $medium-blue
-    border-width: 0 2px 2px 0
-    display: inline-block
-    transform: rotate(45deg)
-    width: 8px
-    height: 8px
-    margin-left: 10px
+    &_0
+      width: 62px
+
+    &_1
+      width: 94px
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        top: 22%
+        left: 50%
+        border: solid rgba(31, 32, 65, 0.5)
+        border-width: 0 2px 2px 0
+        transform: rotate(45deg)
+        width: 6px
+        height: 6px
+        margin-left: 10px
+
+    &_2
+      width: 93px
+
+    &_3
+      width: 83px
+
+    &_4
+      width: 136px
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        top: 22%
+        left: 66%
+        border: solid rgba(31, 32, 65, 0.5)
+        border-width: 0 2px 2px 0
+        transform: rotate(45deg)
+        width: 6px
+        height: 6px
+        margin-left: 10px
 
 @media only screen and (max-width: 892px) //892px 
   .header-list
