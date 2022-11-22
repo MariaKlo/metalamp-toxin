@@ -1,7 +1,8 @@
 extends ../../../layout/page.pug
 block content
   include ../../../components/colors/colors.pug
-  include type/type.pug
+  include ../../../components/text/text.pug
+  include ../../../components/type/type.pug
 
   // цвета
   div.logo 
@@ -16,11 +17,7 @@ block content
         +colors("Green", "#6FCF97")(class="colors__rectangle colors__rectangle_seventh")
           // шрифты, заголовки
       div.types
-        +type("H1")(class="type type_first")
-          h1.type__name.type__name_first This one is the sub-section or widget title
-        +type("H2")(class="type type_second")
-          h2.type__name.type__name_second Next one is the item title inside widgets
-        +type("H3")(class="type type_third")
-          h3.type__name.type__name_third This is a label or CTA text
-        +type("Body")(class="type type_fourth")
-          p.type__text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+        +type("H1", "h1", ".type__name type__name_first", "This one is the sub-section or widget title")(class="type type_first")
+        +type("H2", "h2", "type__name type__name_second", "Next one is the item title inside widgets")(class="type type_second")
+        +type("H3", "h3", "type__name type__name_third", "This is a label or CTA text")(class="type type_third")
+        +type("Body", "p", "type__text", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")(class="type type_fourth")

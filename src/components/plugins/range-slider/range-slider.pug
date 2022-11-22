@@ -1,6 +1,8 @@
+include ../../text/text.pug
+
 mixin range-slider(name)
   div.range-slider
-    h3.range-slider__name= name
+    +text("h3", "range-slider__name", name)
     p.range-slider__price
       div.slider-non-linear-step-value#js-slider-non-linear-step-value
   div#js-slider

@@ -1,6 +1,8 @@
+include ../text/text.pug
+
 mixin colors(normalNameOfColor, hexNameOfColor)
   div.colors
     div(class!=attributes.class)
     div.colors__wrapper
-      h2.colors__english-name= normalNameOfColor
-      p.colors__hex-name= hexNameOfColor
+      +text("h2", "colors__english-name", normalNameOfColor)
+      +text("p", "colors__hex-name", hexNameOfColor)

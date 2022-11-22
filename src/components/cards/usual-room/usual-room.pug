@@ -1,16 +1,17 @@
 include ../../plugins/swiper/swiper.pug
 include ../../buttons/rate-button/rate-button.pug
+include ../../text/text.pug
 
 mixin usual-room(number, price, comments, swiperImgClass)
   div.usual-room
     +swiper("swiper_second", swiperImgClass)(class="swiper js-swiper")
     div.usual-room__wrap
-      h1.usual-room__title №
-        span.usual-room__number= number
-      p.usual-room__price= price
-        span.usual-room__time в сутки
+      +text("h1", "usual-room__title", "№")
+      +text("h3", "usual-room__number", number)
+      +text("p", "usual-room__price", price)
+      +text("span", "usual-room__time", "в сутки")
     div.usual-room__wrap_border
     div.usual-room__wrapper
       +rate-button()
-      p.usual-room__comments= comments
-        span.usual-room__total-comments Отзывов     
+      +text("p", "usual-room__comments", comments)
+      +text("span", "usual-room__total-comments", "Отзывов")

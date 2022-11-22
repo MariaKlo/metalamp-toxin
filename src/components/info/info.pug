@@ -1,7 +1,9 @@
+include ../text/text.pug
+
 mixin info(title, description)
   div.info
     div(class!=attributes.class)
     div.info__wrap
-      h3.info__title= title
-      p.info__description= description
+      +text("h3", "info__title", title)
+      +text("p", "info__description", description)
   div.info__border

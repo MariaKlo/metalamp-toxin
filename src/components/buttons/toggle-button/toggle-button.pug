@@ -1,4 +1,7 @@
+include ../../text/text.pug
+
 mixin toggle-button(name, value)
   label.toggle-button
     input(type="checkbox" name=name value=value).toggle-button__field
-    span(class="toggle-button__text")   Получать спецпредложения
+    +text("span", "toggle-button__text", "Получать спецпредложения")
+    //- span(class="toggle-button__text")   Получать спецпредложения
