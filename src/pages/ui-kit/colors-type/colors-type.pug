@@ -1,19 +1,19 @@
 extends ../../../layout/page.pug
 block content
-  include colors/colors.pug
+  include ../../../components/colors/colors.pug
   include type/type.pug
 
   // цвета
   div.logo 
     div.wrapper
-      div.colors
-        +color("Dark Shade 100%", "#1F2041")(class="color__rectangle color__rectangle_first")
-        +color("Dark Shade 75%", "#1F2041")(class="color__rectangle color__rectangle_second")
-        +color("Dark Shade 50%", "#1F2041")(class="color__rectangle color__rectangle_third")
-        +color("Dark Shade 25%", "#1F2041")(class="color__rectangle color__rectangle_fourth")
-        +color("Dark Shade 5%", "#1F2041")(class="color__rectangle color__rectangle_fifth")
-        +color("Purple", "#BC9CFF")(class="color__rectangle color__rectangle_sixth")
-        +color("Green", "#6FCF97")(class="color__rectangle color__rectangle_seventh")
+      div.colors__wrap
+        +colors("Dark Shade 100%", "#1F2041")(class="colors__rectangle colors__rectangle_first")
+        +colors("Dark Shade 75%", "#1F2041")(class="colors__rectangle colors__rectangle_second")
+        +colors("Dark Shade 50%", "#1F2041")(class="colors__rectangle colors__rectangle_third")
+        +colors("Dark Shade 25%", "#1F2041")(class="colors__rectangle colors__rectangle_fourth")
+        +colors("Dark Shade 5%", "#1F2041")(class="colors__rectangle colors__rectangle_fifth")
+        +colors("Purple", "#BC9CFF")(class="colors__rectangle colors__rectangle_sixth")
+        +colors("Green", "#6FCF97")(class="colors__rectangle colors__rectangle_seventh")
           // шрифты, заголовки
       div.types
         +type("H1")(class="type type_first")
