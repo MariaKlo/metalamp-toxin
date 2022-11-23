@@ -1,34 +1,35 @@
-include ../../../../components/info/info.pug
 include comments/comment.pug
+include ../../../../components/info/info.pug
 include ../../../../components/bullet-list/bullet-list.pug
 include ../../../../components/plugins/graph/graph.pug
 include ../../../../components/cards/book/book.pug
+include ../../../../components/text/text.pug
 
 div.main
   div.main__wrap
     div.main__wrapper
       div.main__wrapper_additional
         div.main__info
-          h3.main__title Сведения о номере
+          +text("h3", "main__title", "Сведения о номере")
           +info("Комфорт", "Шумопоглащающие стены")(class="info__img")
           +info("Удобство", "Окно в каждой из спален")(class="info__img_second")
           +info("Уют", "Номер оснащён камином")(class="info__img_third")
         div.main__graph
-          h3.main__title Впечатления от номера
+          +text("h3", "main__title", "Впечатления от номера")
           +graph()
     div.main__comments
-      h3.main__title.main__title_bigger-margin Отзывы посетителей номера
-        span.main__total-comments 2 отзыва
+      +text("h3", "main__title main__title_bigger-margin", "Отзывы посетителей номера")
+      +text("span", "main__total-comments", "2 отзыва")
       +comment("comment__img", "Мурад Сарафанов", "5 дней назад", 
       "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
       +secondComment("comment__img_second", "Патрисия Стёклышкова", "Неделю назад", 
       "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
     div.main__wrapper
       div.main__rules
-        h3.main__title.main__title_additional-margin Правила
+        +text("h3", "main__title main__title_additional-margin","Правила")
         +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
       div.main__cancel
-        h3.main__title Отмена
-        p.main__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        +text("h3", "main__title","Отмена")   
+        +text("p", "main__text","Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.")       
   div.main__wrap
     +book()

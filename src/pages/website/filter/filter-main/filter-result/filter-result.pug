@@ -1,9 +1,10 @@
 include ../../../../../components/cards/luxury-room/luxury-room.pug
 include ../../../../../components/cards/usual-room/usual-room.pug
 include ../../../../../components/plugins/pagination/pagination.pug
+include ../../../../../components/text/text.pug
 
 div.filter-result__wrap
-  h2.filter-result__title Номера, которые мы для вас подобрали
+  +text("h2", "filter-result__title", "Номера, которые мы для вас подобрали")
   div.filter-result__page
     // first room
     +luxury-room("888", "9 990₽", "145", "luxury-room__img")

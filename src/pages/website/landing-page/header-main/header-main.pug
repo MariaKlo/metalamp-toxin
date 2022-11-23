@@ -1,8 +1,9 @@
 include ../../../../components/cards/rooms/rooms.pug
+include ../../../../components/text/text.pug
 
 section.header__bg
   div.header__container
     +rooms()
     div.header__wrap
-      p.header__text Лучшие номера для вашей работы, 
-      p.header__text.header__text_separated отдыха и просто вдохновения
+      +text("p", "header__text", "Лучшие номера для вашей работы,")
+      +text("p", "header__text header__text_separated", "отдыха и просто вдохновения")

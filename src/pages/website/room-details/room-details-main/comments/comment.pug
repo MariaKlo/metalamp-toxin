@@ -1,23 +1,24 @@
 include ../../../../../components/buttons/like-button/like-button.pug
+include ../../../../../components/text/text.pug
 
 mixin comment(classOfImg, username, time, text)
   div.comment
     div.comment__info
       div(class=classOfImg)
       div.comment__wrapper
-        p.comment__username= username
-        p.comment__time= time
+        +text("p", "comment__username", username)
+        +text("p", "comment__time", time)
     div.comment__wrap
       +like-button("like-button js-like-button", "like-button__heart js-like-button__heart", "like-button__counter js-like-button__counter")
-      p.comment__text= text
+      +text("p", "comment__text", text)
 
 mixin secondComment(classOfImg, username, time, text)
   div.comment
     div.comment__info
       div(class=classOfImg)
       div.comment__wrapper
-        p.comment__username= username
-        p.comment__time= time
+        +text("p", "comment__username", username)
+        +text("p", "comment__time", time)
     div.comment__wrap
       +like-button("like-button_second-like-button js-like-button_second-like-button", "like-button__heart_second js-like-button__heart_second", "like-button__counter_second-like-button js-like-button__counter_second-like-button")
-      p.comment__text= text
+      +text("p", "comment__text", text)

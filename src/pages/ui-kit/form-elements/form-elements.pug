@@ -17,67 +17,65 @@ block content
   include ../../../components/bullet-list/bullet-list.pug
   include ../../../components/comment/comment.pug
   include ../../../components/feedback/feedback.pug
+  include ../../../components/text/text.pug
 
-  // переменные
-  - var textField = "TEXT FIELD"
-  - var dropdown = "DROPDOWN"
   // поля ввода
   div.elements
     form(action="#")
       div.elements__description
-        h3.elements__info #{textField}
-        p.elements__state DEFAULT
+        +text("h3", "elements__info", "Text field")
+        +text("p", "elements__state", "Default")
       input(type="email" name="e-mail" placeholder="Email").elements__field
       div.elements__description
-        h3.elements__info #{textField}
-        p.elements__state HOVER/FOCUS
+        +text("h3", "elements__info", "Text field")
+        +text("p", "elements__state", "Hover/Focus")
       input(type="text" name="text" placeholder="This is pretty awesome").elements__field
-      h3.elements__info #{dropdown}
+      +text("h3", "elements__info", "Dropdown")
       +iqdropdown("iqdropdown_first", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_first")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear" id="iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm" id="iqdropdown-btn-confirm") Применить
-      h3.elements__info MASKED #{textField}
+      +text("h3", "elements__info", "Masked Text Field")
       input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" class="elements__field js-datepicker_first" data-position="right top" id="datepicker_first")
       div.date-dropdown
         div.date-dropdown_before
-          h3.elements__info DATE #{dropdown}
+          +text("h3", "elements__info", "Date dropdown")
           div.elements__field-wrap-datepicker
             input(type="text" name="date" placeholder="ДД.ММ.ГГГГ" id="datepicker_second").elements__field-date.js-datepicker_second
         div.date-dropdown_after
-          h3.elements__info DATE #{dropdown}
+          +text("h3", "elements__info", "Date dropdown")
           div.elements__field-wrap-datepicker
             input(type="text" name="date" placeholder="19.08.2019" id="datepicker_third").elements__field-date.js-datepicker_third
-      h3.elements__info FILTER DATE #{dropdown}
+      +text("h3", "elements__info", "Filter date dropdown")
       div.elements__field-wrap-datepicker_short
         input(type="text" name="date" placeholder="19 авг - 23 авг" id="datepicker_fourth").elements__field-filter.js-datepicker_fourth
-      h3.elements__info SUBSCRIPTION #{textField}
+      +text("h3", "elements__info", "Subscription text field")
       div.elements__field-wrap
         +regular-input("email", "e-mail", "Email")(class="regular-input__field-subscription")
     // кнопки
     div.buttons
       form.buttons-checkbox
-        h3.buttons-checkbox__name CHECKBOX BUTTONS
+        +text("h3", "buttons-checkbox__name", "Checkbox buttons")
         +checkbox-button("Можно курить", "checkbox")(class="checkbox-button__title")
         +checkbox-button("Можно с питомцами", "checkbox-second")(class="checkbox-button__title")
         +checkbox-button("Можно пригласить гостей (до 10 человек)", "checkbox-third")(class="checkbox-button__title")
       form.buttons-radio
-        h3.buttons-radio__name RADIO BUTTONS
+        +text("h3", "buttons-radio__name", "Radio buttons")
         div.buttons-radio__wrapper
           +radio-button("Мужчина", "human", "мужчина")
           +radio-button("Женщина", "human", "женщина")
       form.buttons-toggle
-        h3.buttons-toggle__name TOGGLE
+        +text("h3", "buttons-toggle__name", "Toggle")
         div.buttons-toggle__wrapper
           +toggle-button("toggle", "news")
           +toggle-button("toggle_second", "news-second")
       form.buttons-like
-        h3.buttons-like__name LIKE BUTTON
+        +text("h3", "buttons-like__name", "Like button")
         div.buttons-like__wrapper
           +like-button("like-button js-like-button", "like-button__heart js-like-button__heart", "like-button__counter js-like-button__counter")
           +like-button("like-button_second-like-button js-like-button_second-like-button", "like-button__heart_second js-like-button__heart_second", "like-button__counter_second-like-button js-like-button__counter_second-like-button")
       form.buttons-rate
-        h3.buttons-rate__name RATE BUTTON
+        +text("h3", "buttons-rate__name", "Rate button")
         div.buttons-rate__wrapper
           +rate-button()
           +rate-button()
@@ -87,7 +85,7 @@ block content
           +range-slider("range slider")
       // кнопки + пагинация
       form.buttons
-        h3.buttons__name BUTTONS
+        +text("h3", "buttons__name", "Buttons")
         div.ellipse-buttons
           div.ellipse-buttons__wrap
             +solid-button()
@@ -98,19 +96,19 @@ block content
         +link-button()
         +solid-big-button()
       div.pagination-section
-        h3.pagination-section__name PAGINATION
+        +text("h3", "pagination-section__name", "Pagination")
         +pagination()
   // фильтры по поиску номеров
   div.elements__filter    
     div.filter
       div.filter__description
-        h3.filter__info #{dropdown}
-        p.filter__state DEFAULT
+        +text("h3", "filter__info", "Dropdown")
+        +text("p", "filter__state", "Default")
       form.filter__form
         +iqdropdown("iqdropdown_sixth", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_sixth")
       div.filter__description
-        h3.filter__info #{dropdown}
-        p.filter__state EXPANDED
+        +text("h3", "filter__info", "Dropdown")
+        +text("p", "filter__state", "Expanded")
       form.filter__form
         +iqdropdown("iqdropdown_seventh", "Спальни", "Кровати", "Ванные комнаты")(class="iqdropdown js-iqdropdown_seventh")
       form.filter__checkbox_expanded
@@ -118,24 +116,24 @@ block content
         +expandable-checkbox-list("expandable-checkbox-list_second js-expandable-checkbox-list_second", "expandable checkbox list", "expandable-checkbox-list__checkbox-arrow_second js-expandable-checkbox-list__checkbox-arrow_second")(class="expandable-checkbox-list__checkbox expandable-checkbox-list__checkbox_second js-expandable-checkbox-list__checkbox_second")
     // dropdown с гостями
     form.guests
-      h3.guests__info #{dropdown}
+      +text("h3", "guests__info", "Dropdown")
       +iqdropdown("iqdropdown_second", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_second")
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
-      h3.guests__title Rich Checkbox Buttons
+      +text("h3", "guests__title", "Rich Checkbox Buttons")
       div.guests__checkbox-wrapper
         +checkbox-button("Широкий коридор", "checkbox-fourth", "Ширина коридоров в номере не менее 91 см.")(class="checkbox-button__title checkbox-button__title_bold")
         +checkbox-button("Помощник для инвалидов", "checkbox-fifth", "На 1 этаже вас встретит специалист и проводит до номера.")(class="checkbox-button__title checkbox-button__title_bold")
     // dropdown и списки
     form.lists__form
       div.lists
-        h3.lists__info #{dropdown}
+        +text("h3", "lists__info", "Dropdown")
         +iqdropdown("iqdropdown_third", "Взрослые", "Дети", "Младенцы")(class="iqdropdown js-iqdropdown_third")
           div(class="iqdropdown-menu-btn-wrap")
             a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
             a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
-        h3.lists__title Bullet list
+        +text("h3", "lists__ttle", "Bullet list")
         +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
   // комментарии
   div.elements__comments

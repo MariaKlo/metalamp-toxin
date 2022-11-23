@@ -4,6 +4,7 @@ block content
   include ../../../components/footer-list/footer-list.pug
   include ../../../components/inputs/regular-input/regular-input.pug
   include ../../../components/fontawesome/fontawesome.pug
+  include ../../../components/text/text.pug
 
   // headers
   div.headers
@@ -19,30 +20,30 @@ block content
       div.header__wrapper.header__wrapper_second
         +header-list(["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"])
         div.header__vertical-line
-        p.header__username Юлий Цезарь
+        +text("p", "header__username", "Юлий Цезарь")
   // footers
   div.footers
     div.footer
       div.footer__nav
         div.footer__wrap
           div.footer__logo
-          p.footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          +text("p", "footer__text", "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
         +footer-list("Навигация",["О нас", "Новости", "Служба поддержки", "Услуги"])
         +footer-list("О нас", ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"])
         +footer-list("Служба поддержки", ["Соглашения", "Сообщества", "Связь с нами"])
         form.footer__wrap
-          h3.footer__title Подписка
-          p.footer__text Получайте специальные предложения и новости сервиса
+          +text("h3", "footer__title", "Подписка")
+          +text("p", "footer__text", "Получайте специальные предложения и новости сервиса")
           div.footer__input-wrap
             +regular-input("email", "email", "Email")(class="footer__input")
       div.footer__copyright
-        p.footer__copy Copyright © 2018 Toxin отель. Все права защищены.
+        +text("p", "footer__copy", "Copyright © 2018 Toxin отель. Все права защищены.")
         div.footer__wrapper
           // fontawesome
           +fontawesome()
     div(class="footer footer_center")
       div(class="footer__logo footer__logo_center")
-      p(class="footer__text footer__text_center") Copyright © 2018 Toxin отель. Все права защищены.
+      +text("p", "footer__text footer__text_center", "Copyright © 2018 Toxin отель. Все права защищены.")
       // fontawesome
       div.footer__wrapper_center
         +fontawesome()
