@@ -8,10 +8,7 @@ block content
   include ../../../components/buttons/like-button/like-button.pug
   include ../../../components/buttons/rate-button/rate-button.pug
   include ../../../components/plugins/range-slider/range-slider.pug
-  include ../../../components/buttons/solid-button/solid-button.pug
-  include ../../../components/buttons/transparent-button/transparent-button.pug
-  include ../../../components/buttons/link-button/link-button.pug
-  include ../../../components/buttons/solid-big-button/solid-big-button.pug
+  include ../../../components/buttons/usual-button/usual-button.pug
   include ../../../components/plugins/pagination/pagination.pug
   include ../../../components/buttons/expandable-checkbox-list/expandable-checkbox-list.pug
   include ../../../components/bullet-list/bullet-list.pug
@@ -88,13 +85,14 @@ block content
         +text("h3", "buttons__name", "Buttons")
         div.ellipse-buttons
           div.ellipse-buttons__wrap
-            +solid-button()
-            +solid-button()
+            +usual-button("submit", "Click me")(class="solid-button solid-button_solid")
+            +usual-button("submit", "Click me")(class="solid-button solid-button_solid")
           div.ellipse-buttons__wrap
-            +ellipse-button-transparent()
-            +ellipse-button-transparent()
-        +link-button()
-        +solid-big-button()
+            +usual-button("submit", "Click me")(class="ellipse-button-transparent ellipse-button-transparent_transparented")
+            +usual-button("submit", "Click me")(class="ellipse-button-transparent ellipse-button-transparent_transparented")
+        +usual-button("submit", "Click me")(class="link-button__button")
+        +usual-button("submit", "Click me")(class="link-button__button")
+        +usual-button("submit", "Перейти к оплате")(class="solid-big-button")
       div.pagination-section
         +text("h3", "pagination-section__name", "Pagination")
         +pagination()

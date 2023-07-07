@@ -1,4 +1,6 @@
+include ../../buttons/usual-button/usual-button.pug
+
 mixin regular-input(types, name, placeholder)
   input(type=types name=name placeholder=placeholder class!=attributes.class)
-  button(type="submit" class="input-arrow")
+  +usual-button("submit")(class="input-arrow")
     span(class="material-symbols-outlined") arrow_forward

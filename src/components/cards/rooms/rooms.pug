@@ -1,4 +1,5 @@
 include ../../plugins/iqdropdown/iqdropdown.pug
+include ../../buttons/usual-button/usual-button.pug
 include ../../text/text.pug
 
 mixin rooms()
@@ -19,4 +20,4 @@ mixin rooms()
         div(class="iqdropdown-menu-btn-wrap")
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-clear") Очистить
           a(href="javascript:void(0);" class="iqdropdown-btn iqdropdown-btn-confirm") Применить
-    button(type="submit" class="rooms__btn") Подобрать номер
+    +usual-button("submit", "Подобрать номер")(class="rooms__btn")

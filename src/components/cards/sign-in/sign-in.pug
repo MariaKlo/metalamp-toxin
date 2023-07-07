@@ -1,11 +1,12 @@
 include ../../text/text.pug
+include ../../buttons/usual-button/usual-button.pug
 
 mixin sign-in()
   form.sign-in(action="#")
     +text("h1", "sign-in__title", "Войти")
     input(type="email" name="email" class="sign-in__input" placeholder="Email")
     input(type="password" name="password" class="sign-in__input sign-in__input_second" placeholder="Пароль")
-    button(type="submit" class="sign-in__btn") Войти
+    +usual-button("submit", "Войти")(class="sign-in__btn")
     div.sign-in__wrap
       +text("p", "sign-in__text", "Нет аккаунта на Toxin?")
       a(href="registration.html" class="sign-in__btn_sign-up") Создать
